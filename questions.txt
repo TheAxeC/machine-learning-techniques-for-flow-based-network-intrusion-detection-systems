@@ -1,0 +1,37 @@
+how to correlate flow and packet
+how to capture the netflow
+
+Perhaps use both netflow and packet stream
+
+netflow is usefull to determine top talkers, which ports are being used
+  setting
+
+netflow record:
+  src IP
+  dest IP
+  next-hop IP
+  nbpackets in flow
+  Layer 3 bytes
+  start time
+  last time
+  srcport
+  destport
+  tcp_flags
+  ip protocol
+  src_mask
+  dest_mask
+
+2 parts:
+  Packet capture
+  netflow capture
+
+  netflow capture uses machine learning
+  use netflow to determine overload attacks (ddos, syn)
+  for weird behaviour but unknown if benign:
+    set flags to use in packet capture
+
+    packet capture uses seperate machine learning
+    3 classifications:
+      normal
+      weird
+      malicious

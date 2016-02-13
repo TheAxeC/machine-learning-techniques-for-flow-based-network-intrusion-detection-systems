@@ -1,0 +1,40 @@
+Planning:
+
+week 1:
+    bekijken naar verschillende types IDS
+week 2:
+    Bekijken wat het IDS monitored
+    leren cursus machine learning
+week 3:
+    Bekijken welke aanvallen het kan detecteren
+    leren cursus machine learning
+week 3:
+    Kijken welke parameters te nemen als input
+    leren cursus machine learning
+week 4:
+    genereren input data sets
+    start implementatie IDS
+week 5:
+    implementatie IDS
+week 6:
+    implementatie IDS
+week 7:
+    bijwerken aan draft
+      zorgen voor study van verschillende machine learning algoritmes
+        alsook voor verschillende types IDS
+week 8:
+    extra week (voor als er delays zijn)
+week 9:
+    bekijken verschillende visualisatie methods
+week 10:
+    implementeren visualisatie naar gebruiker
+week 11:
+    voornamelijk werk aan draft
+week 12:
+    deadline first draft
+week 13:
+    verwerken input eerste draft
+week 14:
+    kleine test mbt learning
+week 15:
+    deadline final draft submission
