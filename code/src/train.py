@@ -1,0 +1,72 @@
+
+
+# Load a netflow file
+class NetflowLoader:
+
+    def __init__(self):
+        from flow import Flows
+        self.flow = Flows()
+        self.loaded_file = None
+
+    # Load a file
+    def load(self, file_name, action=None):
+        try:
+            with open(file_name) as f:
+                next(f)
+                for line in f:
+                    items = line.split(',')
+                    item = self.load_single(items)
+
+                    if action:
+                        action([item.make_sample()], [item.make_target()])
+                    else:
+                        self.flow.add_record(item)
+        except Exception as e:
+            raise e
+
+    # Load a single line
+    # Format:
+    #   StartTime,Dur,Proto,SrcAddr,Sport,Dir,DstAddr,Dport,State,sTos,dTos,TotPkts,TotBytes,SrcBytes,label
+    #   2011/08/10 09:46:59.607825,1.026539,tcp,94.44.127.113,1577,   ->,147.32.84.59,6881,S_RA,0,0,4,276,156,flow=Background-Established-cmpgw-CVUT
+    def load_single(self, items):
+        from flow import FlowRecord
+        rec = FlowRecord()
+        rec.start_time = items[0].strip()
+        rec.duration = items[1].strip()
+        rec.protocol = items[2].strip()
+        rec.src_ip = items[3].strip()
+        rec.src_port = items[4].strip()
+        rec.bidirectional = items[5].strip()
+        rec.dest_ip = items[6].strip()
+        rec.dest_port = items[7].strip()
+        rec.state = items[8].strip()
+        rec.sTos = items[9].strip()
+        rec.dTos = items[10].strip()
+        rec.total_pckts = items[11].strip()
+        rec.total_bytes = items[12].strip()
+        rec.total_srcbytes = items[13].strip()
+        rec.label = items[14].strip()
+        return rec
+
+    # Get the netflow
+    def get_netflow(self):
+        return self.flow
+
+
+# The trainer class
+# Can be used to do the main training
+class Trainer:
+
+    def __init__(self):
+        pass
+
+    # Train supervised with samples and targets
+    def train_supervised(self, algorithm, file):
+        loader = NetflowLoader()
+        loader.load(file) #, lambda x,y: algorithm.train(x, y))
+
+        samples = loader.get_netflow().get_sample_data()[0:10000]
+        targets = loader.get_netflow().get_target_data()[0:10000]
+        algorithm.train(samples, targets)
+
+        return loader.get_netflow()

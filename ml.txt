@@ -1,0 +1,7 @@
+supervised learning:
+  Classification
+  Regression (over time)
+
+unsupervised learning:
+  clustering
+  
