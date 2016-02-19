@@ -1,0 +1,64 @@
+\documentclass[notitlepage]{article}
+
+\usepackage{titling}
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{rotating}
+\usepackage[backend=bibtex, sorting=none]{biblatex}
+\usepackage{listings}
+\usepackage{parskip}
+
+\posttitle{\par\end{center}}
+\setlength{\droptitle}{-80pt}
+
+\title{Meeting}
+\author{Axel Faes - 1334986}
+\date{Feb 19, 2016}
+
+\begin{document}
+\maketitle
+
+aanwezigen: Bram Bonne, Pieter Robyns, Axel Faes
+
+Professor Quax is aan het bekijken ofdat ik (gelabelde) netflow data kan verkrijgen van Cegeka. Dit zou heel handig zijn om mijn implementatie te testen op real world data.
+
+Voorlopig moet ik enkel focussen op een passive intrusion detection systeem, geen preventie en niet direct inline in het netwerkverkeer. Ook de visualisatie moet later bekeken worden, de gebruiker is een netwerkadministrator. Er is tevens besproken dat python zelf mogelijks te traag is om packet sniffing op een goede snelheid uit te voeren. Hiervoor zou ik wireshark kunnen gebruiken (of de command line versie). Er is besproken om eventueel zelf datasets te genereren door malware te runnen op een VM of aparte machine.
+
+De datastructuur voor de machine learning algoritmes is bekeken. Ik moet eens bekijken hoe de timestamps van de flowdata gebruikt kunnen worden. Om de effectiviteit (van de machine learning algoritmes) mogelijks te verhogen ga ik eens bekijken of ip-adressen ingedeeld kunnen worden in country-of-origin of iets dergelijks. Dit zou de machine learning algoritmes de mogelijkheid bieden om ook op deze parameter te bekijken of data malicious is of niet.
+
+De actiepunten die gedaan zijn:
+\begin{itemize}  
+		\item Er is al een basis implementatie uitgewerkt voor het IDS
+        \item De netflow structuur is bekeken en er is een datastructuur opgestelt die gefeed kan worden aan verschillende machine learning algoritmes.
+        \item Progressie in de machine learning cursus: chapter 3 van de 18.
+\end{itemize}
+
+Volgende actiepunten zijn besproken:
+\begin{itemize}  
+        \item Beginnen aan de thesis: het schrijven van een hoofdstuk over machine learning en over hoe deze algoritmes toegepast kunnen worden op een intrusion detection systeem.
+        \item Verder werken in de machine learning cursus.
+        \item Ik moet eens bekijken ofdat ik een programma vind om pcap files om te zetten naar netflow. Anders moet ik dit zelf schrijven.
+\end{itemize}
+
+Ik heb ook een korte planning gemaakt van hoe de thesis eruit zou zien:
+\begin{itemize}  
+\item Inleiding:
+\begin{itemize}  
+    \item wat is een IDS
+    \item Waarom is er gekozen voor dit type IDS (host vs netwerk)
+    \item Waarom voor data centers
+    \item Waarom netflow
+    \item Waarom machine learning
+\end{itemize}
+\item Wat is machine learning
+\item Hoe passen we machine learning toe op IDE en wat zijn de voor/nadelen
+\item Welke machine learning algortimes zijn wel/niet gebruikt
+\item Wat zijn de voor/nadelen van netflow
+\item Hoe met combinatie netflow/packets (Als dit gedaan zou worden)
+\item Welke data sets zijn gebruikt
+\item Wat zijn de bevindingen
+\item Hoe kan visualisatie/feedback gebeuren (richting admin en richting automatische preventie)
+\item Conclusie
+\end{itemize}
+\end{document}

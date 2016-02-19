@@ -60,8 +60,13 @@ class FlowRecord:
 
     def make_record(self):
         self.prtcl = self.protocol == "tcp"
-        self.src_ip_num = self.ip2long(self.src_ip)
-        self.dest_ip_num = self.ip2long(self.dest_ip)
+        if self.prtcl:
+            self.prtcl = 0
+        else:
+            self.prtcl = 1
+
+        self.src_ip_num =  abs(hash(str(self.src_ip))) % (10 ** 8)
+        self.dest_ip_num =  abs(hash(str(self.dest_ip))) % (10 ** 8)
 
         if "0x" in  str(self.src_port):
             self.src_port = int(self.src_port, 16)
@@ -73,27 +78,24 @@ class FlowRecord:
         if not self.dest_port:
             self.dest_port = 0
 
-    def ip2long(self, ip):
-        """
-        Convert an IP string to long
-        """
-        import socket, struct
-        try:
-            packedIP = socket.inet_pton(socket.AF_INET, ip)
-            return struct.unpack("!L", packedIP)[0]
-        except Exception as e:
-            try:
-                from binascii import hexlify
-                return int(hexlify(socket.inet_pton(socket.AF_INET6, ip)), 16)
-            except Exception as e:
-                return int(ip.replace(':', ''), 16)
+        self.sTos = abs(hash(str(self.sTos))) % (10 ** 8)
+        self.dTos = abs(hash(str(self.dTos))) % (10 ** 8)
+        self.state = abs(hash(str(self.state))) % (10 ** 8)
+
+        if self.bidirectional == "->":
+            self.dir = 0
+        elif self.bidirectional == '<-':
+            self.dir = 1
+        else:
+            self.dir = 2
 
     # Make a sample of this record
     def make_sample(self):
         self.make_record()
-        return [self.prtcl, self.src_port, self.dest_port,
-                self.src_ip_num, self.dest_ip_num, self.total_pckts,
-                self.total_bytes]
+        return [int(self.prtcl), int(self.src_port), int(self.dest_port),
+                int(self.sTos), int(self.dTos), int(self.state), int(self.total_srcbytes),
+                float(self.duration), int(self.src_ip_num) , int(self.dest_ip_num),
+                int(self.total_pckts), int(self.total_bytes)]
 
     # Return the label of this record
     def make_target(self):

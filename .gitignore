@@ -1,5 +1,6 @@
 .DS_Store
 code/ipsml/
+code/test/
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
