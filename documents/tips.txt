@@ -1,0 +1,36 @@
+Beste studenten
+
+Hier enkele tips op basis van vragen die ik heb gekregen, praktische info en een samenvatting van wat er van je verwacht wordt de komende weken voor de bachelorproef. 
+
+Ruwe planning (deadline: 12 februari)
+Om voor jezelf een overzicht te krijgen van de verschillende taken die je moet voltooien en de tijd die deze taken zullen innemen, verwachten we dat je een ruwe inschatting hiervan probeert te maken. Dit is geen verplicht onderdeel van de bachelorproef, maar zal je helpen om problemen te identificeren en eventueel hulp te vragen als je ergens vast komt te zitten. Maak voor deze planning een Google Drive Sheet aan met <datum, beschrijving> entries voor de belangrijkste data (zie leidraad: verdediging, vulgariserende tekst, etc.) en te voltooien subtaken van je bachelorproef (m.a.w. uit welke grote delen bestaat je literatuurstudie / implementatie en wanneer verwacht je die af te hebben).
+
+Verslagen (deadline: 1 dag na de meeting)
+Na elke bijeenkomst moet je een verslag maken van een halve pagina tot een A4. Hierin bespreek je de 6 puntjes uit de leidraad. Je moet dit verslag met Bram en mezelf delen op Google Drive. Bundel deze verslagen op het einde als appendix in the thesis.
+
+Bachelorproeftekst / thesis (deadline draft: 1 maand voor de verdediging)
+Bestudeer de leidraad goed voor de vereisten van een bachelorproeftekst. Het onderwijsteam verwacht dat je de thesis schrijft op Overleaf (https://www.overleaf.com/) en de link met ons deelt (pieter.robyns@uhasselt.be en bram.bonne@uhasselt.be). Zo verliezen we geen tijd met het synchroniseren van verschillende versies en eventuele feedback. Wie graag offline werkt aan de thesis kan gebruik maken van de ingebouwde git functionaliteit van Overleaf. Reken als deadlines begin mei voor een eerste draft en eind mei voor de finale draft. Op basis hiervan wordt bepaald of je mag verdedigen. De taal kan NL of EN zijn. Studenten die kiezen voor EN moeten een samenvatting van 2-5 blz. maken in het NL. Als voorbeeld kan je op volgende link de thesis vinden van Rick Habets, een student die vorig jaar op zijn bachelorproef uitstekende resultaten behaalde: 
+
+http://research.edm.uhasselt.be/~probyns/thesis_examples/draft_bots_in_the_beehive.pdf
+
+Vulgariserende tekst (deadline: 1 week voor de verdediging)
+Deze tekst dient om je werk te promoten aan een breder publiek van niet-experts. De regels komen overeen met die van de Vlaamse Scriptieprijs (http://www.scriptieprijs.be/journalistiek-artikel). In de master krijg je de kans om met de scriptieprijs mee te doen, dus dit is een goede oefening hiervoor.
+
+Verdediging (29 juni)
+De verdediging verloopt als een presentatie van een poster op academisch niveau. Proffen van de faculteit zullen naar jouw poster komen kijken en om meer uitleg vragen. Hierover later meer info.
+
+Wekelijkse samenkomst
+Binnen onze groep laten we de studenten wekelijks langskomen op het EDM om hun voortgang te bespreken. Indien je eens een dag niet kan is dat niet erg, maar laat dan op voorhand iets weten zodat we de meeting kunnen verzetten. Op dit moment is de planning als volgt:
+
+Alex: vrijdag  10:00, 2.13 EDM
+Wout: vrijdag  10:30, 2.13 EDM
+Jef : maandag  10:00, 2.13 EDM
+Gert: woensdag 14:00, 2.13 EDM
+
+Version control
+Het is aangeraden om bij ons een version control system op te zetten. Je kan Bram contacteren om een git / svn / mercurial repository aan te maken op de server van het EDM.
+
+Ten slotte wensen wij jullie alvast veel succes met de bachelorproef!
+
+
+Met vriendelijke groeten

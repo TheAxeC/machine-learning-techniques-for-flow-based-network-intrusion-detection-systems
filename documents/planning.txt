@@ -1,0 +1,78 @@
+Planning:
+Week 1: 08/02 - 14/02
+  Eerst meeting
+  Bekijken naar type van IDS dat gemaakt gaat worden
+  Bekijken classificaties van machine learning algoritmes
+
+Week 2: 15/02 - 21/02
+  Dichter kijken naar netflow v9
+  Eerst hoofdstukken van machine learning cursus
+
+Week 3: 22/02 - 28/02
+  Bekijken wat voor aanvallen gedetecteerd kunnen worden
+  Beginnen kijken naar parameters die gebruikt kunnen worden voor machine learning algoritmes
+  leren machine learning cursus
+  Beginnen aan draft voor thesis
+    Beschrijven waarom er gekozen is om een “network based intrusion detection system” te implementeren boven andere types van IDS.
+
+Week 4: 29/02 - 06/03
+  Verder kijken naar parameters die gebruikt kunnen worden voor machine learning algoritmes
+  afmaken machine learning cursus
+  Werken aan draft:
+    Er kan al een beschrijving gemaakt worden van de verschillende algortimes die gebruikt gaan worden. (of kort waarom ze niet gebruikt zijn)
+  Eventueel al starten aan implementatie van IDS
+
+Week 5: 07/03 - 13/03
+  start implementatie van IDS
+    Op het einde van de week zou de implementatie in staat moeten zijn om geplaatst te worden in een netwerk.
+    Het moet nog niet in staat zijn om anomalies te detecteren
+  Zorgen dat input data sets gebruikt kunnen worden voor het IDS
+
+Week 6: 14/03 - 20/03
+  verdere implementatie IDS:
+    Begin implementatie van machine learning algoritmes (zoeken naar libraries)
+    Focussen op detecteren van anomalies
+  Er ging mid-maart een tussentijdse presentatie zijn:
+    Maken van deze presentatie
+
+Week 7: 21/03 - 27/03
+  verdere implementatie IDS
+    Verder testing op detecties
+    Implementatie van preventie (afsluiten connecties, blocking ip, …)
+
+Week 8: 28/03 - 03/04
+  Bijwerken aan draft
+  Bekijken ofdat packetanalyse handig is om betrouwbaarheid van de IDS te verhogen
+    Eventueel ook implementeren
+
+Week 9: 04/04 - 10/04
+	(projectweek voor Software engineering)
+  Bekijken ofdat packetanalyse handig is om betrouwbaarheid van de IDS te verhogen
+    Eventueel ook implementeren
+  Bekijken naar visualisatie methodes
+
+Week 10: 11/04 - 17/04
+  Implementeren van visualisatie tool voor administrator van data center
+
+Week 11: 18/04 - 24/04
+  Implementeren van visualisatie tool voor administrator van data center
+
+Week 12: 25/04 - 01/05
+  Afmaken eerste draft
+
+Week 13: 02/05 - 08/05
+  Inlevering eerste draft (deadline)
+
+Week 14: 09/05 - 15/05
+  Verwerken feedback van draft
+
+Week 15: 16/05 - 22/05
+  Korte experimenten om betrouwbaarheid van algoritmes te verhogen
+
+Week 16: 23/05 - 29/05
+  Inleveren finale draft
+  Verwerken feedback finale draft
+
+Week 16+:
+  Maken van poster
+  Maken vulgariserend artikel
