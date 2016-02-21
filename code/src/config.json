@@ -8,7 +8,7 @@
 
     "algorithm" : "KNeighborsClassifier",
 
-    "model" : "model.mdl",
+    "model" : "../models/model.mdl",
     "use_model" : false,
 
     "data-sets" : [
