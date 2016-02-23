@@ -86,11 +86,23 @@ class Config:
             return self.data['use_model']
         return False
 
+    # Get the model directory
+    def get_model_dir(self):
+        if 'model_dir' in self.data:
+            return self.data['model_dir']
+        return ""
+
     # Get the stored model
     def get_model(self):
         if 'model' in self.data:
             return self.data['model']
         return ""
+
+    # Get the stored model
+    def store_model(self):
+        if 'store_model' in self.data:
+            return self.data['store_model']
+        return False
 
     # Check if the IDS is enabled
     def enabled(self):

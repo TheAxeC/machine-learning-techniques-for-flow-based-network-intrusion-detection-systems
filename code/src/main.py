@@ -33,20 +33,62 @@ Future:
 ##########################################################
 ##########################################################
 
+def save_model(config, algorithm):
+    if config.store_model():
+        import os
+
+        directory = config.get_model_dir()
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+
+        directory = directory + config.get_model().split(".")[0] + "/"
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+
+        print "Saving model as " + config.get_model() + " in directory \"" + directory + "\"."
+        algorithm.save(directory + config.get_model())
+
+##########################################################
+
+def check_keys(dic, key, val):
+    if not key in dic:
+        dic[key] = val
+
+##########################################################
+
+def training_data_set(config, algorithm):
+    print "Using data sets with malicious data."
+    trainer = config.get_trainer()
+    if not trainer:
+        sys.exit()
+    trained = False
+    for d in config.get_data_sets():
+        check_keys(d, "from", 0)
+        check_keys(d, "file", "")
+        check_keys(d, "to", -1)
+        if trainer.train(algorithm, d["file"], d["from"], d['to']):
+            trained = True
+    if not trained:
+        print "No training provided."
+        sys.exit()
+
+    save_model(config, algorithm)
+
+##########################################################
+
 def training(config, algorithm):
     print "Start training..."
     if config.use_model():
-        print "Using stored model."
-        algorithm.load_file(config.get_model())
+        try:
+            directory = config.get_model_dir() + config.get_model().split(".")[0] + "/"
+            print "Using stored model \"" + config.get_model() + "\" in directory \"" + directory + "\"."
+            algorithm.load_file(directory + config.get_model())
+        except IOError as e:
+            print "Couldn't use stored model."
+            training_data_set(config, algorithm)
     else:
-        print "Using data sets with malicious data."
-        trainer = config.get_trainer()
-        if not trainer:
-            sys.exit()
-        for d in config.get_data_sets():
-            trainer.train(algorithm, d["file"], d["from"], d['to'])
-        print "Saving model as " + config.get_model() + "."
-        algorithm.save(config.get_model())
+        training_data_set(config, algorithm)
+
     print "Finished training."
 
 ##########################################################
@@ -64,6 +106,10 @@ def sniffing(config, algorithm):
         print "\t capturing packets"
         print "\t converting to netflow"
         print "\t analyse closed flow"
+
+        from sniffer import Sniffer
+        sniff = Sniffer()
+        sniff.start("scapy")
 
         print "End sniffing."
 
@@ -120,7 +166,6 @@ def pcap_to_flow_convertor(files):
 def main():
     # Read the config file
     from config import Config
-    import sys
 
     print "Starting IDS..."
 
@@ -140,6 +185,7 @@ def main():
 
 ##########################################################
 
+import sys
 if __name__ == "__main__":
     main()
 

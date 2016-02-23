@@ -18,7 +18,7 @@ class Trainer:
         try:
             return getattr(sys.modules[__name__], name)()
         except Exception as e:
-            print "Trainer does not exist."
+            print "Trainer \"" + name + "\"does not exist."
             return None
 
 # Supervised netflow trainer
@@ -28,12 +28,23 @@ class NetflowTrainerS(Trainer):
     def train(self, algorithm, file, fr, to):
         from loader import NetflowLoader
         loader = NetflowLoader()
-        loader.load(file, fr, to)
+        if not loader.load(file, fr, to):
+            print "Training set \"" + file + "\" could not be loaded."
+            return False
 
         print "Training size is " + str(loader.get_netflow().get_size()) + "."
 
-        samples = loader.get_netflow().get_sample_data()
-        targets = loader.get_netflow().get_target_data()
-        algorithm.train(samples, targets)
+        if loader.get_netflow().get_size() <= 1:
+            print "Training set too small."
+            return False
+        else:
+            samples = loader.get_netflow().get_sample_data()
+            targets = loader.get_netflow().get_target_data()
+            try:
+                algorithm.train(samples, targets)
+            except Exception as e:
+                print "Wrong training data set used."
+                return False
 
-        print "Training set " + file + " done."
+        print "Training set \"" + file + "\" done."
+        return True

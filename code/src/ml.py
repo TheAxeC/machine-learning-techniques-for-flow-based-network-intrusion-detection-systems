@@ -62,7 +62,7 @@ class MLAlgorithm:
         try:
             return getattr(sys.modules[__name__], name)()
         except Exception as e:
-            print "Algorithm does not exist."
+            print "Algorithm \"" + str(name) + "\" does not exist."
             return None
 
 # Using the SVM machine learning algorithm

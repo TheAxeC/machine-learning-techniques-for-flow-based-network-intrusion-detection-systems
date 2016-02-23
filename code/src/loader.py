@@ -50,8 +50,9 @@ class NetflowLoader:
                     if i == to:
                         break
                     i += 1
+                return True
         except Exception as e:
-            raise e
+            return False
 
     # Load a single line
     # Format:

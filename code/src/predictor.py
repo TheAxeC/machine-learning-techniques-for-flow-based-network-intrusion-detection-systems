@@ -62,15 +62,24 @@ class Predictor:
 
     def runner(self, data_set, check):
         for d in data_set:
-            "Start file: " + str(d) + "."
-            self.predict_file(d, check=True)
-            "End file: " + str(d) + "."
+            self.check_keys(d, "from", 0)
+            self.check_keys(d, "file", "")
+            self.check_keys(d, "to", -1)
+            print "Start file: " + str(d['file']) + "."
+            self.predict_file(d, check)
+            print "End file: " + str(d['file']) + "."
         print self.results()
+
+    def check_keys(self, dic, key, val):
+        if not key in dic:
+            dic[key] = val
 
     def predict_file(self, d, check=False):
         from loader import NetflowLoader
         loader = NetflowLoader()
-        loader.load(d['file'], d['from'], d['to'])
+        if not loader.load(d['file'], d['from'], d['to']):
+            print "Dataset \"" + d['file'] + "\" could not be loaded."
+            return False
 
         samples = loader.get_netflow()
         self.predict(samples, check=True)
@@ -84,16 +93,20 @@ class Predictor:
 
     def loop(self, netflow):
         i = 0
+
         while i < netflow.get_size():
-            result = self.algorithm.predict(netflow.get_sample_data()[i])
-            if self.check:
-                test = result == netflow.get_target_data()[i]
-                if not test:
-                    self.fails.add_fail_record(result, netflow.get_target_data()[i], i)
-            else:
-                self.returns.append(Result(netflow.get_sample_data()[i], result))
-            i = i + 1
-            self.totals = self.totals + 1
+            try:
+                result = self.algorithm.predict(netflow.get_sample_data()[i])
+                if self.check:
+                    test = result == netflow.get_target_data()[i]
+                    if not test:
+                        self.fails.add_fail_record(result, netflow.get_target_data()[i], i)
+                else:
+                    self.returns.append(Result(netflow.get_sample_data()[i], result))
+                i = i + 1
+                self.totals = self.totals + 1
+            except Exception as e:
+                pass
 
     def results(self):
         if self.check:
