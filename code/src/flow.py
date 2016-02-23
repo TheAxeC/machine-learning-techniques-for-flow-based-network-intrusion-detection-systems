@@ -59,11 +59,7 @@ class FlowRecord:
         self.label = 0
 
     def make_record(self):
-        self.prtcl = self.protocol == "tcp"
-        if self.prtcl:
-            self.prtcl = 0
-        else:
-            self.prtcl = 1
+        self.prtcl = abs(hash(str(self.protocol))) % (10 ** 8)
 
         self.src_ip_num =  abs(hash(str(self.src_ip))) % (10 ** 8)
         self.dest_ip_num =  abs(hash(str(self.dest_ip))) % (10 ** 8)

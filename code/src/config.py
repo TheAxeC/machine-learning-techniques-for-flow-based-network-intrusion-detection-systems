@@ -131,6 +131,11 @@ class Config:
     # Get the to-be-converted pcap files
     def pcap_files(self):
         if 'pcap-files' in self.data:
+            for x in self.data['pcap-files']:
+                if not 'src' in x:
+                    x['src'] = ""
+                if not 'dest' in x:
+                    x['dest'] = None
             return self.data['pcap-files']
         return []
 
@@ -139,3 +144,9 @@ class Config:
         if 'prevention' in self.data:
             return self.data['prevention']
         return False
+
+    # Get the flow timeout
+    def get_flow_timeout(self):
+        if 'timeout' in self.data:
+            return self.data['timeout']
+        return 10

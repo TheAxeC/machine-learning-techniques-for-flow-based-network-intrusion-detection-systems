@@ -108,8 +108,8 @@ def sniffing(config, algorithm):
         print "\t analyse closed flow"
 
         from sniffer import Sniffer
-        sniff = Sniffer()
-        sniff.start("scapy")
+        sniff = Sniffer(config.get_flow_timeout())
+        sniff.sniff_tshark(algorithm)
 
         print "End sniffing."
 
@@ -143,20 +143,33 @@ def IDS(config):
     print "Loaded algorithm: " + str(config.get_algorithm_name()) + "."
 
     # Start training
+    # This phase cannot be avoided or stopped
     training(config, algorithm)
 
     # Start prediction
+    # Prediction testing phase
+    # Uses pre-prepared data sets
+    # Can use checkers to detect accuracy
+    # And can use prediction mode, for unlabeled data
     prediction(config, algorithm)
 
     # Start sniffing
+    # Main component of the IDS
     sniffing(config, algorithm)
 
 
 ##########################################################
 ##########################################################
 
-def pcap_to_flow_convertor(files):
+def pcap_to_flow_convertor(config):
     print "Start conversion from pcap to flow..."
+
+    from sniffer import Sniffer
+    sniff = Sniffer(config.get_flow_timeout())
+
+    files = config.pcap_files()
+    for f in files:
+        sniff.convert_flow(f['src'], f['dest'])
 
     print "Conversion done."
 
@@ -179,7 +192,7 @@ def main():
         IDS(config)
 
     if config.flow_converter():
-        pcap_to_flow_convertor(config.pcap_files())
+        pcap_to_flow_convertor(config)
 
     print "End of program."
 

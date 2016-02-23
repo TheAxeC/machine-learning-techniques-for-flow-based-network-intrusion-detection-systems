@@ -1,9 +1,19 @@
 {
     "enable-IDS" : true,
     "pcap-to-flow" : false,
+    "check" : false,
+    "predict" : false,
+    "sniffer" : true,
 
     "pcap-files" : [
-
+        {
+            "src" : "../test/dosattack.pcap",
+            "dest" :  "../test/dosattack2.flow"
+        },
+        {
+            "src" : "../test/test.pcap",
+            "dest" :  "../test/test.flow"
+        }
     ],
 
     "algorithm" : "KNeighborsClassifier",
@@ -47,12 +57,9 @@
 
         ],
 
-    "check" : true,
-    "predict" : false,
-    "sniffer" : true,
     "packet-analyses" : false,
     "prevention" : false,
 
-    "print-fails" : false
-
+    "print-fails" : false,
+    "timeout" : 5000
 }

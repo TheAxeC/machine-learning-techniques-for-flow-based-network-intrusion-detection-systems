@@ -25,7 +25,7 @@ class NetflowLoader:
                     items = line.split(',')
                     labels[items[14].strip()] = True
         except Exception as e:
-            raise e
+            return []
         return labels.keys()
 
     # Load a file
