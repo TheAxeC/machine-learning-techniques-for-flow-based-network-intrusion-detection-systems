@@ -36,8 +36,8 @@ class NetflowTrainerS(Trainer):
 
         print "The labels used are: "
         labels = loader.get_labels(file)
-        for lab in labels:
-            print "\t " + lab
+        #for lab in labels:
+        #    print "\t " + lab
 
         if loader.get_netflow().get_size() <= 1:
             print "Training set too small."

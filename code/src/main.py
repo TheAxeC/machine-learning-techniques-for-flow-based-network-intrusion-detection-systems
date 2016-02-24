@@ -108,7 +108,7 @@ def sniffing(config, algorithm):
         print "\t analyse closed flow"
 
         from sniffer import Sniffer
-        sniff = Sniffer(config.get_flow_timeout())
+        sniff = Sniffer(config.get_protocol_file(), config.get_flow_timeout())
         sniff.sniff_tshark(algorithm)
 
         print "End sniffing."
@@ -165,7 +165,7 @@ def pcap_to_flow_convertor(config):
     print "Start conversion from pcap to flow..."
 
     from sniffer import Sniffer
-    sniff = Sniffer(config.get_flow_timeout())
+    sniff = Sniffer(config.get_protocol_file(), config.get_flow_timeout())
 
     files = config.pcap_files()
     for f in files:

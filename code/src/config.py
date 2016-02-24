@@ -150,3 +150,8 @@ class Config:
         if 'timeout' in self.data:
             return self.data['timeout']
         return 10
+
+    def get_protocol_file(self):
+        if 'protocol-file' in self.data:
+            return self.data['protocol-file']
+        return ""

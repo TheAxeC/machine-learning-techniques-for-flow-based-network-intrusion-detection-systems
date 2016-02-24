@@ -1,22 +1,73 @@
 
+class PacketConfig:
+
+    def __init__(self, file):
+        self.data = {}
+        self.read_config(file)
+
+    # Reading the config file
+    def read_config(self, file=None):
+        import json
+
+        try:
+            file_name = None
+            if file:
+                file_name = file
+            else:
+                file_name = self.default
+
+            with open(file_name) as data_file:
+                self.data = json.load(data_file)
+            return True
+        except Exception as e:
+            print e
+            print self.data
+            return False
+
+    # Get the data array
+    def get_packet_data(self, items):
+        protocol = items[5]
+        prot = self.match_protocol(protocol)
+
+        d = dict(self.data['values'])
+        for i,j in prot.iteritems():
+            d[i] = self.match_data(items[j])
+
+        return d
+
+    def match_data(self, item):
+        if self.isfloat(item):
+            return float(item)
+        elif self.isint(item):
+            return int(item)
+        return item
+
+    def isfloat(self, value):
+      try:
+        float(value)
+        return True
+      except:
+        return False
+
+    def isint(self, value):
+      try:
+        int(value)
+        return True
+      except:
+        return False
+
+    def match_protocol(self, prtcl):
+        for key in self.data.keys():
+            if key in prtcl:
+                return self.data[key]
+        return self.data['default']
+
+
 # Simple flow class
 class SharkPacket:
 
-    def __init__(self, line):
-        self.data = {}
-
-        line = line.strip()
-        items = line.split()
-
-        name = ['start_time', 'src_ip', 'dst_ip', 'protocol', 'length',
-                'src_port', 'dst_port']
-
-        protocol = items[5]
-        try:
-            f = getattr(self, protocol)
-            f(name, items)
-        except Exception as e:
-            self.default(name, items)
+    def __init__(self, config, line):
+        self.data = config.get_packet_data(line)
 
     # Get an item
     def __getitem__(self,index):
@@ -24,28 +75,6 @@ class SharkPacket:
 
     def identifier(self):
         return (self.data['src_ip'], self.data['dst_ip'], self.data['protocol'])
-
-    # Default protocol handler
-    def default(self, name, items):
-        a = 0
-        for i in [1,2,4,5,6,7,8]:
-            self.data[name[a]] = items[i]
-            a += 1
-        self.data[name[0]] = float(self.data[name[0]])
-        self.data[name[4]] = int(self.data[name[4]])
-        self.data[name[5]] = int(self.data[name[5]])
-        self.data[name[6]] = int(self.data[name[6]])
-
-    # ARP protocol
-    def ARP(self, name, items):
-        a = 0
-        for i in [1,2,4,5,6]:
-            self.data[name[a]] = items[i]
-            a += 1
-        self.data[name[0]] = float(self.data[name[0]])
-        self.data[name[4]] = int(self.data[name[4]])
-        self.data['src_port'] = 0
-        self.data['dst_port'] = 0
 
 # A flow record
 class SharkFlow:
@@ -179,7 +208,7 @@ class NetflowGenerator:
 # The basic sniffer class
 class Sniffer:
 
-    def __init__(self, timeout=10.):
+    def __init__(self, config_file, timeout=10.):
         # Scapy variables
         self.filter = "ip"
         self.store = 0
@@ -187,14 +216,16 @@ class Sniffer:
 
         self.flow = NetflowGenerator(timeout)
         self.file = None
+        self.config = PacketConfig(config_file)
+
 
     # Convert to txt records
     def convert_txt(self, file_name, dest=None):
         self.convert(file_name, self.pkt_tshark_txt, dest)
 
     # Convert to flow records
-    def convert_flow(self, file_name, dest=None):
-        self.flow.start(dest)
+    def convert_flow(self, file_name, dest=None, algorithm=None):
+        self.flow.start(algorithm, dest)
         self.convert(file_name, self.pkt_tshark_flow, None)
         self.flow.finish()
 
@@ -228,11 +259,15 @@ class Sniffer:
             print "Quitted packet sniffer..."
 
     # Start scapy
-    def start(self, cmd):
+    def sniff_scapy(self, algorithm):
         try:
+            self.flow.start(algorithm=algorithm)
             self.scapy(self.pkt_callback, self.iface, self.filter, self.store)
-        except KeyboardInterrupt as e:
-            pass
+        except OSError:
+            print "Error sniffing packets."
+        except KeyboardInterrupt:
+            self.flow.finish(False)
+            print "Quitted packet sniffer..."
 
     # Run tshark for packet sniffing
     def tshark(self, command, action, split=True):
@@ -270,5 +305,7 @@ class Sniffer:
     def pkt_tshark_flow(self, pkt):
         if not (pkt[:1].isdigit() or pkt[:1] == " "):
             return
-        f = SharkPacket(pkt)
+        line = pkt.strip()
+        items = line.split()
+        f = SharkPacket(self.config, items)
         self.flow.add_record(f)

@@ -17,7 +17,22 @@ My Bachelor thesis for Bachelor Computer Science at UHasselt: An Intrusion detec
 - Creating models (running overnight)
 - Using IP and timestamps
 - Data Cegeka
-- Packet Data
 - Machine learning
 - Preventie
 - Threading
+
+## Thesis table of contents:
+- Introduction
+    * Explanation of IDS
+    * Netflow
+    * Why use machine learning
+- Machine learning
+- Hoe passen we machine learning toe op IDE en wat zijn de voor/nadelen
+- Welke machine learning algortimes zijn wel/niet gebruikt
+- Wat zijn de voor/nadelen van netflow
+- Attack classification
+- Hoe met combinatie netflow/packets (Als dit gedaan zou worden)
+- Welke data sets zijn gebruikt
+- Wat zijn de bevindingen
+- Hoe kan visualisatie/feedback gebeuren (richting admin en richting automatische preventie)
+- Conclusie
