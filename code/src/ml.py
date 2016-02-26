@@ -6,6 +6,38 @@ class MLAlgorithm:
         self.save = None
         self.save_file = None
         self.algorithm = None
+        self.good_labels = []
+        self.malicious_labels = []
+
+    # Set the logging files:
+    def start(self, log, good_label, malicious_labels):
+        self.logger = self.open_file(log)
+        self.good_labels = self.load_labels(good_label)
+        self.malicious_labels = self.load_labels(malicious_labels)
+
+    # load labels:
+    def load_labels(self, file_name):
+        labels = []
+        try:
+            with open(file_name) as f:
+                for line in f:
+                    labels.append(line.strip())
+        except Exception as e:
+            print "Could not open label file: \"" + file_name + "\"."
+            return []
+        return labels
+
+    # Open a file
+    def open_file(self, f):
+        try:
+            return open(f, "w")
+        except IOError as e:
+            print "Could not open file: \"" + f + "\"."
+            return None
+
+    def stop(self):
+        if self.logger:
+            self.logger.close()
 
     # Train the data set
     def train(self, data_set, target_set):
@@ -92,3 +124,23 @@ class KNeighborsClassifier(MLAlgorithm):
     # Predict a sample
     def predict(self, sample):
         return self.algorithm.predict([sample])[0]
+
+    # Estimate whether a sample is malicious or not
+    def record_predict(self, flow, sample):
+        label = self.predict(sample)
+
+        if label in self.good_labels:
+            self.logger.write("Good label found \"" + label + "\"\n")
+        else:
+            from geoipc import GeoIP
+            gi = GeoIP('GeoIP.dat')
+
+            self.logger.write("Malicious label found \"" + str(label) + "\"!!!!!!!!!!!\n")
+            self.logger.write("\t protocol: " + str(flow.protocol) + "\n")
+            self.logger.write("\t address: from: " + str(flow.src_ip) + " to " + str(flow.dest_ip) + "\n")
+            self.logger.write("\t country origin: " + gi.country(flow.src_ip) + "\n")
+            self.logger.write("\t country destination: " + gi.country(flow.dest_ip) + "\n")
+            self.logger.write("\t ports: from: " + str(flow.src_port) + " to " + str(flow.dest_port) + "\n")
+            self.logger.write("\t packets: " + str(flow.total_pckts) + " with " + str(flow.total_bytes) + " bytes\n")
+            self.logger.write("\t duration: " + str(flow.duration) + " starting from " + str(flow.start_time) + "\n")
+        self.logger.flush()

@@ -1,9 +1,9 @@
 {
-    "enable-IDS" : true,
-    "pcap-to-flow" : false,
-    "check" : false,
+    "enable-IDS" : false,
+    "pcap-to-flow" : true,
+    "check" : true,
     "predict" : false,
-    "sniffer" : true,
+    "sniffer" : false,
 
     "pcap-files" : [
         {
@@ -11,8 +11,8 @@
             "dest" :  "../test/dosattack2.flow"
         },
         {
-            "src" : "../test/test.pcap",
-            "dest" :  "../test/test.flow"
+            "src" : "../test/test1.pcap",
+            "dest" :  "../test/test1.flow"
         }
     ],
 
@@ -31,7 +31,7 @@
             {
                 "file" : "../test/capture20110815.binetflow",
                 "from" : 0,
-                "to" : 100000
+                "to" : 200000
             }
 
         ],
@@ -54,14 +54,18 @@
         ],
 
     "predict-sets" : [
-
+    
         ],
 
     "packet-analyses" : false,
     "prevention" : false,
 
-    "print-fails" : false,
+    "print-fails" : true,
+    "print-labels" : false,
     "timeout" : 5000,
 
-    "protocol-file" : "protocols.json"
+    "protocol-file" : "protocols.json",
+    "logger" : "log.txt",
+    "good-labels" : "good.txt",
+    "malicious-labels" : "bad.txt"
 }

@@ -1,0 +1,40 @@
+% Chapter Template
+
+\chapter{Flow data} % Main chapter title
+
+\label{flow} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
+
+\section{How to use flow-data}
+The following attributes are available with flow-data:
+\begin{itemize}
+\item Source IP
+\item Destination IP
+\item Protocol name
+\item Source port
+\item Destination port
+\item Starting time of the flow
+\item Duration of the flow
+\item Amount of packets in the flow
+\item Amount of bytes in the flow
+\end{itemize}
+However, should an flow exporter be implemented, some additional features can be generated from packet data. \ref{export}
+\begin{itemize}
+\item Amount of TCP SYN within the flow
+\item Source and Destination Type of Service
+\item Payload size
+\end{itemize}
+These data can be used within the machine learning algorithms. However some variables have undesirable effects on the accuracy of the algorithm. Some care should be taken when training the machine learning algorithms with the additional data. Not all data, both training data as predictive data, will have the additional features.\\
+\\
+Most machine learning libraries use numeral data instead of string data. All string data has been hashed in order to be able to use it in machine learning algorithms. The probability on a collision is low enough to be able to ignored.
+
+\subsection{IP addresses}
+
+\subsection{Ports and protocol name}
+Both the source and destination port are discrete data. They are usually received in decimal form, however some data-sets might use them in hexadecimal data or refer to ports as "ssh port" instead of "22". Port data, in decimal form, can be directly fed into the machine learning algorithm.\\
+\\
+The protocol name can simply be converted to a standard string in lower case, in order to avoid errors by lower and uppercase forms of the same name (for example "tcp" and "TCP"). This string can than be hashed into a discrete value.
+
+\subsection{Timing}
+
+\subsection{Size} 
+The amount of packets used in the flow and the amount of bytes are both discrete data. They are always received in decimal form. They can immediately be fed into the machine learning algorithm.

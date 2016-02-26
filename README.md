@@ -5,17 +5,20 @@ My Bachelor thesis for Bachelor Computer Science at UHasselt: An Intrusion detec
 - timeout
 - extra data from packets --> training ?
 
+## Remarks:
+- IP by country has low effect
+- timestamps --> not enough data, algorithm can work with continuous timestamps
+- Extraction labels can be done by hand, depends on dataset
+
 ## TODO:
 - Visualisation
     * Logging
     * Graphing
-- Extraction labels
 - Implementing different algorithms
 - Writing thesis
 - Analysing packets (scapy)?
 - Running virus/botnet in vm and automatic labeling
 - Creating models (running overnight)
-- Using IP and timestamps
 - Data Cegeka
 - Machine learning
 - Preventie

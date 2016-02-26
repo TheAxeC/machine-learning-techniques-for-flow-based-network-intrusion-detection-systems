@@ -155,3 +155,23 @@ class Config:
         if 'protocol-file' in self.data:
             return self.data['protocol-file']
         return ""
+
+    def get_logger_file(self):
+        if 'logger' in self.data:
+            return self.data['logger']
+        return ""
+
+    def get_good_labels_file(self):
+        if 'good-labels' in self.data:
+            return self.data['good-labels']
+        return ""
+
+    def get_bad_labels_file(self):
+        if 'malicious-labels' in self.data:
+            return self.data['malicious-labels']
+        return ""
+
+    def print_labels(self):
+        if 'print-labels' in self.data:
+            return self.data['print-labels']
+        return False

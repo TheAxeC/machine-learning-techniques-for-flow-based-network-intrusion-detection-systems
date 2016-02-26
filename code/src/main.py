@@ -89,7 +89,7 @@ def training(config, algorithm):
     else:
         training_data_set(config, algorithm)
 
-    print "Finished training."
+    print "Finished training.\n"
 
 ##########################################################
 
@@ -111,7 +111,7 @@ def sniffing(config, algorithm):
         sniff = Sniffer(config.get_protocol_file(), config.get_flow_timeout())
         sniff.sniff_tshark(algorithm)
 
-        print "End sniffing."
+        print "End sniffing.\n"
 
 ##########################################################
 
@@ -130,7 +130,7 @@ def prediction(config, algorithm):
         print "Used for IDS on files."
         checker.runner(config.get_predict_sets(), False)
         print "Predictions done"
-    print "End predictions and checks."
+    print "End predictions and checks.\n"
 
 ##########################################################
 
@@ -141,6 +141,11 @@ def IDS(config):
     if not algorithm:
         sys.exit()
     print "Loaded algorithm: " + str(config.get_algorithm_name()) + "."
+
+    algorithm.start(config.get_logger_file(),
+                    config.get_good_labels_file(),
+                    config.get_bad_labels_file())
+    print ""
 
     # Start training
     # This phase cannot be avoided or stopped
@@ -157,6 +162,8 @@ def IDS(config):
     # Main component of the IDS
     sniffing(config, algorithm)
 
+    # Stop the logging
+    algorithm.stop()
 
 ##########################################################
 ##########################################################
@@ -176,6 +183,23 @@ def pcap_to_flow_convertor(config):
 ##########################################################
 ##########################################################
 
+def print_labels(files):
+    from loader import NetflowLoader
+    loader = NetflowLoader()
+
+    for f in files:
+        check_keys(f, "file", "")
+        print "Dataset: \"" + f['file'] + "\""
+        print "The labels used are: "
+        labels = loader.get_labels(f['file'])
+        for lab in labels:
+            print "\t " + lab
+        print ""
+    print "Done checking labels\n"
+
+##########################################################
+##########################################################
+
 def main():
     # Read the config file
     from config import Config
@@ -184,9 +208,12 @@ def main():
 
     config = Config()
     if config.read_config():
-        print "JSON Config file read successfully"
+        print "JSON Config file read successfully\n"
     else:
         sys.exit()
+
+    if config.print_labels():
+        print_labels(config.get_data_sets())
 
     if config.enabled():
         IDS(config)

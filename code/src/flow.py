@@ -85,13 +85,25 @@ class FlowRecord:
         else:
             self.dir = 2
 
+        #from geoipc import GeoIP
+        #gi = GeoIP('GeoIP.dat')
+        #try:
+        #    self.cntry1 = abs(hash(str(gi.country(self.src_ip)))) % (10 ** 8)
+        #except:
+        #    self.cntry1 = 0
+        #try:
+        #    self.cntry2 = abs(hash(str(gi.country(self.dest_ip)))) % (10 ** 8)
+        #except:
+        #    self.cntry2 = 0
+
+
     # Make a sample of this record
     def make_sample(self):
         self.make_record()
         return [int(self.prtcl), int(self.src_port), int(self.dest_port),
                 int(self.sTos), int(self.dTos), int(self.state), int(self.total_srcbytes),
                 float(self.duration), int(self.src_ip_num) , int(self.dest_ip_num),
-                int(self.total_pckts), int(self.total_bytes)]
+                int(self.total_pckts), int(self.total_bytes)] #, int(self.cntry1), int(self.cntry2)]
 
     # Return the label of this record
     def make_target(self):

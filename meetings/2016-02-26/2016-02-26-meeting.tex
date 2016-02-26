@@ -1,0 +1,47 @@
+\documentclass[notitlepage]{article}
+
+\usepackage{titling}
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{rotating}
+\usepackage[backend=bibtex, sorting=none]{biblatex}
+\usepackage{listings}
+\usepackage{parskip}
+
+\posttitle{\par\end{center}}
+\setlength{\droptitle}{-80pt}
+
+\title{Meeting}
+\author{Axel Faes - 1334986}
+\date{Feb 26, 2016}
+
+\begin{document}
+\maketitle
+
+aanwezigen: Bram Bonne, Axel Faes
+
+Deze week is voornamelijk besteed aan de implementatie. Er is een netflow exporter geschreven. Er is bekeken ofdat timestamps gebruikt kunnen worden en ofdat ip-adressen opgedeeld kunnen worden per land. Er is besloten dat dit zeer weinig effect heeft op de accuraatheid van de machine learning algoritmes.
+
+Momenteel zijn Support vector machines en K-nearest Neighbor Classifier algoritmes bekeken. Het K-nearest Neighbor Classifier algoritme is zeer efficient (~98\%).
+
+In een later stadium kan bekeken worden om eventueel verdere analyse te doen op de data die malicious gevonden is, eventueel door pakketten te analyseren, of nogmaals door machine learning technieken. Er kan ook eens bekeken worden om een VM op te zetten, en daarin malware te runnen en dit verkeer te monitoren. Herbij zouden eigen datasets gegenereerd kunnen worden.
+
+De machine learning cursus is gevolgd tot hoofstuk 7. De cursus zou normaal af moeten zijn binnen 2 weken. 
+
+De actiepunten die gedaan zijn:
+\begin{itemize}  
+		\item Er is al een netflow exporter geschreven
+        \item Er zijn experimenten uitgevoerd m.b.t de datastructuur die meegegeven wordt aan de machine learning cursus.
+        \item Progressie in de machine learning cursus: chapter 7 van de 18.
+        \item Er is begonnen aan de thesis. 
+        \item Het zou interessant zijn om eens te kijken ofdat ip-addressen opgedeeld kunnen worden in subnets.
+\end{itemize}
+
+Volgende actiepunten zijn besproken:
+\begin{itemize}  
+        \item Focussen op de thesis
+        \item Verder werken in de machine learning cursus.
+\end{itemize}
+
+\end{document}

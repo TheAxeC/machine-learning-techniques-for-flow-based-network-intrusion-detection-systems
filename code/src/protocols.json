@@ -10,6 +10,24 @@
             "dst_port" : 0
         },
 
+    "LLC" :
+        {
+            "start_time" : 1,
+            "src_ip" : 2,
+            "dst_ip" : 4,
+            "protocol" : 5,
+            "length" : 6
+        },
+
+    "WLCCP" :
+        {
+            "start_time" : 1,
+            "src_ip" : 2,
+            "dst_ip" : 4,
+            "protocol" : 5,
+            "length" : 6
+        },
+
     "ICMP" :
         {
             "start_time" : 1,

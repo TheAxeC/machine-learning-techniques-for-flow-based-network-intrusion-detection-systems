@@ -1,7 +1,118 @@
 % Appendix A
 
-\chapter{Appendix Title Here} % Main appendix title
+\chapter{Meetings} % Main appendix title
 
 \label{AppendixA} % For referencing this appendix elsewhere, use \ref{AppendixA}
 
-Write your Appendix content here.
+\section{Meeting 1: 9 Feb 2016}
+
+aanwezigen: Peter Quax, Bram Bonne, Pieter Robyns, Axel Faes\\
+\\
+Dit is de eerste bijeenkomst met de begeleiders en promotor. Er is dus geen rapportering mogelijk van een vorige bijeenkomst. Tijdens de bijeenkomst is beslist om een \textit{intruder detection system} te bestuderen en te implementeren. \\
+\\
+De actiepunten die gedaan moeten worden:
+\begin{itemize}  
+        \item Beslissen voor wie het systeem gemaakt moet worden. Gaat dit voor end users zijn, of voor grote data centers. Hieraan hangt vast welke data (packets of netflow) gebruikt moet worden.
+        \item Bekijken hoe machine learning algoritmes gebruikt kunnen worden in een \textit{intruder detection system}.
+        \item Bekijken wat netflow is.
+        \item Er moet gekeken worden naar de manier waarop anomalies gegenereerd gaan worden om het systeem te testen/trainen.
+\end{itemize}
+
+\noindent Volgende afspraken zijn gemaakt:
+\begin{itemize}  
+		\item Er is gevraagd om te zorgen dat het systeem ook op correcte wijze informatie kan weergeven aan gebruikers. Tijdens het semester moet bekeken worden hoe deze weergave moet gebeuren.
+        \item Libraries gebruiken indien mogelijk, om te vermijden dat het wiel opnieuw uitgevonden word.
+        \item Er is de mogelijkheid geboden om aan de thesis te werken op het EDM.
+        \item Er is afgesproken om \textit{Overleaf} te gebruiken om de thesis in te schrijven.
+        \item Een ruwe planning voor het werk moet gemaakt worden tegen 12 Feb.
+        \item Een wekelijkse meeting is vastgelegd. Dit om 10:00 elke vrijdag.
+        \item Begin mei moet een eerst draft van de thesis klaar zijn en eind mei moet de finale draft af zijn. 
+        \item Er moet een vulgariserende tekst gemaakt worden en een postersessie gegeven worden (op 29 juni).
+\end{itemize}
+\section{Meeting 2: 12 Feb 2016}
+aanwezigen: Bram Bonne, Pieter Robyns, Axel Faes\\
+
+\noindent Dit is de tweede bijeenkomst met mijn begeleider. Netflow bevat op zichzelf niet zoveel informatie, maar het is toch handig om te kijken welke bevindingen gemaakt kunnen worden met deze data. Mogelijks kan er, indien gevonden wordt dat netflow alleen niet genoeg informatie bevat, ook gebruikt gemaakt worden van packet data. \\
+
+\noindent Er is de mogelijkheid besproken om eventueel meerdere machine learning algoritmes te implementeren en te bekijken in welke situaties welke algoritmes beter werken.\\
+
+\noindent De actiepunten die gedaan zijn:
+\begin{itemize}  
+        \item \textit{Beslissen voor wie het systeem gemaakt moet worden.}: Dit gaat gedaan worden voor data centers
+        \item Er zijn verschillende classificaties van machine learning algorithmes gevonden die gebruikt kunnen worden.
+        \item Verschillende grote data sets van netflow en packets met sporen van anomalies zijn gevonden. Alsook programma's om verkeer te genereren.
+\end{itemize}
+
+\noindent Volgende actiepunten zijn besproken:
+\begin{itemize}  
+		\item Verder uitwerken van welke machine learning algoritmes gebruikt kunnen worden
+        \item Bekijken netflow v9
+\end{itemize}
+\section{Meeting 3: 19 Feb 2016}
+aanwezigen: Bram Bonne, Pieter Robyns, Axel Faes\\
+
+\noindent Professor Quax is aan het bekijken ofdat ik (gelabelde) netflow data kan verkrijgen van Cegeka. Dit zou heel handig zijn om mijn implementatie te testen op real world data.\\
+
+\noindent Voorlopig moet ik enkel focussen op een passive intrusion detection systeem, geen preventie en niet direct inline in het netwerkverkeer. Ook de visualisatie moet later bekeken worden, de gebruiker is een netwerkadministrator. Er is tevens besproken dat python zelf mogelijks te traag is om packet sniffing op een goede snelheid uit te voeren. Hiervoor zou ik wireshark kunnen gebruiken (of de command line versie). Er is besproken om eventueel zelf datasets te genereren door malware te runnen op een VM of aparte machine.\\
+
+\noindent De datastructuur voor de machine learning algoritmes is bekeken. Ik moet eens bekijken hoe de timestamps van de flowdata gebruikt kunnen worden. Om de effectiviteit (van de machine learning algoritmes) mogelijks te verhogen ga ik eens bekijken of ip-adressen ingedeeld kunnen worden in country-of-origin of iets dergelijks. Dit zou de machine learning algoritmes de mogelijkheid bieden om ook op deze parameter te bekijken of data malicious is of niet.\\
+
+\noindent De actiepunten die gedaan zijn:
+\begin{itemize}  
+		\item Er is al een basis implementatie uitgewerkt voor het IDS
+        \item De netflow structuur is bekeken en er is een datastructuur opgestelt die gefeed kan worden aan verschillende machine learning algoritmes.
+        \item Progressie in de machine learning cursus: chapter 3 van de 18.
+\end{itemize}
+
+\noindent Volgende actiepunten zijn besproken:
+\begin{itemize}  
+        \item Beginnen aan de thesis: het schrijven van een hoofdstuk over machine learning en over hoe deze algoritmes toegepast kunnen worden op een intrusion detection systeem.
+        \item Verder werken in de machine learning cursus.
+        \item Ik moet eens bekijken ofdat ik een programma vind om pcap files om te zetten naar netflow. Anders moet ik dit zelf schrijven.
+\end{itemize}
+
+\noindent Ik heb ook een korte planning gemaakt van hoe de thesis eruit zou zien:
+\begin{itemize}  
+\item Inleiding:
+\begin{itemize}  
+    \item wat is een IDS
+    \item Waarom is er gekozen voor dit type IDS (host vs netwerk)
+    \item Waarom voor data centers
+    \item Waarom netflow
+    \item Waarom machine learning
+\end{itemize}
+\item Wat is machine learning
+\item Hoe passen we machine learning toe op IDE en wat zijn de voor/nadelen
+\item Welke machine learning algortimes zijn wel/niet gebruikt
+\item Wat zijn de voor/nadelen van netflow
+\item Hoe met combinatie netflow/packets (Als dit gedaan zou worden)
+\item Welke data sets zijn gebruikt
+\item Wat zijn de bevindingen
+\item Hoe kan visualisatie/feedback gebeuren (richting admin en richting automatische preventie)
+\item Conclusie
+\end{itemize}
+\section{Meeting 4: 26 Feb 2016}
+aanwezigen: Bram Bonne, Axel Faes\\
+
+\noindent Deze week is voornamelijk besteed aan de implementatie. Er is een netflow exporter geschreven. Er is bekeken ofdat timestamps gebruikt kunnen worden en ofdat ip-adressen opgedeeld kunnen worden per land. Er is besloten dat dit zeer weinig effect heeft op de accuraatheid van de machine learning algoritmes.\\
+
+\noindent Momenteel zijn Support vector machines en K-nearest Neighbor Classifier algoritmes bekeken. Het K-nearest Neighbor Classifier algoritme is zeer efficient (~98\%).\\
+
+\noindent In een later stadium kan bekeken worden om eventueel verdere analyse te doen op de data die malicious gevonden is, eventueel door pakketten te analyseren, of nogmaals door machine learning technieken. Er kan ook eens bekeken worden om een VM op te zetten, en daarin malware te runnen en dit verkeer te monitoren. Herbij zouden eigen datasets gegenereerd kunnen worden.\\
+
+\noindent De machine learning cursus is gevolgd tot hoofstuk 7. De cursus zou normaal af moeten zijn binnen 2 weken. \\
+
+\noindent De actiepunten die gedaan zijn:
+\begin{itemize}  
+		\item Er is al een netflow exporter geschreven
+        \item Er zijn experimenten uitgevoerd m.b.t de datastructuur die meegegeven wordt aan de machine learning cursus.
+        \item Progressie in de machine learning cursus: chapter 7 van de 18.
+        \item Er is begonnen aan de thesis. 
+        \item Het zou interessant zijn om eens te kijken ofdat ip-addressen opgedeeld kunnen worden in subnets.
+\end{itemize}
+
+\noindent Volgende actiepunten zijn besproken:
+\begin{itemize}  
+        \item Focussen op de thesis
+        \item Verder werken in de machine learning cursus.
+\end{itemize}

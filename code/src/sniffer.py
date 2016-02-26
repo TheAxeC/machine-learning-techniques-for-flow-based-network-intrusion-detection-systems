@@ -31,7 +31,12 @@ class PacketConfig:
 
         d = dict(self.data['values'])
         for i,j in prot.iteritems():
-            d[i] = self.match_data(items[j])
+            try:
+                d[i] = self.match_data(items[j])
+            except:
+                print i
+                print j
+                print items
 
         return d
 
@@ -68,6 +73,10 @@ class SharkPacket:
 
     def __init__(self, config, line):
         self.data = config.get_packet_data(line)
+        self.active = not "ANSI" in self.data['protocol']
+
+    def is_active(self):
+        return self.active
 
     # Get an item
     def __getitem__(self,index):
@@ -95,10 +104,13 @@ class SharkFlow:
 
     def update(self, time, size=0):
         self.last_time = time
-        self.size += size
+        self.size += int(size)
         self.packets += 1
 
     def get_sample(self):
+        return self.get_flow_record().make_sample()
+
+    def get_flow_record(self):
         from flow import FlowRecord
         f = FlowRecord()
 
@@ -121,7 +133,7 @@ class SharkFlow:
         f.total_bytes = self.size
         f.total_srcbytes = self.size
 
-        return f.make_sample()
+        return f
 
     def output(self):
         return ' '.join([str(self.start_time), self.src_ip, self.dst_ip, str(self.src_port), str(self.dst_port), self.protocol, str(self.size), str(self.last_time - self.start_time)]) + '\n'
@@ -153,7 +165,7 @@ class NetflowGenerator:
         Total Packets: [%i]
         Exported Flows: [%i]
         Open Flows: [%i]
-                    """%(self.packets, len(self.res_flow), len(self.open_flows)))
+                    """%(self.packets, self.complete, self.open))
 
     # Output a line
     def output(self):
@@ -187,7 +199,7 @@ class NetflowGenerator:
                 flow.update(time)
                 self.complete += 1
                 if self.algorithm:
-                    print self.algorithm.predict(flow.get_sample())
+                    self.algorithm.record_predict(flow.get_flow_record(), flow.get_sample())
                 else:
                     self.res_flow.append(flow)
                 remove_flows.append(key)
@@ -308,4 +320,5 @@ class Sniffer:
         line = pkt.strip()
         items = line.split()
         f = SharkPacket(self.config, items)
-        self.flow.add_record(f)
+        if f.is_active():
+            self.flow.add_record(f)
