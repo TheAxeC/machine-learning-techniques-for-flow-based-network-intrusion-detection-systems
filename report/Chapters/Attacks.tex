@@ -29,8 +29,8 @@ An NIDS only monitors the network. As such not every attack can be detected by a
 \end{itemize}
 Other attacks either do not use network communication, or they are not visible within the header information of network traffic. 
 
-\section{Distributed Denial of Service}
-
+\subsection{Distributed Denial of Service}
+A distributed denial of service can be detected by the amount of data that is being received. However, there are many different types of DDoS attacks. There are ICMP floods, SYN floods, etc. These attacks can be described in terms of traffic patterns. A traffic pattern is expressed in a couple features. These features include the number of flows and packets, the packet size, and the total bandwidth used during the traffic. For example UDP flooding can be characterised by a traffic pattern which contains a lot of packets. These patterns can be searched for during the detection phase. \cite{kim2004flow}
 \section{Network scans}
 
 \section{Worms}

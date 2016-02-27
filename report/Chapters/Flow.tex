@@ -28,6 +28,23 @@ These data can be used within the machine learning algorithms. However some vari
 Most machine learning libraries use numeral data instead of string data. All string data has been hashed in order to be able to use it in machine learning algorithms. The probability on a collision is low enough to be able to ignored.
 
 \subsection{IP addresses}
+Flow data can contain multiple forms of IP addresses. Both IPv4 and IPv6 data can be found. For some protocols the flow data can also contain the MAC-addresses instead of the IP-address. These addresses are hashed, so they become numeral, discrete data and are then fed into the machine learning algorithm.\\
+\\
+Using the IP, it is possible to find the country or region of origin. Tests where the country of origin was fed into the machine learning algorithms, have been done. Results however showed, that the accuracy of the IDS became lower.
+
+\begin{table}[H]
+\caption{The effects of using IP country-of-origin on accuracy of IDS.}
+\label{tab:country}
+\centering
+\begin{tabular}{l l l}
+\toprule
+\tabhead{With Country-of-origin} & \tabhead{Accuracy}\\
+\midrule
+Yes & 96.16\%\\
+No & 98.57\%\\
+\bottomrule\\
+\end{tabular}
+\end{table}
 
 \subsection{Ports and protocol name}
 Both the source and destination port are discrete data. They are usually received in decimal form, however some data-sets might use them in hexadecimal data or refer to ports as "ssh port" instead of "22". Port data, in decimal form, can be directly fed into the machine learning algorithm.\\
