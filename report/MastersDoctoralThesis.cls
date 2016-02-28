@@ -387,6 +387,21 @@ KOMA-script documentation for details.}]{fancyhdr}
 }
 
 %----------------------------------------------------------------------------------------
+%	SAMENVATTING PAGE DESIGN
+%----------------------------------------------------------------------------------------
+
+\newcommand{\nederlandsesamenvatting}{Nederlandstalige samenvatting}
+\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\nederlandsesamenvatting}{Nederlandstalige samenvatting} % Declaration of Authorship text for English countries
+
+\newenvironment{samenvatting}{
+	\checktoopen
+	\tttypeout{\nederlandsesamenvatting}
+	\thispagestyle{plain}
+	%\null\vfil
+	{\noindent\huge\bfseries\nederlandsesamenvatting\par\vspace{10pt}}
+}{}
+
+%----------------------------------------------------------------------------------------
 
 \ifbool{hyperrefsupport}{% If the nohyperref class option has not been specified
 \AfterPackage{biblatex}{ % Load the hyperref package after the biblatex package for compatibility 

@@ -10,14 +10,14 @@ An intrusion detection system can use multiple methods to detect malicious behav
 There are several types of attacks that can occur. Some of these attacks occur only on the network, other attacks infect computers, called malware. The exact classifications are not mutually exclusive. Some types of malware utilise network attacks. However it is important to make a distinction between these attacks. Every attack is identified by different characteristics. Knowing these characteristics is usefull to be able to tweak the IDS to make identification more effective.
 
 \section{network attacks}
-There are \textbf{Physical attacks}, these are attacks which attempt to destroy physical equipment and hardware. \textbf{Buffer overflows} are attacks that try to execute arbritrairy code or crash a process by overflowing a buffer on the targeted system. \textbf{Password attacks} attempts to break into a system by gaining the password that the system uses. The simplest password attacks are brute-force password crackers. \textbf{DDOS} attacks are attacks which attempt to make a network resource temporarily or permanently unavailable for the users of that resource. An attack could happen by flooding a system with TCP SYN packets. \textbf{Network scans} are information gathering attacks. They do not cause any damage by themselves but usually serve the purpose to gather information about a system that could be used in further attacks. Network traffic sniffing or port scans are examples of network scans.
+There are \textbf{Physical attacks}, these are attacks which attempt to destroy physical equipment and hardware. \textbf{Buffer overflows} are attacks that try to execute arbritrairy code or crash a process by overflowing a buffer on the targeted system. \textbf{Password attacks} attempts to break into a system by gaining the password that the system uses. The simplest password attacks are brute-force password crackers. \textbf{DDOS} attacks are attacks which attempt to make a network resource temporarily or permanently unavailable for the users of that resource. An attack could happen by flooding a system with TCP SYN packets. \textbf{Network scans} are information gathering attacks. They do not cause any damage by themselves but usually serve the purpose to gather information about a system that could be used in further attacks. Network traffic sniffing or port scans are examples of network scans. \cite{IPFlow}
 
 \section{Malware}
 There are several types of malware. We can make four distinct categories of malware. There are \textbf{botnets}, \textbf{viruses}, \textbf{trojan horses} and \textbf{worms}. Malware are actual programs that infect a system to execute a specific task. The task of the malware defines which categorie the malware belongs in.\\
 \\
 \textbf{Trojan horses} are programs disguised as harmless applications but contain malicious code. \textbf{Worms} are programs that replicate themselves among a network.  They can spread extremely fast. \textbf{Viruses} are similar to worms. However they only replicate themselves on the infected host computer. Thus they require user interaction in order to be spread around a network. The virus can accomplish this by attaching itself to an email-attachment, embed itself within an executable, etc. \\
 \\
-\textbf{Botnets} is malware that causes infected computers to become "slaves" to the master. An infected computer is controlled externally by the bot-master without the knowledge of the owner of the infected computer. The bot-master can use the distributed network of "slave" computer to perform other malicious tasks, such as performing an DDOS attack.
+\textbf{Botnets} is malware that causes infected computers to become "slaves" to the master. An infected computer is controlled externally by the bot-master without the knowledge of the owner of the infected computer. The bot-master can use the distributed network of "slave" computer to perform other malicious tasks, such as performing an DDOS attack. \cite{IPFlow}
 
 \section{Detection}
 An NIDS only monitors the network. As such not every attack can be detected by an NIDS. Only the attacks that actually use the network can be detected. Flow-based IDS have the additional constraint that they can only use flow data. This further limits the attacks that can be detected. The attacks that can be detected using a flow-based network intrusion detection systems are:
@@ -27,13 +27,27 @@ An NIDS only monitors the network. As such not every attack can be detected by a
 \item Worms
 \item Botnets
 \end{itemize}
-Other attacks either do not use network communication, or they are not visible within the header information of network traffic. 
+Other attacks either do not use network communication, or they are not visible within the header information of network traffic. In order to detect other attacks, including \textbf{viruses}, \textbf{trojan horses} and \textbf{Buffer overflows}, other detection systems such as HIDS or Packet-based NIDS should be used.
 
 \subsection{Distributed Denial of Service}
 A distributed denial of service can be detected by the amount of data that is being received. However, there are many different types of DDoS attacks. There are ICMP floods, SYN floods, etc. These attacks can be described in terms of traffic patterns. A traffic pattern is expressed in a couple features. These features include the number of flows and packets, the packet size, and the total bandwidth used during the traffic. For example UDP flooding can be characterised by a traffic pattern which contains a lot of packets. These patterns can be searched for during the detection phase. \cite{kim2004flow}
-\section{Network scans}
+\subsection{Network scans}
+There are three categories of network scans.
+\begin{itemize}
+\item Horizontal scans: a single port is scanned across many different devices.
+\item Vertical scan: several different ports are scanned on a single device
+\item Block scan: a combination of both a vertical and a horizontal scan.
+\end{itemize}
+\noindent Scans can also be described using traffic patterns. They are characterised with a high number of flow and a low number of packets. These can again be used to detect whether a vertical or horizontal scan occurs. \cite{IPFlow} \cite{kim2004flow}
 
-\section{Worms}
+\subsection{Worms}
+Worms exhibit different behaviour depending on their current state. Their are two different states, a target discovery state and a transfer state. In the target discovery state, the worm explores the network to find vulnerabilities and a host to infect. During the transfer state, the worm actually transfers itself to the targeted host. The Sapphire/Slammer worm is an example of this type of behaviour. \cite{moore2003inside}\\
+\\
+Since transfering of the worm itself happends within the payload data, a flow-based NIDS cannot detect this state. The target discovery state can be detected. Worms use techniques similar to network scans in order to find vulnerable hosts. So similar detection techniques can be used to detect worms. \cite{abuadlla2014flow}
 
-\section{Botnets}
+\subsection{Botnets}
+Botnets usually consist out of a huge amount of infected slaves controlled by a central bot-master. Locating the individual infected slaves and isolating them is a difficult problem but is also insignificant due to the huge amount of remaining slaves. Detecting the bot-master and isolating that device is key to taking down a botnet. However indentifing botnet behaviour is a far more difficult problem than detection other types of malicious activities. \cite{zhu2008botnet}\\
+\\
+Botnets often use IRC channels in order to communicate between slaves and the bot-master. 
+
 
