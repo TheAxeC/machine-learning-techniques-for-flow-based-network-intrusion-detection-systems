@@ -42,7 +42,10 @@ headsepline, % Uncomment to get a line under the header
 \usepackage{palatino} % Use the Palatino font by default
 
 \usepackage{datetime}
+\usepackage{pgfplots}
+\usepackage{mathtools}
 \usepackage{float}
+\usepackage{listings}
 
 \newdateformat{monthyeardate}{%
   \monthname[\THEMONTH], \THEYEAR}
@@ -224,9 +227,10 @@ headsepline, % Uncomment to get a line under the header
 \textbf{NIDS} & \textbf{N}etwork (based) \textbf{I}ntrusion \textbf{D}etection \textbf{S}ystem\\
 \textbf{HIDS} & \textbf{H}ost (based) \textbf{I}ntrusion \textbf{D}etection \textbf{S}ystem\\
 \\
-\textbf{DDOS} & \textbf{D}tributed \textbf{D}enial \textbf{o}f \textbf{S}ervice
+\textbf{DDOS} & \textbf{D}tributed \textbf{D}enial \textbf{o}f \textbf{S}ervice  \\
 \\
 \textbf{ML} & \textbf{M}achine \textbf{L}earning\\
+\textbf{MSE} & \textbf{M}inimum \textbf{S}quared \textbf{E}rror (function)\\
 
 \end{abbreviations}
 
@@ -236,7 +240,8 @@ headsepline, % Uncomment to get a line under the header
 
 \begin{symbols}{lll} % Include a list of Symbols (a three column table)
 
-%$a$ & distance & \si{\meter} \\
+$H_0(x)$ & Hypothesis function \\
+$J(\theta)$ & Cost function \\
 %$P$ & power & \si{\watt} (\si{\joule\per\second}) \\
 %Symbol & Name & Unit \\
 
@@ -266,7 +271,7 @@ headsepline, % Uncomment to get a line under the header
 \include{Chapters/Samenvatting}
 \include{Chapters/Introduction}
 \include{Chapters/Attacks} 
-\include{Chapters/ML} 
+\include{Chapters/ML}
 \include{Chapters/ML-IDS}
 \include{Chapters/Flow}
 \include{Chapters/Prevention}

@@ -5,18 +5,98 @@
 \label{Chapter2} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
 
 \section{What is machine learning}
-Machine learning is ... .
+Machine learning is a subfield from Computer Science. It is a type of Artificial Intelligence which allow programs to learn without being explicitly programmed. \\
+\\
+There are two classes of machine learning algorithms. There is \textbf{supervised} learning and \textbf{unsupervised} learning. Supervised learning is trained using labeled data. Labeled data is data which consists of input data and the corresponding output data. Unsupervised learning uses unlabeled data. The data used to train machine learning algorithms is called a \textbf{training set}.\\
+\\
+A \textbf{training sample} is a data point in an available training set that is used in a predictive modeling task. For example, if machine learning is applied to spam filtering, the training set is a collection of emails, some of which are spam emails. A training sample would be a single email. For example, if we are interested in classifying emails, one email in our dataset would be one training sample. Alternative names are a training example or training instance. \\
+\\
+Machine learning is applied for predictive modeling. In predictive modeling, a particular process is modeled. Using a training set, the model tries to learn or approximate a particular function that, for example, let's us distinguish spam from non-spam email. This function is called the target function. To model the process, one or more \textbf{features} are extracted from the process. A feature is an individual property of a process. In the example of mails, a feature could be the textbody, or it could be the sender of the email.
+
+\subsection{Hypothesis}
+Machine learning relies heavily on a hypothesis. This is a function that transform a given input to the machine learning algorithm into the required output. It is a function that tries to model the the target function. When only one feature is considered, a hypothesis is a function of the form: 
+$$H_0(x) = \theta_0 + \theta_1 * x$$
+ \\
+For example, we could use the grades of high school students to predict their chance of success at university. $x$ represents the grades (on a scale from 0 to 10) for students and $y$ is the chance of success. Given is input data (the black points) and from that data a hypothesis (the blue line) is constructed.
+
+\begin{figure}
+\centering
+\begin{tikzpicture}
+  \begin{axis}[ 
+    xlabel=$x$,
+    ylabel={$y$},
+    xmin = 0,
+	xmax = 6,
+  ] 
+    \addplot {15 + 4 * x}; 
+    \addplot[only marks] coordinates {
+		(0, 15)
+		(1, 21)
+		(2, 27)
+		(3, 32)
+		(4, 35)
+		(5, 28)
+		(4, 27)
+	};
+  \end{axis}
+\end{tikzpicture}
+\caption{Regression example} \label{fig:regression}
+\end{figure}
+\subsection{Multiple feature hypothesis}
+\noindent The hypothesis function can be generalised for $N$ properties. It has the form:
+$$H_0(x) = \theta_0x_0 + \theta_1x_1 + ... + \theta_nx_n$$
+$x_0$ always has the value 1. The $\theta$ values and the $x$ values can be represented using vectors:
+$$\theta = [\theta_0, \theta_1, ..., \theta_n]^T$$
+$$X = [1, x_1, ... ,x_n]^T$$
+Now the hypothesis function can be written as:
+$$H_0(x) = \theta^TX$$
+\subsection{Cost function}
+In order to construct a good hypothesis function, good values of $\theta$ have to be found. This can be seen as a minimization problem. The difference between any output $y$ and $H_0(x)$ has to be minimized. More concretely, the squared difference has to be minimized. This is the MSE, "Minimum Squared Error" function or also called the cost function. With dataset size $m$, the MSE is:
+$$J(\theta) = \dfrac{\sum\limits_{i=1}^m(H_0(x^i) - y^i)^2}{2m}$$
+
+\subsection{Gradient descent}
+To solve the minimization problem, the first step is to start with $\theta$ and keep changing the values to minimize $J(\theta)$, this is an iterative approach.  Gradient descent is such an algorithm that can be used to find a solution to the minimization problem. Gradient descent is an algorithm that uses the gradient or derivative of a function to find a local minimum of that function. \\
+\\
+A gradient descent algorithm does this using the following algorithm with a simultanious update for all values of $\theta$:
+\begin{lstlisting}
+            repeat until convergence {
+ \end{lstlisting}
+$$
+    \theta_j = \theta_j - \alpha\dfrac{\partial}{\partial \theta_j}J(\theta) $$
+\begin{lstlisting}
+            }
+ \end{lstlisting}
+ $$\dfrac{\partial}{\partial \theta_j}J(\theta) =  \dfrac{\sum\limits_{i=1}^m(H_0(x^i) - y^i) * x_j^i}{m}$$
+ $\alpha$ is the learning rate of the gradient descent. The value of $\alpha$ describes how fast the gradient descent algorithm approaches the local mimimum. If $\alpha$ is too small, the gradient descent can be very slow. In the other case, if $\alpha$ is too large, the gradient descent can overshoot the local mimimum. It may fail to converge and could even diverge. \\
+ \\
+The value of $\alpha$ does not need to change during the gradient descent, since the closer the gradient descent gets to the local mimimum, the smaller the derivative becomes, and smaller steps will be taken. If $\theta_j$ is already a local minimum, the derivative is $0$ and the gradient descent will not change the value of $\theta_j$.
+
+\subsection{Feature scaling}
+The main idea behind feature scaling is to make sure that the different features are on a different scale. The reason behind this is to optimize the gradient descent algorithm. When the scale is very different, the gradient descent will not alter $\theta_j$ much after each step. The range that should approximately be used is $-1 < x < 1$. \\
+\\
+Mean normalization could be used. This replaces each $x_i$ with $\dfrac{x_i - \mu_i}{s_i}$, where $\mu_i$ is the average value of all $x_i$ values and $s_i$ is the standard deviation.
+\section{Supervised learning}
+\subsection{Lineair Regression}
+Lineair regression is an statistical approach to model the relationship between an "output" value $y$ and one or more "input" values $X$. An example of this can be seen in Figure~\ref{fig:regression}. The black dots represent the data to be modeled. The blue line is the model. This example only has one "input" value, this specific case of regression is called simple linear regression. \\
+\\
+When data follows a polynomial model, you could manipulate the feature so that the hypothesis forms a polynomial function, for example:
+$$H_0(x) = \theta_0 + \theta_1 * x + \theta_2 * \sqrt{x}$$
+Gradient descent executed on a lineair regression cost function will always provide a optimum, absolute minimum. For lineair regression, there is another method that could be used in place of gradient descent, a normal equation. This is a method to solve for $\theta$ analytically. But this method becomes slow when there are a lot of features. $X$ is a $m x n$ matrix constructed by putting all training samples (vectors of features) together. 
+ $$\dfrac{\partial}{\partial \theta_j}J(\theta) =  \dfrac{\sum\limits_{i=1}^m(H_0(x^i) - y^i) * x_j^i}{m} = 0$$
+  $$\theta =  (X^TX)^{-1}X^Ty$$
+  
+But what happens when $(X^TX)$ is non-invertible, or singular. This means there are redundant features or more features than training samples. 
+
+\subsection{Classification}
+In a classification model, the machine learning algorithm tries to sort data into different classes. The simplest version is binary classification. For example, is the IP flow malicious or not. In lineair regression, the hypothesis can output values other than the classes that exist. However there is a method, logistic regression, which constrains the hypothesis to the available classes.\\
+\\
+All classes have to be discrete values.
+
+\section{Unsupervised learning}
+\subsection{Clustering}
 
 \section{Machine learning algorithms}
 
 \subsection{Support Vector Machines}
 
 \subsection{K-Nearest Neighbor}
-
-\section{Supervised learning}
-\subsection{Classification}
-Uses discrete categories
-\subsection{Regression}
-
-\section{Unsupervised learning}
-\subsection{Clustering}

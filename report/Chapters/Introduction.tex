@@ -13,7 +13,7 @@ An intrusion detection system is a system which tries to determine whether a sys
 \includegraphics[width=0.6\textwidth]{Figures/idsdiagram}
 \decoRule
 \caption[Possible placement of IDS]{An IDS can for example be placed within the network or just before the network.}
-\label{fig:Signature}
+\label{fig:IDS}
 \end{figure}
 \subsection{Host-based Intrusion Detection Systems}
 Host-based intrusion detection systems are systems that monitor the device on which they are installed. The way they monitor the system can range from monitoring the state of the main system through log files, to monitoring program execution. In this way they can be quite indistinguishable from Anti-Virus programs.
@@ -53,7 +53,7 @@ Signature based methods are very effective against known attacks. New attacks ca
 \includegraphics[width=0.7\textwidth]{Figures/Anomaly-based-Intrusion-Detection-System}
 \decoRule
 \caption[Anomaly based IDS]{An Anomaly-based intrusion detection system.}
-\label{fig:Signature}
+\label{fig:Anomaly}
 \end{figure}
 \noindent Anomaly based methods, also called Behaviour based methods are methods in which the IDS tries to model the behaviour of network traffic. When an incoming packet deviates from this model, it is flagged as malicious and an alert is send. Because they use a statistical model of normal behaviour, they should be able to detect all deviations from this normal behaviour. As a result, new attacks that deviate to much from normal behaviour are detected aswell. \\
 \\

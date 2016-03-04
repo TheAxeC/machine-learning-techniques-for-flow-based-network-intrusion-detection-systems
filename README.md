@@ -2,7 +2,8 @@
 My Bachelor thesis for Bachelor Computer Science at UHasselt: An Intrusion detection (and prevention) system using machine learning approaches
 
 ## Questions:
-- timeout
+- hoe stellen dat bepaalde kennis vereist is? (algebra)
+- cite bij machine learning
 - extra data from packets --> training ?
 
 ## Remarks:
