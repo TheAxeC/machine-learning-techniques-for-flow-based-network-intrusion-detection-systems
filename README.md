@@ -1,10 +1,24 @@
 # Bachelor-thesis-ML-IPS
-My Bachelor thesis for Bachelor Computer Science at UHasselt: An Intrusion detection (and prevention) system using machine learning approaches
+My Bachelor thesis for Bachelor Computer Science at UHasselt: An Intrusion detection (and prevention) system using machine learning approaches.
+
+## Installation
+The IDS requires the packets listed in the pip_requirements file and it requires:
+- Python 2.7+
+- tshark
+
+## Running the intrusion detection system
+Running the intrusion detection system can be done by:
+```
+python main.py
+```
+Different settings can be configured in "config.json"
+
+# Development
 
 ## Questions:
 - glossary
 
-# TODO:
+## TODO:
 - chapter ML-IDS has to be merged into ML chapter
 - already discuss why using a certain (KNN) algorithm compared to others
 - Uitbreiden van aanvallen
