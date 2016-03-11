@@ -13,8 +13,59 @@ python main.py
 ```
 Different settings can be configured in "config.json"
 
-# Development
+## Thesis table of contents:
+- Introduction
+    * Explanation of IDS
+    * Netflow
+    * Why use machine learning
+    * Existing solutions
+- Attack classification
+    * attack descriptions
+    * discovery methods
+    * flow discovery methods
+- Machine learning
+    * What is machine learning
+    * How to implement a machine learning algorithm
+- How to use flows
+- Implementation
+    * Which datasets are used
+    * What are implementation decisions
+    * results from tests
+- How to report detections
+- Can packet and flow analysis be combined
+- Prevention
+- Conclusion
 
+# Program
+## Flow data
+Flow data has a very specific structure. To be able to use the flow data for machine learning the data is processed as follows:
+- ports (src + dest)
+    * Defined Ports as 1
+    * random ports as 0
+- IP Data: (src + dest)
+    * IPv6 as 0
+    * IPv4 as 1
+    * MAC address as 2
+- Protocol
+    * tcp as 0
+    * udp as 1
+    * other as 2
+- duration
+- total amount of packets
+- total amount of bytes
+- total srcbytes
+- Starting time
+- Type of service (ToS)
+
+## Labels:
+Prediction algorithms predict whether the data is:
+- Malicious
+    * categorize
+- Normal
+    * categorize
+The algorithm tries to predict a label as specific as possible.
+
+# Development
 ## Questions:
 - glossary
 
@@ -28,31 +79,6 @@ Different settings can be configured in "config.json"
 - IP by country has low effect
 - timestamps --> not enough data, algorithm can work with continuous timestamps
 - Extraction labels can be done by hand, depends on dataset
-
-## Flow data
-- Ports are split into binary (src + dest)
-    * Defined Ports
-    * random ports
-- IP Data: (src + dest)
-    * IPv6
-    * IPv4
-    * MAC address
-- Protocol
-    * tcp
-    * udp
-    * other
-- duration
-- total amount of packets
-- total amount of bytes
-- total srcbytes
-- Starting time
-- Type of service (ToS)
-
-## Labels:
-- Malicious
-    * categorize
-- Normal
-    * categorize
 
 ## TODO:
 - Visualisation
@@ -69,27 +95,8 @@ Different settings can be configured in "config.json"
 - Poster
 - Vulgariserende tekst
 
-## Thesis table of contents:
-- Introduction
-    * Explanation of IDS
-    * Netflow
-    * Why use machine learning
-    * Wat zijn de voor/nadelen van netflow
-- Attack classification
-- Machine learning
-    * Hoe passen we machine learning toe op IDE en wat zijn de voor/nadelen
-    * Welke machine learning algortimes zijn wel/niet gebruikt
-- Hoe flows gebruiken
-- Implementatie
-    * Welke data sets zijn gebruikt
-    * Wat zijn de bevindingen
-- Hoe kan visualisatie/feedback gebeuren (richting admin en richting automatische preventie)
-- Hoe met combinatie netflow/packets (Als dit gedaan zou worden)
-- Preventie
-- Conclusie
-
 ## Planning:
-- Week 5: ML cursus verwerkt
+- Week 5: ML cursus verwerkt --> done
 - Week 6: Hoe flow data gebruiken
 - Week 7: Implementatie testen
 - Week 8: implementation hoofdstuk thesis
