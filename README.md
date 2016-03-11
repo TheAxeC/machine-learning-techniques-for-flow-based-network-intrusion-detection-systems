@@ -15,6 +15,31 @@ My Bachelor thesis for Bachelor Computer Science at UHasselt: An Intrusion detec
 - timestamps --> not enough data, algorithm can work with continuous timestamps
 - Extraction labels can be done by hand, depends on dataset
 
+## Flow data
+- Ports are split into binary (src + dest)
+    * Defined Ports
+    * random ports
+- IP Data: (src + dest)
+    * IPv6
+    * IPv4
+    * MAC address
+- Protocol
+    * tcp
+    * udp
+    * other
+- duration
+- total amount of packets
+- total amount of bytes
+- total srcbytes
+- Starting time
+- Type of service (ToS)
+
+## Labels:
+- Malicious
+    * categorize
+- Normal
+    * categorize
+
 ## TODO:
 - Visualisation
     * Logging
