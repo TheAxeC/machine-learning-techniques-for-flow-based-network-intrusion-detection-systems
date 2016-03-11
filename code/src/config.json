@@ -1,6 +1,6 @@
 {
-    "enable-IDS" : false,
-    "pcap-to-flow" : true,
+    "enable-IDS" : true,
+    "pcap-to-flow" : false,
     "check" : true,
     "predict" : false,
     "sniffer" : false,
@@ -16,7 +16,7 @@
         }
     ],
 
-    "algorithm" : "KNeighborsClassifier",
+    "algorithm" : "SupportVectorMachine",
 
     "model_dir" : "../models/",
     "model" : "model.mdl",
@@ -26,12 +26,12 @@
     "data-sets" : [
             {
                 "file" : "../test/capture20110816-2.binetflow",
-                "to" : -1
+                "to" : 10
             },
             {
                 "file" : "../test/capture20110815.binetflow",
                 "from" : 0,
-                "to" : 200000
+                "to" : 5
             }
 
         ],
@@ -47,14 +47,14 @@
             {
                 "file" : "../test/capture20110815.binetflow",
                 "type" : "netflow",
-                "from" : 400000,
-                "to" : 410000
+                "from" : 0,
+                "to" : 0
             }
 
         ],
 
     "predict-sets" : [
-    
+
         ],
 
     "packet-analyses" : false,

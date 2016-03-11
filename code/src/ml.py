@@ -9,6 +9,9 @@ class MLAlgorithm:
         self.good_labels = []
         self.malicious_labels = []
 
+        from sklearn.feature_extraction import DictVectorizer
+        self.vec = DictVectorizer()
+
     # Set the logging files:
     def start(self, log, good_label, malicious_labels):
         self.logger = self.open_file(log)
@@ -97,9 +100,18 @@ class MLAlgorithm:
             print "Algorithm \"" + str(name) + "\" does not exist."
             return None
 
+    def extract_feature_fit(self, data):
+        train = self.vec.fit_transform(data)
+        print self.vec.get
+        return train
+
+    def extract_feature(self, data):
+        return self.vec.transform(data)
+
 # Using the SVM machine learning algorithm
 class SupportVectorMachine(MLAlgorithm):
     def __init__(self):
+        MLAlgorithm.__init__(self)
         from sklearn import svm
         self.algorithm = svm.SVC()
 

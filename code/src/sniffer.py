@@ -248,7 +248,9 @@ class Sniffer:
             if dest:
                 self.file = open(dest, "w")
 
+            # tshark -o column.format:'"No.", "%m", "Time", "%t", "Source", "%s", "Destination", "%d", "Protocol", "%p", "len", "%L", "srcport", "%uS", "dstport", "%uD"'
             cmd = """tshark -o column.format:'"No.", "%%m", "Time", "%%t", "Source", "%%s", "Destination", "%%d", "Protocol", "%%p", "len", "%%L", "srcport", "%%uS", "dstport", "%%uD"' -r %s""" % file_name
+
             self.tshark(cmd, action, split=False)
 
             if dest:
@@ -262,8 +264,8 @@ class Sniffer:
     def sniff_tshark(self, algorithm):
         try:
             self.flow.start(algorithm=algorithm)
-            cmd = """tshark -o column.format:'"No.", "%m", "Time", "%t", "Source", "%s", "Destination", "%d", "Protocol", "%p", "len", "%L", "srcport", "%uS", "dstport", "%uD"' """
-            self.tshark(cmd, self.pkt_tshark_flow, split=False)
+            cmd = """tshark -o column.format:'"No.","%m","Time","%t","Source","%s","Destination","%d","Protocol","%p","len","%L","srcport","%uS","dstport","%uD"' """
+            self.tshark(cmd, self.pkt_tshark_flow, split=True)
         except OSError:
             print "Error sniffing packets."
         except KeyboardInterrupt:
@@ -285,9 +287,10 @@ class Sniffer:
     def tshark(self, command, action, split=True):
         cmd = command
         if split:
-            cmd = command.split()
-        for l in self.runProcess(cmd, shell = not split):
-            action(l)
+            cmd = command.split(' ', 1)
+        #for l in self.runProcess(cmd, shell = not split):
+        #    action(l)
+        self.runProcess(cmd, action, not split)
 
     # Use scapy for packet sniffing
     def scapy(self, action, iface, filter, store):
@@ -295,10 +298,16 @@ class Sniffer:
         sniff(iface=iface, prn=action, filter=filter, store=store)
 
     # Run a process and capture the output
-    def runProcess(self, exe, shell=False):
+    def runProcess(self, exe, action, shell=False):
         import subprocess
         p = subprocess.Popen(exe, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, shell=shell)
-        return iter(p.stdout.readline, b'')
+        #return iter(p.stdout.readline, b'')
+        while True:
+            line = p.stdout.readline()
+            if not line: break
+            action(line)
+            import sys
+            sys.stdout.flush()
 
     # Callback for scapy
     def pkt_callback(self, pkt):
@@ -322,3 +331,6 @@ class Sniffer:
         f = SharkPacket(self.config, items)
         if f.is_active():
             self.flow.add_record(f)
+
+    def pkt_tshark_output(self, pkt):
+        print pkt,

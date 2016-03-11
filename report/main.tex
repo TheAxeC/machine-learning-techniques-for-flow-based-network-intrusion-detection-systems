@@ -43,7 +43,7 @@ headsepline, % Uncomment to get a line under the header
 
 \usepackage{datetime}
 \usepackage{pgfplots}
-\usepackage{mathtools}
+\usepackage{amsmath}
 \usepackage{float}
 \usepackage{listings}
 
@@ -58,8 +58,9 @@ headsepline, % Uncomment to get a line under the header
 \newcommand{\option}[1]{\texttt{\itshape#1}}
 
 \usepackage[backend=bibtex,bibstyle=ieee, citestyle=numeric-comp,natbib=true]{biblatex} % User the bibtex backend with the authoryear citation style (which resembles APA)
+\pgfplotsset{compat=1.12}
 
-\addbibresource{example.bib} % The filename of the bibliography
+\addbibresource{references.bib} % The filename of the bibliography
 
 %----------------------------------------------------------------------------------------
 %	MARGIN SETTINGS
@@ -98,6 +99,12 @@ headsepline, % Uncomment to get a line under the header
 \hypersetup{pdfkeywords=\keywordnames} % Set the PDF's keywords to your keywords
 
 \renewcommand{\cleardoublepage}{\clearpage}
+
+% These commands can be used to remove all figures from the text to check the amount of text.
+% 22 vs 27
+%\usepackage{comment}
+%\excludecomment{figure}
+%\let\endfigure\relax
 
 \begin{document}
 
@@ -209,6 +216,7 @@ headsepline, % Uncomment to get a line under the header
 %	LIST OF CONTENTS/FIGURES/TABLES PAGES
 %----------------------------------------------------------------------------------------
 
+\setcounter{tocdepth}{1}
 \tableofcontents % Prints the main table of contents
 
 \listoffigures % Prints the list of figures
@@ -276,7 +284,6 @@ $J(\theta)$ & Cost function \\
 \include{Chapters/Flow}
 \include{Chapters/Prevention}
 \include{Chapters/Implementation}
-\include{Chapters/Datasets}
 \include{Chapters/Visualisation}
 \include{Chapters/Conclusion}
 

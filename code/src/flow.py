@@ -20,6 +20,13 @@ class Flows:
     def get_sample_data(self):
         return self.flow_sample_data
 
+    # Get the sampled data
+    def get_raw_data(self):
+        l = []
+        for i in self.netflow:
+            l.append(i.make_raw())
+        return l
+
     # Get the targets (labels)
     def get_target_data(self):
         return self.flow_targets
@@ -104,6 +111,19 @@ class FlowRecord:
                 int(self.sTos), int(self.dTos), int(self.state), int(self.total_srcbytes),
                 float(self.duration), int(self.src_ip_num) , int(self.dest_ip_num),
                 int(self.total_pckts), int(self.total_bytes)] #, int(self.cntry1), int(self.cntry2)]
+
+    def make_raw(self):
+        return {
+                    "protocol":str(self.protocol),
+                    "src_port":str(self.src_port),
+                    "dest_port":str(self.dest_port),
+                    "srcbytes":int(self.total_srcbytes),
+                    "duration":float(self.duration),
+                    "src_ip":str(self.src_ip) ,
+                    "dest_ip":str(self.dest_ip),
+                    "totalpackets":int(self.total_pckts),
+                    "totalbytes":int(self.total_bytes)
+                }
 
     # Return the label of this record
     def make_target(self):

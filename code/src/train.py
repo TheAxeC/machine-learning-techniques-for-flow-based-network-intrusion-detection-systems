@@ -40,9 +40,15 @@ class NetflowTrainerS(Trainer):
         else:
             samples = loader.get_netflow().get_sample_data()
             targets = loader.get_netflow().get_target_data()
+
+            from sklearn.feature_extraction import DictVectorizer
+
+            training_set = loader.get_netflow().get_raw_data()
+
             try:
-                algorithm.train(samples, targets)
+                algorithm.train(algorithm.extract_feature_fit(training_set).toarray(), targets)
             except Exception as e:
+                print e
                 print "Wrong training data set used."
                 return False
 

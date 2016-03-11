@@ -82,6 +82,7 @@ class Predictor:
             return False
 
         samples = loader.get_netflow()
+        print "Start predicting..."
         self.predict(samples, check=True)
 
     def predict(self, flow, check=False):
@@ -94,19 +95,28 @@ class Predictor:
     def loop(self, netflow):
         i = 0
 
+        cur = 0.01
+        step = 0.01
         while i < netflow.get_size():
-            try:
-                result = self.algorithm.predict(netflow.get_sample_data()[i])
-                if self.check:
-                    test = result == netflow.get_target_data()[i]
-                    if not test:
-                        self.fails.add_fail_record(result, netflow.get_target_data()[i], i)
-                else:
-                    self.returns.append(Result(netflow.get_sample_data()[i], result))
-                i = i + 1
-                self.totals = self.totals + 1
-            except Exception as e:
-                pass
+            #try:
+            training_set = netflow.get_raw_data()[i]
+
+            result = self.algorithm.predict(self.algorithm.extract_feature(training_set).toarray()[0])#netflow.get_sample_data()[i])
+            if self.check:
+                test = result == netflow.get_target_data()[i]
+                if not test:
+                    self.fails.add_fail_record(result, netflow.get_target_data()[i], i)
+            else:
+                self.returns.append(Result(netflow.get_sample_data()[i], result))
+            i = i + 1
+            self.totals = self.totals + 1
+
+            if i/netflow.get_size() >= cur:
+                print str(cur*100) + "% done"
+                cur += step
+            #except Exception as e:
+            #    print e
+            #    pass
 
     def results(self):
         if self.check:
