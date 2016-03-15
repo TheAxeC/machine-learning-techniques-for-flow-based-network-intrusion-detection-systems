@@ -57,6 +57,8 @@ Flow data has a very specific structure. To be able to use the flow data for mac
 - Starting time
 - Type of service (ToS)
 
+Converting port number into binary is too slow. Ability to set severity of feature.
+
 ## Labels:
 Prediction algorithms predict whether the data is:
 - Malicious
@@ -129,3 +131,6 @@ Visualisation:
 - hoe valideren
 
 - meeting 11/03 en 14/03
+- http://scikit-learn.org/0.15/auto_examples/plot_classification_probability.html
+- http://scikit-learn.org/stable/tutorial/machine_learning_map/index.html
+- http://scikit-learn.org/stable/auto_examples/svm/plot_iris.html

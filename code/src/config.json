@@ -12,12 +12,13 @@
         }
     ],
 
-    "algorithm" : "AlgorithmContainer",
+    "algorithm" : "KNeighborsClassifier",
+    "featureClass" : "FlowFeature",
 
     "model_dir" : "../models/",
     "model" : "model.mdl",
     "use_model" : false,
-    "store_model" : false,
+    "store_model" : true,
 
     "data-sets" : [
             {
@@ -26,8 +27,28 @@
             },
             {
                 "file" : "../test/capture20110815.binetflow",
-                "from" : 1000,
-                "to" : 5000
+                "from" : 0,
+                "to" : 20000
+            },
+            {
+                "file" : "../test/capture20110815.binetflow",
+                "from" : 50000,
+                "to" : 60000
+            },
+            {
+                "file" : "../test/capture20110815.binetflow",
+                "from" : 80000,
+                "to" : 90000
+            },
+            {
+                "file" : "../test/capture20110815.binetflow",
+                "from" : 100000,
+                "to" : 120000
+            },
+            {
+                "file" : "../test/capture20110815.binetflow",
+                "from" : 150000,
+                "to" : 170000
             }
         ],
     "trainer" : "DefaultTrainer",
@@ -36,8 +57,8 @@
             {
                 "file" : "../test/capture20110815.binetflow",
                 "type" : "netflow",
-                "from" : 0,
-                "to" : 1000
+                "from" : 20000,
+                "to" : 22000
             }
         ],
 
@@ -52,6 +73,7 @@
     "timeout" : 5000,
 
     "protocol-file" : "protocols.json",
+    "feature-file" : "features.json",
     "logger" : "log.txt",
     "good-labels" : "good.txt"
 }

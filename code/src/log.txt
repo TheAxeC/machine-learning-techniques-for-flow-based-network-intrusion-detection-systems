@@ -1,0 +1,2317 @@
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 184.72.106.52
+	 ports: from: 47172 to 443
+	 packets: 20 with 3890 bytes
+	 duration: 28.444521 starting from 2011/08/15 11:03:40.452686
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 184.72.106.52
+	 ports: from: 47173 to 443
+	 packets: 20 with 4098 bytes
+	 duration: 28.443104 starting from 2011/08/15 11:03:40.454109
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-UDP-Attempt
+	 protocol: udp
+	 address: from: 147.32.84.118 to 86.111.110.53
+	 ports: from: 1150 to 12797
+	 packets: 1 with 107 bytes
+	 duration: 0.000000 starting from 2011/08/15 11:03:40.483504
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: udp
+	 address: from: 147.32.84.59 to 46.4.35.7
+	 ports: from: 15141 to 50325
+	 packets: 10 with 1399 bytes
+	 duration: 3505.370605 starting from 2011/08/15 11:03:40.510614
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background
+	 protocol: tcp
+	 address: from: 147.32.86.183 to 147.32.192.34
+	 ports: from: 50211 to 993
+	 packets: 24 with 2062 bytes
+	 duration: 2650.242676 starting from 2011/08/15 11:03:40.582641
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: udp
+	 address: from: 147.32.84.59 to 92.249.130.71
+	 ports: from: 15141 to 57481
+	 packets: 12 with 1581 bytes
+	 duration: 3124.940430 starting from 2011/08/15 11:03:40.660484
+Uncorrect labeling: 
+	 got flow=Background expected: flow=Background-UDP-NTP-Established-1
+	 protocol: udp
+	 address: from: 147.32.87.40 to 147.231.100.5
+	 ports: from: 123 to 123
+	 packets: 8 with 720 bytes
+	 duration: 3075.980225 starting from 2011/08/15 11:03:40.750659
+Uncorrect labeling: 
+	 got flow=Background-UDP-Attempt expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.84.118 to 92.161.106.108
+	 ports: from: 2927 to 49930
+	 packets: 10 with 1021 bytes
+	 duration: 0.216482 starting from 2011/08/15 11:03:40.868368
+Uncorrect labeling: 
+	 got flow=Background-TCP-Attempt expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.84.118 to 94.28.228.114
+	 ports: from: 2928 to 6881
+	 packets: 11 with 1081 bytes
+	 duration: 0.441536 starting from 2011/08/15 11:03:40.939000
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 193.86.111.130 to 147.32.85.56
+	 ports: from: 20789 to 44076
+	 packets: 9 with 634 bytes
+	 duration: 0.024272 starting from 2011/08/15 11:03:40.950311
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: udp
+	 address: from: 147.32.84.59 to 149.5.45.5
+	 ports: from: 2707 to 43020
+	 packets: 4 with 482 bytes
+	 duration: 627.150940 starting from 2011/08/15 11:03:40.964369
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 193.86.111.130 to 147.32.85.56
+	 ports: from: 20790 to 44076
+	 packets: 13 with 874 bytes
+	 duration: 21.534594 starting from 2011/08/15 11:03:40.973025
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.86.194 to 195.113.232.97
+	 ports: from: 2295 to 80
+	 packets: 12 with 3436 bytes
+	 duration: 3.573510 starting from 2011/08/15 11:03:41.017058
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.86.134 to 77.93.217.76
+	 ports: from: 51436 to 80
+	 packets: 29 with 17998 bytes
+	 duration: 154.724609 starting from 2011/08/15 11:03:41.027966
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.86.134 to 77.93.217.76
+	 ports: from: 51437 to 80
+	 packets: 53 with 40688 bytes
+	 duration: 26.374664 starting from 2011/08/15 11:03:41.028411
+Uncorrect labeling: 
+	 got flow=Background-UDP-Attempt expected: flow=Background-UDP-Established
+	 protocol: udp
+	 address: from: 147.32.84.118 to 67.183.61.97
+	 ports: from: 1150 to 50864
+	 packets: 2 with 215 bytes
+	 duration: 0.218229 starting from 2011/08/15 11:03:41.053765
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-UDP-Attempt
+	 protocol: udp
+	 address: from: 147.32.84.229 to 95.166.129.253
+	 ports: from: 13363 to 2536
+	 packets: 18 with 2742 bytes
+	 duration: 3369.049316 starting from 2011/08/15 11:03:41.103081
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.86.194 to 212.147.161.105
+	 ports: from: 2297 to 80
+	 packets: 8 with 1679 bytes
+	 duration: 0.200535 starting from 2011/08/15 11:03:41.108902
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.86.194 to 216.137.61.229
+	 ports: from: 2299 to 80
+	 packets: 10 with 1611 bytes
+	 duration: 1.907701 starting from 2011/08/15 11:03:41.263119
+Uncorrect labeling: 
+	 got flow=Background-TCP-Attempt expected: flow=Background-UDP-Attempt
+	 protocol: udp
+	 address: from: 77.48.126.98 to 147.32.84.118
+	 ports: from: 58018 to 6881
+	 packets: 1 with 107 bytes
+	 duration: 0.000182 starting from 2011/08/15 11:03:41.387950
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-UDP-Attempt
+	 protocol: udp
+	 address: from: 147.32.84.229 to 89.178.168.123
+	 ports: from: 13363 to 43203
+	 packets: 6 with 408 bytes
+	 duration: 16.535826 starting from 2011/08/15 11:03:41.412001
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-UDP-Attempt
+	 protocol: udp
+	 address: from: 147.32.84.229 to 68.57.181.254
+	 ports: from: 13363 to 37625
+	 packets: 3 with 219 bytes
+	 duration: 6.053438 starting from 2011/08/15 11:03:41.412100
+Uncorrect labeling: 
+	 got flow=Background-UDP-Attempt expected: flow=Background-UDP-Established
+	 protocol: udp
+	 address: from: 147.32.84.229 to 111.252.246.18
+	 ports: from: 13363 to 17351
+	 packets: 4 with 400 bytes
+	 duration: 23.795353 starting from 2011/08/15 11:03:41.412157
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.86.165 to 80.95.108.34
+	 ports: from: 52736 to 80
+	 packets: 10 with 1959 bytes
+	 duration: 0.006837 starting from 2011/08/15 11:03:41.441195
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-google-webmail
+	 protocol: tcp
+	 address: from: 147.32.86.186 to 74.125.232.213
+	 ports: from: 3028 to 443
+	 packets: 15 with 3428 bytes
+	 duration: 13.191108 starting from 2011/08/15 11:03:41.592054
+Uncorrect labeling: 
+	 got flow=Background-TCP-Attempt expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 60.248.150.212 to 147.32.87.99
+	 ports: from: 80 to 6683
+	 packets: 8 with 480 bytes
+	 duration: 47.992699 starting from 2011/08/15 11:03:41.628243
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 184.72.106.52
+	 ports: from: 47174 to 443
+	 packets: 29 with 12718 bytes
+	 duration: 27.258694 starting from 2011/08/15 11:03:41.636580
+Uncorrect labeling: 
+	 got flow=To-Background-UDP-CVUT-DNS-Server expected: flow=Background-UDP-NTP-Established-1
+	 protocol: udp
+	 address: from: 147.32.84.21 to 83.167.252.118
+	 ports: from: 59668 to 123
+	 packets: 24 with 2160 bytes
+	 duration: 3475.336914 starting from 2011/08/15 11:03:41.641470
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 184.72.106.52
+	 ports: from: 47177 to 443
+	 packets: 20 with 4258 bytes
+	 duration: 27.239542 starting from 2011/08/15 11:03:41.657021
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 184.72.106.52
+	 ports: from: 47178 to 443
+	 packets: 27 with 8996 bytes
+	 duration: 27.220877 starting from 2011/08/15 11:03:41.673935
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 184.72.106.52
+	 ports: from: 47179 to 443
+	 packets: 33 with 13104 bytes
+	 duration: 27.214691 starting from 2011/08/15 11:03:41.681399
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 82.208.46.56
+	 ports: from: 60428 to 80
+	 packets: 343 with 297465 bytes
+	 duration: 11.937703 starting from 2011/08/15 11:03:41.697628
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-UDP-Attempt
+	 protocol: udp
+	 address: from: 147.32.84.229 to 2.106.157.11
+	 ports: from: 13363 to 13890
+	 packets: 9 with 1422 bytes
+	 duration: 2641.809570 starting from 2011/08/15 11:03:41.799116
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-UDP-Attempt
+	 protocol: udp
+	 address: from: 147.32.84.229 to 2.106.157.11
+	 ports: from: 13363 to 12342
+	 packets: 18 with 2922 bytes
+	 duration: 3308.682129 starting from 2011/08/15 11:03:41.799123
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Attempt-cmpgw-CVUT
+	 protocol: icmp
+	 address: from: 147.32.84.59 to 192.168.88.78
+	 ports: from: 0x0008 to 0xc998
+	 packets: 1 with 62 bytes
+	 duration: 0.000000 starting from 2011/08/15 11:03:41.862958
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 76.13.114.90
+	 ports: from: 59794 to 80
+	 packets: 9 with 1539 bytes
+	 duration: 0.332314 starting from 2011/08/15 11:03:41.945553
+Uncorrect labeling: 
+	 got flow=Background-UDP-Attempt expected: flow=Background-TCP-Attempt
+	 protocol: tcp
+	 address: from: 122.155.36.13 to 147.32.84.118
+	 ports: from: 55069 to 6881
+	 packets: 2 with 122 bytes
+	 duration: 0.000018 starting from 2011/08/15 11:03:42.278362
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-UDP-NTP-Established-1
+	 protocol: udp
+	 address: from: 147.32.84.148 to 147.32.30.28
+	 ports: from: 40716 to 123
+	 packets: 24 with 2160 bytes
+	 duration: 3475.864746 starting from 2011/08/15 11:03:42.469379
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-TCP-Attempt
+	 protocol: tcp
+	 address: from: 175.106.62.62 to 147.32.86.24
+	 ports: from: 56081 to 443
+	 packets: 2 with 132 bytes
+	 duration: 2.997699 starting from 2011/08/15 11:03:42.713607
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-UDP-Attempt
+	 protocol: udp
+	 address: from: 147.32.84.229 to 87.244.142.73
+	 ports: from: 13363 to 17275
+	 packets: 6 with 465 bytes
+	 duration: 289.236267 starting from 2011/08/15 11:03:43.135964
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-UDP-Attempt
+	 protocol: udp
+	 address: from: 147.32.84.229 to 107.32.137.156
+	 ports: from: 13363 to 29443
+	 packets: 15 with 2298 bytes
+	 duration: 2974.562988 starting from 2011/08/15 11:03:43.136017
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-UDP-Attempt
+	 protocol: udp
+	 address: from: 147.32.84.229 to 71.192.231.164
+	 ports: from: 13363 to 63984
+	 packets: 18 with 3252 bytes
+	 duration: 2974.309326 starting from 2011/08/15 11:03:43.136079
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background
+	 protocol: icmp
+	 address: from: 2.106.157.11 to 147.32.84.229
+	 ports: from: 0x0103 to 0x026a
+	 packets: 26 with 4914 bytes
+	 duration: 3307.250000 starting from 2011/08/15 11:03:43.231162
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 86.96.226.14 to 147.32.84.229
+	 ports: from: 46638 to 13363
+	 packets: 23 with 4174 bytes
+	 duration: 45.732613 starting from 2011/08/15 11:03:43.567838
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background
+	 protocol: tcp
+	 address: from: 147.32.87.4 to 147.32.86.15
+	 ports: from: 524 to 1134
+	 packets: 4154 with 2511830 bytes
+	 duration: 3351.879883 starting from 2011/08/15 11:03:43.574901
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: udp
+	 address: from: 147.32.84.59 to 94.0.247.147
+	 ports: from: 18338 to 17348
+	 packets: 6 with 663 bytes
+	 duration: 3479.125977 starting from 2011/08/15 11:03:43.580907
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: udp
+	 address: from: 147.32.84.59 to 80.4.109.113
+	 ports: from: 18338 to 45009
+	 packets: 8 with 1017 bytes
+	 duration: 3480.205078 starting from 2011/08/15 11:03:43.580914
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-Attempt-cmpgw-CVUT
+	 protocol: udp
+	 address: from: 147.32.84.59 to 94.0.247.147
+	 ports: from: 18338 to 28740
+	 packets: 9 with 1341 bytes
+	 duration: 3488.179199 starting from 2011/08/15 11:03:43.580918
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 80.239.149.19
+	 ports: from: 1870 to 443
+	 packets: 33 with 17094 bytes
+	 duration: 423.082733 starting from 2011/08/15 11:03:43.586548
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-google-analytics1
+	 protocol: tcp
+	 address: from: 147.32.86.15 to 74.125.232.192
+	 ports: from: 2415 to 80
+	 packets: 10 with 2470 bytes
+	 duration: 114.708885 starting from 2011/08/15 11:03:43.617853
+Uncorrect labeling: 
+	 got flow=Background-UDP-Attempt expected: flow=Background-UDP-Established
+	 protocol: udp
+	 address: from: 147.32.84.229 to 90.151.97.111
+	 ports: from: 13363 to 62943
+	 packets: 2 with 142 bytes
+	 duration: 0.124342 starting from 2011/08/15 11:03:43.690707
+Uncorrect labeling: 
+	 got flow=Background-Attempt-cmpgw-CVUT expected: flow=Background-TCP-Attempt
+	 protocol: tcp
+	 address: from: 178.142.2.99 to 147.32.86.220
+	 ports: from: 62122 to 18252
+	 packets: 6 with 366 bytes
+	 duration: 1.327126 starting from 2011/08/15 11:03:43.750495
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.86.172 to 74.125.232.214
+	 ports: from: 49914 to 443
+	 packets: 16 with 4508 bytes
+	 duration: 123.054306 starting from 2011/08/15 11:03:43.771002
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-UDP-Attempt
+	 protocol: udp
+	 address: from: 82.99.166.18 to 147.32.85.26
+	 ports: from: 27698 to 60764
+	 packets: 1 with 60 bytes
+	 duration: 0.000000 starting from 2011/08/15 11:03:43.839704
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-TCP-Attempt
+	 protocol: tcp
+	 address: from: 147.32.84.215 to 86.49.87.107
+	 ports: from: 41960 to 6889
+	 packets: 4 with 296 bytes
+	 duration: 9.024528 starting from 2011/08/15 11:03:43.850513
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 76.13.114.90
+	 ports: from: 59796 to 80
+	 packets: 9 with 1535 bytes
+	 duration: 0.329427 starting from 2011/08/15 11:03:43.973441
+Uncorrect labeling: 
+	 got flow=To-Background-UDP-CVUT-DNS-Server expected: flow=From-Normal-V45-Stribrek
+	 protocol: udp
+	 address: from: 147.32.84.170 to 147.32.80.9
+	 ports: from: 51711 to 53
+	 packets: 2 with 400 bytes
+	 duration: 0.000507 starting from 2011/08/15 11:03:43.988219
+Uncorrect labeling: 
+	 got flow=To-Background-UDP-CVUT-DNS-Server expected: flow=From-Normal-V45-Stribrek
+	 protocol: udp
+	 address: from: 147.32.84.170 to 147.32.80.9
+	 ports: from: 60977 to 53
+	 packets: 2 with 400 bytes
+	 duration: 0.000505 starting from 2011/08/15 11:03:43.989056
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-UDP-Attempt
+	 protocol: udp
+	 address: from: 147.32.84.118 to 83.1.143.78
+	 ports: from: 1150 to 25054
+	 packets: 1 with 107 bytes
+	 duration: 0.082809 starting from 2011/08/15 11:03:44.033101
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background
+	 protocol: icmp
+	 address: from: 83.1.143.78 to 147.32.84.118
+	 ports: from: 0x0303 to 0xde61
+	 packets: 2 with 270 bytes
+	 duration: 937.894165 starting from 2011/08/15 11:03:44.115910
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 92.40.253.117 to 147.32.84.229
+	 ports: from: 49064 to 13363
+	 packets: 3 with 212 bytes
+	 duration: 0.339693 starting from 2011/08/15 11:03:44.474853
+Uncorrect labeling: 
+	 got flow=Background-UDP-Attempt expected: flow=Background
+	 protocol: icmp
+	 address: from: 107.32.137.156 to 147.32.84.229
+	 ports: from: 0x0303 to 0x0373
+	 packets: 15 with 2718 bytes
+	 duration: 2973.156250 starting from 2011/08/15 11:03:44.542801
+Uncorrect labeling: 
+	 got flow=Background-Attempt-cmpgw-CVUT expected: flow=Background
+	 protocol: icmp
+	 address: from: 195.113.235.89 to 147.32.86.111
+	 ports: from: 0x0003 to 0xc0a8
+	 packets: 17 with 1190 bytes
+	 duration: 2600.945312 starting from 2011/08/15 11:03:44.712515
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-UDP-Established
+	 protocol: udp
+	 address: from: 92.25.218.120 to 147.32.86.179
+	 ports: from: 14860 to 58675
+	 packets: 2 with 128 bytes
+	 duration: 0.000562 starting from 2011/08/15 11:03:44.747830
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.86.165 to 80.95.108.34
+	 ports: from: 52740 to 80
+	 packets: 10 with 1941 bytes
+	 duration: 0.007230 starting from 2011/08/15 11:03:44.802258
+Uncorrect labeling: 
+	 got flow=Background-UDP-Attempt expected: flow=Background-Attempt-cmpgw-CVUT
+	 protocol: udp
+	 address: from: 147.32.84.59 to 65.55.56.40
+	 ports: from: 123 to 123
+	 packets: 19 with 1710 bytes
+	 duration: 2963.787598 starting from 2011/08/15 11:03:44.972971
+Uncorrect labeling: 
+	 got flow=Background-Attempt-cmpgw-CVUT expected: flow=Background-UDP-Attempt
+	 protocol: udp
+	 address: from: 24.162.141.183 to 147.32.85.118
+	 ports: from: 16606 to 19498
+	 packets: 9 with 1314 bytes
+	 duration: 1296.446777 starting from 2011/08/15 11:03:45.134817
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-UDP-Attempt
+	 protocol: udp
+	 address: from: 195.204.138.171 to 147.32.84.118
+	 ports: from: 63089 to 1150
+	 packets: 1 with 145 bytes
+	 duration: 0.000230 starting from 2011/08/15 11:03:45.225750
+Uncorrect labeling: 
+	 got flow=Background-UDP-NTP-Established-1 expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 195.113.232.98
+	 ports: from: 5731 to 80
+	 packets: 3 with 180 bytes
+	 duration: 0.000971 starting from 2011/08/15 11:03:45.406109
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 74.125.232.205
+	 ports: from: 45266 to 80
+	 packets: 10 with 2348 bytes
+	 duration: 0.061840 starting from 2011/08/15 11:03:45.611775
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 147.32.80.7
+	 ports: from: 1071 to 80
+	 packets: 10 with 1590 bytes
+	 duration: 31.025188 starting from 2011/08/15 11:03:45.700786
+Uncorrect labeling: 
+	 got flow=Background expected: flow=Background-UDP-NTP-Established-1
+	 protocol: udp
+	 address: from: 147.32.84.242 to 89.187.142.41
+	 ports: from: 123 to 123
+	 packets: 8 with 720 bytes
+	 duration: 3072.303711 starting from 2011/08/15 11:03:45.705825
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.86.194 to 74.125.232.219
+	 ports: from: 2317 to 80
+	 packets: 23 with 6234 bytes
+	 duration: 6.441561 starting from 2011/08/15 11:03:45.752630
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 66.249.72.50 to 147.32.87.38
+	 ports: from: 63013 to 443
+	 packets: 31 with 18000 bytes
+	 duration: 5.779096 starting from 2011/08/15 11:03:45.766156
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 76.13.114.90
+	 ports: from: 59798 to 80
+	 packets: 9 with 1539 bytes
+	 duration: 0.319380 starting from 2011/08/15 11:03:45.996263
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background
+	 protocol: tcp
+	 address: from: 80.243.111.182 to 147.32.86.33
+	 ports: from: 2772 to 3389
+	 packets: 1014 with 276432 bytes
+	 duration: 2649.985596 starting from 2011/08/15 11:03:46.029827
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=To-Background-CVUT-Proxy
+	 protocol: tcp
+	 address: from: 147.32.85.100 to 147.32.80.13
+	 ports: from: 2851 to 80
+	 packets: 14 with 5478 bytes
+	 duration: 0.115424 starting from 2011/08/15 11:03:46.106211
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-UDP-NTP-Established-1
+	 protocol: udp
+	 address: from: 147.32.84.150 to 24.124.0.251
+	 ports: from: 43392 to 123
+	 packets: 34 with 3060 bytes
+	 duration: 3473.603516 starting from 2011/08/15 11:03:46.152024
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background
+	 protocol: tcp
+	 address: from: 147.32.3.36 to 147.32.85.31
+	 ports: from: 2023 to 4751
+	 packets: 14 with 840 bytes
+	 duration: 3599.806641 starting from 2011/08/15 11:03:46.205160
+Uncorrect labeling: 
+	 got flow=To-Background-CVUT-Proxy expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.86.182 to 109.123.210.131
+	 ports: from: 62857 to 80
+	 packets: 10 with 2126 bytes
+	 duration: 1.009224 starting from 2011/08/15 11:03:46.281486
+Uncorrect labeling: 
+	 got flow=Background-Attempt-cmpgw-CVUT expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: udp
+	 address: from: 147.32.84.59 to 77.93.2.4
+	 ports: from: 50893 to 37614
+	 packets: 12 with 1464 bytes
+	 duration: 3035.763184 starting from 2011/08/15 11:03:46.406082
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 147.32.3.93
+	 ports: from: 53960 to 443
+	 packets: 122 with 54592 bytes
+	 duration: 25.008387 starting from 2011/08/15 11:03:46.415779
+Uncorrect labeling: 
+	 got flow=Background-UDP-Attempt expected: flow=Background-UDP-Established
+	 protocol: udp
+	 address: from: 147.32.84.229 to 98.243.10.72
+	 ports: from: 13363 to 17773
+	 packets: 2 with 137 bytes
+	 duration: 0.152564 starting from 2011/08/15 11:03:46.475214
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.86.194 to 195.113.232.97
+	 ports: from: 2319 to 80
+	 packets: 19 with 6521 bytes
+	 duration: 5.678852 starting from 2011/08/15 11:03:46.508060
+Uncorrect labeling: 
+	 got flow=Background expected: flow=Background-Attempt-cmpgw-CVUT
+	 protocol: icmp
+	 address: from: 94.0.247.147 to 147.32.84.59
+	 ports: from: 0x0103 to 0x5e00
+	 packets: 12 with 2124 bytes
+	 duration: 3485.076904 starting from 2011/08/15 11:03:46.683127
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 195.113.232.80
+	 ports: from: 1073 to 80
+	 packets: 68 with 42984 bytes
+	 duration: 119.850349 starting from 2011/08/15 11:03:46.878196
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-UDP-Established
+	 protocol: udp
+	 address: from: 147.32.86.179 to 88.159.79.170
+	 ports: from: 58675 to 40186
+	 packets: 12 with 816 bytes
+	 duration: 3046.712158 starting from 2011/08/15 11:03:46.901396
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-UDP-Established
+	 protocol: udp
+	 address: from: 147.32.86.179 to 149.13.32.64
+	 ports: from: 58675 to 33033
+	 packets: 4 with 274 bytes
+	 duration: 3031.334473 starting from 2011/08/15 11:03:46.901447
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-UDP-Established
+	 protocol: udp
+	 address: from: 147.32.86.179 to 70.70.230.173
+	 ports: from: 58675 to 54700
+	 packets: 4 with 264 bytes
+	 duration: 3031.470947 starting from 2011/08/15 11:03:46.901454
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-UDP-Established
+	 protocol: udp
+	 address: from: 147.32.86.179 to 78.141.179.10
+	 ports: from: 58675 to 34027
+	 packets: 4 with 272 bytes
+	 duration: 3031.309814 starting from 2011/08/15 11:03:46.901496
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-UDP-Established
+	 protocol: udp
+	 address: from: 147.32.86.179 to 139.30.43.20
+	 ports: from: 58675 to 37275
+	 packets: 4 with 268 bytes
+	 duration: 3031.314941 starting from 2011/08/15 11:03:46.901502
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-UDP-Established
+	 protocol: udp
+	 address: from: 147.32.86.179 to 149.5.45.8
+	 ports: from: 58675 to 43030
+	 packets: 6 with 402 bytes
+	 duration: 2425.121338 starting from 2011/08/15 11:03:46.901588
+Uncorrect labeling: 
+	 got flow=Background-TCP-Attempt expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.84.118 to 209.143.10.121
+	 ports: from: 2930 to 6881
+	 packets: 5 with 364 bytes
+	 duration: 0.307472 starting from 2011/08/15 11:03:46.985642
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-UDP-Established
+	 protocol: udp
+	 address: from: 147.32.86.179 to 93.155.142.181
+	 ports: from: 58675 to 52966
+	 packets: 12 with 1466 bytes
+	 duration: 3032.255615 starting from 2011/08/15 11:03:47.067858
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-UDP-Attempt
+	 protocol: udp
+	 address: from: 147.32.84.229 to 109.86.77.175
+	 ports: from: 13363 to 53151
+	 packets: 99 with 7425 bytes
+	 duration: 565.263550 starting from 2011/08/15 11:03:47.232182
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 65.55.200.139
+	 ports: from: 1075 to 80
+	 packets: 10 with 1450 bytes
+	 duration: 60.023998 starting from 2011/08/15 11:03:47.292810
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: udp
+	 address: from: 147.32.84.59 to 89.216.244.252
+	 ports: from: 10145 to 2774
+	 packets: 14 with 2337 bytes
+	 duration: 2776.875732 starting from 2011/08/15 11:03:47.709786
+Uncorrect labeling: 
+	 got flow=To-Background-UDP-CVUT-DNS-Server expected: flow=Background
+	 protocol: tcp
+	 address: from: 151.49.2.144 to 147.32.84.229
+	 ports: from: 1387 to 443
+	 packets: 2 with 434 bytes
+	 duration: 0.000194 starting from 2011/08/15 11:03:47.827974
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 74.125.232.205
+	 ports: from: 45267 to 80
+	 packets: 10 with 2341 bytes
+	 duration: 0.060979 starting from 2011/08/15 11:03:47.844180
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-UDP-Attempt
+	 protocol: udp
+	 address: from: 147.32.84.118 to 180.149.31.35
+	 ports: from: 1150 to 19697
+	 packets: 1 with 143 bytes
+	 duration: 0.000000 starting from 2011/08/15 11:03:47.884568
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background
+	 protocol: tcp
+	 address: from: 147.32.84.229 to 85.129.43.148
+	 ports: from: 80 to 52490
+	 packets: 14 with 944 bytes
+	 duration: 718.567932 starting from 2011/08/15 11:03:47.891894
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 209.85.148.105
+	 ports: from: 48576 to 80
+	 packets: 60 with 35814 bytes
+	 duration: 125.839157 starting from 2011/08/15 11:03:47.907604
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 76.13.114.90
+	 ports: from: 59800 to 80
+	 packets: 9 with 1541 bytes
+	 duration: 0.330373 starting from 2011/08/15 11:03:48.029353
+Uncorrect labeling: 
+	 got flow=Background-Attempt-cmpgw-CVUT expected: flow=Background-UDP-Established
+	 protocol: udp
+	 address: from: 147.32.86.183 to 187.126.145.84
+	 ports: from: 51246 to 63650
+	 packets: 2 with 135 bytes
+	 duration: 0.237147 starting from 2011/08/15 11:03:48.261761
+Uncorrect labeling: 
+	 got flow=Background-UDP-Attempt expected: flow=Background
+	 protocol: tcp
+	 address: from: 147.32.84.229 to 46.221.146.237
+	 ports: from: 13363 to 51672
+	 packets: 31 with 2435 bytes
+	 duration: 1372.035278 starting from 2011/08/15 11:03:48.268755
+Uncorrect labeling: 
+	 got flow=To-Background-UDP-CVUT-DNS-Server expected: flow=Background-Attempt-cmpgw-CVUT
+	 protocol: udp
+	 address: from: 147.32.84.59 to 157.24.2.105
+	 ports: from: 62412 to 389
+	 packets: 1 with 203 bytes
+	 duration: 0.042478 starting from 2011/08/15 11:03:48.608186
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 95.132.157.216 to 147.32.86.58
+	 ports: from: 10201 to 48784
+	 packets: 20 with 1513 bytes
+	 duration: 1.543533 starting from 2011/08/15 11:03:48.632782
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-google-analytics1
+	 protocol: tcp
+	 address: from: 147.32.85.60 to 74.125.232.192
+	 ports: from: 45077 to 443
+	 packets: 74 with 17075 bytes
+	 duration: 392.450348 starting from 2011/08/15 11:03:48.642005
+Uncorrect labeling: 
+	 got flow=Background expected: flow=Background-UDP-NTP-Established-1
+	 protocol: udp
+	 address: from: 147.32.84.215 to 89.187.142.55
+	 ports: from: 123 to 123
+	 packets: 8 with 720 bytes
+	 duration: 3134.000732 starting from 2011/08/15 11:03:48.683326
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 74.125.232.207
+	 ports: from: 59517 to 443
+	 packets: 19 with 5850 bytes
+	 duration: 125.020699 starting from 2011/08/15 11:03:48.725164
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 74.125.232.215
+	 ports: from: 51566 to 443
+	 packets: 17 with 4781 bytes
+	 duration: 0.083192 starting from 2011/08/15 11:03:48.875930
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background
+	 protocol: icmp
+	 address: from: 147.32.87.1 to 147.32.87.48
+	 ports: from: 0x0105 to 0x9320
+	 packets: 41 with 2870 bytes
+	 duration: 3307.083008 starting from 2011/08/15 11:03:48.889996
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 74.125.232.215
+	 ports: from: 51567 to 443
+	 packets: 17 with 4993 bytes
+	 duration: 0.092928 starting from 2011/08/15 11:03:48.952350
+Uncorrect labeling: 
+	 got flow=To-Background-UDP-CVUT-DNS-Server expected: flow=Background-Attempt-cmpgw-CVUT
+	 protocol: udp
+	 address: from: 147.32.84.59 to 157.24.2.40
+	 ports: from: 62413 to 389
+	 packets: 1 with 203 bytes
+	 duration: 0.042510 starting from 2011/08/15 11:03:49.013354
+Uncorrect labeling: 
+	 got flow=To-Background-UDP-CVUT-DNS-Server expected: flow=Background-UDP-NTP-Established-1
+	 protocol: udp
+	 address: from: 147.32.84.34 to 147.251.48.140
+	 ports: from: 58579 to 123
+	 packets: 24 with 2160 bytes
+	 duration: 3448.343750 starting from 2011/08/15 11:03:49.251596
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-UDP-Attempt
+	 protocol: udp
+	 address: from: 132.68.16.13 to 147.32.86.44
+	 ports: from: 40876 to 10966
+	 packets: 3 with 438 bytes
+	 duration: 6.028132 starting from 2011/08/15 11:03:49.305339
+Uncorrect labeling: 
+	 got flow=To-Background-UDP-CVUT-DNS-Server expected: flow=Background-Attempt-cmpgw-CVUT
+	 protocol: udp
+	 address: from: 147.32.84.59 to 157.24.2.54
+	 ports: from: 62414 to 389
+	 packets: 1 with 203 bytes
+	 duration: 0.042322 starting from 2011/08/15 11:03:49.418978
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-UDP-Attempt
+	 protocol: udp
+	 address: from: 160.68.142.32 to 147.32.85.13
+	 ports: from: 47864 to 30483
+	 packets: 1 with 75 bytes
+	 duration: 0.000000 starting from 2011/08/15 11:03:49.443160
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 151.49.2.144 to 147.32.84.229
+	 ports: from: 1517 to 13363
+	 packets: 12 with 1001 bytes
+	 duration: 4.236255 starting from 2011/08/15 11:03:49.806048
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-UDP-Attempt
+	 protocol: udp
+	 address: from: 147.32.84.229 to 132.230.81.193
+	 ports: from: 13363 to 63848
+	 packets: 21 with 2991 bytes
+	 duration: 2432.570068 starting from 2011/08/15 11:03:49.848725
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 76.13.114.90
+	 ports: from: 59802 to 80
+	 packets: 9 with 1535 bytes
+	 duration: 0.327834 starting from 2011/08/15 11:03:50.060010
+Uncorrect labeling: 
+	 got flow=Background-UDP-Attempt expected: flow=Background-UDP-Established
+	 protocol: udp
+	 address: from: 147.32.84.229 to 24.209.135.57
+	 ports: from: 13363 to 43566
+	 packets: 2 with 135 bytes
+	 duration: 0.141621 starting from 2011/08/15 11:03:50.079765
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.86.182 to 209.85.148.104
+	 ports: from: 62858 to 443
+	 packets: 19 with 5998 bytes
+	 duration: 22.748482 starting from 2011/08/15 11:03:50.158397
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.85.114 to 90.183.38.22
+	 ports: from: 49386 to 80
+	 packets: 15 with 3770 bytes
+	 duration: 0.440938 starting from 2011/08/15 11:03:50.337752
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background
+	 protocol: icmp
+	 address: from: 147.32.80.9 to 147.32.86.247
+	 ports: from: 0x0303 to 0x8900
+	 packets: 14 with 980 bytes
+	 duration: 3599.881104 starting from 2011/08/15 11:03:50.345927
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.86.165 to 80.95.108.34
+	 ports: from: 52744 to 80
+	 packets: 10 with 1929 bytes
+	 duration: 0.006832 starting from 2011/08/15 11:03:50.361447
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-google-analytics2
+	 protocol: tcp
+	 address: from: 147.32.86.186 to 74.125.232.193
+	 ports: from: 3031 to 443
+	 packets: 18 with 5253 bytes
+	 duration: 150.121689 starting from 2011/08/15 11:03:50.542695
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 65.52.110.49 to 147.32.87.41
+	 ports: from: 25454 to 80
+	 packets: 11 with 6203 bytes
+	 duration: 0.736625 starting from 2011/08/15 11:03:50.595998
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.85.114 to 90.183.38.22
+	 ports: from: 49387 to 80
+	 packets: 10 with 2882 bytes
+	 duration: 20.665619 starting from 2011/08/15 11:03:50.779128
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.85.114 to 90.183.38.22
+	 ports: from: 49388 to 80
+	 packets: 14 with 4308 bytes
+	 duration: 20.665604 starting from 2011/08/15 11:03:50.779330
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.86.172 to 217.77.163.156
+	 ports: from: 49915 to 443
+	 packets: 14 with 2967 bytes
+	 duration: 5.018220 starting from 2011/08/15 11:03:50.780610
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.85.114 to 77.78.99.21
+	 ports: from: 49389 to 80
+	 packets: 9 with 2366 bytes
+	 duration: 0.005385 starting from 2011/08/15 11:03:50.983978
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background
+	 protocol: tcp
+	 address: from: 147.32.84.242 to 147.251.3.130
+	 ports: from: 33261 to 1713
+	 packets: 18 with 2952 bytes
+	 duration: 3000.003662 starting from 2011/08/15 11:03:50.996399
+Uncorrect labeling: 
+	 got flow=Background-Attempt-cmpgw-CVUT expected: flow=Background-UDP-Attempt
+	 protocol: udp
+	 address: from: 62.133.187.28 to 147.32.86.194
+	 ports: from: 38550 to 35155
+	 packets: 1 with 145 bytes
+	 duration: 0.000000 starting from 2011/08/15 11:03:51.245874
+Uncorrect labeling: 
+	 got flow=Background-UDP-Attempt expected: flow=Background-UDP-Established
+	 protocol: udp
+	 address: from: 178.116.236.129 to 147.32.84.118
+	 ports: from: 16180 to 1150
+	 packets: 3 with 615 bytes
+	 duration: 2035.715576 starting from 2011/08/15 11:03:51.448256
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=To-Background-CVUT-WebServer
+	 protocol: tcp
+	 address: from: 66.249.66.10 to 147.32.87.36
+	 ports: from: 49782 to 80
+	 packets: 18 with 8526 bytes
+	 duration: 2.579429 starting from 2011/08/15 11:03:51.597886
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 76.13.114.90
+	 ports: from: 59804 to 80
+	 packets: 9 with 1535 bytes
+	 duration: 0.332617 starting from 2011/08/15 11:03:52.089689
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 147.32.80.7
+	 ports: from: 53961 to 80
+	 packets: 32 with 13375 bytes
+	 duration: 17.198448 starting from 2011/08/15 11:03:52.205990
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 195.113.232.90
+	 ports: from: 53962 to 80
+	 packets: 14 with 2788 bytes
+	 duration: 62.381584 starting from 2011/08/15 11:03:52.245246
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-UDP-NTP-Established-1
+	 protocol: udp
+	 address: from: 147.32.84.19 to 212.96.160.147
+	 ports: from: 42752 to 123
+	 packets: 26 with 2340 bytes
+	 duration: 3523.825439 starting from 2011/08/15 11:03:52.601143
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-UDP-Attempt
+	 protocol: udp
+	 address: from: 180.245.239.125 to 147.32.84.189
+	 ports: from: 25678 to 51413
+	 packets: 1 with 107 bytes
+	 duration: 0.000133 starting from 2011/08/15 11:03:52.657532
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 67.195.115.92 to 147.32.85.34
+	 ports: from: 55265 to 80
+	 packets: 10 with 1360 bytes
+	 duration: 360.771545 starting from 2011/08/15 11:03:52.795943
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-UDP-Established
+	 protocol: udp
+	 address: from: 147.32.84.118 to 80.192.80.43
+	 ports: from: 54487 to 62411
+	 packets: 4 with 288 bytes
+	 duration: 1249.614868 starting from 2011/08/15 11:03:52.880770
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-UDP-Established
+	 protocol: udp
+	 address: from: 147.32.84.118 to 88.118.7.167
+	 ports: from: 54487 to 30657
+	 packets: 4 with 264 bytes
+	 duration: 3124.899170 starting from 2011/08/15 11:03:52.880890
+Uncorrect labeling: 
+	 got flow=To-Background-UDP-CVUT-DNS-Server expected: flow=Background-UDP-NTP-Established-1
+	 protocol: udp
+	 address: from: 147.32.84.36 to 89.31.8.3
+	 ports: from: 58404 to 123
+	 packets: 24 with 2160 bytes
+	 duration: 3440.403564 starting from 2011/08/15 11:03:53.033692
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 74.125.232.220
+	 ports: from: 57998 to 80
+	 packets: 6 with 412 bytes
+	 duration: 12.635588 starting from 2011/08/15 11:03:53.140196
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 81.30.226.135
+	 ports: from: 33759 to 80
+	 packets: 47 with 25625 bytes
+	 duration: 123.243080 starting from 2011/08/15 11:03:53.218827
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 12.130.81.249
+	 ports: from: 34951 to 80
+	 packets: 9 with 2433 bytes
+	 duration: 6.400605 starting from 2011/08/15 11:03:53.326226
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 12.130.81.249
+	 ports: from: 34952 to 80
+	 packets: 9 with 2394 bytes
+	 duration: 6.379756 starting from 2011/08/15 11:03:53.347080
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 12.129.199.107
+	 ports: from: 59801 to 80
+	 packets: 11 with 3666 bytes
+	 duration: 6.689969 starting from 2011/08/15 11:03:53.591329
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 12.129.199.107
+	 ports: from: 59802 to 80
+	 packets: 11 with 3659 bytes
+	 duration: 6.688961 starting from 2011/08/15 11:03:53.592355
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 90.183.39.17 to 147.32.84.14
+	 ports: from: 37916 to 80
+	 packets: 76 with 68570 bytes
+	 duration: 0.034891 starting from 2011/08/15 11:03:53.770161
+Uncorrect labeling: 
+	 got flow=Background-UDP-Attempt expected: flow=Background-TCP-Attempt
+	 protocol: tcp
+	 address: from: 93.145.13.48 to 147.32.84.118
+	 ports: from: 54839 to 6881
+	 packets: 2 with 126 bytes
+	 duration: 0.000076 starting from 2011/08/15 11:03:53.932005
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 91.189.92.170
+	 ports: from: 37691 to 80
+	 packets: 10 with 1123 bytes
+	 duration: 0.102698 starting from 2011/08/15 11:03:53.966628
+Uncorrect labeling: 
+	 got flow=To-Background-UDP-CVUT-DNS-Server expected: flow=From-Normal-V45-Stribrek
+	 protocol: udp
+	 address: from: 147.32.84.170 to 147.32.80.9
+	 ports: from: 34583 to 53
+	 packets: 2 with 400 bytes
+	 duration: 0.000364 starting from 2011/08/15 11:03:53.988461
+Uncorrect labeling: 
+	 got flow=To-Background-UDP-CVUT-DNS-Server expected: flow=From-Normal-V45-Stribrek
+	 protocol: udp
+	 address: from: 147.32.84.170 to 147.32.80.9
+	 ports: from: 41605 to 53
+	 packets: 2 with 400 bytes
+	 duration: 0.000292 starting from 2011/08/15 11:03:53.989191
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=From-Normal-V45-Stribrek
+	 protocol: tcp
+	 address: from: 147.32.84.170 to 209.85.148.105
+	 ports: from: 47077 to 80
+	 packets: 6 with 412 bytes
+	 duration: 0.018047 starting from 2011/08/15 11:03:53.990032
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-UDP-Attempt
+	 protocol: udp
+	 address: from: 147.32.84.229 to 83.99.210.55
+	 ports: from: 13363 to 48632
+	 packets: 15 with 2799 bytes
+	 duration: 1789.628784 starting from 2011/08/15 11:03:54.026480
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-UDP-Attempt
+	 protocol: rtp
+	 address: from: 88.100.136.144 to 147.32.85.26
+	 ports: from: 29033 to 60764
+	 packets: 5 with 300 bytes
+	 duration: 20.109142 starting from 2011/08/15 11:03:54.044668
+Uncorrect labeling: 
+	 got flow=Background-google-analytics4 expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.86.186 to 212.65.245.231
+	 ports: from: 3039 to 80
+	 packets: 15 with 8573 bytes
+	 duration: 0.187749 starting from 2011/08/15 11:03:54.052658
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-UDP-NTP-Established-1
+	 protocol: udp
+	 address: from: 147.32.84.7 to 140.99.51.114
+	 ports: from: 34094 to 123
+	 packets: 24 with 2160 bytes
+	 duration: 3454.520508 starting from 2011/08/15 11:03:54.071014
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 76.13.114.90
+	 ports: from: 59806 to 80
+	 packets: 9 with 1541 bytes
+	 duration: 0.328207 starting from 2011/08/15 11:03:54.114233
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 195.189.143.183
+	 ports: from: 57812 to 80
+	 packets: 41 with 14904 bytes
+	 duration: 2.761538 starting from 2011/08/15 11:03:54.163397
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 91.189.88.33
+	 ports: from: 37818 to 80
+	 packets: 43 with 13610 bytes
+	 duration: 2.754171 starting from 2011/08/15 11:03:54.165088
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 91.189.88.33
+	 ports: from: 37821 to 80
+	 packets: 41 with 13055 bytes
+	 duration: 2.718515 starting from 2011/08/15 11:03:54.195701
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-UDP-NTP-Established-1
+	 protocol: udp
+	 address: from: 147.32.84.79 to 89.187.142.55
+	 ports: from: 47929 to 123
+	 packets: 24 with 2160 bytes
+	 duration: 3476.446045 starting from 2011/08/15 11:03:54.564334
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-google-webmail
+	 protocol: tcp
+	 address: from: 147.32.86.186 to 74.125.232.213
+	 ports: from: 3042 to 443
+	 packets: 17 with 5971 bytes
+	 duration: 43.674343 starting from 2011/08/15 11:03:54.775098
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.86.194 to 17.250.249.94
+	 ports: from: 2331 to 80
+	 packets: 14 with 6969 bytes
+	 duration: 161.688065 starting from 2011/08/15 11:03:54.867560
+Uncorrect labeling: 
+	 got flow=Background-TCP-Attempt expected: flow=From-Background-CVUT-Proxy
+	 protocol: tcp
+	 address: from: 147.32.80.13 to 147.32.85.33
+	 ports: from: 60222 to 2869
+	 packets: 2 with 148 bytes
+	 duration: 2.999246 starting from 2011/08/15 11:03:54.885338
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 208.43.179.24 to 147.32.85.72
+	 ports: from: 80 to 44382
+	 packets: 6 with 360 bytes
+	 duration: 20.450590 starting from 2011/08/15 11:03:54.939110
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.86.165 to 80.95.108.34
+	 ports: from: 52748 to 80
+	 packets: 10 with 1958 bytes
+	 duration: 0.006988 starting from 2011/08/15 11:03:55.343587
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 77.104.226.16
+	 ports: from: 50622 to 80
+	 packets: 43 with 37268 bytes
+	 duration: 1.712401 starting from 2011/08/15 11:03:55.356699
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-UDP-Attempt
+	 protocol: udp
+	 address: from: 84.44.229.28 to 147.32.86.194
+	 ports: from: 54280 to 35155
+	 packets: 3 with 444 bytes
+	 duration: 2789.145996 starting from 2011/08/15 11:03:55.477124
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-UDP-NTP-Established-1
+	 protocol: udp
+	 address: from: 147.32.84.153 to 193.85.174.5
+	 ports: from: 39328 to 123
+	 packets: 60 with 5400 bytes
+	 duration: 3541.002686 starting from 2011/08/15 11:03:55.491337
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41151 to 80
+	 packets: 62 with 43216 bytes
+	 duration: 0.882697 starting from 2011/08/15 11:03:55.704741
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 81.30.226.135
+	 ports: from: 33762 to 80
+	 packets: 36 with 21834 bytes
+	 duration: 120.735558 starting from 2011/08/15 11:03:55.726017
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 81.30.226.135
+	 ports: from: 33763 to 80
+	 packets: 45 with 25801 bytes
+	 duration: 120.735504 starting from 2011/08/15 11:03:55.726658
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-UDP-Established
+	 protocol: udp
+	 address: from: 124.169.118.186 to 147.32.86.110
+	 ports: from: 18222 to 31338
+	 packets: 2 with 128 bytes
+	 duration: 0.000418 starting from 2011/08/15 11:03:55.726787
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 81.30.226.135
+	 ports: from: 33764 to 80
+	 packets: 16 with 6167 bytes
+	 duration: 114.808434 starting from 2011/08/15 11:03:55.728096
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 81.30.226.135
+	 ports: from: 33765 to 80
+	 packets: 10 with 1368 bytes
+	 duration: 114.809380 starting from 2011/08/15 11:03:55.729149
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 81.30.226.135
+	 ports: from: 33766 to 80
+	 packets: 10 with 2415 bytes
+	 duration: 114.807487 starting from 2011/08/15 11:03:55.730227
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-UDP-Attempt
+	 protocol: udp
+	 address: from: 147.32.84.229 to 201.19.79.190
+	 ports: from: 13363 to 26124
+	 packets: 18 with 2772 bytes
+	 duration: 3088.952637 starting from 2011/08/15 11:03:55.749424
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 147.251.3.130
+	 ports: from: 44337 to 1713
+	 packets: 18 with 2952 bytes
+	 duration: 3000.188721 starting from 2011/08/15 11:03:55.825521
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 74.125.232.197
+	 ports: from: 50628 to 80
+	 packets: 64 with 60963 bytes
+	 duration: 265.352875 starting from 2011/08/15 11:03:55.852857
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 74.125.232.197
+	 ports: from: 50629 to 80
+	 packets: 51 with 42863 bytes
+	 duration: 265.352325 starting from 2011/08/15 11:03:55.853573
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 147.251.3.130
+	 ports: from: 33264 to 1713
+	 packets: 24 with 3936 bytes
+	 duration: 3040.133545 starting from 2011/08/15 11:03:55.883403
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.86.165 to 80.95.108.34
+	 ports: from: 52750 to 80
+	 packets: 10 with 1927 bytes
+	 duration: 0.007530 starting from 2011/08/15 11:03:55.917930
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-UDP-Established
+	 protocol: udp
+	 address: from: 147.32.84.118 to 89.103.80.31
+	 ports: from: 54487 to 26323
+	 packets: 12 with 1525 bytes
+	 duration: 3076.580078 starting from 2011/08/15 11:03:56.017910
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41152 to 80
+	 packets: 30 with 18601 bytes
+	 duration: 0.565356 starting from 2011/08/15 11:03:56.141848
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 76.13.114.90
+	 ports: from: 59808 to 80
+	 packets: 9 with 1539 bytes
+	 duration: 0.331226 starting from 2011/08/15 11:03:56.142220
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41153 to 80
+	 packets: 57 with 38796 bytes
+	 duration: 0.679647 starting from 2011/08/15 11:03:56.143259
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41154 to 80
+	 packets: 22 with 12841 bytes
+	 duration: 0.452970 starting from 2011/08/15 11:03:56.143817
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41155 to 80
+	 packets: 14 with 5590 bytes
+	 duration: 0.342975 starting from 2011/08/15 11:03:56.144414
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41156 to 80
+	 packets: 12 with 3185 bytes
+	 duration: 0.341255 starting from 2011/08/15 11:03:56.144943
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41157 to 80
+	 packets: 14 with 6111 bytes
+	 duration: 0.343177 starting from 2011/08/15 11:03:56.145439
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-UDP-Attempt
+	 protocol: udp
+	 address: from: 147.32.86.223 to 193.238.38.253
+	 ports: from: 21104 to 50961
+	 packets: 3 with 231 bytes
+	 duration: 6.099050 starting from 2011/08/15 11:03:56.370137
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41158 to 80
+	 packets: 22 with 11847 bytes
+	 duration: 0.455948 starting from 2011/08/15 11:03:56.374143
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41159 to 80
+	 packets: 60 with 41708 bytes
+	 duration: 0.570190 starting from 2011/08/15 11:03:56.375129
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41160 to 80
+	 packets: 30 with 17927 bytes
+	 duration: 0.564698 starting from 2011/08/15 11:03:56.376521
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: udp
+	 address: from: 147.32.84.59 to 131.95.59.144
+	 ports: from: 15141 to 60378
+	 packets: 16 with 2011 bytes
+	 duration: 3328.317627 starting from 2011/08/15 11:03:56.435849
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: udp
+	 address: from: 147.32.84.59 to 78.128.190.174
+	 ports: from: 15141 to 9894
+	 packets: 16 with 2010 bytes
+	 duration: 3328.166992 starting from 2011/08/15 11:03:56.435968
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41161 to 80
+	 packets: 24 with 13901 bytes
+	 duration: 0.452115 starting from 2011/08/15 11:03:56.475300
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41163 to 80
+	 packets: 22 with 11883 bytes
+	 duration: 0.452233 starting from 2011/08/15 11:03:56.595512
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41164 to 80
+	 packets: 10 with 1799 bytes
+	 duration: 0.341985 starting from 2011/08/15 11:03:56.603517
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41165 to 80
+	 packets: 28 with 16280 bytes
+	 duration: 0.456851 starting from 2011/08/15 11:03:56.604318
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41166 to 80
+	 packets: 10 with 1490 bytes
+	 duration: 0.342983 starting from 2011/08/15 11:03:56.605532
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41167 to 80
+	 packets: 22 with 12012 bytes
+	 duration: 0.452468 starting from 2011/08/15 11:03:56.710713
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41168 to 80
+	 packets: 95 with 77490 bytes
+	 duration: 0.684646 starting from 2011/08/15 11:03:56.718073
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-UDP-Established
+	 protocol: udp
+	 address: from: 147.32.85.30 to 204.112.199.19
+	 ports: from: 61070 to 33469
+	 packets: 4 with 271 bytes
+	 duration: 2415.663818 starting from 2011/08/15 11:03:56.753500
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41169 to 80
+	 packets: 20 with 10600 bytes
+	 duration: 0.455108 starting from 2011/08/15 11:03:56.829480
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-UDP-Attempt
+	 protocol: udp
+	 address: from: 147.32.84.118 to 212.17.132.238
+	 ports: from: 1150 to 15028
+	 packets: 1 with 143 bytes
+	 duration: 0.000000 starting from 2011/08/15 11:03:56.830863
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41170 to 80
+	 packets: 50 with 33185 bytes
+	 duration: 0.569813 starting from 2011/08/15 11:03:56.833904
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41171 to 80
+	 packets: 30 with 18144 bytes
+	 duration: 0.568964 starting from 2011/08/15 11:03:56.835153
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.85.2 to 147.32.87.5
+	 ports: from: 49750 to 110
+	 packets: 24 with 3340 bytes
+	 duration: 0.612980 starting from 2011/08/15 11:03:56.931948
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41172 to 80
+	 packets: 14 with 4733 bytes
+	 duration: 0.342215 starting from 2011/08/15 11:03:56.935651
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41173 to 80
+	 packets: 32 with 17870 bytes
+	 duration: 0.568581 starting from 2011/08/15 11:03:56.949159
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41174 to 80
+	 packets: 36 with 23104 bytes
+	 duration: 0.566767 starting from 2011/08/15 11:03:57.051279
+Uncorrect labeling: 
+	 got flow=Background expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 222.122.205.138 to 147.32.84.28
+	 ports: from: 80 to 5485
+	 packets: 4 with 240 bytes
+	 duration: 5.562845 starting from 2011/08/15 11:03:57.110850
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 67.195.112.170 to 147.32.84.130
+	 ports: from: 49762 to 80
+	 packets: 14 with 5240 bytes
+	 duration: 0.457137 starting from 2011/08/15 11:03:57.164214
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41175 to 80
+	 packets: 30 with 17924 bytes
+	 duration: 0.568101 starting from 2011/08/15 11:03:57.165925
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41176 to 80
+	 packets: 14 with 5054 bytes
+	 duration: 0.341181 starting from 2011/08/15 11:03:57.172743
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41177 to 80
+	 packets: 10 with 1712 bytes
+	 duration: 0.339134 starting from 2011/08/15 11:03:57.291101
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41178 to 80
+	 packets: 14 with 5368 bytes
+	 duration: 0.345372 starting from 2011/08/15 11:03:57.291832
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41179 to 80
+	 packets: 20 with 10411 bytes
+	 duration: 0.458814 starting from 2011/08/15 11:03:57.292363
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41180 to 80
+	 packets: 28 with 16592 bytes
+	 duration: 0.456176 starting from 2011/08/15 11:03:57.402325
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41181 to 80
+	 packets: 12 with 2846 bytes
+	 duration: 0.341948 starting from 2011/08/15 11:03:57.406112
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-google-analytics14
+	 protocol: tcp
+	 address: from: 147.32.84.181 to 74.125.232.205
+	 ports: from: 51671 to 80
+	 packets: 10 with 3018 bytes
+	 duration: 114.509125 starting from 2011/08/15 11:03:57.411570
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41182 to 80
+	 packets: 10 with 1537 bytes
+	 duration: 0.341105 starting from 2011/08/15 11:03:57.506254
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41183 to 80
+	 packets: 10 with 1748 bytes
+	 duration: 0.342117 starting from 2011/08/15 11:03:57.518379
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41184 to 80
+	 packets: 24 with 13996 bytes
+	 duration: 0.454862 starting from 2011/08/15 11:03:57.522131
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background
+	 protocol: icmp
+	 address: from: 147.32.87.1 to 147.32.87.5
+	 ports: from: 0x0105 to 0x9320
+	 packets: 18 with 1260 bytes
+	 duration: 3445.200195 starting from 2011/08/15 11:03:57.544928
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41185 to 80
+	 packets: 10 with 1597 bytes
+	 duration: 0.341547 starting from 2011/08/15 11:03:57.621856
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41186 to 80
+	 packets: 22 with 12398 bytes
+	 duration: 0.456404 starting from 2011/08/15 11:03:57.633191
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41187 to 80
+	 packets: 10 with 1795 bytes
+	 duration: 0.341760 starting from 2011/08/15 11:03:57.638114
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 74.125.232.204
+	 ports: from: 51228 to 80
+	 packets: 11 with 3607 bytes
+	 duration: 114.883835 starting from 2011/08/15 11:03:57.651521
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-UDP-NTP-Established-1
+	 protocol: udp
+	 address: from: 147.32.84.157 to 89.187.142.41
+	 ports: from: 59050 to 123
+	 packets: 76 with 6840 bytes
+	 duration: 3576.516357 starting from 2011/08/15 11:03:57.726560
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41188 to 80
+	 packets: 10 with 2055 bytes
+	 duration: 0.337986 starting from 2011/08/15 11:03:57.735662
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41189 to 80
+	 packets: 10 with 2051 bytes
+	 duration: 0.341078 starting from 2011/08/15 11:03:57.748226
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-UDP-Established
+	 protocol: udp
+	 address: from: 130.83.186.193 to 147.32.84.229
+	 ports: from: 51599 to 13363
+	 packets: 12 with 1823 bytes
+	 duration: 180.040573 starting from 2011/08/15 11:03:57.781849
+Uncorrect labeling: 
+	 got flow=Background-UDP-Attempt expected: flow=Background-UDP-Established
+	 protocol: udp
+	 address: from: 147.32.84.118 to 84.46.177.13
+	 ports: from: 1150 to 16918
+	 packets: 2 with 460 bytes
+	 duration: 0.064340 starting from 2011/08/15 11:03:57.831900
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41190 to 80
+	 packets: 10 with 1855 bytes
+	 duration: 0.340810 starting from 2011/08/15 11:03:57.851473
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41191 to 80
+	 packets: 10 with 2097 bytes
+	 duration: 0.341006 starting from 2011/08/15 11:03:57.865200
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-UDP-Established
+	 protocol: udp
+	 address: from: 61.219.43.151 to 147.32.84.229
+	 ports: from: 53836 to 443
+	 packets: 2 with 128 bytes
+	 duration: 0.000392 starting from 2011/08/15 11:03:57.885619
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41192 to 80
+	 packets: 12 with 3898 bytes
+	 duration: 0.341789 starting from 2011/08/15 11:03:57.887514
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41193 to 80
+	 packets: 10 with 1748 bytes
+	 duration: 0.341396 starting from 2011/08/15 11:03:57.893402
+Uncorrect labeling: 
+	 got flow=To-Background-UDP-CVUT-DNS-Server expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 74.125.232.220
+	 ports: from: 50237 to 80
+	 packets: 6 with 372 bytes
+	 duration: 11.033657 starting from 2011/08/15 11:03:57.932644
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41194 to 80
+	 packets: 10 with 1722 bytes
+	 duration: 0.338606 starting from 2011/08/15 11:03:57.962195
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41195 to 80
+	 packets: 10 with 2335 bytes
+	 duration: 0.341419 starting from 2011/08/15 11:03:57.977850
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 209.85.148.106
+	 ports: from: 50974 to 443
+	 packets: 17 with 5075 bytes
+	 duration: 115.491524 starting from 2011/08/15 11:03:58.044392
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41196 to 80
+	 packets: 10 with 1562 bytes
+	 duration: 0.338195 starting from 2011/08/15 11:03:58.080427
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 77.104.226.16
+	 ports: from: 50636 to 80
+	 packets: 15 with 7569 bytes
+	 duration: 53.113110 starting from 2011/08/15 11:03:58.091594
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 77.104.226.16
+	 ports: from: 50637 to 80
+	 packets: 155 with 172623 bytes
+	 duration: 73.112785 starting from 2011/08/15 11:03:58.091854
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 77.104.226.16
+	 ports: from: 50639 to 80
+	 packets: 67 with 60465 bytes
+	 duration: 243.112991 starting from 2011/08/15 11:03:58.092355
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 76.13.114.90
+	 ports: from: 59810 to 80
+	 packets: 9 with 1539 bytes
+	 duration: 0.325632 starting from 2011/08/15 11:03:58.174635
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41199 to 80
+	 packets: 12 with 3616 bytes
+	 duration: 0.341871 starting from 2011/08/15 11:03:58.323023
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41200 to 80
+	 packets: 12 with 2883 bytes
+	 duration: 0.341752 starting from 2011/08/15 11:03:58.352218
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41201 to 80
+	 packets: 12 with 2811 bytes
+	 duration: 0.358952 starting from 2011/08/15 11:03:58.353586
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.215.254.120
+	 ports: from: 34753 to 80
+	 packets: 11 with 1976 bytes
+	 duration: 0.346080 starting from 2011/08/15 11:03:58.380452
+Uncorrect labeling: 
+	 got flow=To-Background-CVUT-WebServer expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 90.183.39.17 to 147.32.84.14
+	 ports: from: 38553 to 80
+	 packets: 14 with 7110 bytes
+	 duration: 0.020968 starting from 2011/08/15 11:03:58.443049
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41203 to 80
+	 packets: 12 with 3115 bytes
+	 duration: 0.341609 starting from 2011/08/15 11:03:58.486406
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41204 to 80
+	 packets: 10 with 1613 bytes
+	 duration: 0.337979 starting from 2011/08/15 11:03:58.488511
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41205 to 80
+	 packets: 10 with 1773 bytes
+	 duration: 0.338714 starting from 2011/08/15 11:03:58.509078
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41206 to 80
+	 packets: 10 with 1541 bytes
+	 duration: 0.340783 starting from 2011/08/15 11:03:58.553037
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41207 to 80
+	 packets: 10 with 1681 bytes
+	 duration: 0.341613 starting from 2011/08/15 11:03:58.581645
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41208 to 80
+	 packets: 10 with 1681 bytes
+	 duration: 0.343105 starting from 2011/08/15 11:03:58.600759
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-UDP-NTP-Established-1
+	 protocol: udp
+	 address: from: 147.32.84.19 to 84.42.234.250
+	 ports: from: 50552 to 123
+	 packets: 26 with 2340 bytes
+	 duration: 3566.845947 starting from 2011/08/15 11:03:58.611625
+Uncorrect labeling: 
+	 got flow=Background expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 174.37.178.152 to 147.32.84.123
+	 ports: from: 80 to 1895
+	 packets: 1 with 60 bytes
+	 duration: 0.000000 starting from 2011/08/15 11:03:58.638241
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41209 to 80
+	 packets: 10 with 1581 bytes
+	 duration: 0.341902 starting from 2011/08/15 11:03:58.714744
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41210 to 80
+	 packets: 10 with 1586 bytes
+	 duration: 0.341030 starting from 2011/08/15 11:03:58.715630
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 64.238.147.56
+	 ports: from: 41211 to 80
+	 packets: 14 with 5945 bytes
+	 duration: 0.339032 starting from 2011/08/15 11:03:58.763240
+Uncorrect labeling: 
+	 got flow=Background-Attempt-cmpgw-CVUT expected: flow=Background-TCP-Attempt
+	 protocol: tcp
+	 address: from: 178.142.2.99 to 147.32.87.194
+	 ports: from: 62129 to 34106
+	 packets: 3 with 186 bytes
+	 duration: 8.953236 starting from 2011/08/15 11:03:58.766809
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-UDP-Attempt
+	 protocol: udp
+	 address: from: 147.32.84.118 to 222.109.231.13
+	 ports: from: 1150 to 59121
+	 packets: 1 with 143 bytes
+	 duration: 0.000000 starting from 2011/08/15 11:03:58.832790
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.86.165 to 83.167.225.83
+	 ports: from: 52752 to 80
+	 packets: 10 with 1486 bytes
+	 duration: 0.030083 starting from 2011/08/15 11:03:58.874732
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background
+	 protocol: icmp
+	 address: from: 147.32.87.1 to 147.32.87.48
+	 ports: from: 0x0105 to 0x9320
+	 packets: 41 with 2870 bytes
+	 duration: 3309.081543 starting from 2011/08/15 11:03:58.938265
+Uncorrect labeling: 
+	 got flow=Background-Attempt-cmpgw-CVUT expected: flow=Background
+	 protocol: icmp
+	 address: from: 201.19.79.190 to 147.32.84.229
+	 ports: from: 0x0103 to 0xc913
+	 packets: 18 with 3276 bytes
+	 duration: 3085.697266 starting from 2011/08/15 11:03:59.004790
+Uncorrect labeling: 
+	 got flow=Background-UDP-Attempt expected: flow=Background-UDP-Established
+	 protocol: udp
+	 address: from: 78.106.238.144 to 147.32.84.118
+	 ports: from: 6881 to 6881
+	 packets: 2 with 214 bytes
+	 duration: 1017.866028 starting from 2011/08/15 11:03:59.402108
+Uncorrect labeling: 
+	 got flow=Background-UDP-Attempt expected: flow=Background-UDP-Established
+	 protocol: udp
+	 address: from: 147.32.84.229 to 68.38.181.48
+	 ports: from: 13363 to 56214
+	 packets: 20 with 1370 bytes
+	 duration: 465.185425 starting from 2011/08/15 11:04:00.150845
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 76.13.114.90
+	 ports: from: 59812 to 80
+	 packets: 9 with 1539 bytes
+	 duration: 0.322561 starting from 2011/08/15 11:04:00.180553
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 94.23.249.32 to 147.32.84.229
+	 ports: from: 34112 to 13363
+	 packets: 23 with 3747 bytes
+	 duration: 35.170246 starting from 2011/08/15 11:04:00.295099
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-UDP-Attempt
+	 protocol: udp
+	 address: from: 195.113.44.15 to 239.255.255.253
+	 ports: from: 1123 to 427
+	 packets: 8 with 784 bytes
+	 duration: 2702.000244 starting from 2011/08/15 11:04:00.585356
+Uncorrect labeling: 
+	 got flow=Background expected: flow=Background-UDP-Attempt
+	 protocol: udp
+	 address: from: 147.32.87.7 to 195.113.44.15
+	 ports: from: 427 to 1123
+	 packets: 8 with 880 bytes
+	 duration: 2702.000244 starting from 2011/08/15 11:04:00.585638
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=To-Normal-V45-UDP-NTP-server
+	 protocol: udp
+	 address: from: 147.32.84.25 to 82.208.56.89
+	 ports: from: 43869 to 123
+	 packets: 86 with 7740 bytes
+	 duration: 3351.361572 starting from 2011/08/15 11:04:00.803275
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 217.201.93.149 to 147.32.84.229
+	 ports: from: 49378 to 80
+	 packets: 32 with 2490 bytes
+	 duration: 342.350647 starting from 2011/08/15 11:04:00.846823
+Uncorrect labeling: 
+	 got flow=Background-TCP-Attempt expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.84.118 to 213.213.242.100
+	 ports: from: 2940 to 6881
+	 packets: 5 with 366 bytes
+	 duration: 0.076016 starting from 2011/08/15 11:04:01.032069
+Uncorrect labeling: 
+	 got flow=Background-TCP-Attempt expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.84.118 to 2.92.78.145
+	 ports: from: 2941 to 6881
+	 packets: 11 with 1081 bytes
+	 duration: 0.511721 starting from 2011/08/15 11:04:01.067023
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.86.126 to 89.185.253.133
+	 ports: from: 39251 to 443
+	 packets: 19 with 4503 bytes
+	 duration: 0.618006 starting from 2011/08/15 11:04:01.313391
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 81.30.226.135
+	 ports: from: 33772 to 80
+	 packets: 10 with 1495 bytes
+	 duration: 115.143250 starting from 2011/08/15 11:04:01.318510
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 81.30.226.135
+	 ports: from: 33773 to 80
+	 packets: 10 with 1495 bytes
+	 duration: 115.140297 starting from 2011/08/15 11:04:01.319180
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.86.165 to 80.95.108.34
+	 ports: from: 52754 to 80
+	 packets: 10 with 1932 bytes
+	 duration: 0.016612 starting from 2011/08/15 11:04:01.476076
+Uncorrect labeling: 
+	 got flow=To-Background-UDP-CVUT-DNS-Server expected: flow=Background-UDP-Attempt
+	 protocol: udp
+	 address: from: 147.32.84.153 to 83.167.228.113
+	 ports: from: 50052 to 123
+	 packets: 1 with 90 bytes
+	 duration: 0.094194 starting from 2011/08/15 11:04:01.507563
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-UDP-NTP-Established-1
+	 protocol: udp
+	 address: from: 147.32.84.166 to 89.31.8.3
+	 ports: from: 44117 to 123
+	 packets: 24 with 2160 bytes
+	 duration: 3414.584717 starting from 2011/08/15 11:04:01.726392
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-UDP-Attempt
+	 protocol: udp
+	 address: from: 147.32.84.229 to 89.178.149.144
+	 ports: from: 13363 to 24441
+	 packets: 3 with 225 bytes
+	 duration: 6.039781 starting from 2011/08/15 11:04:01.788698
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-UDP-Attempt
+	 protocol: udp
+	 address: from: 88.167.179.64 to 147.32.84.118
+	 ports: from: 29225 to 1150
+	 packets: 1 with 145 bytes
+	 duration: 0.000402 starting from 2011/08/15 11:04:02.188031
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 76.13.114.90
+	 ports: from: 59814 to 80
+	 packets: 9 with 1541 bytes
+	 duration: 0.333886 starting from 2011/08/15 11:04:02.214415
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 217.201.93.149 to 147.32.84.229
+	 ports: from: 49379 to 13363
+	 packets: 8 with 564 bytes
+	 duration: 9.261016 starting from 2011/08/15 11:04:02.487044
+Uncorrect labeling: 
+	 got flow=Background-google-analytics13 expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.85.7 to 93.188.130.83
+	 ports: from: 36006 to 80
+	 packets: 14 with 3886 bytes
+	 duration: 60.419468 starting from 2011/08/15 11:04:02.585020
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.86.84 to 74.125.39.109
+	 ports: from: 50484 to 995
+	 packets: 30 with 4584 bytes
+	 duration: 0.938626 starting from 2011/08/15 11:04:02.587252
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-UDP-Attempt
+	 protocol: udp
+	 address: from: 188.67.227.58 to 147.32.84.118
+	 ports: from: 30247 to 1150
+	 packets: 1 with 145 bytes
+	 duration: 0.000780 starting from 2011/08/15 11:04:02.649525
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.85.7 to 93.188.130.105
+	 ports: from: 56639 to 80
+	 packets: 14 with 3674 bytes
+	 duration: 60.352478 starting from 2011/08/15 11:04:02.652004
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.85.7 to 93.188.130.105
+	 ports: from: 56640 to 80
+	 packets: 14 with 3811 bytes
+	 duration: 60.290844 starting from 2011/08/15 11:04:02.664441
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-Attempt-cmpgw-CVUT
+	 protocol: udp
+	 address: from: 46.211.204.246 to 147.32.84.59
+	 ports: from: 35691 to 15140
+	 packets: 1 with 145 bytes
+	 duration: 0.000176 starting from 2011/08/15 11:04:02.856548
+Uncorrect labeling: 
+	 got flow=Background expected: flow=Background-Attempt-cmpgw-CVUT
+	 protocol: icmp
+	 address: from: 147.32.84.59 to 46.211.204.246
+	 ports: from: 0x0303 to 0x243b
+	 packets: 1 with 173 bytes
+	 duration: 0.000000 starting from 2011/08/15 11:04:02.856724
+Uncorrect labeling: 
+	 got flow=Background-UDP-Attempt expected: flow=Background-UDP-NTP-Established-1
+	 protocol: udp
+	 address: from: 147.32.84.94 to 91.189.94.4
+	 ports: from: 123 to 123
+	 packets: 30 with 2700 bytes
+	 duration: 3592.034424 starting from 2011/08/15 11:04:02.956936
+Uncorrect labeling: 
+	 got flow=Background-Attempt-cmpgw-CVUT expected: flow=Background-UDP-Attempt
+	 protocol: udp
+	 address: from: 186.36.12.63 to 147.32.86.194
+	 ports: from: 37675 to 35155
+	 packets: 1 with 145 bytes
+	 duration: 0.000000 starting from 2011/08/15 11:04:03.002075
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 66.249.72.186 to 147.32.86.92
+	 ports: from: 37010 to 80
+	 packets: 16 with 4527 bytes
+	 duration: 5.695002 starting from 2011/08/15 11:04:03.046528
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=To-Background-UDP-CVUT-DNS-Server
+	 protocol: udp
+	 address: from: 147.32.85.100 to 147.32.80.9
+	 ports: from: 2852 to 53
+	 packets: 2 with 206 bytes
+	 duration: 0.000185 starting from 2011/08/15 11:04:03.416641
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=To-Background-UDP-CVUT-DNS-Server
+	 protocol: udp
+	 address: from: 147.32.85.100 to 147.32.80.9
+	 ports: from: 2853 to 53
+	 packets: 2 with 269 bytes
+	 duration: 0.000283 starting from 2011/08/15 11:04:03.417903
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=To-Background-UDP-CVUT-DNS-Server
+	 protocol: udp
+	 address: from: 147.32.85.100 to 147.32.80.9
+	 ports: from: 2854 to 53
+	 packets: 2 with 224 bytes
+	 duration: 0.000320 starting from 2011/08/15 11:04:03.419260
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 84.24.62.42 to 147.32.84.59
+	 ports: from: 61518 to 43087
+	 packets: 6 with 366 bytes
+	 duration: 3.426109 starting from 2011/08/15 11:04:03.472673
+Uncorrect labeling: 
+	 got flow=To-Background-UDP-CVUT-DNS-Server expected: flow=Background-UDP-Established
+	 protocol: udp
+	 address: from: 93.170.0.65 to 147.32.86.186
+	 ports: from: 40760 to 1643
+	 packets: 2 with 128 bytes
+	 duration: 0.000624 starting from 2011/08/15 11:04:03.611584
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.85.36 to 147.32.192.127
+	 ports: from: 43748 to 443
+	 packets: 738 with 822698 bytes
+	 duration: 14.915376 starting from 2011/08/15 11:04:03.631858
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.85.36 to 147.32.192.127
+	 ports: from: 43749 to 443
+	 packets: 18 with 2756 bytes
+	 duration: 4.779847 starting from 2011/08/15 11:04:03.763615
+Uncorrect labeling: 
+	 got flow=To-Background-UDP-CVUT-DNS-Server expected: flow=From-Normal-V45-Stribrek
+	 protocol: udp
+	 address: from: 147.32.84.170 to 147.32.80.9
+	 ports: from: 37963 to 53
+	 packets: 2 with 400 bytes
+	 duration: 0.000387 starting from 2011/08/15 11:04:03.988649
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 65.55.200.139
+	 ports: from: 1077 to 443
+	 packets: 152 with 137421 bytes
+	 duration: 82.266693 starting from 2011/08/15 11:04:04.169514
+Uncorrect labeling: 
+	 got flow=From-Normal-V45-Stribrek expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 147.32.86.50 to 147.32.87.4
+	 ports: from: 59108 to 110
+	 packets: 16 with 1260 bytes
+	 duration: 0.110179 starting from 2011/08/15 11:04:04.191692
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 217.201.93.149 to 147.32.84.229
+	 ports: from: 49381 to 443
+	 packets: 23 with 2090 bytes
+	 duration: 49.300056 starting from 2011/08/15 11:04:04.226326
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-Established-cmpgw-CVUT
+	 protocol: tcp
+	 address: from: 147.32.84.59 to 76.13.114.90
+	 ports: from: 59816 to 80
+	 packets: 9 with 1539 bytes
+	 duration: 0.348336 starting from 2011/08/15 11:04:04.258689
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 123.115.191.216 to 147.32.86.179
+	 ports: from: 57720 to 58675
+	 packets: 3 with 212 bytes
+	 duration: 0.444737 starting from 2011/08/15 11:04:04.288795
+Uncorrect labeling: 
+	 got flow=Background-TCP-Established expected: flow=Background-google-analytics2
+	 protocol: tcp
+	 address: from: 147.32.84.184 to 74.125.232.193
+	 ports: from: 53728 to 80
+	 packets: 131 with 89234 bytes
+	 duration: 265.918274 starting from 2011/08/15 11:04:04.299831
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-google-analytics12
+	 protocol: tcp
+	 address: from: 147.32.86.131 to 74.125.232.203
+	 ports: from: 46466 to 80
+	 packets: 25 with 4932 bytes
+	 duration: 240.120712 starting from 2011/08/15 11:04:04.574313
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-TCP-Established
+	 protocol: tcp
+	 address: from: 90.183.39.17 to 147.32.87.27
+	 ports: from: 50035 to 80
+	 packets: 20 with 14813 bytes
+	 duration: 0.023548 starting from 2011/08/15 11:04:04.664538
+Uncorrect labeling: 
+	 got flow=Background-UDP-Attempt expected: flow=Background-google-analytics13
+	 protocol: tcp
+	 address: from: 74.125.232.204 to 147.32.86.147
+	 ports: from: 80 to 40403
+	 packets: 4 with 258 bytes
+	 duration: 14.126461 starting from 2011/08/15 11:04:04.733116
+Uncorrect labeling: 
+	 got flow=Background-UDP-Attempt expected: flow=Background-UDP-Established
+	 protocol: udp
+	 address: from: 147.32.84.229 to 174.118.79.49
+	 ports: from: 13363 to 29381
+	 packets: 2 with 133 bytes
+	 duration: 0.175100 starting from 2011/08/15 11:04:04.856154
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-UDP-Established
+	 protocol: udp
+	 address: from: 147.32.85.30 to 147.229.67.107
+	 ports: from: 61070 to 24394
+	 packets: 12 with 1513 bytes
+	 duration: 3200.990479 starting from 2011/08/15 11:04:04.922788
+Uncorrect labeling: 
+	 got flow=Background expected: flow=Background-google-analytics15
+	 protocol: tcp
+	 address: from: 74.125.232.206 to 147.32.86.147
+	 ports: from: 80 to 55018
+	 packets: 4 with 258 bytes
+	 duration: 13.933691 starting from 2011/08/15 11:04:04.925576
+Uncorrect labeling: 
+	 got flow=Background expected: flow=Background-google-analytics10
+	 protocol: tcp
+	 address: from: 74.125.232.201 to 147.32.86.147
+	 ports: from: 80 to 54425
+	 packets: 4 with 258 bytes
+	 duration: 13.930258 starting from 2011/08/15 11:04:04.929047
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-google-analytics9
+	 protocol: tcp
+	 address: from: 74.125.232.200 to 147.32.86.147
+	 ports: from: 80 to 39260
+	 packets: 4 with 258 bytes
+	 duration: 13.926506 starting from 2011/08/15 11:04:04.932808
+Uncorrect labeling: 
+	 got flow=Background expected: flow=Background-google-analytics15
+	 protocol: tcp
+	 address: from: 74.125.232.206 to 147.32.86.147
+	 ports: from: 80 to 55029
+	 packets: 4 with 258 bytes
+	 duration: 13.926540 starting from 2011/08/15 11:04:04.932822
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-google-analytics9
+	 protocol: tcp
+	 address: from: 74.125.232.200 to 147.32.86.147
+	 ports: from: 80 to 39261
+	 packets: 4 with 258 bytes
+	 duration: 13.925837 starting from 2011/08/15 11:04:04.933733
+Uncorrect labeling: 
+	 got flow=Background-UDP-Established expected: flow=Background-google-analytics9
+	 protocol: tcp
+	 address: from: 74.125.232.200 to 147.32.86.147
+	 ports: from: 80 to 39259
+	 packets: 4 with 258 bytes
+	 duration: 13.923956 starting from 2011/08/15 11:04:04.935354
+Uncorrect labeling: 
+	 got flow=Background-Established-cmpgw-CVUT expected: flow=Background-google-analytics16
+	 protocol: tcp
+	 address: from: 147.32.84.184 to 74.125.232.207
+	 ports: from: 48308 to 80
+	 packets: 28 with 7799 bytes
+	 duration: 247.127563 starting from 2011/08/15 11:04:05.036040

@@ -1,4 +1,3 @@
-
 class Failure:
 
     def __init__(self, result, correct, index):
@@ -63,6 +62,7 @@ class Predictor:
 
     def set_algorithm(self, algorithm):
         self.algorithm = algorithm
+        self.logger = algorithm.logger
 
     def runner(self, data_set, check):
         for d in data_set:
@@ -70,7 +70,11 @@ class Predictor:
             self.check_keys(d, "file", "")
             self.check_keys(d, "to", -1)
             print "Start file: " + str(d['file']) + "."
-            self.predict_file(d, check)
+            try:
+                self.predict_file(d, check)
+            except KeyboardInterrupt as e:
+                self.logger.update_progress(-1)
+                print "KeyboardInterrupt occured..."
             print "End file: " + str(d['file']) + "."
         print self.results()
 
@@ -99,20 +103,22 @@ class Predictor:
     def loop(self, netflow):
         i = 0
 
-        while i < netflow.get_size():
-            #try:
-            result = self.algorithm.predict(netflow.get_sample_data(self.feature)[i], netflow.get_target_data()[i])
+        size = netflow.get_size()
+        while i < size:
+            flow = netflow.get_sample_data(self.feature)[i]
+            label =  netflow.get_target_data()[i]
+            result = self.algorithm.predict(flow, label)
             if self.check:
-                test = result == netflow.get_target_data()[i]
+                #self.logger.output_complete(result, netflow.get_netflow()[i], self.algorithm.good_labels)
+                test = result == label
                 if not test:
-                    self.fails.add_fail_record(result, netflow.get_target_data()[i], i)
+                    self.logger.output_check(result, netflow.get_netflow()[i], label)
+                    self.fails.add_fail_record(result, label, i)
             else:
-                self.returns.append(Result(netflow.get_sample_data()[i], result))
+                self.returns.append(Result(flow, result))
             i = i + 1
             self.totals = self.totals + 1
-            #except Exception as e:
-            #    print e
-            #    pass
+            self.logger.update_progress(i*1./size)
 
     def results(self):
         if self.check:

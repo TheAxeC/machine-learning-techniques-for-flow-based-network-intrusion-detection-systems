@@ -32,6 +32,18 @@ class Config:
             return MLAlgorithm.get_algorithm(self.data['algorithm'])
         return None
 
+    # Get the algorithm file
+    def get_feature(self):
+        import feature
+        if "featureClass" in self.data and "feature-file" in self.data:
+            return feature.get_feature(self.data['featureClass'], self.data['feature-file'])
+        return None
+
+    def get_feature_name(self):
+        if 'featureClass' in self.data:
+            return self.data['featureClass']
+        return "Unknown"
+
     def get_algorithm_name(self):
         if 'algorithm' in self.data:
             return self.data['algorithm']

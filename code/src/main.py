@@ -3,10 +3,21 @@
 The structure:
     config.json
         contains all information of the program
+    protocols.json
+        contains information about protocols used for sniffing
+    features.json
+        contains all information used for feature extraction
+
+
+    good.txt
+        contains non-malicious labels
+
+
     config.py
         loads all attributes from config.json
     flow.py
         contains flow classes
+    feature.py
         Changing the attributes given to a ml algorithm happens here
     loader.py
         loads different files such as:
@@ -147,8 +158,12 @@ def IDS(config):
                     config.get_good_labels_file())
     print ""
 
-    from feature import FlowFeature
-    feature = FlowFeature()
+    feature = config.get_feature()
+    if not feature:
+        print "No feature loaded"
+        sys.exit()
+    print "Loaded feature: " + str(config.get_feature_name()) + "."
+    print ""
 
     # Start training
     # This phase cannot be avoided or stopped

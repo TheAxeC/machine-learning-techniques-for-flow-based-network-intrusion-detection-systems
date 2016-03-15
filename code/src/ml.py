@@ -10,7 +10,9 @@ class MLAlgorithm:
 
     # Set the logging files:
     def start(self, log, good_label):
-        self.logger = self.open_file(log)
+        from logger import Logger
+        self.logger = Logger()
+        self.logger.start(log)
         self.good_labels = self.load_labels(good_label)
 
     # load labels:
@@ -107,7 +109,7 @@ class OneClassSVM(MLAlgorithm):
         self.algorithm.fit(data_set)
 
     # Predict a sample
-    def predict(self, sample):
+    def predict(self, sample, corr=None):
         return self.algorithm.predict([sample])[0]
 
 class KMeans(MLAlgorithm):
@@ -120,7 +122,7 @@ class KMeans(MLAlgorithm):
         return self.algorithm.fit_predict(data_set)
 
     # Predict a sample
-    def predict(self, sample):
+    def predict(self, sample, corr=None):
         return self.algorithm.predict([sample])[0]
 
 # Using the SVM machine learning algorithm
@@ -134,7 +136,20 @@ class SupportVectorMachine(MLAlgorithm):
         self.algorithm.fit(data_set, target_set)
 
     # Predict a sample
-    def predict(self, sample):
+    def predict(self, sample, corr=None):
+        return self.algorithm.predict([sample])[0]
+
+class LinearSVC(MLAlgorithm):
+    def __init__(self):
+        from sklearn import svm
+        self.algorithm = svm.LinearSVC()
+
+    # Train the data set
+    def train(self, data_set, target_set):
+        self.algorithm.fit(data_set, target_set)
+
+    # Predict a sample
+    def predict(self, sample, corr=None):
         return self.algorithm.predict([sample])[0]
 
 # Using the KNeighborsClassifier machine learning algorithm
@@ -148,33 +163,13 @@ class KNeighborsClassifier(MLAlgorithm):
         self.algorithm.fit(data_set, target_set)
 
     # Predict a sample
-    def predict(self, sample):
+    def predict(self, sample, corr=None):
         return self.algorithm.predict([sample])[0]
-
-    # Estimate whether a sample is malicious or not
-    def record_predict(self, flow, sample):
-        label = self.predict(sample)
-
-        if label in self.good_labels:
-            self.logger.write("Good label found \"" + label + "\"\n")
-        else:
-            from geoipc import GeoIP
-            gi = GeoIP('GeoIP.dat')
-
-            self.logger.write("Malicious label found \"" + str(label) + "\"!!!!!!!!!!!\n")
-            self.logger.write("\t protocol: " + str(flow.protocol) + "\n")
-            self.logger.write("\t address: from: " + str(flow.src_ip) + " to " + str(flow.dest_ip) + "\n")
-            self.logger.write("\t country origin: " + gi.country(flow.src_ip) + "\n")
-            self.logger.write("\t country destination: " + gi.country(flow.dest_ip) + "\n")
-            self.logger.write("\t ports: from: " + str(flow.src_port) + " to " + str(flow.dest_port) + "\n")
-            self.logger.write("\t packets: " + str(flow.total_pckts) + " with " + str(flow.total_bytes) + " bytes\n")
-            self.logger.write("\t duration: " + str(flow.duration) + " starting from " + str(flow.start_time) + "\n")
-        self.logger.flush()
 
 class AlgorithmContainer(MLAlgorithm):
 
     def __init__(self):
-        self.supervised = SupportVectorMachine() #KNeighborsClassifier()
+        self.supervised = KNeighborsClassifier() #KNeighborsClassifier()
         self.unsupervised = None#KMeans()
 
         # Also store the labels in this class

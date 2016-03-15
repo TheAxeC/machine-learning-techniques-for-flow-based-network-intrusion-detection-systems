@@ -1,14 +1,48 @@
+def get_feature(name, file):
+    import sys
+
+    try:
+        return getattr(sys.modules[__name__], name)(file)
+    except Exception as e:
+        print "Feature \"" + str(name) + "\" does not exist."
+        return None
+
 # A class to construct the feature from raw flow data
 class FlowFeature:
 
     # Initialisation
-    def __init__(self):
-        self.ports = {
-            "udp" : [22, 23, 24],
-            "tcp" : [1, 2, 3],
-            "other" : [1, 2, 3]
-        }
-        self.protocols = ["tcp", "udp"]
+    def __init__(self, file):
+        #self.ports = {
+        #    "udp" : [22, 23, 24],
+        #    "tcp" : [1, 2, 3],
+        #    "other" : [1, 2, 3]
+        #}
+        #self.protocols = ["tcp", "udp"]
+
+        self.read_config(file)
+
+    # Reading the config file
+    def read_config(self, file=None):
+        import json
+
+        try:
+            file_name = None
+            if file:
+                file_name = file
+            else:
+                file_name = self.default
+
+            with open(file_name) as data_file:
+                data = json.load(data_file)
+                if "ports" in data:
+                    self.ports = data["ports"]
+                if "protocols" in data:
+                    self.protocols = data["protocols"]
+            return True
+        except Exception as e:
+            print e
+            print self.data
+            return False
 
     # Get the protocol into a feature (index in self.protocols)
     def get_protocol_feature(self, protocol):
@@ -22,10 +56,18 @@ class FlowFeature:
     # 1 is returned
     # Otherwise, 0 is returned
     def get_port_feature(self, protocol, port):
-        if protocol in self.ports:
-            return int(port in self.ports[protocol])
+        try:
+            port = int(port)
+        except Exception as e:
+            try:
+                port = int(port, 16)
+            except Exception as e:
+                port = 0
+        
+        if protocol.lower() in self.ports:
+            return port in self.ports[protocol.lower()]
         else:
-            return int(port in self.ports["other"])
+            return port in self.ports["other"]
 
     # Return the feature for the IP value of the port
     def get_ip_feature(self, ip):
@@ -70,7 +112,8 @@ class FlowFeature:
 
     def print_record(self, flow):
         print "----------------------------"
-        print "record: [protocol, src_port, dst_port, srcbytes, duration, src_ip, dst_ip, packets, bytes]"
+        print "record: "
+        print "[protocol, src_port, dst_port, srcbytes, duration, src_ip, dst_ip, packets, bytes]"
         print [int(self.get_protocol_feature(flow.protocol)),
                 int(self.get_port_feature(flow.protocol, flow.src_port)),
                 int(self.get_port_feature(flow.protocol, flow.dest_port)),
@@ -84,14 +127,15 @@ class FlowFeature:
         print "end record"
 
     def make_record(self, flow):
-        return [int(self.get_protocol_feature(flow.protocol)),
-                int(self.get_port_feature(flow.protocol, flow.src_port)),
-                int(self.get_port_feature(flow.protocol, flow.dest_port)),
-                int(flow.total_srcbytes),
-                float(flow.duration),
-                int(self.get_ip_feature(flow.src_ip)) ,
-                int(self.get_ip_feature(flow.dest_ip)),
-                int(flow.total_pckts),
-                int(flow.total_bytes)]
-
-###########################################################################################
+        #self.print_record(flow)
+        return [
+                    int(self.get_protocol_feature(flow.protocol)),
+                    int(self.get_port_feature(flow.protocol, flow.src_port)),
+                    int(self.get_port_feature(flow.protocol, flow.dest_port)),
+                    int(flow.total_srcbytes),
+                    float(flow.duration),
+                    #int(self.get_ip_feature(flow.src_ip)) ,
+                    #int(self.get_ip_feature(flow.dest_ip)),
+                    int(flow.total_pckts),
+                    int(flow.total_bytes)
+                ]
