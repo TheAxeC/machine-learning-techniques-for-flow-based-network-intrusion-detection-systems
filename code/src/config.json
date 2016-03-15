@@ -9,14 +9,10 @@
         {
             "src" : "../test/dosattack.pcap",
             "dest" :  "../test/dosattack2.flow"
-        },
-        {
-            "src" : "../test/test1.pcap",
-            "dest" :  "../test/test1.flow"
         }
     ],
 
-    "algorithm" : "SupportVectorMachine",
+    "algorithm" : "AlgorithmContainer",
 
     "model_dir" : "../models/",
     "model" : "model.mdl",
@@ -26,46 +22,36 @@
     "data-sets" : [
             {
                 "file" : "../test/capture20110816-2.binetflow",
-                "to" : 10
+                "to" : 10000
             },
             {
                 "file" : "../test/capture20110815.binetflow",
-                "from" : 0,
-                "to" : 5
+                "from" : 1000,
+                "to" : 5000
             }
-
         ],
-    "trainer" : "NetflowTrainerS",
+    "trainer" : "DefaultTrainer",
 
     "check-sets" : [
             {
-                "file" : "../test/capture20110816-2.binetflow",
-                "type" : "netflow",
-                "from" : 0,
-                "to" : 0
-            },
-            {
                 "file" : "../test/capture20110815.binetflow",
                 "type" : "netflow",
                 "from" : 0,
-                "to" : 0
+                "to" : 1000
             }
-
         ],
 
     "predict-sets" : [
-
         ],
 
     "packet-analyses" : false,
     "prevention" : false,
 
-    "print-fails" : true,
+    "print-fails" : false,
     "print-labels" : false,
     "timeout" : 5000,
 
     "protocol-file" : "protocols.json",
     "logger" : "log.txt",
-    "good-labels" : "good.txt",
-    "malicious-labels" : "bad.txt"
+    "good-labels" : "good.txt"
 }

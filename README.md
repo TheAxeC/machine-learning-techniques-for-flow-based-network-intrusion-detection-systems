@@ -63,12 +63,25 @@ Prediction algorithms predict whether the data is:
     * categorize
 - Normal
     * categorize
+
 The algorithm tries to predict a label as specific as possible.
 
-# Development
-## Questions:
-- glossary
+## Logging
+Logging:
+- Printing all records
+- Print predictions
+- Print fails (in check)
+- Print trained model
+- Progression bar training
+- Print record training
+- Things to check on overfitting etc
 
+Visualisation:
+- Keep detected links in database/json
+- Find similarities/connections
+- Graphing
+
+# Development
 ## TODO:
 - chapter ML-IDS has to be merged into ML chapter
 - already discuss why using a certain (KNN) algorithm compared to others
@@ -114,3 +127,5 @@ The algorithm tries to predict a label as specific as possible.
 - alles HEEL SIMPEL kunnen uitleggen. (hopelijk zijn het informatici, dus leg het heel simpel en heel to the point uit).
 - wat is het nut van de BP
 - hoe valideren
+
+- meeting 11/03 en 14/03

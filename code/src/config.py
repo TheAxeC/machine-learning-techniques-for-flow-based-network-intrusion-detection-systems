@@ -166,11 +166,6 @@ class Config:
             return self.data['good-labels']
         return ""
 
-    def get_bad_labels_file(self):
-        if 'malicious-labels' in self.data:
-            return self.data['malicious-labels']
-        return ""
-
     def print_labels(self):
         if 'print-labels' in self.data:
             return self.data['print-labels']

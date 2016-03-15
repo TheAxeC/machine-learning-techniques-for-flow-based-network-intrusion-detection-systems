@@ -7,16 +7,11 @@ class MLAlgorithm:
         self.save_file = None
         self.algorithm = None
         self.good_labels = []
-        self.malicious_labels = []
-
-        from sklearn.feature_extraction import DictVectorizer
-        self.vec = DictVectorizer()
 
     # Set the logging files:
-    def start(self, log, good_label, malicious_labels):
+    def start(self, log, good_label):
         self.logger = self.open_file(log)
         self.good_labels = self.load_labels(good_label)
-        self.malicious_labels = self.load_labels(malicious_labels)
 
     # load labels:
     def load_labels(self, file_name):
@@ -100,18 +95,37 @@ class MLAlgorithm:
             print "Algorithm \"" + str(name) + "\" does not exist."
             return None
 
-    def extract_feature_fit(self, data):
-        train = self.vec.fit_transform(data)
-        print self.vec.get
-        return train
+# An unsupervised learning algorithm
+class OneClassSVM(MLAlgorithm):
+    def __init__(self):
+        from sklearn import svm
+        self.algorithm = svm.OneClassSVM(nu=0.95 * 0.8 + 0.05,
+                                kernel="rbf", gamma=0.1)
 
-    def extract_feature(self, data):
-        return self.vec.transform(data)
+    # Train the data set
+    def train(self, data_set, target_set=None):
+        self.algorithm.fit(data_set)
+
+    # Predict a sample
+    def predict(self, sample):
+        return self.algorithm.predict([sample])[0]
+
+class KMeans(MLAlgorithm):
+    def __init__(self):
+        from sklearn import cluster
+        self.algorithm = cluster.KMeans(n_clusters = 70)
+
+    # Train the data set
+    def train(self, data_set, target_set=None):
+        return self.algorithm.fit_predict(data_set)
+
+    # Predict a sample
+    def predict(self, sample):
+        return self.algorithm.predict([sample])[0]
 
 # Using the SVM machine learning algorithm
 class SupportVectorMachine(MLAlgorithm):
     def __init__(self):
-        MLAlgorithm.__init__(self)
         from sklearn import svm
         self.algorithm = svm.SVC()
 
@@ -156,3 +170,47 @@ class KNeighborsClassifier(MLAlgorithm):
             self.logger.write("\t packets: " + str(flow.total_pckts) + " with " + str(flow.total_bytes) + " bytes\n")
             self.logger.write("\t duration: " + str(flow.duration) + " starting from " + str(flow.start_time) + "\n")
         self.logger.flush()
+
+class AlgorithmContainer(MLAlgorithm):
+
+    def __init__(self):
+        self.supervised = SupportVectorMachine() #KNeighborsClassifier()
+        self.unsupervised = None#KMeans()
+
+        # Also store the labels in this class
+        self.clusters = []
+        for i in xrange(0, 200):
+            self.clusters.append({})
+
+    def get_label(self, clus):
+        m = ""
+        ma = 0
+        for key,val in self.clusters[clus].iteritems():
+            if val > ma:
+                ma = val
+                m = key
+        return m
+
+    # Train the data set
+    def train(self, data_set, target_set):
+        if self.supervised:
+            self.supervised.train(data_set, target_set)
+        if self.unsupervised:
+            totals = self.unsupervised.train(data_set, target_set)
+            i = 0
+            for ind in totals:
+                res = target_set[i]
+                if res in self.clusters[ind]:
+                    self.clusters[ind][res] += 1
+                else:
+                    self.clusters[ind][res] = 1
+                i += 1
+
+    # Predict a sample
+    def predict(self, sample, corr=None):
+        supr = self.supervised.predict(sample)
+        #ussupr = self.unsupervised.predict(sample)
+
+        #print str(self.get_label(ussupr)) + " " + str(supr) + " " + str(corr)
+        return supr
+        return str(self.get_label(ussupr))

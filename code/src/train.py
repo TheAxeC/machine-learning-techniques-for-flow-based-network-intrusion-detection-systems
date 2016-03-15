@@ -22,10 +22,10 @@ class Trainer:
             return None
 
 # Supervised netflow trainer
-class NetflowTrainerS(Trainer):
+class DefaultTrainer(Trainer):
 
     # Train supervised with samples and targets
-    def train(self, algorithm, file, fr, to):
+    def train(self, algorithm, file, fr, to, feature):
         from loader import NetflowLoader
         loader = NetflowLoader()
         if not loader.load(file, fr, to):
@@ -34,21 +34,16 @@ class NetflowTrainerS(Trainer):
 
         print "Training size is " + str(loader.get_netflow().get_size()) + "."
 
-        if loader.get_netflow().get_size() <= 1:
+        if loader.get_netflow().get_size() <= 2:
             print "Training set too small."
             return False
         else:
-            samples = loader.get_netflow().get_sample_data()
+            samples = loader.get_netflow().get_sample_data(feature)
             targets = loader.get_netflow().get_target_data()
-
-            from sklearn.feature_extraction import DictVectorizer
-
-            training_set = loader.get_netflow().get_raw_data()
-
             try:
-                algorithm.train(algorithm.extract_feature_fit(training_set).toarray(), targets)
+                algorithm.train(samples, targets)
             except Exception as e:
-                print e
+                raise e
                 print "Wrong training data set used."
                 return False
 

@@ -1,0 +1,12 @@
+{
+    "ports" : {
+        "udp" : [1, 2, 3, 4],
+        "tcp" : [],
+        "other" : []
+    },
+
+    "protocols" : [
+        "tcp",
+        "udp"
+    ]
+}

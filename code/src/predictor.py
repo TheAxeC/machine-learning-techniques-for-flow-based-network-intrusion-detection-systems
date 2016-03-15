@@ -55,7 +55,11 @@ class Predictor:
         self.check = False
 
         self.algorithm = None
+        self.feature = None
         self.minimize = not print_total
+
+    def set_feature(self, feature):
+        self.feature = feature
 
     def set_algorithm(self, algorithm):
         self.algorithm = algorithm
@@ -95,13 +99,9 @@ class Predictor:
     def loop(self, netflow):
         i = 0
 
-        cur = 0.01
-        step = 0.01
         while i < netflow.get_size():
             #try:
-            training_set = netflow.get_raw_data()[i]
-
-            result = self.algorithm.predict(self.algorithm.extract_feature(training_set).toarray()[0])#netflow.get_sample_data()[i])
+            result = self.algorithm.predict(netflow.get_sample_data(self.feature)[i], netflow.get_target_data()[i])
             if self.check:
                 test = result == netflow.get_target_data()[i]
                 if not test:
@@ -110,10 +110,6 @@ class Predictor:
                 self.returns.append(Result(netflow.get_sample_data()[i], result))
             i = i + 1
             self.totals = self.totals + 1
-
-            if i/netflow.get_size() >= cur:
-                print str(cur*100) + "% done"
-                cur += step
             #except Exception as e:
             #    print e
             #    pass

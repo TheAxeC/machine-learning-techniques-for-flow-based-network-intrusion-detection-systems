@@ -107,9 +107,6 @@ class SharkFlow:
         self.size += int(size)
         self.packets += 1
 
-    def get_sample(self):
-        return self.get_flow_record().make_sample()
-
     def get_flow_record(self):
         from flow import FlowRecord
         f = FlowRecord()
@@ -141,8 +138,9 @@ class SharkFlow:
 # The netflow generator
 class NetflowGenerator:
 
-    def __init__(self, timeout=10.):
+    def __init__(self, feature, timeout=10.):
         self.timeout = float(timeout) / 1000
+        self.feature = feature
 
     # Start generation
     def start(self, algorithm=None, dest=None):
@@ -199,7 +197,8 @@ class NetflowGenerator:
                 flow.update(time)
                 self.complete += 1
                 if self.algorithm:
-                    self.algorithm.record_predict(flow.get_flow_record(), flow.get_sample())
+                    f = flow.get_flow_record()
+                    self.algorithm.record_predict(f, feature.make_record(f))
                 else:
                     self.res_flow.append(flow)
                 remove_flows.append(key)
@@ -220,13 +219,13 @@ class NetflowGenerator:
 # The basic sniffer class
 class Sniffer:
 
-    def __init__(self, config_file, timeout=10.):
+    def __init__(self, config_file, feature, timeout=10.):
         # Scapy variables
         self.filter = "ip"
         self.store = 0
         self.iface = "en0"
 
-        self.flow = NetflowGenerator(timeout)
+        self.flow = NetflowGenerator(feature, timeout)
         self.file = None
         self.config = PacketConfig(config_file)
 

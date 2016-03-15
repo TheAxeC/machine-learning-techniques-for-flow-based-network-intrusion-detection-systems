@@ -56,7 +56,7 @@ def check_keys(dic, key, val):
 
 ##########################################################
 
-def training_data_set(config, algorithm):
+def training_data_set(config, algorithm, feature):
     print "Using data sets with malicious data."
     trainer = config.get_trainer()
     if not trainer:
@@ -66,7 +66,7 @@ def training_data_set(config, algorithm):
         check_keys(d, "from", 0)
         check_keys(d, "file", "")
         check_keys(d, "to", -1)
-        if trainer.train(algorithm, d["file"], d["from"], d['to']):
+        if trainer.train(algorithm, d["file"], d["from"], d['to'], feature):
             trained = True
     if not trained:
         print "No training provided."
@@ -76,7 +76,7 @@ def training_data_set(config, algorithm):
 
 ##########################################################
 
-def training(config, algorithm):
+def training(config, algorithm, feature):
     print "Start training..."
     if config.use_model():
         try:
@@ -85,15 +85,15 @@ def training(config, algorithm):
             algorithm.load_file(directory + config.get_model())
         except IOError as e:
             print "Couldn't use stored model."
-            training_data_set(config, algorithm)
+            training_data_set(config, algorithm, feature)
     else:
-        training_data_set(config, algorithm)
+        training_data_set(config, algorithm, feature)
 
     print "Finished training.\n"
 
 ##########################################################
 
-def sniffing(config, algorithm):
+def sniffing(config, algorithm, feature):
     if config.sniffer_active():
         print "Start sniffing..."
 
@@ -108,18 +108,19 @@ def sniffing(config, algorithm):
         print "\t analyse closed flow"
 
         from sniffer import Sniffer
-        sniff = Sniffer(config.get_protocol_file(), config.get_flow_timeout())
+        sniff = Sniffer(config.get_protocol_file(), config.get_flow_timeout(), feature)
         sniff.sniff_tshark(algorithm)
 
         print "End sniffing.\n"
 
 ##########################################################
 
-def prediction(config, algorithm):
+def prediction(config, algorithm, feature):
     print "Start predictions and checks..."
     from predictor import Predictor
     checker = Predictor(config.print_fails())
     checker.set_algorithm(algorithm)
+    checker.set_feature(feature)
     if config.is_check():
         print "Running Checks..."
         print "Used for checking the accuracy of the IDS"
@@ -143,24 +144,26 @@ def IDS(config):
     print "Loaded algorithm: " + str(config.get_algorithm_name()) + "."
 
     algorithm.start(config.get_logger_file(),
-                    config.get_good_labels_file(),
-                    config.get_bad_labels_file())
+                    config.get_good_labels_file())
     print ""
+
+    from feature import FlowFeature
+    feature = FlowFeature()
 
     # Start training
     # This phase cannot be avoided or stopped
-    training(config, algorithm)
+    training(config, algorithm, feature)
 
     # Start prediction
     # Prediction testing phase
     # Uses pre-prepared data sets
     # Can use checkers to detect accuracy
     # And can use prediction mode, for unlabeled data
-    prediction(config, algorithm)
+    prediction(config, algorithm, feature)
 
     # Start sniffing
     # Main component of the IDS
-    sniffing(config, algorithm)
+    sniffing(config, algorithm, feature)
 
     # Stop the logging
     algorithm.stop()
