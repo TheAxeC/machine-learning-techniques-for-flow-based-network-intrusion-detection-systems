@@ -29,7 +29,7 @@ class NetflowLoader:
         return labels.keys()
 
     # Load a file
-    def load(self, file_name, fr, to, action=None):
+    def load(self, file_name, fr, to, good_labels=None, good=True):
         try:
             with open(file_name) as f:
                 next(f)
@@ -42,8 +42,13 @@ class NetflowLoader:
                     items = line.split(',')
                     item = self.load_single(items)
 
-                    if action:
-                        action([item.make_sample()], [item.make_target()])
+                    if good_labels:
+                        if good:
+                            if item.make_target() in good_labels:
+                                self.flow.add_record(item)
+                        else:
+                            if not item.make_target() in good_labels:
+                                self.flow.add_record(item)
                     else:
                         self.flow.add_record(item)
 

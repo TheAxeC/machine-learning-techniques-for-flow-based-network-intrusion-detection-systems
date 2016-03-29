@@ -3,8 +3,10 @@
 # The config class
 class Config:
 
-    def __init__(self):
-        self.default = 'config.json'
+    def __init__(self, file_name=None):
+        if not file_name:
+            file_name = 'config.json'
+        self.default = file_name
         self.data = {}
 
     # Reading the config file
@@ -36,7 +38,7 @@ class Config:
     def get_feature(self):
         import feature
         if "featureClass" in self.data and "feature-file" in self.data:
-            return feature.get_feature(self.data['featureClass'], self.data['feature-file'])
+            return feature.BasicFeature.get_feature(self.data['featureClass'], self.data['feature-file'])
         return None
 
     def get_feature_name(self):
@@ -62,16 +64,15 @@ class Config:
             return Trainer.get_trainer(self.data['trainer'])
         return None
 
+    def get_trainer_name(self):
+        if 'trainer' in self.data:
+            return self.data['trainer']
+        return "Unknown"
+
     # Get the check sets
     def get_check_sets(self):
         if 'check-sets' in self.data:
             return self.data['check-sets']
-        return []
-
-    # Get the predict data sets
-    def get_predict_sets(self):
-        if 'predict-sets' in self.data:
-            return self.data['predict-sets']
         return []
 
     # Do we need to do the predictions

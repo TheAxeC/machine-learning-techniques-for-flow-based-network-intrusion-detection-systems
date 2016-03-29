@@ -28,41 +28,18 @@
             {
                 "file" : "../test/capture20110815.binetflow",
                 "from" : 0,
-                "to" : 20000
-            },
-            {
-                "file" : "../test/capture20110815.binetflow",
-                "from" : 50000,
-                "to" : 60000
-            },
-            {
-                "file" : "../test/capture20110815.binetflow",
-                "from" : 80000,
-                "to" : 90000
-            },
-            {
-                "file" : "../test/capture20110815.binetflow",
-                "from" : 100000,
-                "to" : 120000
-            },
-            {
-                "file" : "../test/capture20110815.binetflow",
-                "from" : 150000,
-                "to" : 170000
+                "to" : 10000
             }
         ],
-    "trainer" : "DefaultTrainer",
+    "trainer" : "GoodTrainer",
 
     "check-sets" : [
             {
                 "file" : "../test/capture20110815.binetflow",
                 "type" : "netflow",
-                "from" : 20000,
-                "to" : 22000
+                "from" : 10000,
+                "to" : 12000
             }
-        ],
-
-    "predict-sets" : [
         ],
 
     "packet-analyses" : false,

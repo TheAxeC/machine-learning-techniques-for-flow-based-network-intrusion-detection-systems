@@ -42,10 +42,11 @@ Flow data has a very specific structure. To be able to use the flow data for mac
 - ports (src + dest)
     * Defined Ports as 1
     * random ports as 0
+    * Heeft continue minder effect
 - IP Data: (src + dest)
-    * IPv6 as 0
-    * IPv4 as 1
-    * MAC address as 2
+    * IPv6 as seperate continu feature
+    * IPv4 as seperate continu feature
+    * MAC address as seperate continu feature
 - Protocol
     * tcp as 0
     * udp as 1
@@ -85,14 +86,11 @@ Visualisation:
 
 # Development
 ## TODO:
-- chapter ML-IDS has to be merged into ML chapter
+- CEGEKA
+- Port scans detectie vanuit papers
 - already discuss why using a certain (KNN) algorithm compared to others
 - Uitbreiden van aanvallen
 - Existing solutions
-
-## Remarks:
-- IP by country has low effect
-- timestamps --> not enough data, algorithm can work with continuous timestamps
 - Extraction labels can be done by hand, depends on dataset
 
 ## TODO:
@@ -112,7 +110,7 @@ Visualisation:
 
 ## Planning:
 - Week 5: ML cursus verwerkt --> done
-- Week 6: Hoe flow data gebruiken
+- Week 6: Hoe flow data gebruiken --> Al goed mee bezig
 - Week 7: Implementatie testen
 - Week 8: implementation hoofdstuk thesis
 - Week 9: Visualisatie
@@ -130,7 +128,6 @@ Visualisation:
 - wat is het nut van de BP
 - hoe valideren
 
-- meeting 11/03 en 14/03
 - http://scikit-learn.org/0.15/auto_examples/plot_classification_probability.html
 - http://scikit-learn.org/stable/tutorial/machine_learning_map/index.html
 - http://scikit-learn.org/stable/auto_examples/svm/plot_iris.html

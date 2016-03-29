@@ -1,0 +1,41 @@
+Starting IDS...
+JSON Config file read successfully
+
+Intrusion Detection System enabled
+Loaded algorithm: OneClassSVM.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Training size is 5629.
+Training set "../test/capture20110816-2.binetflow" done.
+Training size is 11680.
+Training set "../test/capture20110815.binetflow" done.
+Training size is 15111.
+Training set "../test/capture20110815.binetflow" done.
+Training size is 4847.
+Training set "../test/capture20110815.binetflow" done.
+Training size is 9260.
+Training set "../test/capture20110815.binetflow" done.
+Training size is 9579.
+Training set "../test/capture20110815.binetflow" done.
+Saving model as model.mdl in directory "../models/model/".
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Start file: ../test/capture20110815.binetflow.
+Start predicting...
+Percent: [##################################################] 100% Done...9%
+End file: ../test/capture20110815.binetflow.
+False negative: 3743
+False positive: 95
+True negative: 4686
+True positive: 1477
+
+Checks done
+End predictions and checks.
+
+End of program.

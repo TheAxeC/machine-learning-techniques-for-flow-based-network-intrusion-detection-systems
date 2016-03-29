@@ -8,36 +8,11 @@ class MLAlgorithm:
         self.algorithm = None
         self.good_labels = []
 
-    # Set the logging files:
-    def start(self, log, good_label):
-        from logger import Logger
-        self.logger = Logger()
-        self.logger.start(log)
-        self.good_labels = self.load_labels(good_label)
 
-    # load labels:
-    def load_labels(self, file_name):
-        labels = []
-        try:
-            with open(file_name) as f:
-                for line in f:
-                    labels.append(line.strip())
-        except Exception as e:
-            print "Could not open label file: \"" + file_name + "\"."
-            return []
-        return labels
 
-    # Open a file
-    def open_file(self, f):
-        try:
-            return open(f, "w")
-        except IOError as e:
-            print "Could not open file: \"" + f + "\"."
-            return None
-
-    def stop(self):
-        if self.logger:
-            self.logger.close()
+    #def stop(self):
+    #    if self.logger:
+    #        self.logger.close()
 
     # Train the data set
     def train(self, data_set, target_set):
@@ -94,6 +69,7 @@ class MLAlgorithm:
         try:
             return getattr(sys.modules[__name__], name)()
         except Exception as e:
+            print e
             print "Algorithm \"" + str(name) + "\" does not exist."
             return None
 
@@ -101,8 +77,35 @@ class MLAlgorithm:
 class OneClassSVM(MLAlgorithm):
     def __init__(self):
         from sklearn import svm
-        self.algorithm = svm.OneClassSVM(nu=0.95 * 0.8 + 0.05,
-                                kernel="rbf", gamma=0.1)
+        self.algorithm = svm.OneClassSVM(nu=0.01,
+                                     kernel="rbf", gamma=0.1)
+
+    # Train the data set
+    def train(self, data_set, target_set=None):
+        self.algorithm.fit(data_set)
+
+    # Predict a sample
+    def predict(self, sample, corr=None):
+        return self.algorithm.predict([sample])[0]
+
+# Cannot be used since the data does not follow a Gaussian distribution
+class EllipticEnvelope(MLAlgorithm):
+    def __init__(self):
+        from sklearn import covariance
+        self.algorithm = covariance.EllipticEnvelope(contamination=.1, assume_centered=True)
+
+    # Train the data set
+    def train(self, data_set, target_set=None):
+        self.algorithm.fit(data_set)
+
+    # Predict a sample
+    def predict(self, sample, corr=None):
+        return self.algorithm.predict([sample])[0]
+
+class NeuralNetwork(MLAlgorithm):
+    def __init__(self):
+        from sklearn import neural_network
+        self.algorithm = neural_network.MLPClassifier()
 
     # Train the data set
     def train(self, data_set, target_set=None):

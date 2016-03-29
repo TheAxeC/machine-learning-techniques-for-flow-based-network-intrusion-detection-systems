@@ -1,14 +1,21 @@
-def get_feature(name, file):
-    import sys
 
-    try:
-        return getattr(sys.modules[__name__], name)(file)
-    except Exception as e:
-        print "Feature \"" + str(name) + "\" does not exist."
-        return None
+class BasicFeature:
+
+    def __init__(self):
+        pass
+
+    @staticmethod
+    def get_feature(name, file):
+        import sys
+
+        try:
+            return getattr(sys.modules[__name__], name)(file)
+        except Exception as e:
+            print "Feature \"" + str(name) + "\" does not exist."
+            return None
 
 # A class to construct the feature from raw flow data
-class FlowFeature:
+class FlowFeature(BasicFeature):
 
     # Initialisation
     def __init__(self, file):
@@ -46,10 +53,12 @@ class FlowFeature:
 
     # Get the protocol into a feature (index in self.protocols)
     def get_protocol_feature(self, protocol):
+        prot = [0] * (len(self.protocols)+1)
         try:
-            return self.protocols.index(protocol)
+            prot[self.protocols.index(protocol)] = 1
         except ValueError:
-            return len(self.protocols)
+            prot[ len(self.protocols) ] = 1
+        return prot
 
     # Get the feature for the port
     # If the port is normal behaviour (in self.ports) for the given protocol,
@@ -63,22 +72,12 @@ class FlowFeature:
                 port = int(port, 16)
             except Exception as e:
                 port = 0
-        
-        if protocol.lower() in self.ports:
-            return port in self.ports[protocol.lower()]
-        else:
-            return port in self.ports["other"]
 
-    # Return the feature for the IP value of the port
-    def get_ip_feature(self, ip):
-        if self.is_IPv4(ip):
-            return 0
-        elif self.is_IPv6(ip):
-            return 1
-        elif self.is_MAC(ip):
-            return 2
-        else:
-            return 3
+        return port < 1024
+        #if protocol.lower() in self.ports:
+        #    return port in self.ports[protocol.lower()]
+        #else:
+        #    return port in self.ports["other"]
 
     # Check if a string is an IPv4 address
     # Source: http://stackoverflow.com/questions/319279/how-to-validate-ip-address-in-python
@@ -110,32 +109,48 @@ class FlowFeature:
         import re
         return re.match("[0-9a-f]{2}([-:])[0-9a-f]{2}(\\1[0-9a-f]{2}){4}$", address.lower())
 
-    def print_record(self, flow):
+    def get_IPv4(self, address):
+        import socket
+        if self.is_IPv4(address):
+            return int(socket.inet_aton(address).encode('hex'),16)
+        else:
+            return 0
+
+    def get_IPv6(self, address):
+        import socket
+        if self.is_IPv6(address):
+            return int(socket.inet_pton(socket.AF_INET6, address).encode('hex'),16)
+        else:
+            return 0
+
+    def get_MAC(self, address):
+        if self.is_MAC(address):
+            return int(address.replace(':', ''), 16)
+        else:
+            return 0
+
+    def print_record(self, arr):
         print "----------------------------"
         print "record: "
         print "[protocol, src_port, dst_port, srcbytes, duration, src_ip, dst_ip, packets, bytes]"
-        print [int(self.get_protocol_feature(flow.protocol)),
-                int(self.get_port_feature(flow.protocol, flow.src_port)),
-                int(self.get_port_feature(flow.protocol, flow.dest_port)),
-                int(flow.total_srcbytes),
-                float(flow.duration),
-                int(self.get_ip_feature(flow.src_ip)) ,
-                int(self.get_ip_feature(flow.dest_ip)),
-                int(flow.total_pckts),
-                int(flow.total_bytes)]
+        print arr
         print "----------------------------"
         print "end record"
 
     def make_record(self, flow):
         #self.print_record(flow)
-        return [
-                    int(self.get_protocol_feature(flow.protocol)),
+        arr = [
                     int(self.get_port_feature(flow.protocol, flow.src_port)),
                     int(self.get_port_feature(flow.protocol, flow.dest_port)),
-                    int(flow.total_srcbytes),
                     float(flow.duration),
-                    #int(self.get_ip_feature(flow.src_ip)) ,
-                    #int(self.get_ip_feature(flow.dest_ip)),
+                    int(self.get_IPv4(flow.src_ip)) ,
+                    int(self.get_IPv6(flow.src_ip)) ,
+                    int(self.get_MAC(flow.src_ip)) ,
+                    int(self.get_IPv4(flow.dest_ip)) ,
+                    int(self.get_IPv6(flow.dest_ip)) ,
+                    int(self.get_MAC(flow.dest_ip)) ,
                     int(flow.total_pckts),
                     int(flow.total_bytes)
                 ]
+        arr.extend( self.get_protocol_feature(flow.protocol) )
+        return arr
