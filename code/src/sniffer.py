@@ -138,9 +138,10 @@ class SharkFlow:
 # The netflow generator
 class NetflowGenerator:
 
-    def __init__(self, feature, timeout=10.):
+    def __init__(self, feature, logger, timeout=10.):
         self.timeout = float(timeout) / 1000
         self.feature = feature
+        self.logger = logger
 
     # Start generation
     def start(self, algorithm=None, dest=None):
@@ -198,7 +199,7 @@ class NetflowGenerator:
                 self.complete += 1
                 if self.algorithm:
                     f = flow.get_flow_record()
-                    self.algorithm.record_predict(f, feature.make_record(f))
+                    self.algorithm.record_predict(f, self.feature.make_record(f), self.logger)
                 else:
                     self.res_flow.append(flow)
                 remove_flows.append(key)
@@ -219,13 +220,13 @@ class NetflowGenerator:
 # The basic sniffer class
 class Sniffer:
 
-    def __init__(self, config_file, feature, timeout=10.):
+    def __init__(self, config_file, feature, logger, timeout=10.):
         # Scapy variables
         self.filter = "ip"
         self.store = 0
         self.iface = "en0"
 
-        self.flow = NetflowGenerator(feature, timeout)
+        self.flow = NetflowGenerator(feature, logger, timeout)
         self.file = None
         self.config = PacketConfig(config_file)
 
@@ -263,8 +264,8 @@ class Sniffer:
     def sniff_tshark(self, algorithm):
         try:
             self.flow.start(algorithm=algorithm)
-            cmd = """tshark -o column.format:'"No.","%m","Time","%t","Source","%s","Destination","%d","Protocol","%p","len","%L","srcport","%uS","dstport","%uD"' """
-            self.tshark(cmd, self.pkt_tshark_flow, split=True)
+            cmd = """tshark -ocolumn.format:'"No.","%m","Time","%t","Source","%s","Destination","%d","Protocol","%p","len","%L","srcport","%uS","dstport","%uD"' """
+            self.tshark(cmd, self.pkt_tshark_flow, split=False)
         except OSError:
             print "Error sniffing packets."
         except KeyboardInterrupt:

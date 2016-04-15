@@ -15,11 +15,15 @@ class Flows:
         return self.netflow
 
     # Get the sampled data
-    def get_sample_data(self, feature):
+    def get_sample_data_complete(self, feature):
         l = []
         for i in self.netflow:
             l.append(feature.make_record(i))
         return l
+
+    # Get the sampled data
+    def get_sample_data(self, feature, i):
+        return feature.make_record(self.netflow[i])
 
     # Get the targets (labels)
     def get_target_data(self):
@@ -56,6 +60,7 @@ class FlowRecord:
         self.total_pckts = 0
         self.total_bytes = 0
         self.total_srcbytes = 0
+        self.tcp_flags = 0
 
         self.label = 0
 

@@ -1,0 +1,39 @@
+Starting IDS...
+JSON Config file read successfully
+
+Intrusion Detection System enabled
+Loaded algorithm: KNeighborsClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Training size is 10001.
+Training set "../test/capture20110816-2.binetflow" done.
+Training size is 20001.
+Training set "../test/capture20110815.binetflow" done.
+Training size is 10001.
+Training set "../test/capture20110815.binetflow" done.
+Training size is 10001.
+Training set "../test/capture20110815.binetflow" done.
+Training size is 20001.
+Training set "../test/capture20110815.binetflow" done.
+Training size is 20001.
+Training set "../test/capture20110815.binetflow" done.
+Saving model as model.mdl in directory "../models/model/".
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Start file: ../test/capture20110815.binetflow.
+Start predicting...
+Percent: [##################################################] 100% Done...
+End file: ../test/capture20110815.binetflow.
+Ratio of: 84.5077461269% with 310 fails and a total of 2001 precictions
+Checks done
+End predictions and checks.
+
+End of program.
+
+----------------------------------------------

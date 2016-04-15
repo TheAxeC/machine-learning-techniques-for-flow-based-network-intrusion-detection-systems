@@ -1,5 +1,6 @@
 .DS_Store
 code/ipsml/
+code/env-windows/
 code/test/
 
 ## Core latex/pdflatex auxiliary files:

@@ -88,6 +88,52 @@ class OneClassSVM(MLAlgorithm):
     def predict(self, sample, corr=None):
         return self.algorithm.predict([sample])[0]
 
+    def record_predict(self, flow, features, logger):
+        output = self.algorithm.predict([features])[0]
+        if output > 0:
+            logger.output(flow)
+        else:
+            logger.write("check flow: " + str(output) + ".\n")
+
+class MeanShift(MLAlgorithm):
+    def __init__(self):
+        from sklearn import cluster
+        self.algorithm = cluster.MeanShift()
+
+    # Train the data set
+    def train(self, data_set, target_set=None):
+        self.algorithm.fit(data_set)
+
+    # Predict a sample
+    def predict(self, sample, corr=None):
+        return self.algorithm.predict([sample])[0]
+
+class DecisionTreeClassifier(MLAlgorithm):
+    def __init__(self):
+        from sklearn import tree
+        self.algorithm = tree.DecisionTreeClassifier()
+
+    # Train the data set
+    def train(self, data_set, target_set=None):
+        self.algorithm.fit(data_set, target_set)
+
+    # Predict a sample
+    def predict(self, sample, corr=None):
+        return self.algorithm.predict([sample])[0]
+
+class GaussianNB(MLAlgorithm):
+    def __init__(self):
+        from sklearn import naive_bayes
+        self.algorithm = naive_bayes.GaussianNB()
+
+    # Train the data set
+    def train(self, data_set, target_set=None):
+        self.algorithm.fit(data_set, target_set)
+
+    # Predict a sample
+    def predict(self, sample, corr=None):
+        return self.algorithm.predict([sample])[0]
+
 # Cannot be used since the data does not follow a Gaussian distribution
 class EllipticEnvelope(MLAlgorithm):
     def __init__(self):

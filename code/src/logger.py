@@ -7,6 +7,12 @@ class Logger:
 
     # Start the log file
     def start(self, dest):
+        import os
+        if not os.path.exists(os.path.dirname(dest)):
+            try:
+                os.makedirs(os.path.dirname(dest))
+            except OSError as exc: # Guard against race condition
+                pass
         try:
             self.logger = open(dest, 'w')
         except IOError as e:
@@ -37,6 +43,7 @@ class Logger:
         self.logger.write("\t ports: from: " + str(flow.src_port) + " to " + str(flow.dest_port) + "\n")
         self.logger.write("\t packets: " + str(flow.total_pckts) + " with " + str(flow.total_bytes) + " bytes\n")
         self.logger.write("\t duration: " + str(flow.duration) + " starting from " + str(flow.start_time) + "\n")
+        self.logger.flush()
 
     def output_check(self, label, flow, correct):
         self.logger.write("Uncorrect labeling: \n")
@@ -49,6 +56,10 @@ class Logger:
         if self.logger:
             self.logger.close()
             self.logger = None
+
+    def write(self, str):
+        self.logger.write(str)
+        self.logger.flush()
 
     # update_progress() : Displays or updates a console progress bar
     ## Accepts a float between 0 and 1. Any int will be converted to a float.

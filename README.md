@@ -131,3 +131,6 @@ Visualisation:
 - http://scikit-learn.org/0.15/auto_examples/plot_classification_probability.html
 - http://scikit-learn.org/stable/tutorial/machine_learning_map/index.html
 - http://scikit-learn.org/stable/auto_examples/svm/plot_iris.html
+
+whois
+meer classification

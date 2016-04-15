@@ -14,11 +14,12 @@ pyasn1==0.1.9
 pyasn1-modules==0.0.8
 pycparser==2.14
 pygeoip==0.3.2
+PyMySQL==0.7.2
 pyOpenSSL==0.15.1
 pypcap==1.1.4
 queuelib==1.4.2
 scapy==2.3.2
-scikit-learn==0.17
+scikit-learn==0.17.1
 scipy==0.17.0
 Scrapy==1.0.5
 service-identity==16.0.0

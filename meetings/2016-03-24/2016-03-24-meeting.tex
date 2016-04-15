@@ -1,0 +1,45 @@
+\documentclass[notitlepage]{article}
+
+\usepackage{titling}
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{rotating}
+\usepackage[backend=bibtex, sorting=none]{biblatex}
+\usepackage{listings}
+\usepackage{parskip}
+
+\posttitle{\par\end{center}}
+\setlength{\droptitle}{-80pt}
+
+\title{Meeting}
+\author{Axel Faes - 1334986}
+\date{Mar 18, 2016}
+
+\begin{document}
+\maketitle
+
+aanwezigen: Bram Bonne, Pieter Robyns, Axel Faes
+
+Deze week is voornamelijk besteed aan implementatie. Er zijn verschillende experimenten uitgevoerd. De poort nummers zijn ge\"implementeerd zodanig dat er een indeling is tussen normale poorten ($<$1024) en speciale poorten ($>$1024). Er is ook gekeken ofdat poort data niet continu voorgesteld kan worden. Dit geeft echter slechtere resultaten dan te werken met de binaire indeling.\\\\
+De IP-data kan opgesplitst worden in aparte features voor IPv6, IPv4 en MAC. Deze data is voorgesteld als continue data. Het is moeilijk om IP-addressen zelf te gaan onderverdelen in categorieen of subnets. Het indelen als continue data geeft dan ook de beste accuraatheid.  De starttijd is ook ge\"implementeerd om te voegen als feature. Dit gebeurt door te bekijken in welke dag van de week/ uur van de dag en minuut van het uur de data gegenereerd word. Echter had deze feature geen goede invloed op de accuraatheid\\
+\\
+Er zijn enkele algoritmes verder ge\"implementeerd zoals een Decision Tree learner en een Naive Bayes algoritmes. Beide zijn supervised learning technieken. De Naive Bayes had nog goede accuraatheid, de Decision Tree Learner gaf slechtere resultaten.
+
+De actiepunten die gedaan zijn:
+\begin{itemize}  
+        \item Verdere implementatie: andere algoritmes
+        \item Verdere implementatie: Ports indelen in $>$1024 en $<$1024
+        \item Verdere implementatie: Ports indelen als continue data
+        \item Verdere implementatie: IP indelen als continue data
+        \item Verdere implementatie: Starttime instellen als unix time
+\end{itemize}
+
+Volgende actiepunten zijn besproken:
+\begin{itemize}  		
+		\item Herschrijven en verwerken van feedback op de thesistekst 
+        \item Testen van de implementatie
+        \item Bekijken van Unsupervised learning algoritmes
+\end{itemize}
+
+\end{document}

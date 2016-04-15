@@ -11,11 +11,13 @@ def read_config(file_name):
         return []
 
 # Run a command through system
-def system(data):
+def system(data, config_file):
     import os
 
+    path = os.path.dirname(config_file)
     for config in data:
-        os.system('python main.py ' + config)
+
+        os.system('python main.py ' + path + "/" + config)
         print '\n----------------------------------------------\n',
 
 # Run multiple different version of the IDS, in order to test the IDS
@@ -30,7 +32,7 @@ def main(config_file=None):
         config_file = "testing.json"
 
     data = read_config(config_file)
-    system(data)
+    system(data, config_file)
 
 import sys
 if __name__ == "__main__":

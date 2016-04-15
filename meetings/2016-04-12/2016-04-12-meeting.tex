@@ -1,0 +1,41 @@
+\documentclass[notitlepage]{article}
+
+\usepackage{titling}
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{rotating}
+\usepackage[backend=bibtex, sorting=none]{biblatex}
+\usepackage{listings}
+\usepackage{parskip}
+
+\posttitle{\par\end{center}}
+\setlength{\droptitle}{-80pt}
+
+\title{Meeting}
+\author{Axel Faes - 1334986}
+\date{April 12, 2016}
+
+\begin{document}
+\maketitle
+
+aanwezigen: Bram Bonne, Axel Faes
+
+Afgelopen week, woensdag 6 april, is de meeting geweest met Cegeka. Van deze meeting is een verslag gemaakt. Op maandag 4 april is de dataset van het EDM verkregen. Deze dataset bevat netflow data van het EDM netwerk van 18 februari tot 24 maart. Elke dag is netflow beschikbaar die voorgekomen is tussen 10u tot 24u. Deze zijn per 15 minuten gelogd in een file. \\\\
+Er is kort gewerkt aan het verwerken van de data van het EDM. Dit gebeurt door de data te laten verwerken door verschillende algoritmes. De data waarvan vervolgens gesteld kan worden dat deze daadwerkelijk malicious is, zal doorgegeven worden aan professor Quax. Op het moment zijn er nog niet genoeg testen uitgevoerd om iets te kunnen zeggen over de data. \\\\
+Er is ge\"implementeerd dat de country-of-origin van een IP ook gebruikt kan worden als feature voor de machine learning algoritmes. Er is gevonden dat dit voornamelijk werkt voor data die van buitenaf komt, zoals port scans. Er is ook kort al geprobeerd om visualisaties te maken van de machine learning algoritmes. Zulke visualisaties zouden interessant kunnen zijn om ook in de thesistekst te gebruiken. Tegen volgende bijeenkomst moet voornamelijk gewerkt worden aan de thesistekst.
+De actiepunten die gedaan zijn:
+\begin{itemize}  
+		\item Meeting Cegeka
+        \item Implementatie van WhoIs als feature
+        \item Implementatie van kleine visualisatie van algoritmes
+        \item  Verkrijgen data van EDM
+\end{itemize}
+
+Volgende actiepunten zijn besproken:
+\begin{itemize}  		
+		\item Herschrijven en verwerken van feedback op de thesistekst
+        \item Visualisaties van machine learning algoritmes zijn interessant voor thesistekst.
+\end{itemize}
+
+\end{document}

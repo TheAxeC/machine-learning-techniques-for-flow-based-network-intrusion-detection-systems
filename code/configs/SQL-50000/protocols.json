@@ -1,0 +1,69 @@
+{
+    "values" :
+        {
+            "start_time" : 0,
+            "src_ip" : "",
+            "dst_ip" : "",
+            "protocol" : "",
+            "length" : 0,
+            "src_port" : 0,
+            "dst_port" : 0
+        },
+
+    "LLC" :
+        {
+            "start_time" : 1,
+            "src_ip" : 2,
+            "dst_ip" : 4,
+            "protocol" : 5,
+            "length" : 6
+        },
+
+    "WLCCP" :
+        {
+            "start_time" : 1,
+            "src_ip" : 2,
+            "dst_ip" : 4,
+            "protocol" : 5,
+            "length" : 6
+        },
+
+    "ICMP" :
+        {
+            "start_time" : 1,
+            "src_ip" : 2,
+            "dst_ip" : 4,
+            "protocol" : 5,
+            "length" : 6
+        },
+
+    "IGMP" :
+        {
+            "start_time" : 1,
+            "src_ip" : 2,
+            "dst_ip" : 4,
+            "protocol" : 5,
+            "length" : 6
+        },
+
+    "ARP" :
+        {
+            "start_time" : 1,
+            "src_ip" : 2,
+            "dst_ip" : 4,
+            "protocol" : 5,
+            "length" : 6
+        },
+
+    "default" :
+        {
+            "start_time" : 1,
+            "src_ip" : 2,
+            "dst_ip" : 4,
+            "protocol" : 5,
+            "length" : 6,
+            "src_port" : 7,
+            "dst_port" : 8
+        }
+
+}

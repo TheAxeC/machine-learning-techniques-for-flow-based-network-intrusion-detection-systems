@@ -1,0 +1,43 @@
+\documentclass[notitlepage]{article}
+
+\usepackage{titling}
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{rotating}
+\usepackage[backend=bibtex, sorting=none]{biblatex}
+\usepackage{listings}
+\usepackage{parskip}
+
+\posttitle{\par\end{center}}
+\setlength{\droptitle}{-80pt}
+
+\title{Meeting}
+\author{Axel Faes - 1334986}
+\date{April 01, 2016}
+
+\begin{document}
+\maketitle
+
+aanwezigen: Bram Bonne, Peter Quax, Axel Faes
+
+Deze week is voornamelijk besteed aan implementatie. Er is een nieuwe dataset gevonden. Deze dataset is afkomstig van de universiteit van Twente. Er was een honeypot opgesteld op het netwerk, alle data die hiermee gevangen is, is geclassificeerd en een dataset mee gemaakt. De dataset bevat voornamelijk externe aanvallen. \\\\
+Er is ook gefocused op het trachten te gebruiken van unsupervised learning algoritmes. Echter heeft dit weinig opgebracht. Er kan wel op een accurate manier onderscheidt gemaakt worden tussen malicious en niet malicious data, maar het is moeilijk om vervolgens af te leiden over welk type malicious data het gaat. \\\\
+De features die gebruikt worden in de machine learning algoritmes zijn nog eens overlopen. Professor Quax kwam met het idee om IP-adressen eventueel op te delen in origine (zoals land). Dit kan gebeuren via services zoals WhoIs. \\\\
+De EDM dataet kan afgehaald worden bij het kantoor van professor Quax. Er moet ook zo snel mogelijk een meeting georganiseerd worden met Cegeka.
+
+De actiepunten die gedaan zijn:
+\begin{itemize}  
+		\item Herschrijven en verwerken van feedback op de thesistekst 
+        \item Testen van de implementatie
+        \item Bekijken van Unsupervised learning algoritmes
+\end{itemize}
+
+Volgende actiepunten zijn besproken:
+\begin{itemize}  		
+		\item Verwerken data EDM
+		\item Implementatie van WhoIs als feature
+       \item Maken presentatie voor Cegeka data set
+\end{itemize}
+
+\end{document}

@@ -7,11 +7,13 @@ class Config:
         if not file_name:
             file_name = 'config.json'
         self.default = file_name
+        self.path = ""
         self.data = {}
 
     # Reading the config file
     def read_config(self, file=None):
         import json
+        import os
 
         try:
             file_name = None
@@ -22,10 +24,26 @@ class Config:
 
             with open(file_name) as data_file:
                 self.data = json.load(data_file)
+            self.path = os.path.dirname(file_name) + "/"
+
+            self.add_directory("pcap-files", ["src", "dest"])
+            self.add_directory("data-sets", ["file"])
+            self.add_directory("check-sets", ["file"])
+
             return True
         except Exception as e:
             print e
             return False
+
+    def add_directory(self, name, features):
+        arr = self.data[name]
+        for rec in arr:
+            for f in features:
+                try:
+                    rec[f] = self.path + rec[f]
+                except:
+                    pass
+
 
     # Get the algorithm file
     def get_algorithm(self):
@@ -38,7 +56,7 @@ class Config:
     def get_feature(self):
         import feature
         if "featureClass" in self.data and "feature-file" in self.data:
-            return feature.BasicFeature.get_feature(self.data['featureClass'], self.data['feature-file'])
+            return feature.BasicFeature.get_feature(self.data['featureClass'], self.path + self.data['feature-file'])
         return None
 
     def get_feature_name(self):
@@ -102,7 +120,7 @@ class Config:
     # Get the model directory
     def get_model_dir(self):
         if 'model_dir' in self.data:
-            return self.data['model_dir']
+            return self.path + self.data['model_dir']
         return ""
 
     # Get the stored model
@@ -166,17 +184,17 @@ class Config:
 
     def get_protocol_file(self):
         if 'protocol-file' in self.data:
-            return self.data['protocol-file']
+            return self.path + self.data['protocol-file']
         return ""
 
     def get_logger_file(self):
         if 'logger' in self.data:
-            return self.data['logger']
+            return self.path + self.data['logger']
         return ""
 
     def get_good_labels_file(self):
         if 'good-labels' in self.data:
-            return self.data['good-labels']
+            return self.path + self.data['good-labels']
         return ""
 
     def print_labels(self):

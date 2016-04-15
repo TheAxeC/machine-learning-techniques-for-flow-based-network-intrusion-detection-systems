@@ -48,6 +48,7 @@ class ResultManager:
         self.fails = Failures()
         self.total = 0
         self.good_labels = good_labels
+        self.good_labels.append('non-malicous')
 
         self.false_neg = 0
         self.false_pos = 0
@@ -57,11 +58,11 @@ class ResultManager:
     # Add a record to the result class
     # This can also be logged in this class
     def add_record(self, label, flow, correct):
-        self.compare_strict(label, flow, correct)
+        self.total += 1
+        self.check_output(label, flow, correct)
 
     # Compare labels strict
     def compare_strict(self, label, flow, correct):
-        self.total += 1
         test = correct == label
         if not test:
             self.logger.output_check(correct, flow, label)
@@ -80,12 +81,12 @@ class ResultManager:
     #       true positive
     def check_output(self, label, flow, correct):
         if label > 0:
-            if correct in self.good_labels:
+            if correct not in self.good_labels:
                 self.true_pos += 1
             else:
                 self.false_pos += 1
         else:
-            if correct in self.good_labels:
+            if correct not in self.good_labels:
                 self.false_neg += 1
             else:
                 self.true_neg += 1

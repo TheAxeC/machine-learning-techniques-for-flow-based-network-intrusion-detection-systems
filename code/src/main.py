@@ -70,9 +70,6 @@ def save_model(config, algorithm):
 
 ##########################################################
 
-def check_keys(dic, key, val):
-    if not key in dic:
-        dic[key] = val
 
 ##########################################################
 
@@ -85,10 +82,7 @@ def training_data_set(config, algorithm, feature, good_labels):
     print "Loaded training algorithm: " + str(config.get_trainer_name()) + "."
     trained = False
     for d in config.get_data_sets():
-        check_keys(d, "from", 0)
-        check_keys(d, "file", "")
-        check_keys(d, "to", -1)
-        if trainer.train(algorithm, d["file"], d["from"], d['to'], feature, good_labels):
+        if trainer.train(algorithm, d, feature, good_labels):
             trained = True
     if not trained:
         print "No training provided."
@@ -115,7 +109,7 @@ def training(config, algorithm, feature, good_labels):
 
 ##########################################################
 
-def sniffing(config, algorithm, feature):
+def sniffing(config, algorithm, feature, logger):
     if config.sniffer_active():
         print "Start sniffing..."
 
@@ -130,7 +124,7 @@ def sniffing(config, algorithm, feature):
         print "\t analyse closed flow"
 
         from sniffer import Sniffer
-        sniff = Sniffer(config.get_protocol_file(), config.get_flow_timeout(), feature)
+        sniff = Sniffer(config.get_protocol_file(), feature, logger, config.get_flow_timeout())
         sniff.sniff_tshark(algorithm)
 
         print "End sniffing.\n"
@@ -151,7 +145,7 @@ def prediction(config, algorithm, feature, logger, good_labels):
     if config.is_check():
         print "Running Checks..."
         print "Used for checking the accuracy of the IDS"
-        checker.runner(config.get_check_sets(), good_labels)
+        checker.runner(config.get_check_sets())
         print "Checks done"
     print "End predictions and checks.\n"
 
@@ -259,7 +253,7 @@ def IDS(config):
 
     # Start sniffing
     # Main component of the IDS
-    sniffing(config, algorithm, feature)
+    sniffing(config, algorithm, feature, logger)
 
     # Stop the logging
     stop(logger)
@@ -282,9 +276,13 @@ def pcap_to_flow_convertor(config):
 ##########################################################
 ##########################################################
 
+def check_keys(dic, key, val):
+    if not key in dic:
+        dic[key] = val
+
 def print_labels(files):
-    from loader import NetflowLoader
-    loader = NetflowLoader()
+    from loader import CTULoader
+    loader = CTULoader()
 
     for f in files:
         check_keys(f, "file", "")

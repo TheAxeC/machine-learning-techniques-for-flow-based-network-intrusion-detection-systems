@@ -19,13 +19,6 @@ class FlowFeature(BasicFeature):
 
     # Initialisation
     def __init__(self, file):
-        #self.ports = {
-        #    "udp" : [22, 23, 24],
-        #    "tcp" : [1, 2, 3],
-        #    "other" : [1, 2, 3]
-        #}
-        #self.protocols = ["tcp", "udp"]
-
         self.read_config(file)
 
     # Reading the config file
@@ -55,7 +48,10 @@ class FlowFeature(BasicFeature):
     def get_protocol_feature(self, protocol):
         prot = [0] * (len(self.protocols)+1)
         try:
-            prot[self.protocols.index(protocol)] = 1
+            #prot[self.protocols.index(protocol)] = 1
+            for i in self.protocols:
+                if protocol in i:
+                    prot[self.protocols.index(i)] = 1
         except ValueError:
             prot[ len(self.protocols) ] = 1
         return prot
@@ -64,7 +60,7 @@ class FlowFeature(BasicFeature):
     # If the port is normal behaviour (in self.ports) for the given protocol,
     # 1 is returned
     # Otherwise, 0 is returned
-    def get_port_feature(self, protocol, port):
+    def get_port_feature(self, port):
         try:
             port = int(port)
         except Exception as e:
@@ -140,8 +136,8 @@ class FlowFeature(BasicFeature):
     def make_record(self, flow):
         #self.print_record(flow)
         arr = [
-                    int(self.get_port_feature(flow.protocol, flow.src_port)),
-                    int(self.get_port_feature(flow.protocol, flow.dest_port)),
+                    int(self.get_port_feature(flow.src_port)),
+                    int(self.get_port_feature(flow.dest_port)),
                     float(flow.duration),
                     int(self.get_IPv4(flow.src_ip)) ,
                     int(self.get_IPv6(flow.src_ip)) ,
@@ -150,7 +146,8 @@ class FlowFeature(BasicFeature):
                     int(self.get_IPv6(flow.dest_ip)) ,
                     int(self.get_MAC(flow.dest_ip)) ,
                     int(flow.total_pckts),
-                    int(flow.total_bytes)
+                    int(flow.total_bytes),
+                    #int(flow.tcp_flags)
                 ]
         arr.extend( self.get_protocol_feature(flow.protocol) )
         return arr

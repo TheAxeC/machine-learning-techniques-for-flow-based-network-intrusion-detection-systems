@@ -1,0 +1,66 @@
+{
+    "enable-IDS" : true,
+    "pcap-to-flow" : false,
+    "check" : true,
+    "sniffer" : false,
+
+    "pcap-files" : [
+        {
+            "src" : "../../test/dosattack.pcap",
+            "dest" :  "../../test/dosattack2.flow"
+        }
+    ],
+
+    "algorithm" : "OneClassSVM",
+    "featureClass" : "FlowFeature",
+
+    "model_dir" : "../../models/",
+    "model" : "model.mdl",
+    "use_model" : false,
+    "store_model" : true,
+
+    "data-sets" : [
+            {
+                "host" : "localhost",
+                "type" : "SQLTrainer",
+                "user" : "test",
+                "db" : "dataset",
+                "password" : "test",
+                "amount" : 30000
+            },
+            {
+                "file" : "../../test/capture20110815.binetflow",
+                "from" : 0,
+                "to" : -1,
+                "type" : "BadTrainer"
+            },
+            {
+                "file" : "../../test/capture20110815-2.binetflow",
+                "from" : 0,
+                "to" : -1,
+                "type" : "BadTrainer"
+            }
+        ],
+    "trainer" : "Trainer",
+
+    "check-sets" : [
+            {
+                "file" : "../../test/capture20110815.binetflow",
+                "type" : "file",
+                "from" : 0,
+                "to" : -1
+            }
+        ],
+
+    "packet-analyses" : false,
+    "prevention" : false,
+
+    "print-fails" : false,
+    "print-labels" : false,
+    "timeout" : 5000,
+
+    "protocol-file" : "protocols.json",
+    "feature-file" : "features.json",
+    "logger" : "log.txt",
+    "good-labels" : "good.txt"
+}

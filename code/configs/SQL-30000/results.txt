@@ -1,0 +1,51 @@
+Starting IDS...
+JSON Config file read successfully
+
+Intrusion Detection System enabled
+Loaded algorithm: OneClassSVM.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: SQLTrainer.
+Using Loader "SQLLoader" to load the data.
+Training size is 30000.
+Training set "localhost:dataset"  done.
+Saving model as model.mdl in directory "../configs/main/../../models/model/".
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Start file: localhost:dataset.
+Using Loader "SQLLoader" to load the data.
+Start predicting...
+Percent: [##################################################] 100% Done...
+End prediction.
+Start file: localhost:dataset.
+Using Loader "SQLLoader" to load the data.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Ratio of: 100.0% with 0 fails and a total of 15968 precictions
+False negative: 821
+False positive: 1296
+True negative: 4672
+True positive: 9179
+
+Checks done
+End predictions and checks.
+
+End of program.
+
+===============================
+
+NON-MALICIOUS
+True negative: 78.28 %
+False positive: 21.7 %
+
+MALICIOUS
+True positive: 91.79 %
+False negative: 8.21 %
