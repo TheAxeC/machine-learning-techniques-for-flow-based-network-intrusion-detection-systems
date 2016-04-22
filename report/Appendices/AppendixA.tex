@@ -150,3 +150,134 @@ aanwezigen: Maarten Wijnants, Peter Quax, Wim Lamotte, Jori Liesenborgs, Wouter 
 \noindent Ik moet opletten met aanvallen die maar zeer weinig netwerktraffiek genereren. Ook moet ik goed beschrijven welke aanvallen wel of niet gedetecteert kunnen worden en uitleggen waarom. Dit staat momenteel al beschreven in mijn thesistekst. Ik zou ook mogelijkheden kunnen uitleggen die ervoor zouden kunnen zorgen dat ik toch alle (of een groot deel) van de aanvallen zou kunnen detecteren. Dit zou bv kunnen door toch packet-data te gaan bekijken.\\
 
 \noindent Een algemene opmerking die gegeven was, was dat de presentatie visueler mocht zijn. Figuren en afbeeldingen zijn aangenamer om te tonen aan een publiek. Bij de postersessie moet er ook goed opgelet worden dat ik van persoon tot persoon bekijk hoe diep ik de materie uit mijn bachelorthesis kan uitleggen. 
+
+\section{Meeting 6: 11 Mar 2016}
+aanwezigen: Bram Bonne, Axel Faes\\\\
+\noindent Deze week is voornamelijk besteed aan de thesis en het afmaken van de machine learning cursus. De machine learning cursus is volgens planning afgemaakt. De thesistekst moet ingestuurd worden zodat deze al nagekeken kan worden. Komende weken zal gespendeerd worden aan de implementatie en het uitzoeken hoe de flowdata gebruikt kan worden in de machine learning algoritmes.
+
+\noindent De actiepunten die gedaan zijn:
+\begin{itemize}  
+		\item Afmaken Machine learning cursus
+        \item Schrijven aan thesis.
+\end{itemize}
+
+\noindent Volgende actiepunten zijn besproken:
+\begin{itemize}  		
+		\item Verdere implementatie algoritmes
+        \item Bekijken hoe de flowdata gefeed kan worden aan de machine learning algoritmes
+\end{itemize}
+
+\section{Meeting 7: 18 Mar 2016}
+aanwezigen: Bram Bonne, Pieter Robyns, Axel Faes\\\\
+Deze week is voornamelijk besteed aan implementatie. Er zijn verschillende algoritmes ge\"implementeerd. Deze algoritmes zijn K-Nearest Neighbors, K-Means, Lineair Kernel Support Vector Machines met One vs All classification, Lineair Kernel Support Vector Machines met One vs One classification en Gaussian Kernel Support Vector Machines. \\
+\\
+Er zijn verschillende experimenten uitgevoerd. De poort nummers zijn ge\"implementeerd in 2 varianten. De eerste variant splitst de poorten in categori\"en (veel gebruikte poort nummers en niet-veel gebruikte poort nummers) als een binaire feature. De andere variant maakt van elk poort nummer een nieuwe binaire feature (die stelt of de poort gebruikt is of niet). Deze variant geeft echter heel veel features, dit is enorm inefficient. \\
+\\
+De gestelde feedback was om te kijken hoe goed het werkt als poort nummers als een continue feature voorgesteld wordt en om de categori\"en op te spliten in $>$1024 en $<$1024. De IP-data can opgesplitst worden in aparte features voor IPv6, IPv4 en MAC. Deze data kan mogelijks voorgesteld worden als continue data. Er is voorgesteld om ook andere algoritmes te implementeren. Om gebruik te kunnen maken van datasets van Cegeka moet ik een presentatie maken en een afspraak maken met professor Quax. \\
+\\
+Er is feedback gegeven op de thesistekst. Ik moet als eerste goed letten op spelfouten. De inleiding moet algemener uitgelegd worden. Ook niet gebruikte concepter zoals Signature-based IDS moet dieper uitgelegd worden. De attack classification maakt al teveel assumpties over wat er gedetecteerd kan worden. Dit zou eerst algemener uitgelegd moeten worden. Het machine learning hoofstuk bevat in het algemeen te weinig high-level beschrijvingen. 
+
+De actiepunten die gedaan zijn:
+\begin{itemize}  
+		\item Begin van hoe flowdata gebruikt kan worden
+        \item Implementatie van K-Nearest Neighbors
+        \item Implementatie van K-Means
+        \item Implementatie van Lineair Kernel Support Vector Machines met One vs All classification
+        \item Implementatie van Lineair Kernel Support Vector Machines met One vs One classification
+        \item Implementatie van Gaussian Kernel Support Vector Machines.
+\end{itemize}
+
+Volgende actiepunten zijn besproken:
+\begin{itemize}  		
+		\item Herschrijven en verwerken van feedback op de thesistekst 
+        \item Verdere implementatie: andere algoritmes
+        \item Verdere implementatie: Ports indelen in $>$1024 en $<$1024
+        \item Verdere implementatie: Ports indelen als continue data
+        \item Verdere implementatie: IP indelen als continue data
+        \item Verdere implementatie: Starttime instellen als unix time
+        \item Maken presentatie voor Cegeka data set
+\end{itemize}
+\section{Meeting 8: 24 Mar 2016}
+aanwezigen: Bram Bonne, Pieter Robyns, Axel Faes\\\\
+Deze week is voornamelijk besteed aan implementatie. Er zijn verschillende experimenten uitgevoerd. De poort nummers zijn ge\"implementeerd zodanig dat er een indeling is tussen normale poorten ($<$1024) en speciale poorten ($>$1024). Er is ook gekeken ofdat poort data niet continu voorgesteld kan worden. Dit geeft echter slechtere resultaten dan te werken met de binaire indeling.\\\\
+De IP-data kan opgesplitst worden in aparte features voor IPv6, IPv4 en MAC. Deze data is voorgesteld als continue data. Het is moeilijk om IP-addressen zelf te gaan onderverdelen in categorieen of subnets. Het indelen als continue data geeft dan ook de beste accuraatheid.  De starttijd is ook ge\"implementeerd om te voegen als feature. Dit gebeurt door te bekijken in welke dag van de week/ uur van de dag en minuut van het uur de data gegenereerd word. Echter had deze feature geen goede invloed op de accuraatheid\\
+\\
+Er zijn enkele algoritmes verder ge\"implementeerd zoals een Decision Tree learner en een Naive Bayes algoritmes. Beide zijn supervised learning technieken. De Naive Bayes had nog goede accuraatheid, de Decision Tree Learner gaf slechtere resultaten.
+
+De actiepunten die gedaan zijn:
+\begin{itemize}  
+        \item Verdere implementatie: andere algoritmes
+        \item Verdere implementatie: Ports indelen in $>$1024 en $<$1024
+        \item Verdere implementatie: Ports indelen als continue data
+        \item Verdere implementatie: IP indelen als continue data
+        \item Verdere implementatie: Starttime instellen als unix time
+\end{itemize}
+
+Volgende actiepunten zijn besproken:
+\begin{itemize}  		
+		\item Herschrijven en verwerken van feedback op de thesistekst 
+        \item Testen van de implementatie
+        \item Bekijken van Unsupervised learning algoritmes
+\end{itemize}
+\section{Meeting 9: 01 April 2016}
+aanwezigen: Bram Bonne, Peter Quax, Axel Faes\\\\
+Deze week is voornamelijk besteed aan implementatie. Er is een nieuwe dataset gevonden. Deze dataset is afkomstig van de universiteit van Twente. Er was een honeypot opgesteld op het netwerk, alle data die hiermee gevangen is, is geclassificeerd en een dataset mee gemaakt. De dataset bevat voornamelijk externe aanvallen. \\\\
+Er is ook gefocused op het trachten te gebruiken van unsupervised learning algoritmes. Echter heeft dit weinig opgebracht. Er kan wel op een accurate manier onderscheidt gemaakt worden tussen malicious en niet malicious data, maar het is moeilijk om vervolgens af te leiden over welk type malicious data het gaat. \\\\
+De features die gebruikt worden in de machine learning algoritmes zijn nog eens overlopen. Professor Quax kwam met het idee om IP-adressen eventueel op te delen in origine (zoals land). Dit kan gebeuren via services zoals WhoIs. \\\\
+De EDM dataet kan afgehaald worden bij het kantoor van professor Quax. Er moet ook zo snel mogelijk een meeting georganiseerd worden met Cegeka.
+
+De actiepunten die gedaan zijn:
+\begin{itemize}  
+		\item Herschrijven en verwerken van feedback op de thesistekst 
+        \item Testen van de implementatie
+        \item Bekijken van Unsupervised learning algoritmes
+\end{itemize}
+
+Volgende actiepunten zijn besproken:
+\begin{itemize}  		
+		\item Verwerken data EDM
+		\item Implementatie van WhoIs als feature
+       \item Maken presentatie voor Cegeka data set
+\end{itemize}
+\section{Meeting Cegeka: 06 April 2016}
+aanwezigen: Peter Quax, Axel Faes, Cegeka\\\\
+Er is een meeting geweest met Cegeka om de mogelijkheid te bespreken om data te kunnen gebruiken die afkomstig is van Cegeka, alsook om informatie te krijgen van de hudige IDS' die gebruikt worden. \\\\
+In het begin is een korte presentatie gegeven waarin de eigenschappen van het te ontwikkelen systeem uitgelegd worden. Er wordt ook beschreven wat de algemene onderzoeksvragen zijn en hoe data nu gebruikt kan worden in machine learning algoritmes. \\\\
+Een eerste vraag die gesteld is, is welke classificatie van ‘onverwachte traffiek’ er momenteel gebeurt in datacenter/hosting context. Cegeka werkt heel gelaagd. Voor de routers staat een DDoS protection systeem. Na de router staan zowel firewalls als SIEM devices. Voor grotere klanten is er extra beveiliging voorzien in de vorm van afgestelde IPS systemen en meer gedetailleerde threat detection. Zoveel mogelijk data wordt verwerkt, zowel flows als meer gedetailleerd. De systemen werken voornamelijk met een signature database en verwerken de data voornamelijk automatisch. De systemen moeten wel manueel afgesteld en onderhouden worden. \\\\
+De classificatie gebeurt heel gedetailleerd door deze verschillende lagen. Er werd wel gesteld dat het veel interessanter is om outbound verkeer na te kijken in vergelijking met binnengaand verkeer. Zaken zoals port-scans zijn interessant om te weten maar gebeuren heel veel en kunnen al goed gedetecteerd worden. \\\\
+Er was veel interesse naar een intrusion detectie systeem dat op basis van netflow en machine learning technieken werkt. Er accuraatheid van rond de 70-80 procent zou gezien worden als een goede accuraatheid. Ze hebben ook liever false positives dan false negatives. Teveel alerts genereren is heel vervelend, maar het is belangrijker dat voldoende anomalieen gedetecteerd worden. \\\\
+Er is gevraagd of het mogelijk is om data te verkrijgen. Dit was zeker mogelijk. De netflow en corresponderende logs van 3 dagen wordt geleverd. De logs worden zowel in binair als text formaat geleverd. Het binair formaat kan ingelezen door een programma dat de logs visualiseerd. Dit programma wordt ook meegeleverd. Mogelijks zou ook output van het DDoS systeem geleverd kunnen worden. Om te bekijken ofdat een flow gezien is als malicious of niet moet dit bekeken worden of deze flow voorkomt in de logs.
+\section{Meeting 10: 12 April 2016}
+aanwezigen: Bram Bonne, Axel Faes\\\\
+Afgelopen week, woensdag 6 april, is de meeting geweest met Cegeka. Van deze meeting is een verslag gemaakt. Op maandag 4 april is de dataset van het EDM verkregen. Deze dataset bevat netflow data van het EDM netwerk van 18 februari tot 24 maart. Elke dag is netflow beschikbaar die voorgekomen is tussen 10u tot 24u. Deze zijn per 15 minuten gelogd in een file. \\\\
+Er is kort gewerkt aan het verwerken van de data van het EDM. Dit gebeurt door de data te laten verwerken door verschillende algoritmes. De data waarvan vervolgens gesteld kan worden dat deze daadwerkelijk malicious is, zal doorgegeven worden aan professor Quax. Op het moment zijn er nog niet genoeg testen uitgevoerd om iets te kunnen zeggen over de data. \\\\
+Er is ge\"implementeerd dat de country-of-origin van een IP ook gebruikt kan worden als feature voor de machine learning algoritmes. Er is gevonden dat dit voornamelijk werkt voor data die van buitenaf komt, zoals port scans. Er is ook kort al geprobeerd om visualisaties te maken van de machine learning algoritmes. Zulke visualisaties zouden interessant kunnen zijn om ook in de thesistekst te gebruiken. Tegen volgende bijeenkomst moet voornamelijk gewerkt worden aan de thesistekst.
+De actiepunten die gedaan zijn:
+\begin{itemize}  
+		\item Meeting Cegeka
+        \item Implementatie van WhoIs als feature
+        \item Implementatie van kleine visualisatie van algoritmes
+        \item  Verkrijgen data van EDM
+\end{itemize}
+
+Volgende actiepunten zijn besproken:
+\begin{itemize}  		
+		\item Herschrijven en verwerken van feedback op de thesistekst
+        \item Visualisaties van machine learning algoritmes zijn interessant voor thesistekst.
+\end{itemize}
+\section{Meeting 11: 18 April 2016}
+aanwezigen: Bram Bonne, Axel Faes \\
+\\
+Ik heb mijn huidige vooruitgang laten zien van de bachelorproef tekst. Hierbij is een korte herschikking gekomen van de hoofdstukken. Ik moet het "Implementatie" hoofdstuk opsplitsen naar een hoofstuk "Implementatie" en een hoofdstuk "Evaluatie". In "Implementatie" moet mijn implementatie zelf beschreven staan, in "Evaluatie" moeten de resultaten beschreven worden. \\\\
+Verder is kort uitgelegd wat de algemene structuur is van het machine learning hoofdstuk en welke aanpassingen er gebeurd zijn. Het hoofdstuk is opgesplitst in meerdere delen zodanig dat de uitleg, de algoritmes en validatie in aparte hoofdstukken uitgelegd wordt. Het hoofdstuk "Preventie" moet ik aanpassen naar iets gelijkaardigs aan "Future work". Het hoofdstuk "Visualisatie" moet samengevoegd worden met "Implementatie".
+De actiepunten die gedaan zijn:
+\begin{itemize}  
+        \item  Verwerken feedback op machine learning hoofdstukken.
+\end{itemize}
+
+Volgende actiepunten zijn besproken:
+\begin{itemize}  		
+		\item Herschrijven en verwerken van feedback op de thesistekst
+        \item Halen data bij Cegeka
+\end{itemize}
+

@@ -1,8 +1,13 @@
 % Chapter Template
 
-\chapter{Flow data} % Main chapter title
+\chapter{IP Flows} % Main chapter title
 
 \label{flow} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
+
+\label{export}
+Flows are aggregated from all packet data that travels through the network. Flow exporters are programs which collect network packets and aggregate them into flow records. A flow is not the same as a TCP connection. A flow can be any communication between two devices with any protocol. Flows are defined using a (source\_IP, destination\_IP, protocol) tuple. This is why flows are also called IP Flows.\\
+\\
+Since flow data does not contain any payload information, intrusion detection systems that use flow data cannot detect malicious behaviour embedded within payload data. \cite{IPFlow}
 
 \section{How to use flow-data}
 The following attributes are available with flow-data:
@@ -17,7 +22,7 @@ The following attributes are available with flow-data:
 \item Amount of packets in the flow
 \item Amount of bytes in the flow
 \end{itemize}
-However, should an flow exporter be implemented, some additional features can be generated from packet data. \ref{export}
+However, should a flow exporter be implemented, some additional features can be generated from packet data. \ref{export}
 \begin{itemize}
 \item Amount of TCP SYN within the flow
 \item Source and Destination Type of Service
