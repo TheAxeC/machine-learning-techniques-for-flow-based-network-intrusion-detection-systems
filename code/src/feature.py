@@ -34,8 +34,6 @@ class FlowFeature(BasicFeature):
 
             with open(file_name) as data_file:
                 data = json.load(data_file)
-                if "ports" in data:
-                    self.ports = data["ports"]
                 if "protocols" in data:
                     self.protocols = data["protocols"]
             return True

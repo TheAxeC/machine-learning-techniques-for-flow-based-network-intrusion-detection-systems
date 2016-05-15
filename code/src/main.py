@@ -77,7 +77,7 @@ def training_data_set(config, algorithm, feature, good_labels):
     print "Using data sets with malicious data."
     trainer = config.get_trainer()
     if not trainer:
-        sys.exit()
+        return False
 
     print "Loaded training algorithm: " + str(config.get_trainer_name()) + "."
     trained = False
@@ -86,9 +86,10 @@ def training_data_set(config, algorithm, feature, good_labels):
             trained = True
     if not trained:
         print "No training provided."
-        sys.exit()
+        return False
 
     save_model(config, algorithm)
+    return True
 
 ##########################################################
 
@@ -98,24 +99,24 @@ def training(config, algorithm, feature, good_labels):
         try:
             directory = config.get_model_dir() + config.get_model().split(".")[0] + "/"
             print "Using stored model \"" + config.get_model() + "\" in directory \"" + directory + "\"."
-            algorithm.load_file(directory + config.get_model())
+            if not algorithm.load_file(directory + config.get_model()):
+                return False
         except IOError as e:
             print "Couldn't use stored model."
-            training_data_set(config, algorithm, feature, good_labels)
+            if not training_data_set(config, algorithm, feature, good_labels):
+                return False
     else:
-        training_data_set(config, algorithm, feature, good_labels)
+        if not training_data_set(config, algorithm, feature, good_labels):
+            return False
 
     print "Finished training.\n"
+    return True
 
 ##########################################################
 
 def sniffing(config, algorithm, feature, logger):
     if config.sniffer_active():
         print "Start sniffing..."
-
-        prevention = config.prevention_active()
-        if prevention:
-            print "Activating Intrusion Prevention System."
 
         print "implement continuous monitoring"
         print "This means:"
@@ -134,7 +135,7 @@ def sniffing(config, algorithm, feature, logger):
 def prediction(config, algorithm, feature, logger, good_labels):
     print "Start predictions and checks..."
     from predictor import Predictor
-    checker = Predictor(config.print_fails())
+    checker = Predictor()
     checker.set_algorithm(algorithm)
     checker.set_feature(feature)
     checker.set_logger(logger)
@@ -185,7 +186,7 @@ def load_algorithm(config):
     # Load algortihm
     algorithm = config.get_algorithm()
     if not algorithm:
-        sys.exit()
+        return None
     print "Loaded algorithm: " + str(config.get_algorithm_name()) + "."
     print ""
     return algorithm
@@ -196,7 +197,7 @@ def load_feature(config):
     feature = config.get_feature()
     if not feature:
         print "No feature loaded"
-        sys.exit()
+        return None
     print "Loaded feature: " + str(config.get_feature_name()) + "."
     print ""
     return feature
@@ -228,6 +229,8 @@ def IDS(config):
 
     # Load the algorithm that is used in the IDS
     algorithm = load_algorithm(config)
+    if algorithm == None:
+        return
 
     # Load the logger
     # Should there be multiple labels
@@ -239,10 +242,13 @@ def IDS(config):
     # These records need to be parsed into an array that can be fed
     # to a machine learning algorithm
     feature = load_feature(config)
+    if feature == None:
+        return
 
     # Start training
     # This phase cannot be avoided or stopped
-    training(config, algorithm, feature, good_labels)
+    if not training(config, algorithm, feature, good_labels):
+        return
 
     # Start prediction
     # Prediction testing phase
@@ -304,27 +310,33 @@ def main(config_file=None):
     print "Starting IDS..."
 
     # Read the main config file
-    config = Config(config_file)
-    if config.read_config():
+    config_main = Config(config_file)
+    if config_main.read_config():
         print "JSON Config file read successfully\n"
     else:
         sys.exit()
 
-    # Print the labels from the given datasets
-    # Used to manually check which labels exist
-    if config.print_labels():
-        print_labels(config.get_data_sets())
+    print '--------------------------------------------------'
+    for config in config_main.get_configs():
+        print "Starting config: " + config.get_name()
 
-    # Run the actual IDS
-    if config.enabled():
-        IDS(config)
+        # Print the labels from the given datasets
+        # Used to manually check which labels exist
+        if config.print_labels():
+            print_labels(config.get_data_sets())
 
-    # Convert pcap files to flow files
-    # These files are not labeled
-    # In other words, they cannot be used for training
-    # Unless they solely consist of normal or malicious behaviour
-    if config.flow_converter():
-        pcap_to_flow_convertor(config)
+        # Run the actual IDS
+        if config.enabled():
+            IDS(config)
+
+        # Convert pcap files to flow files
+        # These files are not labeled
+        # In other words, they cannot be used for training
+        # Unless they solely consist of normal or malicious behaviour
+        if config.flow_converter():
+            pcap_to_flow_convertor(config)
+        print "End config: " + config.get_name()
+        print '--------------------------------------------------'
 
     print "End of program."
 

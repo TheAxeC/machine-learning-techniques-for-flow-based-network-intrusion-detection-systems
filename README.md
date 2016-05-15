@@ -5,36 +5,7 @@ My Bachelor thesis for Bachelor Computer Science at UHasselt: An Intrusion detec
 The IDS requires the packets listed in the pip_requirements file and it requires:
 - Python 2.7+
 - tshark
-
-## Running the intrusion detection system
-Running the intrusion detection system can be done by:
-```
-python main.py
-```
-Different settings can be configured in "config.json"
-
-## Thesis table of contents:
-- Introduction
-    * Explanation of IDS
-    * Netflow
-    * Why use machine learning
-    * Existing solutions
-- Attack classification
-    * attack descriptions
-    * discovery methods
-    * flow discovery methods
-- Machine learning
-    * What is machine learning
-    * How to implement a machine learning algorithm
-- How to use flows
-- Implementation
-    * Which datasets are used
-    * What are implementation decisions
-    * results from tests
-- How to report detections
-- Can packet and flow analysis be combined
-- Prevention
-- Conclusion
+- sklearn
 
 # Program
 ## Flow data
@@ -69,57 +40,28 @@ Prediction algorithms predict whether the data is:
 
 The algorithm tries to predict a label as specific as possible.
 
-## Logging
-Logging:
-- Printing all records
-- Print predictions
-- Print fails (in check)
-- Print trained model
-- Progression bar training
-- Print record training
-- Things to check on overfitting etc
-
-Visualisation:
-- Keep detected links in database/json
-- Find similarities/connections
-- Graphing
-
 # Development
-## TODO:
-- CEGEKA
-- Port scans detectie vanuit papers
-- already discuss why using a certain (KNN) algorithm compared to others
-- Uitbreiden van aanvallen
-- Existing solutions
-- Extraction labels can be done by hand, depends on dataset
 
 ## TODO:
 - Visualisation
     * Logging
     * Graphing
-- Implementing different algorithms
 - Writing thesis
-- Analysing packets (scapy)?
-- Running virus/botnet in VM and automatic labeling
-- Creating models (running overnight)
+    * Kernels
+    * Neuralnet
+    * Tree
+    * Bayesian
+    * Bagging
+    * Recall
+    * Learning curve
+    * Samenvatting
+    * Evaluation
+    * Conclusion
+    * Abstract
+    * Acknowledgement
 - Data Cegeka
-- Machine learning
-- Preventie
 - Poster
 - Vulgariserende tekst
-
-## Planning:
-- Week 5: ML cursus verwerkt --> done
-- Week 6: Hoe flow data gebruiken --> Al goed mee bezig
-- Week 7: Implementatie testen
-- Week 8: implementation hoofdstuk thesis
-- Week 9: Visualisatie
-- Week 10: Implementatie (multi-pass + visualisatie)
-- Week 11: Attack classification
-- Week 12: Afmaken draft
-- Week 13-14: Extra: preventie
-- Week 15: verwerken feedback draft
-- Week 15+: Eventueel kleine experimentjes
 
 ## Tips
 - algemene tip: figuurtjes toevoegen ( ook bij poster) : interessante manier visueel voorstellen.
@@ -131,6 +73,3 @@ Visualisation:
 - http://scikit-learn.org/0.15/auto_examples/plot_classification_probability.html
 - http://scikit-learn.org/stable/tutorial/machine_learning_map/index.html
 - http://scikit-learn.org/stable/auto_examples/svm/plot_iris.html
-
-whois
-meer classification

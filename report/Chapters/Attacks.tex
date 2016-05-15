@@ -4,30 +4,84 @@
 
 \label{attack} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
 
-An intrusion detection system can use multiple methods to detect malicious behaviour. In order to make the IDS as effective as possible, the exact classifications of attacks that can be detected need to be known.
+An intrusion detection system can use multiple methods to detect malicious behaviour. In order to make the IDS as effective as possible, the exact classifications of malicious behaviour that can be detected need to be known. Classification can happen on several different ways. For example they can be classified using similar behaviour or they could be classified using similar damage caused. \cite{paulauskas2015computer}
 
 \section{Classification}
-There are several types of attacks that can occur. Some of these attacks occur from within the network, other from outside the network. The exact classifications are not mutually exclusive. Some types of malware utilise network attacks. However it is important to make a distinction between these attacks. Every attack is identified by different characteristics. Knowing these characteristics is useful to be able to tweak the IDS to make identification more effective.
+A usefull classification is to first make a distinction between internal and external malicious behaviour. This makes it easier for humans to understand. The IDS itself can work with different kind of classifications. However, the IDS has to communicate with an administrator about the detections. A distinction between internal and external malicious behaviour is easier to understand. \\\\
+The exact classifications are not mutually exclusive. Some types of malicious behaviour can be both internal and external. The exact classification needs to be much deeper than just internal and external. Every type of malicious behaviour is identified by different characteristics. Knowing these characteristics is useful to be able to tweak the IDS to make identification more effective. \cite{hansman2005taxonomy}
 
-\section{Network attacks}
-There are \textbf{Physical attacks}, these are attacks which attempt to destroy physical equipment and hardware. \textbf{Buffer overflows} are attacks that try to execute arbritrairy code or crash a process by overflowing a buffer on the targeted system. \textbf{Password attacks} attempts to break into a system by gaining the password that the system uses. The simplest password attacks are brute-force password crackers. \textbf{DDOS} attacks are attacks which attempt to make a network resource temporarily or permanently unavailable for the users of that resource. An attack could happen by flooding a system with TCP SYN packets. \textbf{Network scans} are information gathering attacks. They do not cause any damage by themselves but usually serve the purpose to gather information about a system that could be used in further attacks. Network traffic sniffing or port scans are examples of network scans. \cite{IPFlow}
+\section{External abnormal behaviour}
+External abnormal behaviour consists of different kind of attacks on a systems. There are many different type of attacks. There are \textbf{Physical attacks}, \textbf{Buffer overflows}, \textbf{Distributed Denial of Service}, \textbf{Brute-force attacks}, \textbf{Vulnerability scans} and \textbf{Man in the middle attacks}. 
 
-\section{Malware}
-There are several types of malware. There are four distinct categories of malware. There are \textbf{botnets}, \textbf{viruses}, \textbf{trojan horses} and \textbf{worms}. Malware are actual programs that infect a system to execute a specific task. The task of the malware defines which category the malware belongs in.\\
-\\
-\textbf{Trojan horses} are programs disguised as harmless applications but contain malicious code. \textbf{Worms} are programs that replicate themselves among a network.  They can spread extremely fast. \textbf{Viruses} are similar to worms. However they only replicate themselves on the infected host computer. Thus they require user interaction in order to be spread around a network. The virus can accomplish this by attaching itself to an email-attachment, embed itself within an executable, etc. \\
-\\
-\textbf{Botnets} is malware that causes infected computers to become "slaves" to the master. An infected computer is controlled externally by the bot-master without the knowledge of the owner of the infected computer. The bot-master can use the distributed network of "slave" computer to perform other malicious tasks, such as performing an DDOS attack. \cite{IPFlow}
+\subsection{DDoS}
+\textbf{DDOS} or Distributed Denial of Service attacks are attacks which attempt to make a network resource temporarily or permanently unavailable for the users of that resource. An attack could happen by flooding a system with TCP SYN packets. In Figure~\ref{fig:ddos} an example can be seen. The attacker uses some Master Nodes to control a number of Daemon Nodes. These Daemon Nodes are the computers that actually carry out the attack. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{Figures/ddos}
+\decoRule
+\caption[DDoS attack]{DDoS attack. \cite{hansman2005taxonomy}}
+\label{fig:ddos}
+\end{figure}
+
+\subsection{Vulnerability scans}
+\textbf{Network scans} are information gathering attacks. They do not cause any damage by themselves but usually serve the purpose to gather information about a system that could be used in further attacks. Network traffic sniffing or port scans are examples of network scans. \cite{IPFlow}
+
+\subsection{Buffer overflows}
+Buffer overflows are one of the most used methods of attacking a computer or network. They are
+used to exploit flawed programming. They work by trying to overflow buffers within the program. When this happens the overflowed data will overflow into adjacent memory. This can cause data corruption or alter the execution of a program. There are stack-based and heap-based buffer overflows. Stack-based overflows try to overflow the program stack and heap-based overflows try to overflow dynamically created memory in a program. \cite{paulauskas2015computer}
+ 
+\subsection{Brute-force attacks}
+Brute-force attacks are a method that can be used to gain access to a target computer. This can be done by for example attempting all different kind of passwords. These attacks will eventually succeed but they can take a long time to execute. \cite{paulauskas2015computer}
+
+\subsection{Physical attacks}
+Physical attacks are attacks that try to physically damage computers. These attacks can be very basic, such as cutting a wire. However, they can also be energy attacks, such as  electro-magnetic pulses (EMP's) or high and low energy radio frequency (HERF and LERF) attacks. \cite{hansman2005taxonomy}
+
+\subsection{Man in the Middle}
+A man in the middle attack (MITM) is an attack where the attacker tries to secretly relay and possibly alter communication between two computers or networks as can be seen in Figure~\ref{fig:mitm}.  
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{Figures/main_the_middle}
+\decoRule
+\caption[Man in the middle attack]{Man in the middle attack. \cite{mitmExample}}
+\label{fig:mitm}
+\end{figure}
+
+\section{Internal abnormal behaviour}
+Internal abnormal behaviour can be called malware. There are several types of malware. There are four distinct categories of malware. There are \textbf{botnets}, \textbf{viruses}, \textbf{trojan horses} and \textbf{worms}. Malware are actual programs that infect a system to execute a specific task. The task of the malware defines which category the malware belongs in.
+
+\subsection{Trojan horses}
+\textbf{Trojan horses} are programs disguised as harmless applications but contain malicious code. They get their name from the battle of Troy. In stories it is said that the Greeks created a giant wooden horse and filled it with soldiers. The Trojans thought the horse was a gift of surrender. They brought the horse inside Troy. At night, the Greeks came out the horse, opened the gates of Troy and defeated Troy. This is also the way a Trojan horse works. Some of the capabilities of a Trojan horse include keystroke logging, program installation and file transfers. \cite{hansman2005taxonomy}
+
+\subsection{Viruses}
+\textbf{Viruses} are self-replicating programs that infect and spread through other programs. An infection means that they embed themselves within another program. When that program is run, the virus also activates and runs. \cite{hansman2005taxonomy}
+
+\subsection{Worms}
+\textbf{Worms} are programs that replicate themselves among a network.  They can spread extremely fast. Unlike viruses, they do not require infected files to spread. \cite{hansman2005taxonomy}
+
+\subsection{Botnets}
+\textbf{Botnets} is malware that causes infected computers to become "slaves" to the master. An infected computer is controlled externally by the bot-master without the knowledge of the owner of the infected computer. An example of this is shown in Figure~\ref{fig:botnet}. The bot-master can use the distributed network of "slave" computer to perform other malicious tasks, such as performing an DDOS attack. \cite{IPFlow}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{Figures/botnet}
+\decoRule
+\caption[Botnet infection]{Botnet infection. \cite{botnetExample}}
+\label{fig:botnet}
+\end{figure}
 
 \section{Detection}
-An NIDS only monitors the network. As such not every attack can be detected by an NIDS. Only the attacks that actually use the network can be detected. Flow-based IDS have the additional constraint that they can only use flow data. This further limits the attacks that can be detected. The attacks that can be detected using a flow-based network intrusion detection systems are:
+An NIDS only monitors the network. As such not every attack can be detected by an NIDS. Only the attacks that actually use the network can be detected. Flow-based IDS have the additional constraint that they can only use flow data. This further limits the attacks that can be detected. The attacks that can generally be detected using a flow-based network intrusion detection systems are:
 \begin{itemize}
 \item DDOS
-\item Network scans
+\item Vulnerability scans
 \item Worms
 \item Botnets
 \end{itemize}
-Other attacks either do not use network communication, or they are not visible within the header information of network traffic. In order to detect other attacks, including \textbf{viruses}, \textbf{trojan horses} and \textbf{Buffer overflows}, other detection systems such as HIDS or Packet-based NIDS should be used.
+Other attacks either do not use network communication, or they are not visible within the header information of network traffic. In order to detect other attacks, including \textbf{Viruses}, \textbf{Trojan horses}, \textbf{Man in the Middle} and \textbf{Buffer overflows}, other detection systems such as HIDS or Packet-based NIDS should be used. \textbf{Physical attacks} are even more difficult to detect. \\\\
+However there are some special circumstances in which other types of abnormal behaviour can be detected. When more information about a network and the abnormal behaviour is known, other types of abnormal behaviour can be detected. For example. when it is known that viruses are always distributed from the same source, it is possible to detect this distribution.This is  analogous for other attacks. \\\\
+Other activities such as phoning home which a keystroke logging Trojan might do, could also be detected.  \textbf{Brute-force attacks} can also be detected since they might generate a lot of network traffic. However, unless the \textbf{Brute-force attack} is also a DDoS attack, the traffic mostly looks harmless from a flow-based approach. \cite{paulauskas2015computer}
 
 \subsection{Distributed Denial of Service}
 A distributed denial of service can be detected by the amount of data that is being received. However, there are many different types of DDoS attacks. There are ICMP floods, SYN floods, etc. These attacks can be described in terms of traffic patterns. A traffic pattern is expressed in a couple features. These features include the number of flows and packets, the packet size, and the total bandwidth used during the traffic. For example UDP flooding can be characterised by a traffic pattern which contains a lot of packets. These patterns can be searched for during the detection phase. \cite{kim2004flow}

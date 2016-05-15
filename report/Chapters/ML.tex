@@ -3,7 +3,6 @@
 \chapter{Machine learning} % Main chapter title
 
 \label{Chapter2} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
-
 \section{What is machine learning}
 Machine learning is a subfield of Computer Science. It is a type of Artificial Intelligence which allows programs to learn and find patterns within data. \cite{coursera} \\
 \\
@@ -21,8 +20,8 @@ A \textbf{training sample} is a data point in an available training set that is 
 \\
 Machine learning is applied for predictive modeling. In predictive modeling, a particular process or event is modeled. Using a training set, the model tries to learn or approximate a particular function that, for example, lets us distinguish spam from non-spam email. This function is called the target function. The function the model makes to approximate the target function is called the \textbf{hypothesis}. \\
 \\
-To model the particular process or event, one or more \textbf{features} are extracted. A feature is an individual property. All features combined define the model of the particular process of event. In the example of mails, a feature could be the textbody, or it could be the sender of the email. It could even be individual characters which appear in the email. Which features are chosen is completely dependent on which problem is being solved. \\\\
-This chapter gives an introduction to the mathematical background of supervised machine learning. It starts with lineair regression which is a simple category of machine learning algorithms. The principles behind lineair regression are the same as for other machine learning algorithms. Afterwards logistic regression is used to explain how classification works within machine learning. It begins by explaining what exactly the hypothesis is and how it can be constructed. 
+To model the particular process or event, one or more \textbf{features} are extracted. A feature is an individual property. All features combined define the model of the particular process or event. In the example of mails, a feature could be the textbody, or it could be the sender of the email. It could even be individual characters which appear in the email. Which features are chosen is completely dependent on which problem is being solved. \\\\
+This chapter gives an introduction to the mathematical background of supervised machine learning. It starts with lineair regression which is a simple category of machine learning algorithms. The principles behind lineair regression are the same as for other machine learning algorithms. Afterwards logistic regression is used to explain how classification works within machine learning. It begins by explaining what exactly the hypothesis is and how it can be constructed. \cite{courseraLectures}
 \section{Lineair Regression}
 \label{regression}
 Lineair regression is a statistical approach to model the relationship between an "output" value $y$ and one or more "input" values $x_1...x_n$. It belongs to the category of supervised learning. An example of this can be seen in Figure~\ref{fig:regression}. The black dots represent the data to be modeled. The blue line is the model. This example only has one "input" value. This specific case of regression is called simple linear regression. \cite{scikit-regression}. 
@@ -40,7 +39,7 @@ H_0(x) = \theta_0x_0 + \theta_1x_1 + ... + \theta_nx_n
 $x_0$ always has the value 1. The $\theta$ values and the $x$ values can be represented using vectors. Now the hypothesis function can be written in a more convenient way:
 \begin{align}
 \label{hypothesisfunc}
-H_0(x) = \theta^TX
+H_0(x) = \theta^TX = [\theta_1, \theta_2, ..., \theta_n]^T [x_0, x_1, ..., x_n]
 \end{align}
 
 \begin{figure}[H]
@@ -74,12 +73,12 @@ In order to construct a good hypothesis function, good values of $\theta$ have t
 \begin{align}
 J(\theta) = \dfrac{\sum\limits_{i=1}^m(H_0(x^{(i)}) - y^{(i)})^2}{2m} 
 \end{align}
-\noindent Seeing this equation already makes it seem that the number of training samples is important. From statistics, it is known that the population of data points, in this case training samples, have to be large enough. This problem is addressed later in Section~\ref{overfitting}.
+\noindent Seeing this equation already makes it clear that the number of training samples is important. From statistics, it is known that the population of data points, in this case training samples, have to be large enough. This problem is addressed later in Section~\ref{overfitting}.
 
 \subsection{Gradient descent}
-To solve the minimization problem, the first step is to start with $\theta$ and keep changing the values to minimize $J(\theta)$, this is an iterative approach.  Gradient descent is such an algorithm that can be used to find a solution to the minimization problem. Gradient descent is an algorithm that uses the gradient or derivative of a function to find a local minimum of that function. \\\\
-In order to easily explain the gradient descent algorithm, a analogy to a ball rolling down a hill can be made. Let's say have a landscape such as in Figure~\ref{fig:gradient}. The horizontal location of the ball represents the values of $\theta$, the height of the ball represents the MSE. We want to get the ball to the lowest possible point, in order to minimize the MSE. To do this, the ball rolls down the hill until it comes to rest at the lowest point. Every iteration of gradient descent will bring the ball closer to the lowest point. \cite{rollingBall}\\\\
-Ofcourse, when a ball rolls down a hill, it does not just roll down and immediately stop. The ball takes a path similar as described in Figure~\ref{fig:gradient}. When the ball finally comes to rest, it can be said that the algorithm converges to that horizontal position.
+To solve the minimization problem, the first step is to start with $\theta$ and keep changing the values to minimize $J(\theta)$. This is an iterative approach.  Gradient descent is such an algorithm that can be used to find a solution to the minimization problem. Gradient descent is an algorithm that uses the gradient or derivative of a function to find a local minimum of that function. \\\\
+In order to easily explain the gradient descent algorithm, a analogy to a ball rolling down a hill can be made. \cite{rollingBall} Let's say we have a landscape such as in Figure~\ref{fig:gradient}. The horizontal location of the ball represents the values of $\theta$, the height of the ball represents the MSE. We want to get the ball to the lowest possible point, in order to minimize the MSE. To do this, the ball rolls down the hill until it comes to rest at the lowest point. Every iteration of gradient descent will bring the ball closer to the lowest point. \\\\
+Of course, when a ball rolls down a hill, it does not just roll down and immediately stop. The ball takes a path similar as described in Figure~\ref{fig:gradient}. When the ball finally comes to rest, it can be said that the algorithm converges to that horizontal position.
  \begin{figure}[H]
 \centering
 \includegraphics[width=1\textwidth]{Figures/gradient}
@@ -104,7 +103,7 @@ Ofcourse, when a ball rolls down a hill, it does not just roll down and immediat
  $\alpha$ is the learning rate of the gradient descent. The value of $\alpha$ describes how fast the gradient descent algorithm approaches the local mimimum. If $\alpha$ is too small, the gradient descent can be very slow. In the other case, if $\alpha$ is too large, the gradient descent can overshoot the local mimimum. It may fail to converge and could even diverge. \\\\ 
 To go back to the example of the rolling ball, having $\alpha$ too large, could be seen as having the ball roll down the hill extremely fast. Because of this, the ball could come to rest at another point in the landscape, it might have flown over the hill. \\
  \\
-The value of $\alpha$ does not need to change during the gradient descent, since the closer the gradient descent gets to the local mimimum, the smaller the derivative becomes, and smaller steps will be taken. If $\theta_j$ is already a local minimum, the derivative is $0$ and the gradient descent will not change the value of $\theta_j$.
+The value of $\alpha$ does not need to change during the gradient descent, since the closer the gradient descent gets to the local mimimum, the smaller the derivative becomes, and smaller steps will be taken. If $\theta_j$ is already a local minimum, the derivative is $0$ and the gradient descent will not change the value of $\theta_j$. \cite{courseraLecturesGradient}
 
 \subsection{Normal equation}
 There is another method that could be used in place of gradient descent, a normal equation. This is a method to solve for $\theta$ analytically. But this method becomes slow when there are a lot of features. $X$ is a $m$ X $n$ matrix constructed by putting all training samples (vectors of features) together. The notation $x^{(i)}$ and $y^{(i)}$ is used to denote the $i$th training sample. With dataset size is denoted by $m$.
@@ -114,11 +113,51 @@ There is another method that could be used in place of gradient descent, a norma
 But what happens when $(X^TX)$ is non-invertible, or singular? This means there are redundant features or more features than training samples. There are mathematical models, such as the pseudo-inverse to still compute a correct result. There are still other methods that could replace gradient descent, such as conjugate gradient, BFGS and L-BFGS. Thinking about matrices and non-invertibility can help to be able to understand how features relate to eachother.
 
 \subsection{Feature scaling}
-The main idea behind feature scaling is to make sure that the different features are on a different scale. The reason behind this is to optimize the gradient descent algorithm. The gradient descent will converge much more quickly with feature scaling. With feature scaling, the partial derivative will be larger and because the features are in scale, the values of $\theta$ will also be similar in scale.\\
+The main idea behind feature scaling is to make sure that the different features are on a similar scale. The reason behind this is to optimize the gradient descent algorithm. The gradient descent will converge much more quickly with feature scaling. With feature scaling, the partial derivative will be larger and because the features are in scale, the values of $\theta$ will also be similar in scale.\\
 \\
 When one feature is very large and another is very small, the values of $\theta$ need to be small for the first feature and larger for the second, since the cost function needs to be minimized. This means that the values of $\theta$ need to change more and thus, requires more iterations for the gradient descent algorithm. The range that should approximately be used is $-1 < x < 1$. \\
 \\
-Mean normalization could be used. This replaces each $x_i$ with $\dfrac{x_i - \mu_i}{s_i}$, where $\mu_i$ is the average value of all $x_i$ values and $s_i$ is the standard deviation.
+Mean normalization could be used. This replaces each $x_i$ with $\dfrac{x_i - \mu_i}{s_i}$, where $\mu_i$ is the average value of all $x_i$ values and $s_i$ is the standard deviation.\\
+\\
+Lets use a numeric example. There are two data points, $(0.5, 3, 1)$ and $(0.7, 4, 2)$ with $(x_1, x_2, y)$. The hypothesis is:
+\begin{align}
+H_0(x) = \theta_1 * x_1 + \theta_2 * x_2
+\end{align}
+\noindent In Figure~\ref{fig:costwithscale}, it can be seen that the values of $\theta$ quite quickly fall into the blue zone, where the cost function is minimal. The values of $\theta$ also seem to be equally large when the cost function is minimal. This in contrary to Figure~\ref{fig:costwithoutscale}. Here, both values of $\theta$ need to change a lot. They are not even remotely close to eachother. 
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+    \begin{axis}[
+        width=16cm,
+        height=8cm,
+        xlabel=$\theta_1$,
+        ylabel=$\theta_2$,
+        zlabel=J($\theta$)]
+      % plot the stirling-formulae
+      \addplot3[surf] {( (-0.71*x-0.71*y-1)^2 + (0.71*x+0.71*y-2)^2)/(2*2)};
+    \end{axis}
+\end{tikzpicture}
+\caption{Cost function with feature scaling} \label{fig:costwithscale}
+\end{figure}
+
+\noindent When $\theta_2$ is near $-4$, the gradient descrent will change $\theta_1$ towards a larger value. However, when $\theta_2$ is near $4$, the gradient descrent will change $\theta_1$ towards a smaller value. In the gradient descent algorithm, $\theta_2$ will converge towards approximatly $-1$ and the actual value of $\theta_2$ will change between being larger and smaller than this value. Because of this, the value of $\theta_1$ takes a longer time to converge.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+    \begin{axis}[
+        width=16cm,
+        height=8cm,
+        xlabel=$\theta_1$,
+        ylabel=$\theta_2$,
+        zlabel=J($\theta$)]
+      % plot the stirling-formulae
+      \addplot3[surf] {( (0.5*x+3*y-1)^2 + (0.7*x+4*y-2)^2)/(2*2)};
+    \end{axis}
+\end{tikzpicture}
+\caption{Cost function without feature scaling} \label{fig:costwithoutscale}
+\end{figure}
 
 \section{Classification with logistic regression}
 \label{classification}
@@ -171,7 +210,7 @@ g(z) =  \dfrac{1}{1 + e^{-z}}
 H_0(x) = g(\theta^TX) = \dfrac{1}{1 + e^{\theta^TX}}
 \end{align}
 \subsection{Cost function}
-The cost function from lineair regression cannot simply be applied to logistic regression. For classification it is important that data that belongs to the class has an output closer to 1, and that data that does not belong to the class has an output closer to 0. To do this a different cost function should be used. The notation $x^{(i)}$ and $y^{(i)}$ is used to denote the $i$th training sample. With dataset size is denoted by $m$. A helper function $Cost$ is used. This helps to see the parallel with the cost function for linear regression, as seen in Section~\ref{costfunction}. 
+The cost function from lineair regression cannot simply be applied to logistic regression. For classification it is important that data that belongs to the class has an output closer to 1, and that data that does not belong to the class has an output closer to 0. To do this a different cost function should be used. The notation $x^{(i)}$ and $y^{(i)}$ is used to denote the $i$th training sample. With dataset size is denoted by $m$. A helper function $Cost$ is used. This helps to see the parallel with the cost function for linear regression, as seen in Section~\ref{costfunction}.  \cite{courseraLecturesCost}
 \begin{gather}
 J(\theta) = \dfrac{\sum\limits_{i=1}^m(Cost(H_\theta(x^{(i)}), y^{(i)}))}{m}\\
   Cost(H_\theta(x^{(i)}), y^{(i)}) =	\begin{cases}
@@ -179,7 +218,69 @@ J(\theta) = \dfrac{\sum\limits_{i=1}^m(Cost(H_\theta(x^{(i)}), y^{(i)}))}{m}\\
         									        - log(1 - H_\theta(x^{(i)})), & \text{if } y^{(i)} = 0\\
             									\end{cases}
 \end{gather}
-The given cost function accomplishes exactly what is wanted. If the expected output is 1 (belongs to a class), then the cost becomes greater as the output goes to 0 and analogous if the expected output is 0. Gradient descent for logistic regression is exactly the same as for lineair regression except with a different hypothesis.
+The given cost function accomplishes exactly what is wanted. If the expected output is 1 (belongs to a class), then the cost becomes greater as the output goes to 0 and analogous if the expected output is 0. Gradient descent for logistic regression is exactly the same as for lineair regression except with a different hypothesis. \\
+\\
+A very simple example of the cost function would be the following. Take one data point, $(3)$ with outputs $1$. The hypothesis seen in Figure~\ref{fig:hyporegresion} and is:
+\begin{align}
+H_0(x) = \dfrac{1}{1 + \exp{\theta_1 * x_1}}
+\end{align}
+\noindent The cost function is: $-log(\theta_1 * 3)$ which is graphed in Figure~\ref{fig:costregression} becomes larger when the hypothesis goes towards $0$, and goes to $0$ when the hypothesis goes towards $1$. This is indeed the behaviour that is expected from the cost function for logistic regression.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+    \begin{axis}[
+    	legend pos=south west,
+        axis x line=middle,
+        axis y line=middle,
+        grid = major,
+        width=10cm,
+        height=6cm,
+        grid style={dashed, gray!30},
+        xmin=-10,     % start the diagram at this x-coordinate
+        xmax= 10,    % end   the diagram at this x-coordinate
+        ymin= -0.2,     % start the diagram at this y-coordinate
+        ymax=1.2,   % end   the diagram at this y-coordinate
+        %axis background/.style={fill=white},
+        xlabel=$\theta_1$,
+        ylabel=$H_0(x)$,
+        tick align=outside,
+        enlargelimits=false]
+      % plot the stirling-formulae
+      \addplot[domain=-10:10, blue, ultra thick,samples=500] {( 1 / (1 +  exp(3 * x) )   )};
+      \addlegendentry{$g(x)=( 1 / (1 +  exp(3 * x) )   )$}
+    \end{axis}
+\end{tikzpicture}
+\caption{Hypothesis function example} \label{fig:hyporegresion}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+    \begin{axis}[
+    	legend pos=north west,
+        axis x line=middle,
+        axis y line=middle,
+        grid = major,
+        width=10cm,
+        height=6cm,
+        grid style={dashed, gray!30},
+        xmin=-0,     % start the diagram at this x-coordinate
+        xmax= 1,    % end   the diagram at this x-coordinate
+        ymin= -2,     % start the diagram at this y-coordinate
+        ymax=6,   % end   the diagram at this y-coordinate
+        %axis background/.style={fill=white},
+        xlabel=$\dfrac{1}{1 + \exp{3*\theta_1}}$,
+        ylabel=$J(\theta)$,
+        tick align=outside,
+        enlargelimits=false]
+      % plot the stirling-formulae
+      \addplot[domain=-0:1, blue, ultra thick,samples=500] {-ln(  x )) };
+      \addlegendentry{$g(x)=-log(x)$}
+    \end{axis}
+\end{tikzpicture}
+\caption{Cost function example} \label{fig:costregression}
+\end{figure}
 
 \subsection{Multi-class classification}
 The above hypothesis and cost function are for binary classification. To compute multi-class classification, the One-vs-all algorithm could be used. This algortihm splits the multiples classes into two groups. One group contains one class, the other group contains all other classes. Using these two new groups, the algorithms for binary classification can be used. In other words, for each class $i$ a different logistic regression classifier $H_\theta(x)$ is trained to predict the probability that $y = 1$. On an input x, the most probable class is chosen. \\\\
@@ -214,6 +315,42 @@ A hypothesis is complex when the values of $\theta$ are too large. Regularisatio
 J(\theta) = \dfrac{\sum\limits_{i=1}^m(H_0(x^{(i)}) - y^{(i)})^2 + \lambda * \sum\limits_{j=1}^m(\theta_j^2)}{2m}
 \end{align}
 The only change to the cost function is that a penalty is added for large values of $\theta$. When values of $\theta$ become larger, the cost function also becomes larger. When this cost function is minimized lower values for $\theta$ will be chosen. Only $\theta_1$ till $\theta_m$ should be regularised. $\lambda$ is called the regularisation parameter. Because of this small modification, the hypothesis that is constructed will be simpler.
+\\\\
+Lets use a numeric example. There are two data points, $(3,1)$ and $(5,2)$. The hypothesis is:
+\begin{align}
+H_0(x) = \theta x_1
+\end{align}
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+    \begin{axis}[
+    	legend pos=north east,
+        axis x line=middle,
+        axis y line=middle,
+        grid = major,
+        width=16cm,
+        height=8cm,
+        grid style={dashed, gray!30},
+        xmin=-0.4,     % start the diagram at this x-coordinate
+        xmax= 2,    % end   the diagram at this x-coordinate
+        ymin= 0,     % start the diagram at this y-coordinate
+        ymax= 4,   % end   the diagram at this y-coordinate
+        %axis background/.style={fill=white},
+        xlabel=$\theta$,
+        ylabel=J($\theta$),
+        tick align=outside,
+        enlargelimits=false]
+      % plot the stirling-formulae
+      \addplot[domain=-1:1, blue, ultra thick,samples=500] {((3*x-1)^2 + (5*x-2)^2)/(2*2)};
+      \addplot[domain=-1:1, red, ultra thick,samples=500] {((3*x-1)^2 + (5*x-2)^2 + 30*x^2)/(2*2)};
+      \addlegendentry{$J(\theta)=((3*\theta-1)^2 + (5*\theta-2)^2) / (2*2)$}
+      \addlegendentry{$J(\theta_{reg})=((3*\theta-1)^2 + (5*\theta-2)^2 + 30*\theta^2) / (2*2)$}
+    \end{axis}
+\end{tikzpicture}
+\caption{Effect of regularisation} \label{fig:regularisation}
+\end{figure}
+\noindent In this example, a cost function is constructed with and without regularisation. The blue graph shows the cost function without regularisation, the red graph shows the cost function with regularisation. It can be seen that having regularisation does change the value of $\theta$ where the cost function is minimal, which is exactly what is intended to happen with regularisation. 
 
-
-
+\section{Summary}
+At the core of a machine learning algorithm is the hypothesis. The hypothesis is the function that is used to fit the training data, it is used to predict values for new data. The hypothesis is constructed using the features that represent the data given to the machine learning algorithm and a set of unknown values $\theta$. \\\\
+These values $\theta$ are chosen, as such that the hypothesis is the most accurate. In order to do this, a cost function is constructed. The cost function measures the difference between a known output and a predicted output, usually the MSE is used. The values for $\theta$ can be found by minimizing the cost function. This is done by using the gradient descent algorithm. 

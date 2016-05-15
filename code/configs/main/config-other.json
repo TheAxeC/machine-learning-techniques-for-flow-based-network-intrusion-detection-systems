@@ -35,7 +35,7 @@
                 "type" : "SQLLoader",
                 "user" : "root",
                 "db" : "dataset",
-                "password" : "Kronos1994"
+                "password" : ""
             }
         ],
     "trainer" : "Trainer",

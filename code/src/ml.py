@@ -37,7 +37,12 @@ class MLAlgorithm:
     # Load model from filename
     def load_file(self, file):
         from sklearn.externals import joblib
-        self.algorithm = joblib.load(file)
+        try:
+            self.algorithm = joblib.load(file)
+        except Exception as e:
+            return False
+        return True
+        
 
     # Load a model (either from memory or from file)
     def load(self, file=None, model=None, override=False):
@@ -209,7 +214,11 @@ class KNeighborsClassifier(MLAlgorithm):
 
     # Train the data set
     def train(self, data_set, target_set):
+        #from visualise import plot_learning_curve
+        #plot_learning_curve(self.algorithm, "KNeighborsClassifier", data_set, target_set, cv=2)
+
         self.algorithm.fit(data_set, target_set)
+
 
     # Predict a sample
     def predict(self, sample, corr=None):

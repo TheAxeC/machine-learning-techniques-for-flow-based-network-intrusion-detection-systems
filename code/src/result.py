@@ -57,6 +57,11 @@ class ResultManager:
 
     # Add a record to the result class
     # This can also be logged in this class
+    #
+    # label = predicted output
+    # flow = the flow data
+    # correct = correct label
+    #
     def add_record(self, label, flow, correct):
         self.total += 1
         self.check_output(label, flow, correct)
@@ -74,6 +79,26 @@ class ResultManager:
             pass
 
     # Use standard checking for the output using labels
+    # True positive = good data
+    # Check for:
+    #       false negative
+    #       false positive
+    #       true negative
+    #       true positive
+    def check_output(self, label, flow, correct):
+        if label > 0:
+            if correct in self.good_labels:
+                self.true_pos += 1
+            else:
+                self.false_pos += 1
+        else:
+            if correct in self.good_labels:
+                self.false_neg += 1
+            else:
+                self.true_neg += 1
+
+    # Use standard checking for the output using labels
+    # True positive = malicious data
     # Check for:
     #       false negative
     #       false positive

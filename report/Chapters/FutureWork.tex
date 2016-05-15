@@ -1,13 +1,23 @@
 % Chapter Template
 
 \chapter{Future work} % Main chapter title
-
 \label{prevention} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
 
-\section{Prevention}
-This chapter will only be done if this is made in the thesis
-\subsection{Real-time detection}
+\section{Increasing accuracy}
+There are several possible methods that could be used to improve the accuracy of the implemented  system. Currently the system generates alerts based on whether it thinks a flow is malicious or not. Incrementing the accuracy of the system could be solved by giving the system more data to learn from. \\
+\\
+One method to be able to get more training data is to generate it. Using a Virtual Machine, different kinds of malware could be run. The generated network traffic can be used to train the system. \\
+\\
+Another possible solution could be to implement packet analysis. A flow-based intrusion detection system processes a lot less data than a packet-based intrusion detection system. However, because IP flows contain less information than complete packets, a flow-based system cannot detect everything. It might be worth to find methods that incorperate both flow-based intrusion detection and packet-based intrusion deteciton. \\
+\\
+One such method could be to use the IP flows to eliminate flows that are non-malicious and afterwards to perform packet analysis on the remaining flows. This may or may not have an impact on the accuracy and the different kinds of attacks that can be detected.
 
-\subsection{Data limiting}
+\section{Intrusion Prevention Systems}
+It is useful to have an intrusion detection system. Intrusion prevention systems also have their place as a security tool. This thesis tried to find out whether machine learning techniques and IP flows can be used for an efficient intrusion detection system. Are these techniques also usable in the context of intrusion prevention? \\
+\\
+There are two main issues with using a similar system for intrusion prevention. IP Flows are defined as an entire "flow", as a connection. At the moment a flow is received by the intrusion detection system, every packet has already been exchanged between the source and the destination. This means that "prevention" is more difficult since the intrusion has already happened. A solution to this could be to process incomplete flows. This means that the flow might still change and that communication is still ongoing. However, it is unknown how the system reacts to unknown flows. \\
+\\
+The other issue is the performance of the machine learning algorithms. During the tests that were done in this thesis, no performance issues of the machine learning algorithms were noticed. But it is unknown how fast the machine learning algorithm needs to perform, should the intrusion detection system be fast enough.
 
-\subsection{Connection closing}
+\section{Neural networks}
+As explained in Section~\ref{neuralnet}, Neural networks are powerful machine learning algorithms. This is also suggested in other research such as \cite{koch2009fast}. They focussed on very specific methods on how neural networks can be used and did not use IP flows. However, neural networks have not been tested in this implementation. 

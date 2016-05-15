@@ -25,7 +25,7 @@
                 "type" : "SQLTrainer",
                 "user" : "root",
                 "db" : "dataset",
-                "password" : "Kronos1994",
+                "password" : "",
                 "amount" : 50000
             }
         ],
@@ -36,7 +36,7 @@
                 "host" : "localhost",
                 "user" : "root",
                 "db" : "dataset",
-                "password" : "Kronos1994",
+                "password" : "",
                 "type" : "sql",
                 "amount" : 10000
             },
@@ -44,7 +44,7 @@
                 "host" : "localhost",
                 "user" : "root",
                 "db" : "dataset",
-                "password" : "Kronos1994",
+                "password" : "",
                 "type" : "sql",
                 "amount" : 10000,
                 "good" : true

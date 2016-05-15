@@ -10,6 +10,30 @@ class Config:
         self.path = ""
         self.data = {}
 
+        self.configs = []
+
+    def read_config_str(self, str_config, directory, data):
+        import json
+        import os
+        import copy
+
+        try:
+            self.data = copy.deepcopy(data)
+            del self.data['name']
+            self.data.update( str_config )
+            self.path = directory
+
+            self.add_directory("pcap-files", ["src", "dest"])
+            self.add_directory("data-sets", ["file"])
+            self.add_directory("check-sets", ["file"])
+
+            return True
+        except Exception as e:
+            import traceback
+            traceback.print_exc()
+            print e
+            return False
+
     # Reading the config file
     def read_config(self, file=None):
         import json
@@ -26,6 +50,8 @@ class Config:
                 self.data = json.load(data_file)
             self.path = os.path.dirname(file_name) + "/"
 
+            self.make_configs()
+
             self.add_directory("pcap-files", ["src", "dest"])
             self.add_directory("data-sets", ["file"])
             self.add_directory("check-sets", ["file"])
@@ -34,6 +60,28 @@ class Config:
         except Exception as e:
             print e
             return False
+
+    def make_configs(self):
+        if 'use_main' in self.data and self.data['use_main']:
+            self.data['name'] = 'Main'
+            self.configs.append(self)
+        if 'configs' in self.data:
+            config_list = self.data['configs']
+
+            if not type(config_list) is list:
+                return
+            for d in config_list:
+                c = Config()
+                if c.read_config_str(d, self.path, self.data):
+                    self.configs.append(c)
+
+    def get_name(self):
+        if 'name' in self.data:
+            return self.data['name']
+        return "defaultName"
+
+    def get_configs(self):
+        return self.configs
 
     def add_directory(self, name, features):
         arr = self.data[name]
@@ -105,12 +153,6 @@ class Config:
             return self.data['check']
         return False
 
-    # Should failed predictions be printed
-    def print_fails(self):
-        if 'print-fails' in self.data:
-            return self.data['print-fails']
-        return False
-
     # Check if we want to use a stored model
     def use_model(self):
         if 'use_model' in self.data:
@@ -147,12 +189,6 @@ class Config:
             return self.data['sniffer']
         return False
 
-    # Check if the packet analyser is active
-    def packet_analyser_active(self):
-        if 'packet-analyses' in self.data:
-            return self.data['packet-analyses']
-        return False
-
     # Check if the flow converter is active
     def flow_converter(self):
         if 'pcap-to-flow' in self.data:
@@ -169,12 +205,6 @@ class Config:
                     x['dest'] = None
             return self.data['pcap-files']
         return []
-
-    # Is prevention active
-    def prevention_active(self):
-        if 'prevention' in self.data:
-            return self.data['prevention']
-        return False
 
     # Get the flow timeout
     def get_flow_timeout(self):

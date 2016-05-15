@@ -3,6 +3,7 @@
     "pcap-to-flow" : false,
     "check" : true,
     "sniffer" : false,
+    "use_main" : true,
 
     "pcap-files" : [
         {
@@ -11,8 +12,14 @@
         }
     ],
 
-    "algorithm" : "OneClassSVM",
+    "algorithm" : "KNeighborsClassifier",
     "featureClass" : "FlowFeature",
+
+    "configs" : [
+        {
+            "algorithm" : "KNeighborsClassifier"
+        }
+    ],
 
     "model_dir" : "../../models/",
     "model" : "model.mdl",
@@ -21,24 +28,9 @@
 
     "data-sets" : [
             {
-                "host" : "localhost",
-                "type" : "SQLTrainer",
-                "user" : "test",
-                "db" : "dataset",
-                "password" : "test",
-                "amount" : 30000
-            },
-            {
                 "file" : "../../test/capture20110815.binetflow",
                 "from" : 0,
-                "to" : -1,
-                "type" : "BadTrainer"
-            },
-            {
-                "file" : "../../test/capture20110815-2.binetflow",
-                "from" : 0,
-                "to" : -1,
-                "type" : "BadTrainer"
+                "to" : 10000
             }
         ],
     "trainer" : "Trainer",
@@ -46,21 +38,19 @@
     "check-sets" : [
             {
                 "file" : "../../test/capture20110815.binetflow",
-                "type" : "file",
+                "type" : "PredictionFile",
                 "from" : 0,
-                "to" : -1
+                "to" : 1000
             }
         ],
 
-    "packet-analyses" : false,
-    "prevention" : false,
-
-    "print-fails" : false,
-    "print-labels" : false,
-    "timeout" : 5000,
-
-    "protocol-file" : "protocols.json",
     "feature-file" : "features.json",
     "logger" : "log.txt",
-    "good-labels" : "good.txt"
+    "good-labels" : "good.txt",
+
+    "protocol-file" : "protocols.json",
+    "timeout" : 5000,
+
+
+    "print-labels" : false
 }

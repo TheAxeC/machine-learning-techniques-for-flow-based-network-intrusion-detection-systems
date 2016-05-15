@@ -134,6 +134,8 @@
 %	REQUIRED PACKAGES
 %----------------------------------------------------------------------------------------
 
+\usepackage[pdftex,dvipsnames]{xcolor}  % Coloured text etc.
+
 \RequirePackage{babel} % Required for automatically changing names of document elements to languages besides english
 
 \RequirePackage{scrbase} % Required for handling language-dependent names of sections/document elements
@@ -241,6 +243,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 
 \def\authorname{}
 \def\ttitle{}
+\newcommand*{\advisor}[1]{\def\adname{#1}}
 \newcommand*{\supervisor}[1]{\def\supname{#1}}
 \newcommand*{\thesistitle}[1]{\def\@title{#1}\def\ttitle{#1}}
 \newcommand*{\examiner}[1]{\def\examname{#1}}
