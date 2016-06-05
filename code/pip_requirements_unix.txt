@@ -2,7 +2,6 @@ attrs==15.2.0
 cffi==1.5.2
 cryptography==1.2.2
 cssselect==0.9.1
-dnet==1.12
 enum34==1.1.2
 idna==2.0
 impacket==0.9.14

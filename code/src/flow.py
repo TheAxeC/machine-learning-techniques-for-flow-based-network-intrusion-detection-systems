@@ -33,6 +33,22 @@ class Flows:
     def get_size(self):
         return len(self.netflow)
 
+    def addFlows(self, flows):
+        self.netflow = self.netflow + flows.netflow
+        self.flow_targets = self.flow_targets + flows.flow_targets
+
+    def random(self, amount=-1):
+        import random
+        if amount < 0:
+            amount = len(self.netflow)
+        sample = random.sample(self.netflow, amount)
+
+        newFlow = Flows()
+        newFlow.netflow = sample
+        newFlow.flow_targets = []
+        for item in newFlow.netflow:
+            newFlow.flow_targets.append(item.make_target())
+        return newFlow
 
 # A flow record
 class FlowRecord:
@@ -63,6 +79,11 @@ class FlowRecord:
         self.tcp_flags = 0
 
         self.label = 0
+        self.prediction = ""
+
+    # Get the sampled data
+    def get_sample_data(self, feature):
+        return feature.make_record(self)
 
     # Return the label of this record
     def make_target(self):

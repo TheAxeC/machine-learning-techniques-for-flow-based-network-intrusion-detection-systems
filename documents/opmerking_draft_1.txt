@@ -1,0 +1,37 @@
+Opmerkingen:
+	#General
+	#	4.1.1 variabelen bespreken
+	#	overfitting herschrijven
+	#
+	#kernels:
+	#	simpel kernel
+	#	hoe gebruiken
+	#
+	#Distance
+	#	distance -> ml
+	#
+	#Datasets:
+	#	EDM + cegeka meer uitleg dataset
+	#
+	#feature selection
+	#	ip addressen subnets bespreken
+	#	protocollen laag bespreken
+	#
+	#evaluation
+	#	waarom
+	#	vergelijken
+	#	metrics
+	#	verklaren
+	#	random classifier (both all positive and pure random)
+	#	betrouwbaarheidsinterval -> is standaard deviatie
+	#	goed/slecht resultaat
+	#	edm/cegeka --> ook andere algoritmes
+	#	neuralnet testing
+	#	meer experimenten uitleggen (syn paketten)
+	#	AI2 vergelijking
+	#	future work?
+	#	sklearn.metrics
+	#	neurolab
+	#	pybrain
+	#	FANN
+	#	unstable sklearn

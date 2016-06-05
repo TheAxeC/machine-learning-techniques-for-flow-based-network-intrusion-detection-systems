@@ -1,0 +1,555 @@
+Starting IDS...
+JSON Config file read successfully
+
+--------------------------------------------------
+Starting config: Random classifier (uniform) SQL
+Description:
+	Random classifier to construct a baseline
+=============
+Iteration 0
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: SQLTrainer.
+Using Loader "PickleLoader" to load the data.
+Training size is 10000.
+Training set "localhost:dataset"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionSQL.
+Start file: localhost:dataset.
+Using Loader "PickleLoader" to load the data.
+Using 10000 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...
+End prediction.
+Ratio of: 33.11% with 6689 fails and a total of 10000 precictions
+False negative: 0
+False positive: 0
+True negative: 0
+True positive: 10000
+
+Precision: 1.0
+Recall: 1.0
+Fscore: 1.0
+
+F1 score: 0.496922972517
+Precision score: 0.997293473336
+Recall score: 0.3311
+Accuracy score: 0.3311
+
+F1 score Micro: 0.3311
+Precision score Micro: 0.3311
+Recall score Micro: 0.3311
+
+F1 score Macro: 0.166232805111
+Precision score Macro: 0.333027363732
+Recall score Macro: 0.205670614261
+
+F1 score Binary: 1.0
+Precision score Binary: 1.0
+Recall score Binary: 1.0
+Accuracy score Binary: 1.0
+classification report:
+                 precision    recall  f1-score   support
+
+icmp_sideeffect       0.00      0.00      0.00         5
+ irc_sideeffect       0.00      0.29      0.00         7
+       ssh_conn       1.00      0.33      0.50      9988
+
+    avg / total       1.00      0.33      0.50     10000
+
+Predictions:
+ssh_conn => 3314
+icmp_sideeffect => 3301
+irc_sideeffect => 3385
+
+
+Checks done
+End predictions and checks.
+
+------
+End config: Random classifier (uniform) SQL
+--------------------------------------------------
+Starting config: Random classifier (uniform) CTU
+Description:
+	Random classifier to construct a baseline
+=============
+Iteration 0
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Training size is 50001.
+Training set "configs/main/../../test/capture20110815.binetflow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Training size is 2580.
+Training set "configs/main/../../test/capture20110815.binetflow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/capture20110815.binetflow.
+Using Loader "CTULoader" to load the data.
+Using 1121076 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...9%
+End prediction.
+/Users/axelfaes/GoogleDrive/Data/workspace/School/Bachelor-CS-UHasselt/Bachelor-thesis-ML-IPS/code/ipsml/lib/python2.7/site-packages/sklearn/metrics/classification.py:1122: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/Users/axelfaes/GoogleDrive/Data/workspace/School/Bachelor-CS-UHasselt/Bachelor-thesis-ML-IPS/code/ipsml/lib/python2.7/site-packages/sklearn/metrics/classification.py:1122: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/Users/axelfaes/GoogleDrive/Data/workspace/School/Bachelor-CS-UHasselt/Bachelor-thesis-ML-IPS/code/ipsml/lib/python2.7/site-packages/sklearn/metrics/classification.py:1122: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Ratio of: 1.75251276452% with 1101429 fails and a total of 1121076 precictions
+False negative: 1951
+False positive: 274580
+True negative: 843916
+True positive: 629
+
+Precision: 0.00228553572013
+Recall: 0.243798449612
+Fscore: 0.00452861704387
+
+F1 score: 0.0304334866953
+Precision score: 0.261050798011
+Recall score: 0.0175251276452
+Accuracy score: 0.0175251276452
+
+F1 score Micro: 0.0175251276452
+Precision score Micro: 0.0175251276452
+Recall score Micro: 0.0175251276452
+
+F1 score Macro: 0.00453042599503
+Precision score Macro: 0.0171702612261
+Recall score Macro: 0.0131819118536
+
+F1 score Binary: 0.00452861704387
+Precision score Binary: 0.00228553572013
+Recall score Binary: 0.243798449612
+Accuracy score Binary: 0.753334296694
+classification report:
+                                                        precision    recall  f1-score   support
+
+                                       flow=Background       0.03      0.02      0.02     33200
+                    flow=Background-Attempt-cmpgw-CVUT       0.00      0.02      0.01      4144
+                flow=Background-Established-cmpgw-CVUT       0.09      0.02      0.03     99088
+                           flow=Background-TCP-Attempt       0.02      0.02      0.02     26449
+                       flow=Background-TCP-Established       0.12      0.02      0.03    138727
+                           flow=Background-UDP-Attempt       0.03      0.02      0.02     38313
+                       flow=Background-UDP-Established       0.22      0.02      0.03    246234
+                 flow=Background-UDP-NTP-Established-1       0.00      0.02      0.00      1522
+                           flow=Background-ajax.google       0.00      0.01      0.00       175
+                     flow=Background-google-analytics1       0.00      0.02      0.00       515
+                    flow=Background-google-analytics10       0.00      0.02      0.00       569
+                    flow=Background-google-analytics11       0.00      0.01      0.00       470
+                    flow=Background-google-analytics12       0.00      0.01      0.00       442
+                    flow=Background-google-analytics13       0.00      0.02      0.00       517
+                    flow=Background-google-analytics14       0.00      0.02      0.00       428
+                    flow=Background-google-analytics15       0.00      0.02      0.00       451
+                    flow=Background-google-analytics16       0.00      0.03      0.00       556
+                     flow=Background-google-analytics2       0.00      0.01      0.00       409
+                     flow=Background-google-analytics3       0.00      0.01      0.00       412
+                     flow=Background-google-analytics4       0.00      0.01      0.00       389
+                     flow=Background-google-analytics5       0.00      0.01      0.00       406
+                     flow=Background-google-analytics6       0.00      0.02      0.00       417
+                     flow=Background-google-analytics7       0.00      0.01      0.00       434
+                     flow=Background-google-analytics8       0.00      0.02      0.00       403
+                     flow=Background-google-analytics9       0.00      0.02      0.00       461
+                            flow=Background-google-pop       0.00      0.01      0.00       276
+                        flow=Background-google-webmail       0.00      0.02      0.00       752
+                       flow=Background-www.fel.cvut.cz       0.00      0.03      0.00       162
+                       flow=From-Background-CVUT-Proxy       0.00      0.02      0.00       427
+                             flow=From-Botnet-V45-ICMP       0.00      0.01      0.00       812
+                      flow=From-Botnet-V45-TCP-Attempt       0.00      0.00      0.00         3
+                 flow=From-Botnet-V45-TCP-Attempt-SPAM       0.00      0.02      0.00      1127
+      flow=From-Botnet-V45-TCP-CC106-IRC-Not-Encrypted       0.00      0.00      0.00         5
+           flow=From-Botnet-V45-TCP-CC73-Not-Encrypted       0.00      0.02      0.00        47
+                  flow=From-Botnet-V45-TCP-Established       0.00      0.00      0.00         2
+       flow=From-Botnet-V45-TCP-Established-HTTP-Ad-15       0.00      0.00      0.00         1
+        flow=From-Botnet-V45-TCP-Established-HTTP-Ad-4       0.00      0.00      0.00         1
+       flow=From-Botnet-V45-TCP-Established-HTTP-Ad-40       0.00      0.00      0.00         3
+       flow=From-Botnet-V45-TCP-Established-HTTP-Ad-62       0.00      0.00      0.00         2
+flow=From-Botnet-V45-TCP-HTTP-Google-Net-Established-6       0.00      0.00      0.00         5
+              flow=From-Botnet-V45-TCP-WEB-Established       0.00      0.00      0.00         1
+                      flow=From-Botnet-V45-UDP-Attempt       0.00      0.01      0.00       501
+                          flow=From-Botnet-V45-UDP-DNS       0.00      0.01      0.00        70
+                   flow=From-Normal-V45-CVUT-WebServer       0.00      0.00      0.00        89
+                            flow=From-Normal-V45-Grill       0.00      0.02      0.00      2474
+                             flow=From-Normal-V45-Jist       0.01      0.02      0.01     10482
+                    flow=From-Normal-V45-MatLab-Server       0.00      0.00      0.00         4
+                         flow=From-Normal-V45-Stribrek       0.01      0.02      0.01     12133
+              flow=From-Normal-V45-UDP-CVUT-DNS-Server       0.00      0.00      0.00        13
+                    flow=Normal-V45-HTTP-windowsupdate       0.00      0.00      0.00        24
+                         flow=To-Background-CVUT-Proxy       0.01      0.02      0.01     10791
+                     flow=To-Background-CVUT-WebServer       0.00      0.02      0.00      1714
+                              flow=To-Background-Grill       0.00      0.04      0.00        50
+                               flow=To-Background-Jist       0.00      0.00      0.00        10
+                      flow=To-Background-MatLab-Server       0.00      0.01      0.00       573
+                           flow=To-Background-Stribrek       0.00      0.03      0.00        35
+                flow=To-Background-UDP-CVUT-DNS-Server       0.43      0.02      0.03    483307
+                     flow=To-Normal-V45-UDP-NTP-server       0.00      0.02      0.00        49
+
+                                           avg / total       0.26      0.02      0.03   1121076
+
+Predictions:
+flow=From-Botnet-V45-TCP-Established-HTTP-Ad-62 => 19621
+flow=From-Normal-V45-MatLab-Server => 19476
+flow=Background-UDP-NTP-Established-1 => 19689
+flow=To-Background-Stribrek => 19702
+flow=To-Background-CVUT-Proxy => 19941
+flow=From-Botnet-V45-TCP-CC73-Not-Encrypted => 19787
+flow=Background-google-pop => 19824
+flow=Background-UDP-Attempt => 19700
+flow=Background-google-analytics10 => 19622
+flow=From-Botnet-V45-TCP-Established-HTTP-Ad-4 => 19828
+flow=From-Normal-V45-UDP-CVUT-DNS-Server => 19832
+flow=From-Botnet-V45-TCP-Established => 19353
+flow=From-Botnet-V45-TCP-Attempt-SPAM => 19857
+flow=From-Botnet-V45-TCP-CC106-IRC-Not-Encrypted => 19535
+flow=Background-google-analytics15 => 19575
+flow=Background-google-analytics14 => 19680
+flow=Background-google-analytics16 => 19740
+flow=Background-google-analytics11 => 19568
+flow=To-Background-MatLab-Server => 19652
+flow=Background-google-analytics13 => 19751
+flow=Background-google-analytics12 => 19836
+flow=Background-ajax.google => 19514
+flow=To-Background-Grill => 19619
+flow=From-Normal-V45-CVUT-WebServer => 19402
+flow=From-Normal-V45-Jist => 19637
+flow=Background-Attempt-cmpgw-CVUT => 19460
+flow=Background-TCP-Established => 19874
+flow=From-Botnet-V45-TCP-Established-HTTP-Ad-40 => 19893
+flow=From-Normal-V45-Stribrek => 19692
+flow=Background-google-analytics4 => 19546
+flow=From-Botnet-V45-TCP-WEB-Established => 19683
+flow=To-Background-Jist => 19575
+flow=Background-Established-cmpgw-CVUT => 19611
+flow=From-Normal-V45-Grill => 19638
+flow=From-Botnet-V45-TCP-Established-HTTP-Ad-15 => 19716
+flow=Background-www.fel.cvut.cz => 19659
+flow=To-Background-UDP-CVUT-DNS-Server => 19828
+flow=Background-google-analytics9 => 19687
+flow=Background-google-webmail => 19719
+flow=From-Botnet-V45-TCP-HTTP-Google-Net-Established-6 => 19730
+flow=Background-google-analytics5 => 19742
+flow=Background-TCP-Attempt => 19620
+flow=Background-google-analytics7 => 19875
+flow=Background-google-analytics6 => 19355
+flow=Background-google-analytics1 => 19944
+flow=Background-google-analytics3 => 19606
+flow=Background-google-analytics2 => 19676
+flow=From-Botnet-V45-UDP-Attempt => 19600
+flow=To-Normal-V45-UDP-NTP-server => 19764
+flow=From-Botnet-V45-UDP-DNS => 19579
+flow=From-Background-CVUT-Proxy => 19700
+flow=To-Background-CVUT-WebServer => 19742
+flow=From-Botnet-V45-TCP-Attempt => 19627
+flow=From-Botnet-V45-ICMP => 19400
+flow=Background-UDP-Established => 19526
+flow=Background => 19671
+flow=Background-google-analytics8 => 19597
+
+
+Checks done
+End predictions and checks.
+
+------
+End config: Random classifier (uniform) CTU
+--------------------------------------------------
+Starting config: Random classifier (Pure) SQL
+Description:
+	Random classifier to construct a baseline
+=============
+Iteration 0
+------
+Intrusion Detection System enabled
+Loaded algorithm: PureRandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: SQLTrainer.
+Using Loader "PickleLoader" to load the data.
+Training size is 1000.
+Training set "localhost:dataset"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionSQL.
+Start file: localhost:dataset.
+Using Loader "PickleLoader" to load the data.
+Using 10000 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...
+End prediction.
+Ratio of: 50.47% with 4953 fails and a total of 10000 precictions
+False negative: 0
+False positive: 0
+True negative: 0
+True positive: 10000
+
+Precision: 1.0
+Recall: 1.0
+Fscore: 1.0
+
+F1 score: 0.670011658159
+Precision score: 0.998704735926
+Recall score: 0.5047
+Accuracy score: 0.5047
+
+F1 score Micro: 0.5047
+Precision score Micro: 0.5047
+Recall score Micro: 0.5047
+
+F1 score Macro: 0.224343398334
+Precision score Macro: 0.33360460673
+Recall score Macro: 0.418184699563
+
+F1 score Binary: 1.0
+Precision score Binary: 1.0
+Recall score Binary: 1.0
+Accuracy score Binary: 1.0
+classification report:
+                 precision    recall  f1-score   support
+
+icmp_sideeffect       0.00      0.00      0.00         1
+ irc_sideeffect       0.00      0.75      0.00         8
+       ssh_conn       1.00      0.50      0.67      9991
+
+    avg / total       1.00      0.50      0.67     10000
+
+Predictions:
+ssh_conn => 5043
+irc_sideeffect => 4957
+
+
+Checks done
+End predictions and checks.
+
+------
+End config: Random classifier (Pure) SQL
+--------------------------------------------------
+Starting config: Random classifier (Pure) CTU
+Description:
+	Random classifier to construct a baseline
+=============
+Iteration 0
+------
+Intrusion Detection System enabled
+Loaded algorithm: PureRandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Training size is 50001.
+Training set "configs/main/../../test/capture20110815.binetflow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Training size is 2580.
+Training set "configs/main/../../test/capture20110815.binetflow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/capture20110815.binetflow.
+Using Loader "CTULoader" to load the data.
+Using 1121076 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...9%
+End prediction.
+Ratio of: 1.76062996621% with 1101338 fails and a total of 1121076 precictions
+False negative: 1935
+False positive: 274661
+True negative: 843835
+True positive: 645
+
+Precision: 0.00234284759504
+Recall: 0.25
+Fscore: 0.00464219140223
+
+F1 score: 0.0305349928326
+Precision score: 0.262120224772
+Recall score: 0.0176062996621
+Accuracy score: 0.0176062996621
+
+F1 score Micro: 0.0176062996621
+Precision score Micro: 0.0176062996621
+Recall score Micro: 0.0176062996621
+
+F1 score Macro: 0.00459375847113
+Precision score Macro: 0.0173188436857
+Recall score Macro: 0.017695012215
+
+F1 score Binary: 0.00464219140223
+Precision score Binary: 0.00234284759504
+Recall score Binary: 0.25
+Accuracy score Binary: 0.753276316681
+classification report:
+                                                        precision    recall  f1-score   support
+
+                                       flow=Background       0.03      0.02      0.02     33200
+                    flow=Background-Attempt-cmpgw-CVUT       0.00      0.02      0.01      4144
+                flow=Background-Established-cmpgw-CVUT       0.09      0.02      0.03     99088
+                           flow=Background-TCP-Attempt       0.02      0.02      0.02     26449
+                       flow=Background-TCP-Established       0.13      0.02      0.03    138727
+                           flow=Background-UDP-Attempt       0.03      0.02      0.02     38313
+                       flow=Background-UDP-Established       0.22      0.02      0.03    246234
+                 flow=Background-UDP-NTP-Established-1       0.00      0.02      0.00      1522
+                           flow=Background-ajax.google       0.00      0.02      0.00       175
+                     flow=Background-google-analytics1       0.00      0.02      0.00       515
+                    flow=Background-google-analytics10       0.00      0.03      0.00       569
+                    flow=Background-google-analytics11       0.00      0.02      0.00       470
+                    flow=Background-google-analytics12       0.00      0.02      0.00       442
+                    flow=Background-google-analytics13       0.00      0.01      0.00       517
+                    flow=Background-google-analytics14       0.00      0.01      0.00       428
+                    flow=Background-google-analytics15       0.00      0.02      0.00       451
+                    flow=Background-google-analytics16       0.00      0.02      0.00       556
+                     flow=Background-google-analytics2       0.00      0.01      0.00       409
+                     flow=Background-google-analytics3       0.00      0.01      0.00       412
+                     flow=Background-google-analytics4       0.00      0.02      0.00       389
+                     flow=Background-google-analytics5       0.00      0.02      0.00       406
+                     flow=Background-google-analytics6       0.00      0.01      0.00       417
+                     flow=Background-google-analytics7       0.00      0.03      0.00       434
+                     flow=Background-google-analytics8       0.00      0.02      0.00       403
+                     flow=Background-google-analytics9       0.00      0.03      0.00       461
+                            flow=Background-google-pop       0.00      0.01      0.00       276
+                        flow=Background-google-webmail       0.00      0.02      0.00       752
+                       flow=Background-www.fel.cvut.cz       0.00      0.01      0.00       162
+                       flow=From-Background-CVUT-Proxy       0.00      0.01      0.00       427
+                             flow=From-Botnet-V45-ICMP       0.00      0.01      0.00       812
+                      flow=From-Botnet-V45-TCP-Attempt       0.00      0.00      0.00         3
+                 flow=From-Botnet-V45-TCP-Attempt-SPAM       0.00      0.02      0.00      1127
+      flow=From-Botnet-V45-TCP-CC106-IRC-Not-Encrypted       0.00      0.00      0.00         5
+           flow=From-Botnet-V45-TCP-CC73-Not-Encrypted       0.00      0.00      0.00        47
+                  flow=From-Botnet-V45-TCP-Established       0.00      0.00      0.00         2
+       flow=From-Botnet-V45-TCP-Established-HTTP-Ad-15       0.00      0.00      0.00         1
+        flow=From-Botnet-V45-TCP-Established-HTTP-Ad-4       0.00      0.00      0.00         1
+       flow=From-Botnet-V45-TCP-Established-HTTP-Ad-40       0.00      0.00      0.00         3
+       flow=From-Botnet-V45-TCP-Established-HTTP-Ad-62       0.00      0.00      0.00         2
+flow=From-Botnet-V45-TCP-HTTP-Google-Net-Established-6       0.00      0.00      0.00         5
+              flow=From-Botnet-V45-TCP-WEB-Established       0.00      0.00      0.00         1
+                      flow=From-Botnet-V45-UDP-Attempt       0.00      0.03      0.00       501
+                          flow=From-Botnet-V45-UDP-DNS       0.00      0.01      0.00        70
+                   flow=From-Normal-V45-CVUT-WebServer       0.00      0.02      0.00        89
+                            flow=From-Normal-V45-Grill       0.00      0.01      0.00      2474
+                             flow=From-Normal-V45-Jist       0.01      0.02      0.01     10482
+                    flow=From-Normal-V45-MatLab-Server       0.00      0.25      0.00         4
+                         flow=From-Normal-V45-Stribrek       0.01      0.02      0.01     12133
+              flow=From-Normal-V45-UDP-CVUT-DNS-Server       0.00      0.00      0.00        13
+                    flow=Normal-V45-HTTP-windowsupdate       0.00      0.00      0.00        24
+                         flow=To-Background-CVUT-Proxy       0.01      0.02      0.01     10791
+                     flow=To-Background-CVUT-WebServer       0.00      0.02      0.00      1714
+                              flow=To-Background-Grill       0.00      0.02      0.00        50
+                               flow=To-Background-Jist       0.00      0.00      0.00        10
+                      flow=To-Background-MatLab-Server       0.00      0.02      0.00       573
+                           flow=To-Background-Stribrek       0.00      0.03      0.00        35
+                flow=To-Background-UDP-CVUT-DNS-Server       0.44      0.02      0.03    483307
+                     flow=To-Normal-V45-UDP-NTP-server       0.00      0.00      0.00        49
+
+                                           avg / total       0.26      0.02      0.03   1121076
+
+Predictions:
+flow=From-Botnet-V45-TCP-Established-HTTP-Ad-62 => 19803
+flow=From-Normal-V45-Stribrek => 19645
+flow=Background-UDP-NTP-Established-1 => 19593
+flow=To-Background-Stribrek => 19489
+flow=To-Background-CVUT-Proxy => 19792
+flow=From-Botnet-V45-TCP-CC73-Not-Encrypted => 19750
+flow=From-Normal-V45-MatLab-Server => 19587
+flow=Background-UDP-Attempt => 19728
+flow=Background-google-analytics10 => 19610
+flow=Background-google-analytics4 => 19581
+flow=From-Normal-V45-UDP-CVUT-DNS-Server => 19651
+flow=From-Botnet-V45-TCP-Established => 19672
+flow=From-Botnet-V45-TCP-Attempt-SPAM => 19950
+flow=From-Botnet-V45-TCP-CC106-IRC-Not-Encrypted => 19578
+flow=Background-google-analytics15 => 19940
+flow=Background-google-analytics14 => 19670
+flow=Background-google-analytics16 => 19628
+flow=Background-google-analytics11 => 19412
+flow=To-Background-MatLab-Server => 19394
+flow=Background-google-analytics13 => 19765
+flow=Background-google-analytics12 => 19707
+flow=Background-ajax.google => 19792
+flow=To-Background-Grill => 19799
+flow=From-Normal-V45-CVUT-WebServer => 19748
+flow=Background-google-analytics9 => 19470
+flow=From-Normal-V45-Jist => 19664
+flow=Background-Attempt-cmpgw-CVUT => 19806
+flow=Background-TCP-Established => 19689
+flow=From-Botnet-V45-TCP-Established-HTTP-Ad-40 => 19576
+flow=From-Botnet-V45-TCP-WEB-Established => 19567
+flow=To-Background-Jist => 19770
+flow=Background-Established-cmpgw-CVUT => 19642
+flow=From-Normal-V45-Grill => 19467
+flow=From-Botnet-V45-TCP-Established-HTTP-Ad-15 => 19565
+flow=Background-www.fel.cvut.cz => 19686
+flow=To-Background-UDP-CVUT-DNS-Server => 19606
+flow=Background-TCP-Attempt => 19592
+flow=Background-google-webmail => 19861
+flow=From-Botnet-V45-TCP-HTTP-Google-Net-Established-6 => 19464
+flow=Background-google-analytics5 => 19791
+flow=From-Botnet-V45-TCP-Established-HTTP-Ad-4 => 19880
+flow=Background-google-analytics7 => 19811
+flow=Background-google-analytics6 => 19586
+flow=Background-google-analytics1 => 19558
+flow=Background-google-analytics3 => 19704
+flow=Background-google-analytics2 => 19516
+flow=From-Botnet-V45-UDP-Attempt => 19744
+flow=To-Normal-V45-UDP-NTP-server => 19676
+flow=From-Botnet-V45-UDP-DNS => 19618
+flow=From-Background-CVUT-Proxy => 19574
+flow=To-Background-CVUT-WebServer => 19622
+flow=Background-google-pop => 19852
+flow=From-Botnet-V45-TCP-Attempt => 19467
+flow=From-Botnet-V45-ICMP => 19672
+flow=Background-UDP-Established => 19674
+flow=Background => 19856
+flow=Background-google-analytics8 => 19766
+
+
+Checks done
+End predictions and checks.
+
+------
+End config: Random classifier (Pure) CTU
+--------------------------------------------------

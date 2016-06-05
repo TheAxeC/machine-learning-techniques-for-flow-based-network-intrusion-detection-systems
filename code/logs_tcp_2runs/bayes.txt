@@ -1,0 +1,536 @@
+Starting IDS...
+JSON Config file read successfully
+
+--------------------------------------------------
+Starting config: Gaussian Naive Bayes CTU
+Description:
+	Gaussian Naive Bayes
+=============
+Iteration 0
+------
+Intrusion Detection System enabled
+Loaded algorithm: GaussianNB.
+
+Loaded feature: FlowFeatureWFlags.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Loaded data manually
+Training size is 5001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 3500.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 55518 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...4%
+End prediction.
+/Users/axelfaes/GoogleDrive/Data/workspace/School/Bachelor-CS-UHasselt/Bachelor-thesis-ML-IPS/code/ipsml/lib/python2.7/site-packages/sklearn/metrics/classification.py:1122: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/Users/axelfaes/GoogleDrive/Data/workspace/School/Bachelor-CS-UHasselt/Bachelor-thesis-ML-IPS/code/ipsml/lib/python2.7/site-packages/sklearn/metrics/classification.py:1122: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Ratio of: 0.620400063421% with 194306 fails and a total of 195519 precictions
+False negative: 0
+False positive: 138622
+True negative: 6
+True positive: 56891
+
+Precision: 0.290983208278
+Recall: 1.0
+Fscore: 0.45079317285
+
+F1 score: 0.000126901932804
+Precision score: 0.010608331857
+Recall score: 0.00620400063421
+Accuracy score: 0.00620400063421
+
+F1 score Binary: 0.45079317285
+Precision score Binary: 0.290983208278
+Recall score Binary: 1.0
+Accuracy score Binary: 0.291004966269
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 967.080578089
+------
+Iteration 1
+------
+Intrusion Detection System enabled
+Loaded algorithm: GaussianNB.
+
+Loaded feature: FlowFeatureWFlags.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 5001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 3500.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 55518 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...4%
+End prediction.
+Ratio of: 0.620400063421% with 194306 fails and a total of 195519 precictions
+False negative: 0
+False positive: 138622
+True negative: 6
+True positive: 56891
+
+Precision: 0.290983208278
+Recall: 1.0
+Fscore: 0.45079317285
+
+F1 score: 0.000126901932804
+Precision score: 0.010608331857
+Recall score: 0.00620400063421
+Accuracy score: 0.00620400063421
+
+F1 score Binary: 0.45079317285
+Precision score Binary: 0.290983208278
+Recall score Binary: 1.0
+Accuracy score Binary: 0.291004966269
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 1053.84999204
+------
+
+
+++++++++++++++++++++
+\caption{Gaussian Naive Bayes CTU: Experiment 1.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.000126901932804 \\
+Multi-class Precision & 0.010608331857 \\
+Multi-class Recall & 0.00620400063421 \\
+\midrule
+Binary F-score & 0.45079317285 \\
+Binary Precision & 0.290983208278 \\
+Binary Recall & 1.0 \\
+\midrule
+Total amount of samples & 195519 \\
+Correctly classified & 0.620400063421% \\
+False negative & 0 \\
+False positive & 138622 \\
+True negative & 6 \\
+True positive & 56891 \\
+\midrule
+Positive training samples & 3545 \\
+Negative training samples & 4956 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Gaussian Naive Bayes CTU: Experiment 2.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.000126901932804 \\
+Multi-class Precision & 0.010608331857 \\
+Multi-class Recall & 0.00620400063421 \\
+\midrule
+Binary F-score & 0.45079317285 \\
+Binary Precision & 0.290983208278 \\
+Binary Recall & 1.0 \\
+\midrule
+Total amount of samples & 195519 \\
+Correctly classified & 0.620400063421% \\
+False negative & 0 \\
+False positive & 138622 \\
+True negative & 6 \\
+True positive & 56891 \\
+\midrule
+Positive training samples & 3545 \\
+Negative training samples & 4956 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Gaussian Naive Bayes CTU: Average.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.000126901932804 \\
+Multi-class Precision & 0.010608331857 \\
+Multi-class Recall & 0.00620400063421 \\
+\midrule
+Binary F-score & 0.45079317285 \\
+Binary Precision & 0.290983208278 \\
+Binary Recall & 1.0 \\
+\midrule
+Total amount of samples & 195519.0 \\
+Correctly classified & 0.620400063421% \\
+False negative & 0.0 \\
+False positive & 138622.0 \\
+True negative & 6.0 \\
+True positive & 56891.0 \\
+\midrule
+Positive training samples & 3545.0 \\
+Negative training samples & 4956.0 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Gaussian Naive Bayes CTU: Variance.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 0.0 \\
+Binary Precision & 0.0 \\
+Binary Recall & 0.0 \\
+\midrule
+Total amount of samples & 0.0 \\
+Correctly classified & 0.0% \\
+False negative & 0.0 \\
+False positive & 0.0 \\
+True negative & 0.0 \\
+True positive & 0.0 \\
+\midrule
+Positive training samples & 0.0 \\
+Negative training samples & 0.0 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+
+
+Config execution time: 2020.93213582
+End config: Gaussian Naive Bayes CTU
+--------------------------------------------------
+Starting config: Gaussian Naive Bayes Cross
+Description:
+	Gaussian Naive Bayes Cross
+=============
+Iteration 0
+------
+Intrusion Detection System enabled
+Loaded algorithm: GaussianNB.
+
+Loaded feature: FlowFeatureWFlags.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 5001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 3500.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: SQLTrainer.
+Using Loader "PickleLoader" to load the data.
+Loaded data manually
+Training size is 3000.
+Training set "localhost:dataset"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionSQL.
+Start file: localhost:dataset.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Using 70000 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...6%
+End prediction.
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 36466 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...5%
+End prediction.
+Ratio of: 28.3648520897% with 176557 fails and a total of 246467 precictions
+False negative: 0
+False positive: 138622
+True negative: 6
+True positive: 107839
+
+Precision: 0.437549957194
+Recall: 1.0
+Fscore: 0.608744002258
+
+F1 score: 0.12538284292
+Precision score: 0.0888320994714
+Recall score: 0.283648520897
+Accuracy score: 0.283648520897
+
+F1 score Binary: 0.608744002258
+Precision score Binary: 0.437549957194
+Recall score Binary: 1.0
+Accuracy score Binary: 0.437563649495
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 1223.6991322
+------
+Iteration 1
+------
+Intrusion Detection System enabled
+Loaded algorithm: GaussianNB.
+
+Loaded feature: FlowFeatureWFlags.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 5001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 3500.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: SQLTrainer.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Training size is 3000.
+Training set "localhost:dataset"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionSQL.
+Start file: localhost:dataset.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Using 70000 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...6%
+End prediction.
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 36466 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...5%
+End prediction.
+Ratio of: 28.3579546146% with 176574 fails and a total of 246467 precictions
+False negative: 0
+False positive: 138622
+True negative: 6
+True positive: 107839
+
+Precision: 0.437549957194
+Recall: 1.0
+Fscore: 0.608744002258
+
+F1 score: 0.125328619406
+Precision score: 0.0887929769028
+Recall score: 0.283579546146
+Accuracy score: 0.283579546146
+
+F1 score Binary: 0.608744002258
+Precision score Binary: 0.437549957194
+Recall score Binary: 1.0
+Accuracy score Binary: 0.437563649495
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 539.197908163
+------
+
+
+++++++++++++++++++++
+\caption{Gaussian Naive Bayes Cross: Experiment 1.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.12538284292 \\
+Multi-class Precision & 0.0888320994714 \\
+Multi-class Recall & 0.283648520897 \\
+\midrule
+Binary F-score & 0.608744002258 \\
+Binary Precision & 0.437549957194 \\
+Binary Recall & 1.0 \\
+\midrule
+Total amount of samples & 246467 \\
+Correctly classified & 28.3648520897% \\
+False negative & 0 \\
+False positive & 138622 \\
+True negative & 6 \\
+True positive & 107839 \\
+\midrule
+Positive training samples & 6545 \\
+Negative training samples & 4956 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Gaussian Naive Bayes Cross: Experiment 2.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.125328619406 \\
+Multi-class Precision & 0.0887929769028 \\
+Multi-class Recall & 0.283579546146 \\
+\midrule
+Binary F-score & 0.608744002258 \\
+Binary Precision & 0.437549957194 \\
+Binary Recall & 1.0 \\
+\midrule
+Total amount of samples & 246467 \\
+Correctly classified & 28.3579546146% \\
+False negative & 0 \\
+False positive & 138622 \\
+True negative & 6 \\
+True positive & 107839 \\
+\midrule
+Positive training samples & 6545 \\
+Negative training samples & 4956 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Gaussian Naive Bayes Cross: Average.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.125355731163 \\
+Multi-class Precision & 0.0888125381871 \\
+Multi-class Recall & 0.283614033522 \\
+\midrule
+Binary F-score & 0.608744002258 \\
+Binary Precision & 0.437549957194 \\
+Binary Recall & 1.0 \\
+\midrule
+Total amount of samples & 246467.0 \\
+Correctly classified & 28.3614033522% \\
+False negative & 0.0 \\
+False positive & 138622.0 \\
+True negative & 6.0 \\
+True positive & 107839.0 \\
+\midrule
+Positive training samples & 6545.0 \\
+Negative training samples & 4956.0 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Gaussian Naive Bayes Cross: Variance.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 7.35047376815e-10 \\
+Multi-class Precision & 3.82643844458e-10 \\
+Multi-class Recall & 1.18937907521e-09 \\
+\midrule
+Binary F-score & 0.0 \\
+Binary Precision & 0.0 \\
+Binary Recall & 0.0 \\
+\midrule
+Total amount of samples & 0.0 \\
+Correctly classified & 1.18937907521e-05% \\
+False negative & 0.0 \\
+False positive & 0.0 \\
+True negative & 0.0 \\
+True positive & 0.0 \\
+\midrule
+Positive training samples & 0.0 \\
+Negative training samples & 0.0 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+
+
+Config execution time: 1762.8977561
+End config: Gaussian Naive Bayes Cross
+--------------------------------------------------
+Total execution time: 3783.82993197
+End of program.

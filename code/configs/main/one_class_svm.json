@@ -1,0 +1,344 @@
+{
+    "check" : true,
+    "algorithm" : "KNeighborsClassifier",
+    "featureClass" : "FlowFeatureWFlags",
+    "amount" : 1,
+
+    "check-sets" : [
+            {
+                "file" : "../../test/test.flow",
+                "from" : 50000,
+                "to" : 190000
+            },
+            {
+                "file" : "../../test/test.flow",
+                "from" : 500000,
+                "to" : 600000,
+                "type" : "PredictionFileBadSamples"
+            }
+        ],
+
+    "configs" : [
+        {
+            "enable-IDS" : false,
+            "name" : "OneClassSVM",
+            "description" : "OneClassSVM",
+            "check" : true,
+            "sniffer" : false,
+            "algorithm" : "OneClassSVM",
+            "featureClass" : "FlowFeatureWCountry",
+            "data-sets" : [
+                    {
+                        "host" : "localhost",
+                        "type" : "SQLTrainer",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 30000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 600000,
+                        "type" : "BadTrainer",
+                        "amount" : 35000
+                    }
+                ],
+            "check-sets" : [
+                    {
+                        "host" : "localhost",
+                        "type" : "PredictionSQL",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 50000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 50000,
+                        "to" : 190000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 520000,
+                        "to" : 600000,
+                        "type" : "PredictionFileBadSamples"
+                    }
+                ]
+        },
+        {
+            "enable-IDS" : false,
+            "name" : "OneClassSVM SQL",
+            "description" : "OneClassSVM SQL",
+            "check" : true,
+            "sniffer" : false,
+            "algorithm" : "OneClassSVM",
+            "featureClass" : "FlowFeatureWCountry",
+            "data-sets" : [
+                    {
+                        "host" : "localhost",
+                        "type" : "SQLTrainer",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 50000
+                    }
+                ],
+            "check-sets" : [
+                    {
+                        "host" : "localhost",
+                        "type" : "PredictionSQL",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 50000
+                    }
+                ]
+        },
+        {
+            "enable-IDS" : false,
+            "name" : "OneClassSVM CTU",
+            "description" : "OneClassSVM",
+            "check" : true,
+            "sniffer" : false,
+            "algorithm" : "OneClassSVM",
+            "featureClass" : "FlowFeatureWCountry",
+            "data-sets" : [
+                {
+                    "file" : "../../test/test.flow",
+                    "from" : 0,
+                    "to" : 600000,
+                    "type" : "BadTrainer",
+                    "amount" : 35000
+                }
+                ],
+            "check-sets" : [
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 50000,
+                        "to" : 190000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 520000,
+                        "to" : 600000,
+                        "type" : "PredictionFileBadSamples"
+                    }
+                ]
+        },
+        {
+            "enable-IDS" : true,
+            "name" : "OneClassSVM",
+            "description" : "OneClassSVM",
+            "check" : true,
+            "sniffer" : false,
+            "algorithm" : "OneClassSVM",
+            "featureClass" : "FlowFeatureWFlags",
+            "data-sets" : [
+                    {
+                        "host" : "localhost",
+                        "type" : "SQLTrainer",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 30000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 600000,
+                        "type" : "BadTrainer",
+                        "amount" : 35000
+                    }
+                ],
+            "check-sets" : [
+                    {
+                        "host" : "localhost",
+                        "type" : "PredictionSQL",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 50000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 50000,
+                        "to" : 190000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 520000,
+                        "to" : 600000,
+                        "type" : "PredictionFileBadSamples"
+                    }
+                ]
+        },
+        {
+            "enable-IDS" : false,
+            "name" : "OneClassSVM SQL",
+            "description" : "OneClassSVM SQL",
+            "check" : true,
+            "sniffer" : false,
+            "algorithm" : "OneClassSVM",
+            "featureClass" : "FlowFeatureWFlags",
+            "data-sets" : [
+                    {
+                        "host" : "localhost",
+                        "type" : "SQLTrainer",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 50000
+                    }
+                ],
+            "check-sets" : [
+                    {
+                        "host" : "localhost",
+                        "type" : "PredictionSQL",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 50000
+                    }
+                ]
+        },
+        {
+            "enable-IDS" : false,
+            "name" : "OneClassSVM CTU",
+            "description" : "OneClassSVM",
+            "check" : true,
+            "sniffer" : false,
+            "algorithm" : "OneClassSVM",
+            "featureClass" : "FlowFeatureWFlags",
+            "data-sets" : [
+                {
+                    "file" : "../../test/test.flow",
+                    "from" : 0,
+                    "to" : 600000,
+                    "type" : "BadTrainer",
+                    "amount" : 35000
+                }
+                ],
+            "check-sets" : [
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 50000,
+                        "to" : 190000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 520000,
+                        "to" : 600000,
+                        "type" : "PredictionFileBadSamples"
+                    }
+                ]
+        },
+        {
+            "enable-IDS" : false,
+            "name" : "OneClassSVM",
+            "description" : "OneClassSVM",
+            "check" : true,
+            "sniffer" : false,
+            "algorithm" : "OneClassSVM",
+            "featureClass" : "FlowFeature",
+            "data-sets" : [
+                    {
+                        "host" : "localhost",
+                        "type" : "SQLTrainer",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 30000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 600000,
+                        "type" : "BadTrainer",
+                        "amount" : 35000
+                    }
+                ],
+            "check-sets" : [
+                    {
+                        "host" : "localhost",
+                        "type" : "PredictionSQL",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 50000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 50000,
+                        "to" : 190000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 520000,
+                        "to" : 600000,
+                        "type" : "PredictionFileBadSamples"
+                    }
+                ]
+        },
+        {
+            "enable-IDS" : false,
+            "name" : "OneClassSVM SQL",
+            "description" : "OneClassSVM SQL",
+            "check" : true,
+            "sniffer" : false,
+            "algorithm" : "OneClassSVM",
+            "featureClass" : "FlowFeature",
+            "data-sets" : [
+                    {
+                        "host" : "localhost",
+                        "type" : "SQLTrainer",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 50000
+                    }
+                ],
+            "check-sets" : [
+                    {
+                        "host" : "localhost",
+                        "type" : "PredictionSQL",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 50000
+                    }
+                ]
+        },
+        {
+            "enable-IDS" : false,
+            "name" : "OneClassSVM CTU",
+            "description" : "OneClassSVM",
+            "check" : true,
+            "sniffer" : false,
+            "algorithm" : "OneClassSVM",
+            "featureClass" : "FlowFeature",
+            "data-sets" : [
+                {
+                    "file" : "../../test/test.flow",
+                    "from" : 0,
+                    "to" : 600000,
+                    "type" : "BadTrainer",
+                    "amount" : 35000
+                }
+                ],
+            "check-sets" : [
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 50000,
+                        "to" : 190000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 520000,
+                        "to" : 600000,
+                        "type" : "PredictionFileBadSamples"
+                    }
+                ]
+        }
+    ]
+}

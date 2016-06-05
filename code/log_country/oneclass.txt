@@ -1,0 +1,2398 @@
+Starting IDS...
+JSON Config file read successfully
+
+--------------------------------------------------
+Starting config: OneClassSVM
+Description:
+	OneClassSVM
+=============
+Iteration 0
+------
+Intrusion Detection System enabled
+Loaded algorithm: OneClassSVM.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: SQLTrainer.
+Using Loader "PickleLoader" to load the data.
+Loaded data manually
+Training size is 30000.
+Training set "localhost:dataset"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Loaded data manually
+Training size is 35000.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionSQL.
+Start file: localhost:dataset.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Using 50000 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...
+End prediction.
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [--------------------------------------------------] 0.000714280612281%Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 36466 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...5%
+End prediction.
+/Users/axelfaes/GoogleDrive/Data/workspace/School/Bachelor-CS-UHasselt/Bachelor-thesis-ML-IPS/code/ipsml/lib/python2.7/site-packages/sklearn/metrics/classification.py:1122: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/Users/axelfaes/GoogleDrive/Data/workspace/School/Bachelor-CS-UHasselt/Bachelor-thesis-ML-IPS/code/ipsml/lib/python2.7/site-packages/sklearn/metrics/classification.py:1124: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true samples.
+  'recall', 'true', average, warn_for)
+/Users/axelfaes/GoogleDrive/Data/workspace/School/Bachelor-CS-UHasselt/Bachelor-thesis-ML-IPS/code/ipsml/lib/python2.7/site-packages/sklearn/metrics/classification.py:1122: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/Users/axelfaes/GoogleDrive/Data/workspace/School/Bachelor-CS-UHasselt/Bachelor-thesis-ML-IPS/code/ipsml/lib/python2.7/site-packages/sklearn/metrics/classification.py:1124: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples.
+  'recall', 'true', average, warn_for)
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 371.700478792
+------
+Iteration 1
+------
+Intrusion Detection System enabled
+Loaded algorithm: OneClassSVM.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: SQLTrainer.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Training size is 30000.
+Training set "localhost:dataset"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 35000.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionSQL.
+Start file: localhost:dataset.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Using 50000 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...
+End prediction.
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [--------------------------------------------------] 0.000714280612281%Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 36466 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...5%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 255.056524038
+------
+Iteration 2
+------
+Intrusion Detection System enabled
+Loaded algorithm: OneClassSVM.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: SQLTrainer.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Training size is 30000.
+Training set "localhost:dataset"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 35000.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionSQL.
+Start file: localhost:dataset.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Using 50000 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...
+End prediction.
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [--------------------------------------------------] 0.000714280612281%Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 36466 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...5%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 237.972321987
+------
+Iteration 3
+------
+Intrusion Detection System enabled
+Loaded algorithm: OneClassSVM.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: SQLTrainer.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Training size is 30000.
+Training set "localhost:dataset"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 35000.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionSQL.
+Start file: localhost:dataset.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Using 50000 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...
+End prediction.
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [--------------------------------------------------] 0.000714280612281%Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 36466 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...5%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 241.110122204
+------
+Iteration 4
+------
+Intrusion Detection System enabled
+Loaded algorithm: OneClassSVM.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: SQLTrainer.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Training size is 30000.
+Training set "localhost:dataset"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 35000.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionSQL.
+Start file: localhost:dataset.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Using 50000 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...
+End prediction.
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [--------------------------------------------------] 0.000714280612281%Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 36466 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...5%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 235.756260157
+------
+Iteration 5
+------
+Intrusion Detection System enabled
+Loaded algorithm: OneClassSVM.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: SQLTrainer.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Training size is 30000.
+Training set "localhost:dataset"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 35000.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionSQL.
+Start file: localhost:dataset.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Using 50000 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...
+End prediction.
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [--------------------------------------------------] 0.000714280612281%Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 36466 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...5%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 332.122924089
+------
+Iteration 6
+------
+Intrusion Detection System enabled
+Loaded algorithm: OneClassSVM.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: SQLTrainer.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Training size is 30000.
+Training set "localhost:dataset"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 35000.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionSQL.
+Start file: localhost:dataset.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Using 50000 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...
+End prediction.
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [--------------------------------------------------] 0.000714280612281%Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 36466 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...5%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 287.556534052
+------
+Iteration 7
+------
+Intrusion Detection System enabled
+Loaded algorithm: OneClassSVM.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: SQLTrainer.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Training size is 30000.
+Training set "localhost:dataset"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 35000.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionSQL.
+Start file: localhost:dataset.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Using 50000 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...
+End prediction.
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [--------------------------------------------------] 0.000714280612281%Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 36466 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...5%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 296.255264044
+------
+Iteration 8
+------
+Intrusion Detection System enabled
+Loaded algorithm: OneClassSVM.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: SQLTrainer.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Training size is 30000.
+Training set "localhost:dataset"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 35000.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionSQL.
+Start file: localhost:dataset.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Using 50000 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...
+End prediction.
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [--------------------------------------------------] 0.000714280612281%Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 36466 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...5%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 278.614082098
+------
+Iteration 9
+------
+Intrusion Detection System enabled
+Loaded algorithm: OneClassSVM.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: SQLTrainer.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Training size is 30000.
+Training set "localhost:dataset"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 35000.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionSQL.
+Start file: localhost:dataset.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Using 50000 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...
+End prediction.
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [--------------------------------------------------] 0.000714280612281%Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 36466 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...5%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 284.228069782
+------
+
+
+++++++++++++++++++++
+\caption{OneClassSVM: Experiment 1.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 0.0565320452614 \\
+Binary Precision & 0.055540298573 \\
+Binary Recall & 0.0575598538235 \\
+\midrule
+Total amount of samples & 226467 \\
+Correctly classified & 0.0% \\
+False negative & 82783 \\
+False positive & 85977 \\
+True negative & 52651 \\
+True positive & 5056 \\
+\midrule
+Positive training samples & 65000 \\
+Negative training samples & 0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{OneClassSVM: Experiment 2.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 0.349199994281 \\
+Binary Precision & 0.300339422162 \\
+Binary Recall & 0.417047097531 \\
+\midrule
+Total amount of samples & 226467 \\
+Correctly classified & 0.0% \\
+False negative & 51206 \\
+False positive & 85339 \\
+True negative & 53289 \\
+True positive & 36633 \\
+\midrule
+Positive training samples & 65000 \\
+Negative training samples & 0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{OneClassSVM: Experiment 3.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 0.127975137974 \\
+Binary Precision & 0.120881456813 \\
+Binary Recall & 0.135953278157 \\
+\midrule
+Total amount of samples & 226467 \\
+Correctly classified & 0.0% \\
+False negative & 75897 \\
+False positive & 86849 \\
+True negative & 51779 \\
+True positive & 11942 \\
+\midrule
+Positive training samples & 65000 \\
+Negative training samples & 0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{OneClassSVM: Experiment 4.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 0.0635439797849 \\
+Binary Precision & 0.061150586873 \\
+Binary Recall & 0.0661323557873 \\
+\midrule
+Total amount of samples & 226467 \\
+Correctly classified & 0.0% \\
+False negative & 82030 \\
+False positive & 89186 \\
+True negative & 49442 \\
+True positive & 5809 \\
+\midrule
+Positive training samples & 65000 \\
+Negative training samples & 0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{OneClassSVM: Experiment 5.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 0.0578720682068 \\
+Binary Precision & 0.0561224489796 \\
+Binary Recall & 0.0597342865925 \\
+\midrule
+Total amount of samples & 226467 \\
+Correctly classified & 0.0% \\
+False negative & 82592 \\
+False positive & 88245 \\
+True negative & 50383 \\
+True positive & 5247 \\
+\midrule
+Positive training samples & 65000 \\
+Negative training samples & 0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{OneClassSVM: Experiment 6.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 0.0507543820723 \\
+Binary Precision & 0.0494910267089 \\
+Binary Recall & 0.0520839262742 \\
+\midrule
+Total amount of samples & 226467 \\
+Correctly classified & 0.0% \\
+False negative & 83264 \\
+False positive & 87866 \\
+True negative & 50762 \\
+True positive & 4575 \\
+\midrule
+Positive training samples & 65000 \\
+Negative training samples & 0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{OneClassSVM: Experiment 7.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 0.0805607682967 \\
+Binary Precision & 0.0781864346857 \\
+Binary Recall & 0.083083823814 \\
+\midrule
+Total amount of samples & 226467 \\
+Correctly classified & 0.0% \\
+False negative & 80541 \\
+False positive & 86043 \\
+True negative & 52585 \\
+True positive & 7298 \\
+\midrule
+Positive training samples & 65000 \\
+Negative training samples & 0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{OneClassSVM: Experiment 8.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 0.351814425899 \\
+Binary Precision & 0.300083579787 \\
+Binary Recall & 0.425095914116 \\
+\midrule
+Total amount of samples & 226467 \\
+Correctly classified & 0.0% \\
+False negative & 50499 \\
+False positive & 87092 \\
+True negative & 51536 \\
+True positive & 37340 \\
+\midrule
+Positive training samples & 65000 \\
+Negative training samples & 0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{OneClassSVM: Experiment 9.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 0.0645550726546 \\
+Binary Precision & 0.0623139427712 \\
+Binary Recall & 0.0669634217147 \\
+\midrule
+Total amount of samples & 226467 \\
+Correctly classified & 0.0% \\
+False negative & 81957 \\
+False positive & 88511 \\
+True negative & 50117 \\
+True positive & 5882 \\
+\midrule
+Positive training samples & 65000 \\
+Negative training samples & 0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{OneClassSVM: Experiment 10.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 0.354553090058 \\
+Binary Precision & 0.30157247765 \\
+Binary Recall & 0.430116463074 \\
+\midrule
+Total amount of samples & 226467 \\
+Correctly classified & 0.0% \\
+False negative & 50058 \\
+False positive & 87499 \\
+True negative & 51129 \\
+True positive & 37781 \\
+\midrule
+Positive training samples & 65000 \\
+Negative training samples & 0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{OneClassSVM: Average.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 0.155736096449 \\
+Binary Precision & 0.1385681675 \\
+Binary Recall & 0.179377042088 \\
+\midrule
+Total amount of samples & 226467.0 \\
+Correctly classified & 0.0% \\
+False negative & 72082.7 \\
+False positive & 87260.7 \\
+True negative & 51367.3 \\
+True positive & 15756.3 \\
+\midrule
+Positive training samples & 65000.0 \\
+Negative training samples & 0.0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{OneClassSVM: Variance.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 0.0169078526394 \\
+Binary Precision & 0.0116220194873 \\
+Binary Recall & 0.0261711618374 \\
+\midrule
+Total amount of samples & 0.0 \\
+Correctly classified & 0.0% \\
+False negative & 201928569.61 \\
+False positive & 1368361.81 \\
+True negative & 1368361.81 \\
+True positive & 201928569.61 \\
+\midrule
+Positive training samples & 0.0 \\
+Negative training samples & 0.0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+
+
+Config execution time: 2820.40688419
+End config: OneClassSVM
+--------------------------------------------------
+Starting config: OneClassSVM SQL
+Description:
+	OneClassSVM SQL
+=============
+Iteration 0
+------
+Intrusion Detection System enabled
+Loaded algorithm: OneClassSVM.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: SQLTrainer.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Training size is 50000.
+Training set "localhost:dataset"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionSQL.
+Start file: localhost:dataset.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Using 50000 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 64.9022140503
+------
+Iteration 1
+------
+Intrusion Detection System enabled
+Loaded algorithm: OneClassSVM.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: SQLTrainer.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Training size is 50000.
+Training set "localhost:dataset"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionSQL.
+Start file: localhost:dataset.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Using 50000 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 68.6314101219
+------
+Iteration 2
+------
+Intrusion Detection System enabled
+Loaded algorithm: OneClassSVM.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: SQLTrainer.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Training size is 50000.
+Training set "localhost:dataset"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionSQL.
+Start file: localhost:dataset.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Using 50000 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 48.0969529152
+------
+Iteration 3
+------
+Intrusion Detection System enabled
+Loaded algorithm: OneClassSVM.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: SQLTrainer.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Training size is 50000.
+Training set "localhost:dataset"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionSQL.
+Start file: localhost:dataset.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Using 50000 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 46.654227972
+------
+Iteration 4
+------
+Intrusion Detection System enabled
+Loaded algorithm: OneClassSVM.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: SQLTrainer.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Training size is 50000.
+Training set "localhost:dataset"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionSQL.
+Start file: localhost:dataset.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Using 50000 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 46.7739970684
+------
+Iteration 5
+------
+Intrusion Detection System enabled
+Loaded algorithm: OneClassSVM.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: SQLTrainer.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Training size is 50000.
+Training set "localhost:dataset"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionSQL.
+Start file: localhost:dataset.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Using 50000 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 52.6933438778
+------
+Iteration 6
+------
+Intrusion Detection System enabled
+Loaded algorithm: OneClassSVM.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: SQLTrainer.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Training size is 50000.
+Training set "localhost:dataset"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionSQL.
+Start file: localhost:dataset.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Using 50000 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 54.2167320251
+------
+Iteration 7
+------
+Intrusion Detection System enabled
+Loaded algorithm: OneClassSVM.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: SQLTrainer.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Training size is 50000.
+Training set "localhost:dataset"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionSQL.
+Start file: localhost:dataset.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Using 50000 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 49.6872520447
+------
+Iteration 8
+------
+Intrusion Detection System enabled
+Loaded algorithm: OneClassSVM.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: SQLTrainer.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Training size is 50000.
+Training set "localhost:dataset"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionSQL.
+Start file: localhost:dataset.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Using 50000 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 55.9828059673
+------
+Iteration 9
+------
+Intrusion Detection System enabled
+Loaded algorithm: OneClassSVM.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: SQLTrainer.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Training size is 50000.
+Training set "localhost:dataset"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionSQL.
+Start file: localhost:dataset.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Using 50000 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 62.4736049175
+------
+
+
+++++++++++++++++++++
+\caption{OneClassSVM SQL: Experiment 1.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 0.119381652687 \\
+Binary Precision & 1.0 \\
+Binary Recall & 0.06348 \\
+\midrule
+Total amount of samples & 50000 \\
+Correctly classified & 0.0% \\
+False negative & 46826 \\
+False positive & 0 \\
+True negative & 0 \\
+True positive & 3174 \\
+\midrule
+Positive training samples & 50000 \\
+Negative training samples & 0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{OneClassSVM SQL: Experiment 2.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 0.0692371556002 \\
+Binary Precision & 1.0 \\
+Binary Recall & 0.03586 \\
+\midrule
+Total amount of samples & 50000 \\
+Correctly classified & 0.0% \\
+False negative & 48207 \\
+False positive & 0 \\
+True negative & 0 \\
+True positive & 1793 \\
+\midrule
+Positive training samples & 50000 \\
+Negative training samples & 0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{OneClassSVM SQL: Experiment 3.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 0.0687897105116 \\
+Binary Precision & 1.0 \\
+Binary Recall & 0.03562 \\
+\midrule
+Total amount of samples & 50000 \\
+Correctly classified & 0.0% \\
+False negative & 48219 \\
+False positive & 0 \\
+True negative & 0 \\
+True positive & 1781 \\
+\midrule
+Positive training samples & 50000 \\
+Negative training samples & 0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{OneClassSVM SQL: Experiment 4.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 0.124460782475 \\
+Binary Precision & 1.0 \\
+Binary Recall & 0.06636 \\
+\midrule
+Total amount of samples & 50000 \\
+Correctly classified & 0.0% \\
+False negative & 46682 \\
+False positive & 0 \\
+True negative & 0 \\
+True positive & 3318 \\
+\midrule
+Positive training samples & 50000 \\
+Negative training samples & 0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{OneClassSVM SQL: Experiment 5.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 0.121536583075 \\
+Binary Precision & 1.0 \\
+Binary Recall & 0.0647 \\
+\midrule
+Total amount of samples & 50000 \\
+Correctly classified & 0.0% \\
+False negative & 46765 \\
+False positive & 0 \\
+True negative & 0 \\
+True positive & 3235 \\
+\midrule
+Positive training samples & 50000 \\
+Negative training samples & 0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{OneClassSVM SQL: Experiment 6.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 0.0809088815537 \\
+Binary Precision & 1.0 \\
+Binary Recall & 0.04216 \\
+\midrule
+Total amount of samples & 50000 \\
+Correctly classified & 0.0% \\
+False negative & 47892 \\
+False positive & 0 \\
+True negative & 0 \\
+True positive & 2108 \\
+\midrule
+Positive training samples & 50000 \\
+Negative training samples & 0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{OneClassSVM SQL: Experiment 7.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 0.0335863452236 \\
+Binary Precision & 1.0 \\
+Binary Recall & 0.01708 \\
+\midrule
+Total amount of samples & 50000 \\
+Correctly classified & 0.0% \\
+False negative & 49146 \\
+False positive & 0 \\
+True negative & 0 \\
+True positive & 854 \\
+\midrule
+Positive training samples & 50000 \\
+Negative training samples & 0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{OneClassSVM SQL: Experiment 8.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 0.118957149844 \\
+Binary Precision & 1.0 \\
+Binary Recall & 0.06324 \\
+\midrule
+Total amount of samples & 50000 \\
+Correctly classified & 0.0% \\
+False negative & 46838 \\
+False positive & 0 \\
+True negative & 0 \\
+True positive & 3162 \\
+\midrule
+Positive training samples & 50000 \\
+Negative training samples & 0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{OneClassSVM SQL: Experiment 9.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 0.117221772447 \\
+Binary Precision & 1.0 \\
+Binary Recall & 0.06226 \\
+\midrule
+Total amount of samples & 50000 \\
+Correctly classified & 0.0% \\
+False negative & 46887 \\
+False positive & 0 \\
+True negative & 0 \\
+True positive & 3113 \\
+\midrule
+Positive training samples & 50000 \\
+Negative training samples & 0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{OneClassSVM SQL: Experiment 10.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 0.0853182201118 \\
+Binary Precision & 1.0 \\
+Binary Recall & 0.04456 \\
+\midrule
+Total amount of samples & 50000 \\
+Correctly classified & 0.0% \\
+False negative & 47772 \\
+False positive & 0 \\
+True negative & 0 \\
+True positive & 2228 \\
+\midrule
+Positive training samples & 50000 \\
+Negative training samples & 0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{OneClassSVM SQL: Average.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 0.093939825353 \\
+Binary Precision & 1.0 \\
+Binary Recall & 0.049532 \\
+\midrule
+Total amount of samples & 50000.0 \\
+Correctly classified & 0.0% \\
+False negative & 47523.4 \\
+False positive & 0.0 \\
+True negative & 0.0 \\
+True positive & 2476.6 \\
+\midrule
+Positive training samples & 50000.0 \\
+Negative training samples & 0.0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{OneClassSVM SQL: Variance.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 0.000863774233013 \\
+Binary Precision & 0.0 \\
+Binary Recall & 0.000257037456 \\
+\midrule
+Total amount of samples & 0.0 \\
+Correctly classified & 0.0% \\
+False negative & 642593.64 \\
+False positive & 0.0 \\
+True negative & 0.0 \\
+True positive & 642593.64 \\
+\midrule
+Positive training samples & 0.0 \\
+Negative training samples & 0.0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+
+
+Config execution time: 550.124130964
+End config: OneClassSVM SQL
+--------------------------------------------------
+Starting config: OneClassSVM CTU
+Description:
+	OneClassSVM
+=============
+Iteration 0
+------
+Intrusion Detection System enabled
+Loaded algorithm: OneClassSVM.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 35000.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [--------------------------------------------------] 0.000714280612281%Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 36466 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...5%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 173.864280939
+------
+Iteration 1
+------
+Intrusion Detection System enabled
+Loaded algorithm: OneClassSVM.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 35000.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [--------------------------------------------------] 0.000714280612281%Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 36466 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...5%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 166.696932793
+------
+Iteration 2
+------
+Intrusion Detection System enabled
+Loaded algorithm: OneClassSVM.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 35000.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [--------------------------------------------------] 0.000714280612281%Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 36466 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...5%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 194.055613995
+------
+Iteration 3
+------
+Intrusion Detection System enabled
+Loaded algorithm: OneClassSVM.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 35000.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [--------------------------------------------------] 0.000714280612281%Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 36466 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...5%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 178.001415014
+------
+Iteration 4
+------
+Intrusion Detection System enabled
+Loaded algorithm: OneClassSVM.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 35000.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [--------------------------------------------------] 0.000714280612281%Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 36466 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...5%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 177.944838047
+------
+Iteration 5
+------
+Intrusion Detection System enabled
+Loaded algorithm: OneClassSVM.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 35000.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [--------------------------------------------------] 0.000714280612281%Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 36466 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...5%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 172.773851156
+------
+Iteration 6
+------
+Intrusion Detection System enabled
+Loaded algorithm: OneClassSVM.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 35000.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [--------------------------------------------------] 0.000714280612281%Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 36466 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...5%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 131.15811801
+------
+Iteration 7
+------
+Intrusion Detection System enabled
+Loaded algorithm: OneClassSVM.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 35000.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [--------------------------------------------------] 0.000714280612281%Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 36466 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...5%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 125.371777058
+------
+Iteration 8
+------
+Intrusion Detection System enabled
+Loaded algorithm: OneClassSVM.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 35000.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [--------------------------------------------------] 0.000714280612281%Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 36466 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...5%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 106.657263041
+------
+Iteration 9
+------
+Intrusion Detection System enabled
+Loaded algorithm: OneClassSVM.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 35000.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [--------------------------------------------------] 0.000714280612281%Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 36466 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...5%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 114.594352007
+------
+
+
+++++++++++++++++++++
+\caption{OneClassSVM CTU: Experiment 1.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 0.4247387096 \\
+Binary Precision & 0.27520977189 \\
+Binary Recall & 0.930072147784 \\
+\midrule
+Total amount of samples & 176467 \\
+Correctly classified & 0.0% \\
+False negative & 2646 \\
+False positive & 92684 \\
+True negative & 45944 \\
+True positive & 35193 \\
+\midrule
+Positive training samples & 35000 \\
+Negative training samples & 0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{OneClassSVM CTU: Experiment 2.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 0.4247387096 \\
+Binary Precision & 0.27520977189 \\
+Binary Recall & 0.930072147784 \\
+\midrule
+Total amount of samples & 176467 \\
+Correctly classified & 0.0% \\
+False negative & 2646 \\
+False positive & 92684 \\
+True negative & 45944 \\
+True positive & 35193 \\
+\midrule
+Positive training samples & 35000 \\
+Negative training samples & 0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{OneClassSVM CTU: Experiment 3.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 0.4247387096 \\
+Binary Precision & 0.27520977189 \\
+Binary Recall & 0.930072147784 \\
+\midrule
+Total amount of samples & 176467 \\
+Correctly classified & 0.0% \\
+False negative & 2646 \\
+False positive & 92684 \\
+True negative & 45944 \\
+True positive & 35193 \\
+\midrule
+Positive training samples & 35000 \\
+Negative training samples & 0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{OneClassSVM CTU: Experiment 4.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 0.4247387096 \\
+Binary Precision & 0.27520977189 \\
+Binary Recall & 0.930072147784 \\
+\midrule
+Total amount of samples & 176467 \\
+Correctly classified & 0.0% \\
+False negative & 2646 \\
+False positive & 92684 \\
+True negative & 45944 \\
+True positive & 35193 \\
+\midrule
+Positive training samples & 35000 \\
+Negative training samples & 0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{OneClassSVM CTU: Experiment 5.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 0.4247387096 \\
+Binary Precision & 0.27520977189 \\
+Binary Recall & 0.930072147784 \\
+\midrule
+Total amount of samples & 176467 \\
+Correctly classified & 0.0% \\
+False negative & 2646 \\
+False positive & 92684 \\
+True negative & 45944 \\
+True positive & 35193 \\
+\midrule
+Positive training samples & 35000 \\
+Negative training samples & 0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{OneClassSVM CTU: Experiment 6.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 0.4247387096 \\
+Binary Precision & 0.27520977189 \\
+Binary Recall & 0.930072147784 \\
+\midrule
+Total amount of samples & 176467 \\
+Correctly classified & 0.0% \\
+False negative & 2646 \\
+False positive & 92684 \\
+True negative & 45944 \\
+True positive & 35193 \\
+\midrule
+Positive training samples & 35000 \\
+Negative training samples & 0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{OneClassSVM CTU: Experiment 7.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 0.4247387096 \\
+Binary Precision & 0.27520977189 \\
+Binary Recall & 0.930072147784 \\
+\midrule
+Total amount of samples & 176467 \\
+Correctly classified & 0.0% \\
+False negative & 2646 \\
+False positive & 92684 \\
+True negative & 45944 \\
+True positive & 35193 \\
+\midrule
+Positive training samples & 35000 \\
+Negative training samples & 0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{OneClassSVM CTU: Experiment 8.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 0.4247387096 \\
+Binary Precision & 0.27520977189 \\
+Binary Recall & 0.930072147784 \\
+\midrule
+Total amount of samples & 176467 \\
+Correctly classified & 0.0% \\
+False negative & 2646 \\
+False positive & 92684 \\
+True negative & 45944 \\
+True positive & 35193 \\
+\midrule
+Positive training samples & 35000 \\
+Negative training samples & 0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{OneClassSVM CTU: Experiment 9.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 0.4247387096 \\
+Binary Precision & 0.27520977189 \\
+Binary Recall & 0.930072147784 \\
+\midrule
+Total amount of samples & 176467 \\
+Correctly classified & 0.0% \\
+False negative & 2646 \\
+False positive & 92684 \\
+True negative & 45944 \\
+True positive & 35193 \\
+\midrule
+Positive training samples & 35000 \\
+Negative training samples & 0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{OneClassSVM CTU: Experiment 10.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 0.4247387096 \\
+Binary Precision & 0.27520977189 \\
+Binary Recall & 0.930072147784 \\
+\midrule
+Total amount of samples & 176467 \\
+Correctly classified & 0.0% \\
+False negative & 2646 \\
+False positive & 92684 \\
+True negative & 45944 \\
+True positive & 35193 \\
+\midrule
+Positive training samples & 35000 \\
+Negative training samples & 0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{OneClassSVM CTU: Average.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 0.4247387096 \\
+Binary Precision & 0.27520977189 \\
+Binary Recall & 0.930072147784 \\
+\midrule
+Total amount of samples & 176467.0 \\
+Correctly classified & 0.0% \\
+False negative & 2646.0 \\
+False positive & 92684.0 \\
+True negative & 45944.0 \\
+True positive & 35193.0 \\
+\midrule
+Positive training samples & 35000.0 \\
+Negative training samples & 0.0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{OneClassSVM CTU: Variance.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 1.23259516441e-32 \\
+Binary Precision & 3.08148791102e-33 \\
+Binary Recall & 0.0 \\
+\midrule
+Total amount of samples & 0.0 \\
+Correctly classified & 0.0% \\
+False negative & 0.0 \\
+False positive & 0.0 \\
+True negative & 0.0 \\
+True positive & 0.0 \\
+\midrule
+Positive training samples & 0.0 \\
+Negative training samples & 0.0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+
+
+Config execution time: 1541.12104893
+End config: OneClassSVM CTU
+--------------------------------------------------
+Starting config: OneClassSVM
+Description:
+	OneClassSVM
+=============
+Config execution time: 3.60012054443e-05
+End config: OneClassSVM
+--------------------------------------------------
+Starting config: OneClassSVM SQL
+Description:
+	OneClassSVM SQL
+=============
+Config execution time: 2.78949737549e-05
+End config: OneClassSVM SQL
+--------------------------------------------------
+Starting config: OneClassSVM CTU
+Description:
+	OneClassSVM
+=============
+Config execution time: 3.09944152832e-05
+End config: OneClassSVM CTU
+--------------------------------------------------
+Starting config: OneClassSVM
+Description:
+	OneClassSVM
+=============
+Config execution time: 3.00407409668e-05
+End config: OneClassSVM
+--------------------------------------------------
+Starting config: OneClassSVM SQL
+Description:
+	OneClassSVM SQL
+=============
+Config execution time: 2.69412994385e-05
+End config: OneClassSVM SQL
+--------------------------------------------------
+Starting config: OneClassSVM CTU
+Description:
+	OneClassSVM
+=============
+Config execution time: 2.69412994385e-05
+End config: OneClassSVM CTU
+--------------------------------------------------
+Total execution time: 4911.65246201
+End of program.

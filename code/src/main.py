@@ -73,17 +73,20 @@ def save_model(config, algorithm):
 
 ##########################################################
 
-def training_data_set(config, algorithm, feature, good_labels):
+def training_data_set(config, algorithm, feature, good_labels, manager):
     print "Using data sets with malicious data."
     trainer = config.get_trainer()
     if not trainer:
         return False
 
     print "Loaded training algorithm: " + str(config.get_trainer_name()) + "."
-    trained = False
+    trained = True
     for d in config.get_data_sets():
-        if trainer.train(algorithm, d, feature, good_labels):
-            trained = True
+        if not trainer.train(algorithm, d, feature, good_labels, config):
+            trained = False
+    print "Start complete training..."
+    trainer.trainAll(feature, algorithm, good_labels, manager)
+    print "Training done."
     if not trained:
         print "No training provided."
         return False
@@ -93,7 +96,7 @@ def training_data_set(config, algorithm, feature, good_labels):
 
 ##########################################################
 
-def training(config, algorithm, feature, good_labels):
+def training(config, algorithm, feature, good_labels, manager):
     print "Start training..."
     if config.use_model():
         try:
@@ -103,10 +106,10 @@ def training(config, algorithm, feature, good_labels):
                 return False
         except IOError as e:
             print "Couldn't use stored model."
-            if not training_data_set(config, algorithm, feature, good_labels):
+            if not training_data_set(config, algorithm, feature, good_labels, manager):
                 return False
     else:
-        if not training_data_set(config, algorithm, feature, good_labels):
+        if not training_data_set(config, algorithm, feature, good_labels, manager):
             return False
 
     print "Finished training.\n"
@@ -132,21 +135,23 @@ def sniffing(config, algorithm, feature, logger):
 
 ##########################################################
 
-def prediction(config, algorithm, feature, logger, good_labels):
+def prediction(config, algorithm, feature, logger, good_labels, manager):
     print "Start predictions and checks..."
     from predictor import Predictor
     checker = Predictor()
     checker.set_algorithm(algorithm)
     checker.set_feature(feature)
     checker.set_logger(logger)
+    checker.set_good_labels(good_labels)
+    checker.set_db_file(config.get_db_file())
 
-    from result import ResultManager
-    checker.set_resultmanager(ResultManager(logger, good_labels))
+    from result import ResultPrediction
+    checker.set_resultmanager(ResultPrediction(logger, good_labels, manager))
 
     if config.is_check():
         print "Running Checks..."
         print "Used for checking the accuracy of the IDS"
-        checker.runner(config.get_check_sets())
+        checker.runner(config.get_check_sets(), config)
         print "Checks done"
     print "End predictions and checks.\n"
 
@@ -224,7 +229,7 @@ def load_feature(config):
 #     A SQL loader
 # These components can easily be exchanged with others
 # Most of these components can be set using the config file
-def IDS(config):
+def IDS(config, manager):
     print "Intrusion Detection System enabled"
 
     # Load the algorithm that is used in the IDS
@@ -247,7 +252,7 @@ def IDS(config):
 
     # Start training
     # This phase cannot be avoided or stopped
-    if not training(config, algorithm, feature, good_labels):
+    if not training(config, algorithm, feature, good_labels, manager):
         return
 
     # Start prediction
@@ -255,7 +260,7 @@ def IDS(config):
     # Uses pre-prepared data sets
     # Can use checkers to detect accuracy
     # And can use prediction mode, for unlabeled data
-    prediction(config, algorithm, feature, logger, good_labels)
+    prediction(config, algorithm, feature, logger, good_labels, manager)
 
     # Start sniffing
     # Main component of the IDS
@@ -317,8 +322,15 @@ def main(config_file=None):
         sys.exit()
 
     print '--------------------------------------------------'
+    import time
+    start_time = time.time()
     for config in config_main.get_configs():
+        start_time_config = time.time()
+
         print "Starting config: " + config.get_name()
+        print "Description: "
+        print "\t" + config.get_description()
+        print "============="
 
         # Print the labels from the given datasets
         # Used to manually check which labels exist
@@ -327,7 +339,18 @@ def main(config_file=None):
 
         # Run the actual IDS
         if config.enabled():
-            IDS(config)
+            from result import ResultManager
+            manager = ResultManager()
+            for i in xrange(config.get_amount()):
+                start_time_iter = time.time()
+                print "Iteration " + str(i)
+                print "------"
+                IDS(config, manager)
+                print 'Iteration execution time: ' + str((time.time() - start_time_iter))
+                print "------"
+            print '\n'
+            manager.print_results(config.get_name())
+            print '\n'
 
         # Convert pcap files to flow files
         # These files are not labeled
@@ -335,9 +358,13 @@ def main(config_file=None):
         # Unless they solely consist of normal or malicious behaviour
         if config.flow_converter():
             pcap_to_flow_convertor(config)
+
+        print 'Config execution time: ' + str((time.time() - start_time_config))
         print "End config: " + config.get_name()
         print '--------------------------------------------------'
 
+    delta = (time.time() - start_time)
+    print 'Total execution time: ' + str(delta)
     print "End of program."
 
 ##########################################################

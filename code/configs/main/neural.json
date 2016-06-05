@@ -1,0 +1,248 @@
+{
+    "check" : true,
+    "algorithm" : "KNeighborsClassifier",
+    "featureClass" : "FlowFeatureWFlags",
+    "amount" : 10,
+
+    "check-sets" : [
+            {
+                "file" : "../../test/test.flow",
+                "from" : 50000,
+                "to" : 190000
+            },
+            {
+                "file" : "../../test/test.flow",
+                "from" : 500000,
+                "to" : 600000,
+                "type" : "PredictionFileBadSamples"
+            }
+        ],
+
+    "configs" : [
+        {
+            "enable-IDS" : true,
+            "name" : "NeuralNetwork CTU",
+            "description" : "NeuralNetwork",
+            "check" : true,
+            "sniffer" : false,
+            "algorithm" : "NeuralNetwork",
+            "featureClass" : "FlowFeatureWCountry",
+            "data-sets" : [
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 25000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 600000,
+                        "type" : "BadTrainer",
+                        "amount" : 25000
+                    }
+                ]
+        },
+        {
+            "enable-IDS" : true,
+            "name" : "NeuralNetwork Cross",
+            "description" : "NeuralNetwork Cross",
+            "check" : true,
+            "sniffer" : false,
+            "algorithm" : "NeuralNetwork",
+            "featureClass" : "FlowFeatureWCountry",
+            "data-sets" : [
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 25000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 600000,
+                        "type" : "BadTrainer",
+                        "amount" : 25000
+                    },
+                    {
+                        "host" : "localhost",
+                        "type" : "SQLTrainer",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 20000
+                    }
+                ],
+            "check-sets" : [
+                    {
+                        "host" : "localhost",
+                        "type" : "PredictionSQL",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 70000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 50000,
+                        "to" : 190000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 520000,
+                        "to" : 600000,
+                        "type" : "PredictionFileBadSamples"
+                    }
+                ]
+        },
+        {
+            "enable-IDS" : false,
+            "name" : "NeuralNetwork CTU",
+            "description" : "NeuralNetwork",
+            "check" : true,
+            "sniffer" : false,
+            "algorithm" : "NeuralNetwork",
+            "featureClass" : "FlowFeatureWFlags",
+            "data-sets" : [
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 25000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 600000,
+                        "type" : "BadTrainer",
+                        "amount" : 25000
+                    }
+                ]
+        },
+        {
+            "enable-IDS" : false,
+            "name" : "NeuralNetwork Cross",
+            "description" : "NeuralNetwork Cross",
+            "check" : true,
+            "sniffer" : false,
+            "algorithm" : "NeuralNetwork",
+            "featureClass" : "FlowFeatureWFlags",
+            "data-sets" : [
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 25000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 600000,
+                        "type" : "BadTrainer",
+                        "amount" : 25000
+                    },
+                    {
+                        "host" : "localhost",
+                        "type" : "SQLTrainer",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 20000
+                    }
+                ],
+            "check-sets" : [
+                    {
+                        "host" : "localhost",
+                        "type" : "PredictionSQL",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 70000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 50000,
+                        "to" : 190000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 520000,
+                        "to" : 600000,
+                        "type" : "PredictionFileBadSamples"
+                    }
+                ]
+        },
+        {
+            "enable-IDS" : false,
+            "name" : "NeuralNetwork CTU",
+            "description" : "NeuralNetwork",
+            "check" : true,
+            "sniffer" : false,
+            "algorithm" : "NeuralNetwork",
+            "featureClass" : "FlowFeature",
+            "data-sets" : [
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 25000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 600000,
+                        "type" : "BadTrainer",
+                        "amount" : 25000
+                    }
+                ]
+        },
+        {
+            "enable-IDS" : false,
+            "name" : "NeuralNetwork Cross",
+            "description" : "NeuralNetwork Cross",
+            "check" : true,
+            "sniffer" : false,
+            "algorithm" : "NeuralNetwork",
+            "featureClass" : "FlowFeature",
+            "data-sets" : [
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 25000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 600000,
+                        "type" : "BadTrainer",
+                        "amount" : 25000
+                    },
+                    {
+                        "host" : "localhost",
+                        "type" : "SQLTrainer",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 20000
+                    }
+                ],
+            "check-sets" : [
+                    {
+                        "host" : "localhost",
+                        "type" : "PredictionSQL",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 70000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 50000,
+                        "to" : 190000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 520000,
+                        "to" : 600000,
+                        "type" : "PredictionFileBadSamples"
+                    }
+                ]
+        }
+    ]
+}

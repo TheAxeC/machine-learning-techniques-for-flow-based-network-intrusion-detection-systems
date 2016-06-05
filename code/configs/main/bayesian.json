@@ -1,0 +1,248 @@
+{
+    "check" : true,
+    "algorithm" : "KNeighborsClassifier",
+    "featureClass" : "FlowFeatureWFlags",
+    "amount" : 10,
+
+    "check-sets" : [
+            {
+                "file" : "../../test/test.flow",
+                "from" : 50000,
+                "to" : 190000
+            },
+            {
+                "file" : "../../test/test.flow",
+                "from" : 500000,
+                "to" : 600000,
+                "type" : "PredictionFileBadSamples"
+            }
+        ],
+
+    "configs" : [
+        {
+            "enable-IDS" : true,
+            "name" : "Gaussian Naive Bayes CTU",
+            "description" : "Gaussian Naive Bayes",
+            "check" : true,
+            "sniffer" : false,
+            "algorithm" : "GaussianNB",
+            "featureClass" : "FlowFeatureWCountry",
+            "data-sets" : [
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 5000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 600000,
+                        "type" : "BadTrainer",
+                        "amount" : 3500
+                    }
+                ]
+        },
+        {
+            "enable-IDS" : true,
+            "name" : "Gaussian Naive Bayes Cross",
+            "description" : "Gaussian Naive Bayes Cross",
+            "check" : true,
+            "sniffer" : false,
+            "algorithm" : "GaussianNB",
+            "featureClass" : "FlowFeatureWCountry",
+            "data-sets" : [
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 5000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 600000,
+                        "type" : "BadTrainer",
+                        "amount" : 3500
+                    },
+                    {
+                        "host" : "localhost",
+                        "type" : "SQLTrainer",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 3000
+                    }
+                ],
+            "check-sets" : [
+                    {
+                        "host" : "localhost",
+                        "type" : "PredictionSQL",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 70000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 50000,
+                        "to" : 190000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 520000,
+                        "to" : 600000,
+                        "type" : "PredictionFileBadSamples"
+                    }
+                ]
+        },
+        {
+            "enable-IDS" : false,
+            "name" : "Gaussian Naive Bayes CTU",
+            "description" : "Gaussian Naive Bayes",
+            "check" : true,
+            "sniffer" : false,
+            "algorithm" : "GaussianNB",
+            "featureClass" : "FlowFeatureWFlags",
+            "data-sets" : [
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 5000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 600000,
+                        "type" : "BadTrainer",
+                        "amount" : 3500
+                    }
+                ]
+        },
+        {
+            "enable-IDS" : false,
+            "name" : "Gaussian Naive Bayes Cross",
+            "description" : "Gaussian Naive Bayes Cross",
+            "check" : true,
+            "sniffer" : false,
+            "algorithm" : "GaussianNB",
+            "featureClass" : "FlowFeatureWFlags",
+            "data-sets" : [
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 5000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 600000,
+                        "type" : "BadTrainer",
+                        "amount" : 3500
+                    },
+                    {
+                        "host" : "localhost",
+                        "type" : "SQLTrainer",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 3000
+                    }
+                ],
+            "check-sets" : [
+                    {
+                        "host" : "localhost",
+                        "type" : "PredictionSQL",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 70000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 50000,
+                        "to" : 190000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 520000,
+                        "to" : 600000,
+                        "type" : "PredictionFileBadSamples"
+                    }
+                ]
+        },
+        {
+            "enable-IDS" : false,
+            "name" : "Gaussian Naive Bayes CTU",
+            "description" : "Gaussian Naive Bayes",
+            "check" : true,
+            "sniffer" : false,
+            "algorithm" : "GaussianNB",
+            "featureClass" : "FlowFeature",
+            "data-sets" : [
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 5000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 600000,
+                        "type" : "BadTrainer",
+                        "amount" : 3500
+                    }
+                ]
+        },
+        {
+            "enable-IDS" : false,
+            "name" : "Gaussian Naive Bayes Cross",
+            "description" : "Gaussian Naive Bayes Cross",
+            "check" : true,
+            "sniffer" : false,
+            "algorithm" : "GaussianNB",
+            "featureClass" : "FlowFeature",
+            "data-sets" : [
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 5000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 600000,
+                        "type" : "BadTrainer",
+                        "amount" : 3500
+                    },
+                    {
+                        "host" : "localhost",
+                        "type" : "SQLTrainer",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 3000
+                    }
+                ],
+            "check-sets" : [
+                    {
+                        "host" : "localhost",
+                        "type" : "PredictionSQL",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 70000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 50000,
+                        "to" : 190000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 520000,
+                        "to" : 600000,
+                        "type" : "PredictionFileBadSamples"
+                    }
+                ]
+        }
+    ]
+}

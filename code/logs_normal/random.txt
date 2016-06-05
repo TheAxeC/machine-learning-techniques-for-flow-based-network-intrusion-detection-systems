@@ -1,0 +1,3801 @@
+Starting IDS...
+JSON Config file read successfully
+
+--------------------------------------------------
+Starting config: Random classifier (uniform)
+Description:
+	Random classifier to construct a baseline
+=============
+Iteration 0
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Loaded data manually
+Training size is 50001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 81796.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+/Users/axelfaes/GoogleDrive/Data/workspace/School/Bachelor-CS-UHasselt/Bachelor-thesis-ML-IPS/code/ipsml/lib/python2.7/site-packages/sklearn/metrics/classification.py:1122: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/Users/axelfaes/GoogleDrive/Data/workspace/School/Bachelor-CS-UHasselt/Bachelor-thesis-ML-IPS/code/ipsml/lib/python2.7/site-packages/sklearn/metrics/classification.py:1124: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true samples.
+  'recall', 'true', average, warn_for)
+/Users/axelfaes/GoogleDrive/Data/workspace/School/Bachelor-CS-UHasselt/Bachelor-thesis-ML-IPS/code/ipsml/lib/python2.7/site-packages/sklearn/metrics/classification.py:1122: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/Users/axelfaes/GoogleDrive/Data/workspace/School/Bachelor-CS-UHasselt/Bachelor-thesis-ML-IPS/code/ipsml/lib/python2.7/site-packages/sklearn/metrics/classification.py:1124: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples.
+  'recall', 'true', average, warn_for)
+Ratio of: 0.97542246017% with 229536 fails and a total of 231797 precictions
+False negative: 28036
+False positive: 98004
+True negative: 50543
+True positive: 55214
+
+Precision: 0.360362359514
+Recall: 0.663231231231
+Fscore: 0.466989190926
+
+F1 score: 0.0163342899919
+Precision score: 0.120990499706
+Recall score: 0.0097542246017
+Accuracy score: 0.0097542246017
+
+F1 score Binary: 0.466989190926
+Precision score Binary: 0.360362359514
+Recall score Binary: 0.663231231231
+Accuracy score Binary: 0.456248355242
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 44.4786171913
+------
+Iteration 1
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 50001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 81796.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 0.993541762836% with 229494 fails and a total of 231797 precictions
+False negative: 28322
+False positive: 98152
+True negative: 50395
+True positive: 54928
+
+Precision: 0.358818918213
+Recall: 0.659795795796
+Fscore: 0.464841535142
+
+F1 score: 0.0167473851241
+Precision score: 0.122541108697
+Recall score: 0.00993541762836
+Accuracy score: 0.00993541762836
+
+F1 score Binary: 0.464841535142
+Precision score Binary: 0.358818918213
+Recall score Binary: 0.659795795796
+Accuracy score Binary: 0.4543760273
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 44.0263040066
+------
+Iteration 2
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 50001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 81796.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 0.98275646363% with 229519 fails and a total of 231797 precictions
+False negative: 28037
+False positive: 98164
+True negative: 50383
+True positive: 55213
+
+Precision: 0.35998226592
+Recall: 0.663219219219
+Fscore: 0.466666948404
+
+F1 score: 0.0165656364523
+Precision score: 0.12005166617
+Recall score: 0.0098275646363
+Accuracy score: 0.0098275646363
+
+F1 score Binary: 0.466666948404
+Precision score Binary: 0.35998226592
+Recall score Binary: 0.663219219219
+Accuracy score Binary: 0.455553781973
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 44.5265820026
+------
+Iteration 3
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 50001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 81796.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 0.991816114963% with 229498 fails and a total of 231797 precictions
+False negative: 28311
+False positive: 98432
+True negative: 50115
+True positive: 54939
+
+Precision: 0.358209831063
+Recall: 0.659927927928
+Fscore: 0.464362841844
+
+F1 score: 0.016693391333
+Precision score: 0.123864900641
+Recall score: 0.00991816114963
+Accuracy score: 0.00991816114963
+
+F1 score Binary: 0.464362841844
+Precision score Binary: 0.358209831063
+Recall score Binary: 0.659927927928
+Accuracy score Binary: 0.453215529105
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 47.2706320286
+------
+Iteration 4
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 50001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 81796.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 0.964637160964% with 229561 fails and a total of 231797 precictions
+False negative: 28479
+False positive: 98009
+True negative: 50538
+True positive: 54771
+
+Precision: 0.358495876424
+Recall: 0.65790990991
+Fscore: 0.46410202093
+
+F1 score: 0.0162710973894
+Precision score: 0.119816777975
+Recall score: 0.00964637160964
+Accuracy score: 0.00964637160964
+
+F1 score Binary: 0.46410202093
+Precision score Binary: 0.358495876424
+Recall score Binary: 0.65790990991
+Accuracy score Binary: 0.454315629624
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 49.3988969326
+------
+Iteration 5
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 50001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 81796.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 0.938321030902% with 229622 fails and a total of 231797 precictions
+False negative: 28538
+False positive: 97742
+True negative: 50805
+True positive: 54712
+
+Precision: 0.358875464074
+Recall: 0.657201201201
+Fscore: 0.464243288192
+
+F1 score: 0.0157567492435
+Precision score: 0.114562174747
+Recall score: 0.00938321030902
+Accuracy score: 0.00938321030902
+
+F1 score Binary: 0.464243288192
+Precision score Binary: 0.358875464074
+Recall score Binary: 0.657201201201
+Accuracy score Binary: 0.455212966518
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 50.3506190777
+------
+Iteration 6
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 50001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 81796.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 0.971108340488% with 229546 fails and a total of 231797 precictions
+False negative: 28336
+False positive: 97987
+True negative: 50560
+True positive: 54914
+
+Precision: 0.359147422188
+Recall: 0.659627627628
+Fscore: 0.465075311983
+
+F1 score: 0.0163889036304
+Precision score: 0.122262040425
+Recall score: 0.00971108340488
+Accuracy score: 0.00971108340488
+
+F1 score Binary: 0.465075311983
+Precision score Binary: 0.359147422188
+Recall score Binary: 0.659627627628
+Accuracy score Binary: 0.455027459372
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 54.2117760181
+------
+Iteration 7
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 50001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 81796.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 0.952557625854% with 229589 fails and a total of 231797 precictions
+False negative: 28166
+False positive: 98045
+True negative: 50502
+True positive: 55084
+
+Precision: 0.359722848056
+Recall: 0.66166966967
+Fscore: 0.466065090385
+
+F1 score: 0.0160651463272
+Precision score: 0.120491325092
+Recall score: 0.00952557625854
+Accuracy score: 0.00952557625854
+
+F1 score Binary: 0.466065090385
+Precision score Binary: 0.359722848056
+Recall score Binary: 0.66166966967
+Accuracy score Binary: 0.455510640776
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 48.6859819889
+------
+Iteration 8
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 50001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 81796.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 0.952989037822% with 229588 fails and a total of 231797 precictions
+False negative: 28393
+False positive: 98069
+True negative: 50478
+True positive: 54857
+
+Precision: 0.358715980278
+Recall: 0.658942942943
+Fscore: 0.464543391369
+
+F1 score: 0.0159673444711
+Precision score: 0.116977686286
+Recall score: 0.00952989037822
+Accuracy score: 0.00952989037822
+
+F1 score Binary: 0.464543391369
+Precision score Binary: 0.358715980278
+Recall score Binary: 0.658942942943
+Accuracy score Binary: 0.454427796736
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 52.1777441502
+------
+Iteration 9
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 50001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 81796.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 0.95342044979% with 229587 fails and a total of 231797 precictions
+False negative: 28373
+False positive: 98009
+True negative: 50538
+True positive: 54877
+
+Precision: 0.358940648588
+Recall: 0.659183183183
+Fscore: 0.464791476099
+
+F1 score: 0.0160210785289
+Precision score: 0.117916927842
+Recall score: 0.0095342044979
+Accuracy score: 0.0095342044979
+
+F1 score Binary: 0.464791476099
+Precision score Binary: 0.358940648588
+Recall score Binary: 0.659183183183
+Accuracy score Binary: 0.454772926311
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 48.109347105
+------
+Iteration 10
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 50001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 81796.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 0.988796231185% with 229505 fails and a total of 231797 precictions
+False negative: 28193
+False positive: 98109
+True negative: 50438
+True positive: 55057
+
+Precision: 0.359459671206
+Recall: 0.661345345345
+Fscore: 0.465763738495
+
+F1 score: 0.0166465116909
+Precision score: 0.122515220998
+Recall score: 0.00988796231185
+Accuracy score: 0.00988796231185
+
+F1 score Binary: 0.465763738495
+Precision score Binary: 0.359459671206
+Recall score Binary: 0.661345345345
+Accuracy score Binary: 0.455118055885
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 51.4191150665
+------
+Iteration 11
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 50001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 81796.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 0.968951280646% with 229551 fails and a total of 231797 precictions
+False negative: 28430
+False positive: 98346
+True negative: 50201
+True positive: 54820
+
+Precision: 0.357912330413
+Recall: 0.658498498498
+Fscore: 0.463758798051
+
+F1 score: 0.0162632284115
+Precision score: 0.11989368021
+Recall score: 0.00968951280646
+Accuracy score: 0.00968951280646
+
+F1 score Binary: 0.463758798051
+Precision score Binary: 0.357912330413
+Recall score Binary: 0.658498498498
+Accuracy score Binary: 0.453073163156
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 71.9532210827
+------
+Iteration 12
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 50001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 81796.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 0.98750199528% with 229508 fails and a total of 231797 precictions
+False negative: 28319
+False positive: 98287
+True negative: 50260
+True positive: 54931
+
+Precision: 0.358515318044
+Recall: 0.659831831832
+Fscore: 0.46459563239
+
+F1 score: 0.0166667311136
+Precision score: 0.12710137567
+Recall score: 0.0098750199528
+Accuracy score: 0.0098750199528
+
+F1 score Binary: 0.46459563239
+Precision score Binary: 0.358515318044
+Recall score Binary: 0.659831831832
+Accuracy score Binary: 0.453806563502
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 61.6841349602
+------
+Iteration 13
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 50001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 81796.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 1.00993541763% with 229456 fails and a total of 231797 precictions
+False negative: 28272
+False positive: 97870
+True negative: 50677
+True positive: 54978
+
+Precision: 0.359690673087
+Recall: 0.660396396396
+Fscore: 0.465721861261
+
+F1 score: 0.0168336062636
+Precision score: 0.119430439085
+Recall score: 0.0100993541763
+Accuracy score: 0.0100993541763
+
+F1 score Binary: 0.465721861261
+Precision score Binary: 0.359690673087
+Recall score Binary: 0.660396396396
+Accuracy score Binary: 0.455808315034
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 67.5841879845
+------
+Iteration 14
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 50001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 81796.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 0.949537742076% with 229596 fails and a total of 231797 precictions
+False negative: 28145
+False positive: 97987
+True negative: 50560
+True positive: 55105
+
+Precision: 0.359946959998
+Recall: 0.661921921922
+Fscore: 0.466315762751
+
+F1 score: 0.0159650035165
+Precision score: 0.123141252832
+Recall score: 0.00949537742076
+Accuracy score: 0.00949537742076
+
+F1 score Binary: 0.466315762751
+Precision score Binary: 0.359946959998
+Recall score Binary: 0.661921921922
+Accuracy score Binary: 0.455851456231
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 54.207046032
+------
+Iteration 15
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 50001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 81796.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 0.946949270267% with 229602 fails and a total of 231797 precictions
+False negative: 28301
+False positive: 97841
+True negative: 50706
+True positive: 54949
+
+Precision: 0.359637410825
+Recall: 0.660048048048
+Fscore: 0.465590577868
+
+F1 score: 0.0159238348977
+Precision score: 0.118760625682
+Recall score: 0.00946949270267
+Accuracy score: 0.00946949270267
+
+F1 score Binary: 0.465590577868
+Precision score Binary: 0.359637410825
+Recall score Binary: 0.660048048048
+Accuracy score Binary: 0.455808315034
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 51.0907459259
+------
+Iteration 16
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 50001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 81796.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 0.95342044979% with 229587 fails and a total of 231797 precictions
+False negative: 28276
+False positive: 98115
+True negative: 50432
+True positive: 54974
+
+Precision: 0.359098302295
+Recall: 0.660348348348
+Fscore: 0.465213104904
+
+F1 score: 0.0159838121441
+Precision score: 0.117367743297
+Recall score: 0.0095342044979
+Accuracy score: 0.0095342044979
+
+F1 score Binary: 0.465213104904
+Precision score Binary: 0.359098302295
+Recall score Binary: 0.660348348348
+Accuracy score Binary: 0.454734099233
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 54.5677409172
+------
+Iteration 17
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 50001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 81796.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 0.932281263347% with 229636 fails and a total of 231797 precictions
+False negative: 28116
+False positive: 98298
+True negative: 50249
+True positive: 55134
+
+Precision: 0.359338338808
+Recall: 0.66227027027
+Fscore: 0.465890942277
+
+F1 score: 0.0157756966482
+Precision score: 0.117105994008
+Recall score: 0.00932281263347
+Accuracy score: 0.00932281263347
+
+F1 score Binary: 0.465890942277
+Precision score Binary: 0.359338338808
+Recall score Binary: 0.66227027027
+Accuracy score Binary: 0.454634874481
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 49.1135420799
+------
+Iteration 18
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 50001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 81796.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 0.997855882518% with 229484 fails and a total of 231797 precictions
+False negative: 28262
+False positive: 97426
+True negative: 51121
+True positive: 54988
+
+Precision: 0.360780505728
+Recall: 0.660516516517
+Fscore: 0.466664403558
+
+F1 score: 0.01673675601
+Precision score: 0.122738311676
+Recall score: 0.00997855882518
+Accuracy score: 0.00997855882518
+
+F1 score Binary: 0.466664403558
+Precision score Binary: 0.360780505728
+Recall score Binary: 0.660516516517
+Accuracy score Binary: 0.45776692537
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 55.2110130787
+------
+Iteration 19
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 50001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 81796.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 0.957303157504% with 229578 fails and a total of 231797 precictions
+False negative: 28255
+False positive: 98191
+True negative: 50356
+True positive: 54995
+
+Precision: 0.359008003342
+Recall: 0.660600600601
+Fscore: 0.465199884958
+
+F1 score: 0.0161412488249
+Precision score: 0.123215807827
+Recall score: 0.00957303157504
+Accuracy score: 0.00957303157504
+
+F1 score Binary: 0.465199884958
+Precision score Binary: 0.359008003342
+Recall score Binary: 0.660600600601
+Accuracy score Binary: 0.454496822651
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 54.0411441326
+------
+
+
+++++++++++++++++++++
+\caption{Random classifier (uniform): Experiment 1.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0163342899919 \\
+Multi-class Precision & 0.120990499706 \\
+Multi-class Recall & 0.0097542246017 \\
+\midrule
+Binary F-score & 0.466989190926 \\
+Binary Precision & 0.360362359514 \\
+Binary Recall & 0.663231231231 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 0.97542246017% \\
+False negative & 28036 \\
+False positive & 98004 \\
+True negative & 50543 \\
+True positive & 55214 \\
+\midrule
+Positive training samples & 82159 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (uniform): Experiment 2.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0167473851241 \\
+Multi-class Precision & 0.122541108697 \\
+Multi-class Recall & 0.00993541762836 \\
+\midrule
+Binary F-score & 0.464841535142 \\
+Binary Precision & 0.358818918213 \\
+Binary Recall & 0.659795795796 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 0.993541762836% \\
+False negative & 28322 \\
+False positive & 98152 \\
+True negative & 50395 \\
+True positive & 54928 \\
+\midrule
+Positive training samples & 82159 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (uniform): Experiment 3.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0165656364523 \\
+Multi-class Precision & 0.12005166617 \\
+Multi-class Recall & 0.0098275646363 \\
+\midrule
+Binary F-score & 0.466666948404 \\
+Binary Precision & 0.35998226592 \\
+Binary Recall & 0.663219219219 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 0.98275646363% \\
+False negative & 28037 \\
+False positive & 98164 \\
+True negative & 50383 \\
+True positive & 55213 \\
+\midrule
+Positive training samples & 82159 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (uniform): Experiment 4.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.016693391333 \\
+Multi-class Precision & 0.123864900641 \\
+Multi-class Recall & 0.00991816114963 \\
+\midrule
+Binary F-score & 0.464362841844 \\
+Binary Precision & 0.358209831063 \\
+Binary Recall & 0.659927927928 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 0.991816114963% \\
+False negative & 28311 \\
+False positive & 98432 \\
+True negative & 50115 \\
+True positive & 54939 \\
+\midrule
+Positive training samples & 82159 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (uniform): Experiment 5.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0162710973894 \\
+Multi-class Precision & 0.119816777975 \\
+Multi-class Recall & 0.00964637160964 \\
+\midrule
+Binary F-score & 0.46410202093 \\
+Binary Precision & 0.358495876424 \\
+Binary Recall & 0.65790990991 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 0.964637160964% \\
+False negative & 28479 \\
+False positive & 98009 \\
+True negative & 50538 \\
+True positive & 54771 \\
+\midrule
+Positive training samples & 82159 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (uniform): Experiment 6.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0157567492435 \\
+Multi-class Precision & 0.114562174747 \\
+Multi-class Recall & 0.00938321030902 \\
+\midrule
+Binary F-score & 0.464243288192 \\
+Binary Precision & 0.358875464074 \\
+Binary Recall & 0.657201201201 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 0.938321030902% \\
+False negative & 28538 \\
+False positive & 97742 \\
+True negative & 50805 \\
+True positive & 54712 \\
+\midrule
+Positive training samples & 82159 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (uniform): Experiment 7.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0163889036304 \\
+Multi-class Precision & 0.122262040425 \\
+Multi-class Recall & 0.00971108340488 \\
+\midrule
+Binary F-score & 0.465075311983 \\
+Binary Precision & 0.359147422188 \\
+Binary Recall & 0.659627627628 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 0.971108340488% \\
+False negative & 28336 \\
+False positive & 97987 \\
+True negative & 50560 \\
+True positive & 54914 \\
+\midrule
+Positive training samples & 82159 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (uniform): Experiment 8.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0160651463272 \\
+Multi-class Precision & 0.120491325092 \\
+Multi-class Recall & 0.00952557625854 \\
+\midrule
+Binary F-score & 0.466065090385 \\
+Binary Precision & 0.359722848056 \\
+Binary Recall & 0.66166966967 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 0.952557625854% \\
+False negative & 28166 \\
+False positive & 98045 \\
+True negative & 50502 \\
+True positive & 55084 \\
+\midrule
+Positive training samples & 82159 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (uniform): Experiment 9.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0159673444711 \\
+Multi-class Precision & 0.116977686286 \\
+Multi-class Recall & 0.00952989037822 \\
+\midrule
+Binary F-score & 0.464543391369 \\
+Binary Precision & 0.358715980278 \\
+Binary Recall & 0.658942942943 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 0.952989037822% \\
+False negative & 28393 \\
+False positive & 98069 \\
+True negative & 50478 \\
+True positive & 54857 \\
+\midrule
+Positive training samples & 82159 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (uniform): Experiment 10.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0160210785289 \\
+Multi-class Precision & 0.117916927842 \\
+Multi-class Recall & 0.0095342044979 \\
+\midrule
+Binary F-score & 0.464791476099 \\
+Binary Precision & 0.358940648588 \\
+Binary Recall & 0.659183183183 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 0.95342044979% \\
+False negative & 28373 \\
+False positive & 98009 \\
+True negative & 50538 \\
+True positive & 54877 \\
+\midrule
+Positive training samples & 82159 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (uniform): Experiment 11.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0166465116909 \\
+Multi-class Precision & 0.122515220998 \\
+Multi-class Recall & 0.00988796231185 \\
+\midrule
+Binary F-score & 0.465763738495 \\
+Binary Precision & 0.359459671206 \\
+Binary Recall & 0.661345345345 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 0.988796231185% \\
+False negative & 28193 \\
+False positive & 98109 \\
+True negative & 50438 \\
+True positive & 55057 \\
+\midrule
+Positive training samples & 82159 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (uniform): Experiment 12.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0162632284115 \\
+Multi-class Precision & 0.11989368021 \\
+Multi-class Recall & 0.00968951280646 \\
+\midrule
+Binary F-score & 0.463758798051 \\
+Binary Precision & 0.357912330413 \\
+Binary Recall & 0.658498498498 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 0.968951280646% \\
+False negative & 28430 \\
+False positive & 98346 \\
+True negative & 50201 \\
+True positive & 54820 \\
+\midrule
+Positive training samples & 82159 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (uniform): Experiment 13.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0166667311136 \\
+Multi-class Precision & 0.12710137567 \\
+Multi-class Recall & 0.0098750199528 \\
+\midrule
+Binary F-score & 0.46459563239 \\
+Binary Precision & 0.358515318044 \\
+Binary Recall & 0.659831831832 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 0.98750199528% \\
+False negative & 28319 \\
+False positive & 98287 \\
+True negative & 50260 \\
+True positive & 54931 \\
+\midrule
+Positive training samples & 82159 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (uniform): Experiment 14.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0168336062636 \\
+Multi-class Precision & 0.119430439085 \\
+Multi-class Recall & 0.0100993541763 \\
+\midrule
+Binary F-score & 0.465721861261 \\
+Binary Precision & 0.359690673087 \\
+Binary Recall & 0.660396396396 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 1.00993541763% \\
+False negative & 28272 \\
+False positive & 97870 \\
+True negative & 50677 \\
+True positive & 54978 \\
+\midrule
+Positive training samples & 82159 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (uniform): Experiment 15.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0159650035165 \\
+Multi-class Precision & 0.123141252832 \\
+Multi-class Recall & 0.00949537742076 \\
+\midrule
+Binary F-score & 0.466315762751 \\
+Binary Precision & 0.359946959998 \\
+Binary Recall & 0.661921921922 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 0.949537742076% \\
+False negative & 28145 \\
+False positive & 97987 \\
+True negative & 50560 \\
+True positive & 55105 \\
+\midrule
+Positive training samples & 82159 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (uniform): Experiment 16.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0159238348977 \\
+Multi-class Precision & 0.118760625682 \\
+Multi-class Recall & 0.00946949270267 \\
+\midrule
+Binary F-score & 0.465590577868 \\
+Binary Precision & 0.359637410825 \\
+Binary Recall & 0.660048048048 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 0.946949270267% \\
+False negative & 28301 \\
+False positive & 97841 \\
+True negative & 50706 \\
+True positive & 54949 \\
+\midrule
+Positive training samples & 82159 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (uniform): Experiment 17.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0159838121441 \\
+Multi-class Precision & 0.117367743297 \\
+Multi-class Recall & 0.0095342044979 \\
+\midrule
+Binary F-score & 0.465213104904 \\
+Binary Precision & 0.359098302295 \\
+Binary Recall & 0.660348348348 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 0.95342044979% \\
+False negative & 28276 \\
+False positive & 98115 \\
+True negative & 50432 \\
+True positive & 54974 \\
+\midrule
+Positive training samples & 82159 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (uniform): Experiment 18.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0157756966482 \\
+Multi-class Precision & 0.117105994008 \\
+Multi-class Recall & 0.00932281263347 \\
+\midrule
+Binary F-score & 0.465890942277 \\
+Binary Precision & 0.359338338808 \\
+Binary Recall & 0.66227027027 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 0.932281263347% \\
+False negative & 28116 \\
+False positive & 98298 \\
+True negative & 50249 \\
+True positive & 55134 \\
+\midrule
+Positive training samples & 82159 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (uniform): Experiment 19.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.01673675601 \\
+Multi-class Precision & 0.122738311676 \\
+Multi-class Recall & 0.00997855882518 \\
+\midrule
+Binary F-score & 0.466664403558 \\
+Binary Precision & 0.360780505728 \\
+Binary Recall & 0.660516516517 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 0.997855882518% \\
+False negative & 28262 \\
+False positive & 97426 \\
+True negative & 51121 \\
+True positive & 54988 \\
+\midrule
+Positive training samples & 82159 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (uniform): Experiment 20.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0161412488249 \\
+Multi-class Precision & 0.123215807827 \\
+Multi-class Recall & 0.00957303157504 \\
+\midrule
+Binary F-score & 0.465199884958 \\
+Binary Precision & 0.359008003342 \\
+Binary Recall & 0.660600600601 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 0.957303157504% \\
+False negative & 28255 \\
+False positive & 98191 \\
+True negative & 50356 \\
+True positive & 54995 \\
+\midrule
+Positive training samples & 82159 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (uniform): Average.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0162873726006 \\
+Multi-class Precision & 0.120537277943 \\
+Multi-class Recall & 0.00968455156883 \\
+\midrule
+Binary F-score & 0.465319790089 \\
+Binary Precision & 0.359232956403 \\
+Binary Recall & 0.660324324324 \\
+\midrule
+Total amount of samples & 231797.0 \\
+Correctly classified & 0.968455156883% \\
+False negative & 28278.0 \\
+False positive & 98054.15 \\
+True negative & 50492.85 \\
+True positive & 54972.0 \\
+\midrule
+Positive training samples & 82159.0 \\
+Negative training samples & 49638.0 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (uniform): Variance.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 1.17806631371e-07 \\
+Multi-class Precision & 8.33396600028e-06 \\
+Multi-class Recall & 4.45846682108e-08 \\
+\midrule
+Binary F-score & 8.2151409325e-07 \\
+Binary Precision & 4.99721573097e-07 \\
+Binary Recall & 2.47545563582e-06 \\
+\midrule
+Total amount of samples & 0.0 \\
+Correctly classified & 0.000445846682108% \\
+False negative & 17156.3 \\
+False positive & 48798.9275 \\
+True negative & 48798.9275 \\
+True positive & 17156.3 \\
+\midrule
+Positive training samples & 0.0 \\
+Negative training samples & 0.0 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+
+
+Config execution time: 1054.11197305
+End config: Random classifier (uniform)
+--------------------------------------------------
+Starting config: Random classifier (All positive)
+Description:
+	Random classifier to construct a baseline
+=============
+Iteration 0
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: GoodTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 49638.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+/Users/axelfaes/GoogleDrive/Data/workspace/School/Bachelor-CS-UHasselt/Bachelor-thesis-ML-IPS/code/ipsml/lib/python2.7/site-packages/sklearn/metrics/classification.py:1122: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 due to no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/Users/axelfaes/GoogleDrive/Data/workspace/School/Bachelor-CS-UHasselt/Bachelor-thesis-ML-IPS/code/ipsml/lib/python2.7/site-packages/sklearn/metrics/classification.py:1122: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Ratio of: 1.77871154502% with 227674 fails and a total of 231797 precictions
+False negative: 83250
+False positive: 0
+True negative: 148547
+True positive: 0
+
+Precision: inf
+Recall: 0.0
+Fscore: nan
+
+F1 score: 0.0278101317419
+Precision score: 0.107528930091
+Recall score: 0.0177871154502
+Accuracy score: 0.0177871154502
+
+F1 score Binary: 0.0
+Precision score Binary: 0.0
+Recall score Binary: 0.0
+Accuracy score Binary: 0.640849536448
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 52.8063371181
+------
+Iteration 1
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: GoodTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 49638.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 1.88397606526% with 227430 fails and a total of 231797 precictions
+False negative: 83250
+False positive: 0
+True negative: 148547
+True positive: 0
+
+Precision: inf
+Recall: 0.0
+Fscore: nan
+
+F1 score: 0.0298600574097
+Precision score: 0.113797455271
+Recall score: 0.0188397606526
+Accuracy score: 0.0188397606526
+
+F1 score Binary: 0.0
+Precision score Binary: 0.0
+Recall score Binary: 0.0
+Accuracy score Binary: 0.640849536448
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 55.9311358929
+------
+Iteration 2
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: GoodTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 49638.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 1.82659827349% with 227563 fails and a total of 231797 precictions
+False negative: 83250
+False positive: 0
+True negative: 148547
+True positive: 0
+
+Precision: inf
+Recall: 0.0
+Fscore: nan
+
+F1 score: 0.0286524653515
+Precision score: 0.110591750253
+Recall score: 0.0182659827349
+Accuracy score: 0.0182659827349
+
+F1 score Binary: 0.0
+Precision score Binary: 0.0
+Recall score Binary: 0.0
+Accuracy score Binary: 0.640849536448
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 59.5615561008
+------
+Iteration 3
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: GoodTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 49638.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 1.88699594904% with 227423 fails and a total of 231797 precictions
+False negative: 83250
+False positive: 0
+True negative: 148547
+True positive: 0
+
+Precision: inf
+Recall: 0.0
+Fscore: nan
+
+F1 score: 0.0296288564088
+Precision score: 0.113736213431
+Recall score: 0.0188699594904
+Accuracy score: 0.0188699594904
+
+F1 score Binary: 0.0
+Precision score Binary: 0.0
+Recall score Binary: 0.0
+Accuracy score Binary: 0.640849536448
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 52.0322949886
+------
+Iteration 4
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: GoodTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 49638.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 1.86154264292% with 227482 fails and a total of 231797 precictions
+False negative: 83250
+False positive: 0
+True negative: 148547
+True positive: 0
+
+Precision: inf
+Recall: 0.0
+Fscore: nan
+
+F1 score: 0.0292004993775
+Precision score: 0.113388546809
+Recall score: 0.0186154264292
+Accuracy score: 0.0186154264292
+
+F1 score Binary: 0.0
+Precision score Binary: 0.0
+Recall score Binary: 0.0
+Accuracy score Binary: 0.640849536448
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 52.4662630558
+------
+Iteration 5
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: GoodTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 49638.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 1.7735346014% with 227686 fails and a total of 231797 precictions
+False negative: 83250
+False positive: 0
+True negative: 148547
+True positive: 0
+
+Precision: inf
+Recall: 0.0
+Fscore: nan
+
+F1 score: 0.0278965946907
+Precision score: 0.107294768998
+Recall score: 0.017735346014
+Accuracy score: 0.017735346014
+
+F1 score Binary: 0.0
+Precision score Binary: 0.0
+Recall score Binary: 0.0
+Accuracy score Binary: 0.640849536448
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 72.817196846
+------
+Iteration 6
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: GoodTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 49638.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 1.79510519981% with 227636 fails and a total of 231797 precictions
+False negative: 83250
+False positive: 0
+True negative: 148547
+True positive: 0
+
+Precision: inf
+Recall: 0.0
+Fscore: nan
+
+F1 score: 0.0283002741893
+Precision score: 0.110069185304
+Recall score: 0.0179510519981
+Accuracy score: 0.0179510519981
+
+F1 score Binary: 0.0
+Precision score Binary: 0.0
+Recall score Binary: 0.0
+Accuracy score Binary: 0.640849536448
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 57.3315210342
+------
+Iteration 7
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: GoodTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 49638.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 1.81322450247% with 227594 fails and a total of 231797 precictions
+False negative: 83250
+False positive: 0
+True negative: 148547
+True positive: 0
+
+Precision: inf
+Recall: 0.0
+Fscore: nan
+
+F1 score: 0.0283205353963
+Precision score: 0.108264061487
+Recall score: 0.0181322450247
+Accuracy score: 0.0181322450247
+
+F1 score Binary: 0.0
+Precision score Binary: 0.0
+Recall score Binary: 0.0
+Accuracy score Binary: 0.640849536448
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 84.2785489559
+------
+Iteration 8
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: GoodTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 49638.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 1.83824639663% with 227536 fails and a total of 231797 precictions
+False negative: 83250
+False positive: 0
+True negative: 148547
+True positive: 0
+
+Precision: inf
+Recall: 0.0
+Fscore: nan
+
+F1 score: 0.0289294882254
+Precision score: 0.110422766353
+Recall score: 0.0183824639663
+Accuracy score: 0.0183824639663
+
+F1 score Binary: 0.0
+Precision score Binary: 0.0
+Recall score Binary: 0.0
+Accuracy score Binary: 0.640849536448
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 70.5999491215
+------
+Iteration 9
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: GoodTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 49638.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 1.86671958653% with 227470 fails and a total of 231797 precictions
+False negative: 83250
+False positive: 0
+True negative: 148547
+True positive: 0
+
+Precision: inf
+Recall: 0.0
+Fscore: nan
+
+F1 score: 0.0293343900062
+Precision score: 0.111170402437
+Recall score: 0.0186671958653
+Accuracy score: 0.0186671958653
+
+F1 score Binary: 0.0
+Precision score Binary: 0.0
+Recall score Binary: 0.0
+Accuracy score Binary: 0.640849536448
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 93.3580698967
+------
+Iteration 10
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: GoodTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 49638.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 1.83910922057% with 227534 fails and a total of 231797 precictions
+False negative: 83250
+False positive: 0
+True negative: 148547
+True positive: 0
+
+Precision: inf
+Recall: 0.0
+Fscore: nan
+
+F1 score: 0.0289468910843
+Precision score: 0.111420565395
+Recall score: 0.0183910922057
+Accuracy score: 0.0183910922057
+
+F1 score Binary: 0.0
+Precision score Binary: 0.0
+Recall score Binary: 0.0
+Accuracy score Binary: 0.640849536448
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 88.9555311203
+------
+Iteration 11
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: GoodTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 49638.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 1.85334581552% with 227501 fails and a total of 231797 precictions
+False negative: 83250
+False positive: 0
+True negative: 148547
+True positive: 0
+
+Precision: inf
+Recall: 0.0
+Fscore: nan
+
+F1 score: 0.0291526082172
+Precision score: 0.112434880164
+Recall score: 0.0185334581552
+Accuracy score: 0.0185334581552
+
+F1 score Binary: 0.0
+Precision score Binary: 0.0
+Recall score Binary: 0.0
+Accuracy score Binary: 0.640849536448
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 84.5434119701
+------
+Iteration 12
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: GoodTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 49638.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 1.82573544955% with 227565 fails and a total of 231797 precictions
+False negative: 83250
+False positive: 0
+True negative: 148547
+True positive: 0
+
+Precision: inf
+Recall: 0.0
+Fscore: nan
+
+F1 score: 0.0285753343588
+Precision score: 0.110114258978
+Recall score: 0.0182573544955
+Accuracy score: 0.0182573544955
+
+F1 score Binary: 0.0
+Precision score Binary: 0.0
+Recall score Binary: 0.0
+Accuracy score Binary: 0.640849536448
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 78.7860770226
+------
+Iteration 13
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: GoodTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 49638.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 1.85507146339% with 227497 fails and a total of 231797 precictions
+False negative: 83250
+False positive: 0
+True negative: 148547
+True positive: 0
+
+Precision: inf
+Recall: 0.0
+Fscore: nan
+
+F1 score: 0.0291823789722
+Precision score: 0.112169327343
+Recall score: 0.0185507146339
+Accuracy score: 0.0185507146339
+
+F1 score Binary: 0.0
+Precision score Binary: 0.0
+Recall score Binary: 0.0
+Accuracy score Binary: 0.640849536448
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 67.0381748676
+------
+Iteration 14
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: GoodTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 49638.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 1.85464005142% with 227498 fails and a total of 231797 precictions
+False negative: 83250
+False positive: 0
+True negative: 148547
+True positive: 0
+
+Precision: inf
+Recall: 0.0
+Fscore: nan
+
+F1 score: 0.0289088150915
+Precision score: 0.10982690679
+Recall score: 0.0185464005142
+Accuracy score: 0.0185464005142
+
+F1 score Binary: 0.0
+Precision score Binary: 0.0
+Recall score Binary: 0.0
+Accuracy score Binary: 0.640849536448
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 48.5275468826
+------
+Iteration 15
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: GoodTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 49638.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 1.85291440355% with 227502 fails and a total of 231797 precictions
+False negative: 83250
+False positive: 0
+True negative: 148547
+True positive: 0
+
+Precision: inf
+Recall: 0.0
+Fscore: nan
+
+F1 score: 0.0292964220378
+Precision score: 0.111933482382
+Recall score: 0.0185291440355
+Accuracy score: 0.0185291440355
+
+F1 score Binary: 0.0
+Precision score Binary: 0.0
+Recall score Binary: 0.0
+Accuracy score Binary: 0.640849536448
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 47.1003570557
+------
+Iteration 16
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: GoodTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 49638.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 1.8373835727% with 227538 fails and a total of 231797 precictions
+False negative: 83250
+False positive: 0
+True negative: 148547
+True positive: 0
+
+Precision: inf
+Recall: 0.0
+Fscore: nan
+
+F1 score: 0.0290246359201
+Precision score: 0.112269764445
+Recall score: 0.018373835727
+Accuracy score: 0.018373835727
+
+F1 score Binary: 0.0
+Precision score Binary: 0.0
+Recall score Binary: 0.0
+Accuracy score Binary: 0.640849536448
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 64.2825260162
+------
+Iteration 17
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: GoodTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 49638.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 1.77914295698% with 227673 fails and a total of 231797 precictions
+False negative: 83250
+False positive: 0
+True negative: 148547
+True positive: 0
+
+Precision: inf
+Recall: 0.0
+Fscore: nan
+
+F1 score: 0.0279099515037
+Precision score: 0.107124091942
+Recall score: 0.0177914295698
+Accuracy score: 0.0177914295698
+
+F1 score Binary: 0.0
+Precision score Binary: 0.0
+Recall score Binary: 0.0
+Accuracy score Binary: 0.640849536448
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 71.0680398941
+------
+Iteration 18
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: GoodTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 49638.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 1.82271556578% with 227572 fails and a total of 231797 precictions
+False negative: 83250
+False positive: 0
+True negative: 148547
+True positive: 0
+
+Precision: inf
+Recall: 0.0
+Fscore: nan
+
+F1 score: 0.0284173940105
+Precision score: 0.107856212712
+Recall score: 0.0182271556578
+Accuracy score: 0.0182271556578
+
+F1 score Binary: 0.0
+Precision score Binary: 0.0
+Recall score Binary: 0.0
+Accuracy score Binary: 0.640849536448
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 97.4290149212
+------
+Iteration 19
+------
+Intrusion Detection System enabled
+Loaded algorithm: RandomClassifier.
+
+Loaded feature: FlowFeature.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: GoodTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 49638.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 150001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...8%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 81796 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...3%
+End prediction.
+Ratio of: 1.78777119635% with 227653 fails and a total of 231797 precictions
+False negative: 83250
+False positive: 0
+True negative: 148547
+True positive: 0
+
+Precision: inf
+Recall: 0.0
+Fscore: nan
+
+F1 score: 0.0279751773331
+Precision score: 0.108452504735
+Recall score: 0.0178777119635
+Accuracy score: 0.0178777119635
+
+F1 score Binary: 0.0
+Precision score Binary: 0.0
+Recall score Binary: 0.0
+Accuracy score Binary: 0.640849536448
+
+
+Checks done
+End predictions and checks.
+
+Iteration execution time: 98.0705780983
+------
+
+
+++++++++++++++++++++
+\caption{Random classifier (All positive): Experiment 1.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0278101317419 \\
+Multi-class Precision & 0.107528930091 \\
+Multi-class Recall & 0.0177871154502 \\
+\midrule
+Binary F-score & 0.0 \\
+Binary Precision & 0.0 \\
+Binary Recall & 0.0 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 1.77871154502% \\
+False negative & 83250 \\
+False positive & 0 \\
+True negative & 148547 \\
+True positive & 0 \\
+\midrule
+Positive training samples & 0 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (All positive): Experiment 2.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0298600574097 \\
+Multi-class Precision & 0.113797455271 \\
+Multi-class Recall & 0.0188397606526 \\
+\midrule
+Binary F-score & 0.0 \\
+Binary Precision & 0.0 \\
+Binary Recall & 0.0 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 1.88397606526% \\
+False negative & 83250 \\
+False positive & 0 \\
+True negative & 148547 \\
+True positive & 0 \\
+\midrule
+Positive training samples & 0 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (All positive): Experiment 3.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0286524653515 \\
+Multi-class Precision & 0.110591750253 \\
+Multi-class Recall & 0.0182659827349 \\
+\midrule
+Binary F-score & 0.0 \\
+Binary Precision & 0.0 \\
+Binary Recall & 0.0 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 1.82659827349% \\
+False negative & 83250 \\
+False positive & 0 \\
+True negative & 148547 \\
+True positive & 0 \\
+\midrule
+Positive training samples & 0 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (All positive): Experiment 4.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0296288564088 \\
+Multi-class Precision & 0.113736213431 \\
+Multi-class Recall & 0.0188699594904 \\
+\midrule
+Binary F-score & 0.0 \\
+Binary Precision & 0.0 \\
+Binary Recall & 0.0 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 1.88699594904% \\
+False negative & 83250 \\
+False positive & 0 \\
+True negative & 148547 \\
+True positive & 0 \\
+\midrule
+Positive training samples & 0 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (All positive): Experiment 5.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0292004993775 \\
+Multi-class Precision & 0.113388546809 \\
+Multi-class Recall & 0.0186154264292 \\
+\midrule
+Binary F-score & 0.0 \\
+Binary Precision & 0.0 \\
+Binary Recall & 0.0 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 1.86154264292% \\
+False negative & 83250 \\
+False positive & 0 \\
+True negative & 148547 \\
+True positive & 0 \\
+\midrule
+Positive training samples & 0 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (All positive): Experiment 6.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0278965946907 \\
+Multi-class Precision & 0.107294768998 \\
+Multi-class Recall & 0.017735346014 \\
+\midrule
+Binary F-score & 0.0 \\
+Binary Precision & 0.0 \\
+Binary Recall & 0.0 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 1.7735346014% \\
+False negative & 83250 \\
+False positive & 0 \\
+True negative & 148547 \\
+True positive & 0 \\
+\midrule
+Positive training samples & 0 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (All positive): Experiment 7.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0283002741893 \\
+Multi-class Precision & 0.110069185304 \\
+Multi-class Recall & 0.0179510519981 \\
+\midrule
+Binary F-score & 0.0 \\
+Binary Precision & 0.0 \\
+Binary Recall & 0.0 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 1.79510519981% \\
+False negative & 83250 \\
+False positive & 0 \\
+True negative & 148547 \\
+True positive & 0 \\
+\midrule
+Positive training samples & 0 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (All positive): Experiment 8.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0283205353963 \\
+Multi-class Precision & 0.108264061487 \\
+Multi-class Recall & 0.0181322450247 \\
+\midrule
+Binary F-score & 0.0 \\
+Binary Precision & 0.0 \\
+Binary Recall & 0.0 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 1.81322450247% \\
+False negative & 83250 \\
+False positive & 0 \\
+True negative & 148547 \\
+True positive & 0 \\
+\midrule
+Positive training samples & 0 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (All positive): Experiment 9.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0289294882254 \\
+Multi-class Precision & 0.110422766353 \\
+Multi-class Recall & 0.0183824639663 \\
+\midrule
+Binary F-score & 0.0 \\
+Binary Precision & 0.0 \\
+Binary Recall & 0.0 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 1.83824639663% \\
+False negative & 83250 \\
+False positive & 0 \\
+True negative & 148547 \\
+True positive & 0 \\
+\midrule
+Positive training samples & 0 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (All positive): Experiment 10.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0293343900062 \\
+Multi-class Precision & 0.111170402437 \\
+Multi-class Recall & 0.0186671958653 \\
+\midrule
+Binary F-score & 0.0 \\
+Binary Precision & 0.0 \\
+Binary Recall & 0.0 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 1.86671958653% \\
+False negative & 83250 \\
+False positive & 0 \\
+True negative & 148547 \\
+True positive & 0 \\
+\midrule
+Positive training samples & 0 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (All positive): Experiment 11.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0289468910843 \\
+Multi-class Precision & 0.111420565395 \\
+Multi-class Recall & 0.0183910922057 \\
+\midrule
+Binary F-score & 0.0 \\
+Binary Precision & 0.0 \\
+Binary Recall & 0.0 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 1.83910922057% \\
+False negative & 83250 \\
+False positive & 0 \\
+True negative & 148547 \\
+True positive & 0 \\
+\midrule
+Positive training samples & 0 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (All positive): Experiment 12.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0291526082172 \\
+Multi-class Precision & 0.112434880164 \\
+Multi-class Recall & 0.0185334581552 \\
+\midrule
+Binary F-score & 0.0 \\
+Binary Precision & 0.0 \\
+Binary Recall & 0.0 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 1.85334581552% \\
+False negative & 83250 \\
+False positive & 0 \\
+True negative & 148547 \\
+True positive & 0 \\
+\midrule
+Positive training samples & 0 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (All positive): Experiment 13.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0285753343588 \\
+Multi-class Precision & 0.110114258978 \\
+Multi-class Recall & 0.0182573544955 \\
+\midrule
+Binary F-score & 0.0 \\
+Binary Precision & 0.0 \\
+Binary Recall & 0.0 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 1.82573544955% \\
+False negative & 83250 \\
+False positive & 0 \\
+True negative & 148547 \\
+True positive & 0 \\
+\midrule
+Positive training samples & 0 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (All positive): Experiment 14.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0291823789722 \\
+Multi-class Precision & 0.112169327343 \\
+Multi-class Recall & 0.0185507146339 \\
+\midrule
+Binary F-score & 0.0 \\
+Binary Precision & 0.0 \\
+Binary Recall & 0.0 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 1.85507146339% \\
+False negative & 83250 \\
+False positive & 0 \\
+True negative & 148547 \\
+True positive & 0 \\
+\midrule
+Positive training samples & 0 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (All positive): Experiment 15.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0289088150915 \\
+Multi-class Precision & 0.10982690679 \\
+Multi-class Recall & 0.0185464005142 \\
+\midrule
+Binary F-score & 0.0 \\
+Binary Precision & 0.0 \\
+Binary Recall & 0.0 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 1.85464005142% \\
+False negative & 83250 \\
+False positive & 0 \\
+True negative & 148547 \\
+True positive & 0 \\
+\midrule
+Positive training samples & 0 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (All positive): Experiment 16.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0292964220378 \\
+Multi-class Precision & 0.111933482382 \\
+Multi-class Recall & 0.0185291440355 \\
+\midrule
+Binary F-score & 0.0 \\
+Binary Precision & 0.0 \\
+Binary Recall & 0.0 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 1.85291440355% \\
+False negative & 83250 \\
+False positive & 0 \\
+True negative & 148547 \\
+True positive & 0 \\
+\midrule
+Positive training samples & 0 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (All positive): Experiment 17.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0290246359201 \\
+Multi-class Precision & 0.112269764445 \\
+Multi-class Recall & 0.018373835727 \\
+\midrule
+Binary F-score & 0.0 \\
+Binary Precision & 0.0 \\
+Binary Recall & 0.0 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 1.8373835727% \\
+False negative & 83250 \\
+False positive & 0 \\
+True negative & 148547 \\
+True positive & 0 \\
+\midrule
+Positive training samples & 0 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (All positive): Experiment 18.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0279099515037 \\
+Multi-class Precision & 0.107124091942 \\
+Multi-class Recall & 0.0177914295698 \\
+\midrule
+Binary F-score & 0.0 \\
+Binary Precision & 0.0 \\
+Binary Recall & 0.0 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 1.77914295698% \\
+False negative & 83250 \\
+False positive & 0 \\
+True negative & 148547 \\
+True positive & 0 \\
+\midrule
+Positive training samples & 0 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (All positive): Experiment 19.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0284173940105 \\
+Multi-class Precision & 0.107856212712 \\
+Multi-class Recall & 0.0182271556578 \\
+\midrule
+Binary F-score & 0.0 \\
+Binary Precision & 0.0 \\
+Binary Recall & 0.0 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 1.82271556578% \\
+False negative & 83250 \\
+False positive & 0 \\
+True negative & 148547 \\
+True positive & 0 \\
+\midrule
+Positive training samples & 0 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (All positive): Experiment 20.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0279751773331 \\
+Multi-class Precision & 0.108452504735 \\
+Multi-class Recall & 0.0178777119635 \\
+\midrule
+Binary F-score & 0.0 \\
+Binary Precision & 0.0 \\
+Binary Recall & 0.0 \\
+\midrule
+Total amount of samples & 231797 \\
+Correctly classified & 1.78777119635% \\
+False negative & 83250 \\
+False positive & 0 \\
+True negative & 148547 \\
+True positive & 0 \\
+\midrule
+Positive training samples & 0 \\
+Negative training samples & 49638 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (All positive): Average.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0287661450663 \\
+Multi-class Precision & 0.110493303766 \\
+Multi-class Recall & 0.0183162422292 \\
+\midrule
+Binary F-score & 0.0 \\
+Binary Precision & 0.0 \\
+Binary Recall & 0.0 \\
+\midrule
+Total amount of samples & 231797.0 \\
+Correctly classified & 1.83162422292% \\
+False negative & 83250.0 \\
+False positive & 0.0 \\
+True negative & 148547.0 \\
+True positive & 0.0 \\
+\midrule
+Positive training samples & 0.0 \\
+Negative training samples & 49638.0 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+\caption{Random classifier (All positive): Variance.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 3.40907048968e-07 \\
+Multi-class Precision & 4.50919745538e-06 \\
+Multi-class Recall & 1.13671033698e-07 \\
+\midrule
+Binary F-score & 0.0 \\
+Binary Precision & 0.0 \\
+Binary Recall & 0.0 \\
+\midrule
+Total amount of samples & 0.0 \\
+Correctly classified & 0.00113671033698% \\
+False negative & 0.0 \\
+False positive & 0.0 \\
+True negative & 0.0 \\
+True positive & 0.0 \\
+\midrule
+Positive training samples & 0.0 \\
+Negative training samples & 0.0 \\
+\bottomrule
+\endaaa{tabular}
+++++++++++++++++++++
+
+
+Config execution time: 1396.99266315
+End config: Random classifier (All positive)
+--------------------------------------------------
+Total execution time: 2451.10467792

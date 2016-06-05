@@ -1,5 +1,5 @@
 
-class BasicFeature:
+class BasicFeature(object):
 
     def __init__(self):
         pass
@@ -11,6 +11,8 @@ class BasicFeature:
         try:
             return getattr(sys.modules[__name__], name)(file)
         except Exception as e:
+            import traceback
+            traceback.print_exc()
             print "Feature \"" + str(name) + "\" does not exist."
             return None
 
@@ -18,8 +20,8 @@ class BasicFeature:
 class FlowFeature(BasicFeature):
 
     # Initialisation
-    def __init__(self, file):
-        self.read_config(file)
+    def __init__(self, config):
+        self.read_config(config.get_feature_file())
 
     # Reading the config file
     def read_config(self, file=None):
@@ -87,6 +89,7 @@ class FlowFeature(BasicFeature):
             return address.count('.') == 3
         except socket.error:  # not a valid address
             return False
+        return True
 
     # Check if a string is an IPv6 address
     def is_IPv6(self, address):
@@ -148,4 +151,76 @@ class FlowFeature(BasicFeature):
                     #int(flow.tcp_flags)
                 ]
         arr.extend( self.get_protocol_feature(flow.protocol) )
+        return arr
+
+# A class to construct the feature from raw flow data
+class FlowFeatureWFlags(FlowFeature):
+
+    def make_record(self, flow):
+        #self.print_record(flow)
+        arr = [
+                    int(self.get_port_feature(flow.src_port)),
+                    int(self.get_port_feature(flow.dest_port)),
+                    float(flow.duration),
+                    int(self.get_IPv4(flow.src_ip)) ,
+                    int(self.get_IPv6(flow.src_ip)) ,
+                    int(self.get_MAC(flow.src_ip)) ,
+                    int(self.get_IPv4(flow.dest_ip)) ,
+                    int(self.get_IPv6(flow.dest_ip)) ,
+                    int(self.get_MAC(flow.dest_ip)) ,
+                    int(flow.total_pckts),
+                    int(flow.total_bytes),
+                    int(flow.tcp_flags)
+                ]
+        arr.extend( self.get_protocol_feature(flow.protocol) )
+        return arr
+
+
+# A class to construct the feature from raw flow data
+class FlowFeatureWCountry(FlowFeature):
+
+    def __init__(self, config):
+        super(FlowFeatureWCountry, self).__init__(config)
+        self.load_countries(config.get_country_file())
+
+    def load_countries(self, file_name):
+        try:
+            import pickle
+            self.countries = pickle.load( open( file_name, "r+" ) )
+            self.unique = list(set( val for dic in self.countries for val in dic.values()))
+        except Exception as e:
+            self.countries = []
+            self.unique = []
+
+    def get_country_feature(self, ip):
+        prot = [0] * (len(self.unique)+1)
+        try:
+            #prot[self.protocols.index(protocol)] = 1
+            if not self.is_IPv4(ip):
+                raise ValueError
+
+            cntry = self.countries[ip]
+            prot[self.unique.index(cntry)] = 1
+        except Exception as e:
+            prot[ len(self.unique) ] = 1
+        return prot
+
+    def make_record(self, flow):
+        #self.print_record(flow)
+        arr = [
+                    int(self.get_port_feature(flow.src_port)),
+                    int(self.get_port_feature(flow.dest_port)),
+                    float(flow.duration),
+                    #int(self.get_IPv4(flow.src_ip)) ,
+                    #int(self.get_IPv6(flow.src_ip)) ,
+                    #int(self.get_MAC(flow.src_ip)) ,
+                    #int(self.get_IPv4(flow.dest_ip)) ,
+                    #int(self.get_IPv6(flow.dest_ip)) ,
+                    #int(self.get_MAC(flow.dest_ip)) ,
+                    int(flow.total_pckts),
+                    int(flow.total_bytes),
+                    #int(flow.tcp_flags)
+                ]
+        arr.extend( self.get_protocol_feature(flow.protocol) )
+        arr.extend( self.get_country_feature(flow.dest_ip) )
         return arr

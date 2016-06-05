@@ -11,6 +11,19 @@ class Loader:
             print "Loader \"" + name + "\"does not exist."
             return default
 
+    data = {}
+
+    @staticmethod
+    def get_data(name):
+        if name in Loader.data:
+            return Loader.data[name]
+        return None
+
+    @staticmethod
+    def insert_data(name, content):
+        Loader.data[name] = content
+        return content
+
 # Load a netflow file
 class CTULoader:
 
@@ -32,33 +45,53 @@ class CTULoader:
         return labels.keys()
 
     # Load a file
-    def load(self, file_name, fr, to, good_labels=None, good=True):
+    def load(self, file_name, fr, to, good_labels=None, good=True, amount=-1, amountGood=0):
+        f = Loader.get_data(file_name)
+        if not f:
+            f = open(file_name)
+            Loader.insert_data(file_name, f)
+            print 'Loaded data manually'
+        else:
+            print 'Use stored data'
+        f.seek(0,0)
         try:
-            with open(file_name) as f:
-                next(f)
+            next(f)
 
-                i = 0
-                while i < fr and next(f):
-                    i += 1
+            i = 0
+            total = 0
+            while i < fr and next(f):
+                i += 1
 
-                for line in f:
-                    items = line.split(',')
-                    item = self.load_single(items)
-
-                    if good_labels:
-                        if good:
-                            if item.make_target() in good_labels:
-                                self.flow.add_record(item)
-                        else:
-                            if not item.make_target() in good_labels:
-                                self.flow.add_record(item)
-                    else:
-                        self.flow.add_record(item)
-
-                    if i == to:
+            g = 0
+            for line in f:
+                if amount >= 0 and total >= amount:
+                    if g >= amountGood:
                         break
-                    i += 1
-                return True
+
+                items = line.split(',')
+                item = self.load_single(items)
+
+                if good_labels:
+                    if good:
+                        if item.make_target() in good_labels:
+                            total += 1
+                            self.flow.add_record(item)
+                    else:
+                        if not item.make_target() in good_labels:
+                            if total <= amount or amount == -1:
+                                total += 1
+                                self.flow.add_record(item)
+                        elif g < amountGood:
+                            self.flow.add_record(item)
+                            g += 1
+                else:
+                    self.flow.add_record(item)
+
+                if i == to:
+                    break
+                i += 1
+
+            return True
         except Exception as e:
             return False
 
@@ -90,15 +123,44 @@ class CTULoader:
     def get_netflow(self):
         return self.flow
 
+class PickleLoader:
+    def __init__(self):
+        from flow import Flows
+        self.flow = Flows()
+
+    # Get the netflow
+    def get_netflow(self):
+        return self.flow
+
+    # Load a file
+    def load(self, host, user, password, db, amount, good=False, classify=False, db_file=""):
+        file_name = db_file
+
+        try:
+            self.flow = Loader.get_data(file_name)
+            if not self.flow:
+                import pickle
+                self.flow = pickle.load( open( file_name, "r+" ) )
+                Loader.insert_data(file_name, self.flow)
+                print 'Loaded data manually'
+            else:
+                print 'Use stored data'
+
+            self.flow = self.flow.random(amount)
+            return True
+        except Exception as e:
+            return False
+
 class SQLLoader:
     def __init__(self):
         from flow import Flows
         self.flow = Flows()
-        self.cmd = "SELECT * FROM `flows` ORDER BY RAND() LIMIT %s"
-        self.cmd_good = "SELECT * FROM `flows` WHERE `id` NOT IN (SELECT `flowid` FROM `flow_alert`) ORDER BY RAND() LIMIT %s"
+        self.cmd = "SELECT * FROM `flows` LIMIT %s, %s"
+        self.cmd_total = "SELECT * FROM `flows` INNER JOIN `flow_alert` ON flows.id = flow_alert.flowid INNER JOIN `alerts` ON flow_alert.alertid = alerts.id INNER JOIN `alert_type` ON alerts.type = alert_type.id LIMIT %s, %s"
+        self.cmd_good = "SELECT * FROM `flows` WHERE `id` NOT IN (SELECT `flowid` FROM `flow_alert`) LIMIT %s, %s"
 
     # Load a file
-    def load(self, host, user, password, db, amount, good=False):
+    def load(self, host, user, password, db, amount, good=False, classify=False):
         import pymysql.cursors
 
         # Connect to the database
@@ -112,13 +174,18 @@ class SQLLoader:
         try:
             with connection.cursor() as cursor:
                 # Read a single record
-                if good:
-                    cursor.execute(self.cmd_good, (amount,))
+                import random
+                size = 14164163
+                ran = random.randint(0, size-amount)
+                if classify:
+                    cursor.execute(self.cmd_total, (ran, amount,))
+                elif good:
+                    cursor.execute(self.cmd_good, (ran, amount,))
                 else:
-                    cursor.execute(self.cmd, (amount,))
+                    cursor.execute(self.cmd, (ran, amount,))
 
                 for row in cursor:
-                    item = self.load_single(row, good)
+                    item = self.load_single(row, good, classify)
                     self.flow.add_record(item)
 
                 ret = True
@@ -133,7 +200,7 @@ class SQLLoader:
     # Format:
     #   StartTime,Dur,Proto,SrcAddr,Sport,Dir,DstAddr,Dport,State,sTos,dTos,TotPkts,TotBytes,SrcBytes,label
     #   2011/08/10 09:46:59.607825,1.026539,tcp,94.44.127.113,1577,   ->,147.32.84.59,6881,S_RA,0,0,4,276,156,flow=Background-Established-cmpgw-CVUT
-    def load_single(self, items, good):
+    def load_single(self, items, good, classify):
         import socket, ipaddress
         from flow import FlowRecord
         rec = FlowRecord()
@@ -146,7 +213,10 @@ class SQLLoader:
         rec.dest_port = items['dst_port']
         rec.total_pckts = items['packets']
         rec.total_bytes = items['octets']
-        if good:
+
+        if classify:
+            rec.label = items['description']
+        elif good:
             rec.label = 'non-malicous'
         else:
             rec.label = 'malicous'
@@ -156,3 +226,56 @@ class SQLLoader:
     # Get the netflow
     def get_netflow(self):
         return self.flow
+
+class BinaryLoader:
+
+    # Load a file
+    def load(self, filepath, amount, predictor):
+
+        try:
+            import pynfdump_src
+            d=pynfdump_src.search_file(filepath)
+
+            i = 0
+            for r in d:
+                if amount >= 0 and i >= amount:
+                    break
+                if i % 100 == 0:
+                    print "Computed " + str(i) + " flows..."
+                i += 1
+                flow = self.load_single(r)
+                predictor.predict_flow(flow)
+            print "Done predicting elements from NFDump."
+            print str(amount) + " element predicted."
+            print "Waiting for KeyboardInterrupt..."
+        except KeyboardInterrupt as e:
+            pass
+        return True
+
+    # Load a single line
+    def load_single(self, items):
+        import socket, ipaddress
+        from flow import FlowRecord
+        rec = FlowRecord()
+
+        import datetime
+        start = (items['first']-datetime.datetime(1970,1,1)).total_seconds()
+        end = (items['last']-datetime.datetime(1970,1,1)).total_seconds()
+
+        rec.start_time = start
+        rec.duration = -1 * ((start + items['msec_first']/1000.0) - (end + items['msec_last']/1000.0))
+        rec.protocol = items['prot']
+        rec.src_ip = str(items['srcip'])
+        rec.src_port = items['srcport']
+        rec.dest_ip = str(items['dstip'])
+        rec.dest_port = items['dstport']
+        rec.total_pckts = items['packets']
+        rec.total_bytes = items['bytes']
+
+        rec.label = "Unknown"
+
+        return rec
+
+    # Get the netflow
+    def get_netflow(self):
+        return None

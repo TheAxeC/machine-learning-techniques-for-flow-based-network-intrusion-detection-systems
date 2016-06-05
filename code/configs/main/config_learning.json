@@ -1,0 +1,187 @@
+{
+    "featureClass" : "FlowFeature",
+    "trainer" : "PlotTrainer",
+
+    "configs" : [
+        {
+            "name" : "Random classifier (uniform)",
+            "description" : "Random classifier to construct a baseline",
+            "algorithm" : "Plot_RandomClassifier",
+            "data-sets" : [
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 50000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 600000,
+                        "type" : "BadTrainer"
+                    }
+                ]
+        },
+        {
+            "name" : "DecisionTreeClassifier",
+            "description" : "DecisionTreeClassifier",
+            "algorithm" : "Plot_DecisionTreeClassifier",
+            "data-sets" : [
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 20000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 600000,
+                        "type" : "BadTrainer",
+                        "amount" : 15000
+                    },
+                    {
+                        "host" : "localhost",
+                        "type" : "SQLTrainer",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 15000
+                    }
+                ]
+        },
+        {
+            "name" : "SupportVectorMachine with RBF Kernel",
+            "description" : "SupportVectorMachine",
+            "algorithm" : "Plot_SupportVectorMachine",
+            "data-sets" : [
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 2500
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 600000,
+                        "type" : "BadTrainer",
+                        "amount" : 2500
+                    },
+                    {
+                        "host" : "localhost",
+                        "type" : "SQLTrainer",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 2000
+                    }
+                ]
+        },
+        {
+            "name" : "NeuralNetwork",
+            "description" : "NeuralNetwork",
+            "algorithm" : "Plot_NeuralNetwork",
+            "data-sets" : [
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 25000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 600000,
+                        "type" : "BadTrainer",
+                        "amount" : 25000
+                    },
+                    {
+                        "host" : "localhost",
+                        "type" : "SQLTrainer",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 20000
+                    }
+                ]
+        },
+        {
+            "name" : "SupportVectorMachine with Linear kernel",
+            "description" : "LinearSVC",
+            "algorithm" : "Plot_LinearSVC",
+            "data-sets" : [
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 5000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 600000,
+                        "type" : "BadTrainer",
+                        "amount" : 5000
+                    },
+                    {
+                        "host" : "localhost",
+                        "type" : "SQLTrainer",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 5000
+                    }
+                ]
+        },
+        {
+            "name" : "KNeighborsClassifier",
+            "description" : "KNeighborsClassifier",
+            "algorithm" : "Plot_KNeighborsClassifier",
+            "data-sets" : [
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 50000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 600000,
+                        "type" : "BadTrainer",
+                        "amount" : 35000
+                    },
+                    {
+                        "host" : "localhost",
+                        "type" : "SQLTrainer",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 30000
+                    }
+                ]
+        },
+        {
+            "name" : "Gaussian Naive Bayes",
+            "description" : "Gaussian Naive Bayes",
+            "algorithm" : "Plot_GaussianNB",
+            "data-sets" : [
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 5000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 600000,
+                        "type" : "BadTrainer",
+                        "amount" : 3500
+                    },
+                    {
+                        "host" : "localhost",
+                        "type" : "SQLTrainer",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 3000
+                    }
+                ]
+        }
+    ]
+}

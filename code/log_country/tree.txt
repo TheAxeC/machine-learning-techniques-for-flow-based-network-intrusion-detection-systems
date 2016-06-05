@@ -1,0 +1,1800 @@
+Starting IDS...
+JSON Config file read successfully
+
+--------------------------------------------------
+Starting config: DecisionTreeClassifier CTU
+Description:
+	DecisionTreeClassifier
+=============
+Iteration 0
+------
+Intrusion Detection System enabled
+Loaded algorithm: DecisionTreeClassifier.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Loaded data manually
+Training size is 25001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 25000.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 55518 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...4%
+End prediction.
+/Users/axelfaes/GoogleDrive/Data/workspace/School/Bachelor-CS-UHasselt/Bachelor-thesis-ML-IPS/code/ipsml/lib/python2.7/site-packages/sklearn/metrics/classification.py:1122: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/Users/axelfaes/GoogleDrive/Data/workspace/School/Bachelor-CS-UHasselt/Bachelor-thesis-ML-IPS/code/ipsml/lib/python2.7/site-packages/sklearn/metrics/classification.py:1124: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true samples.
+  'recall', 'true', average, warn_for)
+/Users/axelfaes/GoogleDrive/Data/workspace/School/Bachelor-CS-UHasselt/Bachelor-thesis-ML-IPS/code/ipsml/lib/python2.7/site-packages/sklearn/metrics/classification.py:1122: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/Users/axelfaes/GoogleDrive/Data/workspace/School/Bachelor-CS-UHasselt/Bachelor-thesis-ML-IPS/code/ipsml/lib/python2.7/site-packages/sklearn/metrics/classification.py:1124: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples.
+  'recall', 'true', average, warn_for)
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 29.3083629608
+------
+Iteration 1
+------
+Intrusion Detection System enabled
+Loaded algorithm: DecisionTreeClassifier.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 25001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 25000.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 55518 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...4%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 28.6214110851
+------
+Iteration 2
+------
+Intrusion Detection System enabled
+Loaded algorithm: DecisionTreeClassifier.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 25001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 25000.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 55518 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...4%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 46.5046870708
+------
+Iteration 3
+------
+Intrusion Detection System enabled
+Loaded algorithm: DecisionTreeClassifier.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 25001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 25000.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 55518 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...4%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 111.127519846
+------
+Iteration 4
+------
+Intrusion Detection System enabled
+Loaded algorithm: DecisionTreeClassifier.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 25001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 25000.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 55518 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...4%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 103.507773161
+------
+Iteration 5
+------
+Intrusion Detection System enabled
+Loaded algorithm: DecisionTreeClassifier.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 25001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 25000.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 55518 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...4%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 113.537258863
+------
+Iteration 6
+------
+Intrusion Detection System enabled
+Loaded algorithm: DecisionTreeClassifier.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 25001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 25000.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 55518 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...4%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 111.845927
+------
+Iteration 7
+------
+Intrusion Detection System enabled
+Loaded algorithm: DecisionTreeClassifier.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 25001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 25000.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 55518 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...4%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 98.0506601334
+------
+Iteration 8
+------
+Intrusion Detection System enabled
+Loaded algorithm: DecisionTreeClassifier.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 25001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 25000.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 55518 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...4%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 112.799299002
+------
+Iteration 9
+------
+Intrusion Detection System enabled
+Loaded algorithm: DecisionTreeClassifier.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 25001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 25000.
+Training set "configs/main/../../test/test.flow"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 55518 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...4%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 111.828551054
+------
+
+
+++++++++++++++++++++
+\caption{DecisionTreeClassifier CTU: Experiment 1.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.599977008976 \\
+Multi-class Precision & 0.65682599607 \\
+Multi-class Recall & 0.600662851181 \\
+\midrule
+Binary F-score & 0.906866187236 \\
+Binary Precision & 0.838417455153 \\
+Binary Recall & 0.98748483943 \\
+\midrule
+Total amount of samples & 195519 \\
+Correctly classified & 60.0662851181% \\
+False negative & 712 \\
+False positive & 10827 \\
+True negative & 127801 \\
+True positive & 56179 \\
+\midrule
+Positive training samples & 25195 \\
+Negative training samples & 24806 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{DecisionTreeClassifier CTU: Experiment 2.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.60004990241 \\
+Multi-class Precision & 0.656948151542 \\
+Multi-class Recall & 0.600770257622 \\
+\midrule
+Binary F-score & 0.90740082698 \\
+Binary Precision & 0.839331869183 \\
+Binary Recall & 0.98748483943 \\
+\midrule
+Total amount of samples & 195519 \\
+Correctly classified & 60.0770257622% \\
+False negative & 712 \\
+False positive & 10754 \\
+True negative & 127874 \\
+True positive & 56179 \\
+\midrule
+Positive training samples & 25195 \\
+Negative training samples & 24806 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{DecisionTreeClassifier CTU: Experiment 3.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.599917375249 \\
+Multi-class Precision & 0.656999856449 \\
+Multi-class Recall & 0.60072422629 \\
+\midrule
+Binary F-score & 0.907386322343 \\
+Binary Precision & 0.839243569444 \\
+Binary Recall & 0.987572726793 \\
+\midrule
+Total amount of samples & 195519 \\
+Correctly classified & 60.072422629% \\
+False negative & 707 \\
+False positive & 10762 \\
+True negative & 127866 \\
+True positive & 56184 \\
+\midrule
+Positive training samples & 25195 \\
+Negative training samples & 24806 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{DecisionTreeClassifier CTU: Experiment 4.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.598766880772 \\
+Multi-class Precision & 0.656271404448 \\
+Multi-class Recall & 0.599527411658 \\
+\midrule
+Binary F-score & 0.906914614559 \\
+Binary Precision & 0.838462227263 \\
+Binary Recall & 0.987537571848 \\
+\midrule
+Total amount of samples & 195519 \\
+Correctly classified & 59.9527411658% \\
+False negative & 709 \\
+False positive & 10824 \\
+True negative & 127804 \\
+True positive & 56182 \\
+\midrule
+Positive training samples & 25195 \\
+Negative training samples & 24806 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{DecisionTreeClassifier CTU: Experiment 5.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.599891242676 \\
+Multi-class Precision & 0.657164575279 \\
+Multi-class Recall & 0.600632163626 \\
+\midrule
+Binary F-score & 0.906573501053 \\
+Binary Precision & 0.837917250843 \\
+Binary Recall & 0.98748483943 \\
+\midrule
+Total amount of samples & 195519 \\
+Correctly classified & 60.0632163626% \\
+False negative & 712 \\
+False positive & 10867 \\
+True negative & 127761 \\
+True positive & 56179 \\
+\midrule
+Positive training samples & 25195 \\
+Negative training samples & 24806 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{DecisionTreeClassifier CTU: Experiment 6.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.599938281319 \\
+Multi-class Precision & 0.657061863905 \\
+Multi-class Recall & 0.600760028437 \\
+\midrule
+Binary F-score & 0.906740475941 \\
+Binary Precision & 0.838151927438 \\
+Binary Recall & 0.987555149321 \\
+\midrule
+Total amount of samples & 195519 \\
+Correctly classified & 60.0760028437% \\
+False negative & 708 \\
+False positive & 10849 \\
+True negative & 127779 \\
+True positive & 56183 \\
+\midrule
+Positive training samples & 25195 \\
+Negative training samples & 24806 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{DecisionTreeClassifier CTU: Experiment 7.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.600865186318 \\
+Multi-class Precision & 0.657928901797 \\
+Multi-class Recall & 0.601629509153 \\
+\midrule
+Binary F-score & 0.907192856393 \\
+Binary Precision & 0.838938000239 \\
+Binary Recall & 0.987537571848 \\
+\midrule
+Total amount of samples & 195519 \\
+Correctly classified & 60.1629509153% \\
+False negative & 709 \\
+False positive & 10786 \\
+True negative & 127842 \\
+True positive & 56182 \\
+\midrule
+Positive training samples & 25195 \\
+Negative training samples & 24806 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{DecisionTreeClassifier CTU: Experiment 8.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.599746659081 \\
+Multi-class Precision & 0.656946729948 \\
+Multi-class Recall & 0.60047361126 \\
+\midrule
+Binary F-score & 0.906212447477 \\
+Binary Precision & 0.837262674734 \\
+Binary Recall & 0.987537571848 \\
+\midrule
+Total amount of samples & 195519 \\
+Correctly classified & 60.047361126% \\
+False negative & 709 \\
+False positive & 10920 \\
+True negative & 127708 \\
+True positive & 56182 \\
+\midrule
+Positive training samples & 25195 \\
+Negative training samples & 24806 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{DecisionTreeClassifier CTU: Experiment 9.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.600335687345 \\
+Multi-class Precision & 0.657389604878 \\
+Multi-class Recall & 0.601240800127 \\
+\midrule
+Binary F-score & 0.909014417242 \\
+Binary Precision & 0.842109996852 \\
+Binary Recall & 0.987467261957 \\
+\midrule
+Total amount of samples & 195519 \\
+Correctly classified & 60.1240800127% \\
+False negative & 713 \\
+False positive & 10533 \\
+True negative & 128095 \\
+True positive & 56178 \\
+\midrule
+Positive training samples & 25195 \\
+Negative training samples & 24806 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{DecisionTreeClassifier CTU: Experiment 10.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.599900321173 \\
+Multi-class Precision & 0.656653704741 \\
+Multi-class Recall & 0.600729340882 \\
+\midrule
+Binary F-score & 0.908021174284 \\
+Binary Precision & 0.840419484172 \\
+Binary Recall & 0.987449684484 \\
+\midrule
+Total amount of samples & 195519 \\
+Correctly classified & 60.0729340882% \\
+False negative & 714 \\
+False positive & 10667 \\
+True negative & 127961 \\
+True positive & 56177 \\
+\midrule
+Positive training samples & 25195 \\
+Negative training samples & 24806 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{DecisionTreeClassifier CTU: Average.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.599938854532 \\
+Multi-class Precision & 0.657019078905 \\
+Multi-class Recall & 0.600715020024 \\
+\midrule
+Binary F-score & 0.907232282351 \\
+Binary Precision & 0.839025445532 \\
+Binary Recall & 0.987511205639 \\
+\midrule
+Total amount of samples & 195519.0 \\
+Correctly classified & 60.0715020024% \\
+False negative & 710.5 \\
+False positive & 10778.9 \\
+True negative & 127849.1 \\
+True positive & 56180.5 \\
+\midrule
+Positive training samples & 25195.0 \\
+Negative training samples & 24806.0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{DecisionTreeClassifier CTU: Variance.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 2.44402923375e-07 \\
+Multi-class Precision & 1.72849786148e-07 \\
+Multi-class Recall & 2.59638046722e-07 \\
+\midrule
+Binary F-score & 5.80291324381e-07 \\
+Binary Precision & 1.73922780861e-06 \\
+Binary Recall & 1.56028611187e-09 \\
+\midrule
+Total amount of samples & 0.0 \\
+Correctly classified & 0.00259638046722% \\
+False negative & 5.05 \\
+False positive & 11087.69 \\
+True negative & 11087.69 \\
+True positive & 5.05 \\
+\midrule
+Positive training samples & 0.0 \\
+Negative training samples & 0.0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+
+
+Config execution time: 867.139385939
+End config: DecisionTreeClassifier CTU
+--------------------------------------------------
+Starting config: DecisionTreeClassifier Cross
+Description:
+	DecisionTreeClassifier Cross
+=============
+Iteration 0
+------
+Intrusion Detection System enabled
+Loaded algorithm: DecisionTreeClassifier.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 20001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 15000.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: SQLTrainer.
+Using Loader "PickleLoader" to load the data.
+Loaded data manually
+Training size is 15000.
+Training set "localhost:dataset"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionSQL.
+Start file: localhost:dataset.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Using 70000 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...6%
+End prediction.
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 36466 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...5%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 260.005526066
+------
+Iteration 1
+------
+Intrusion Detection System enabled
+Loaded algorithm: DecisionTreeClassifier.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 20001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 15000.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: SQLTrainer.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Training size is 15000.
+Training set "localhost:dataset"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionSQL.
+Start file: localhost:dataset.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Using 70000 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...6%
+End prediction.
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 36466 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...5%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 159.540277004
+------
+Iteration 2
+------
+Intrusion Detection System enabled
+Loaded algorithm: DecisionTreeClassifier.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 20001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 15000.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: SQLTrainer.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Training size is 15000.
+Training set "localhost:dataset"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionSQL.
+Start file: localhost:dataset.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Using 70000 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...6%
+End prediction.
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 36466 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...5%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 153.707244873
+------
+Iteration 3
+------
+Intrusion Detection System enabled
+Loaded algorithm: DecisionTreeClassifier.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 20001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 15000.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: SQLTrainer.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Training size is 15000.
+Training set "localhost:dataset"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionSQL.
+Start file: localhost:dataset.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Using 70000 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...6%
+End prediction.
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 36466 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...5%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 206.565248966
+------
+Iteration 4
+------
+Intrusion Detection System enabled
+Loaded algorithm: DecisionTreeClassifier.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 20001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 15000.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: SQLTrainer.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Training size is 15000.
+Training set "localhost:dataset"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionSQL.
+Start file: localhost:dataset.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Using 70000 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...6%
+End prediction.
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 36466 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...5%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 251.340157986
+------
+Iteration 5
+------
+Intrusion Detection System enabled
+Loaded algorithm: DecisionTreeClassifier.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 20001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 15000.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: SQLTrainer.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Training size is 15000.
+Training set "localhost:dataset"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionSQL.
+Start file: localhost:dataset.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Using 70000 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...6%
+End prediction.
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 36466 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...5%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 223.184888124
+------
+Iteration 6
+------
+Intrusion Detection System enabled
+Loaded algorithm: DecisionTreeClassifier.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 20001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 15000.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: SQLTrainer.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Training size is 15000.
+Training set "localhost:dataset"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionSQL.
+Start file: localhost:dataset.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Using 70000 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...6%
+End prediction.
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 36466 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...5%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 230.504482985
+------
+Iteration 7
+------
+Intrusion Detection System enabled
+Loaded algorithm: DecisionTreeClassifier.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 20001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 15000.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: SQLTrainer.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Training size is 15000.
+Training set "localhost:dataset"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionSQL.
+Start file: localhost:dataset.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Using 70000 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...6%
+End prediction.
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 36466 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...5%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 228.477864981
+------
+Iteration 8
+------
+Intrusion Detection System enabled
+Loaded algorithm: DecisionTreeClassifier.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 20001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 15000.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: SQLTrainer.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Training size is 15000.
+Training set "localhost:dataset"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionSQL.
+Start file: localhost:dataset.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Using 70000 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...6%
+End prediction.
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 36466 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...5%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 226.798547029
+------
+Iteration 9
+------
+Intrusion Detection System enabled
+Loaded algorithm: DecisionTreeClassifier.
+
+Loaded feature: FlowFeatureWCountry.
+
+Start training...
+Using data sets with malicious data.
+Loaded training algorithm: Trainer.
+Loaded training algorithm: DefaultTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 20001.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: BadTrainer.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Training size is 15000.
+Training set "configs/main/../../test/test.flow"  done.
+Loaded training algorithm: SQLTrainer.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Training size is 15000.
+Training set "localhost:dataset"  done.
+Start complete training...
+Training done.
+Finished training.
+
+Start predictions and checks...
+Running Checks...
+Used for checking the accuracy of the IDS
+Loaded prediction loader: PredictionSQL.
+Start file: localhost:dataset.
+Using Loader "PickleLoader" to load the data.
+Use stored data
+Using 70000 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...6%
+End prediction.
+Loaded prediction loader: PredictionFile.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 140001 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...4%
+End prediction.
+Loaded prediction loader: PredictionFileBadSamples.
+Start file: configs/main/../../test/test.flow.
+Using Loader "CTULoader" to load the data.
+Use stored data
+Using 36466 samples.
+Start predicting...
+Percent: [##################################################] 100% Done...5%
+End prediction.
+cannot concatenate 'str' and 'NoneType' objects
+Checks done
+End predictions and checks.
+
+Iteration execution time: 237.478382826
+------
+
+
+++++++++++++++++++++
+\caption{DecisionTreeClassifier Cross: Experiment 1.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.750514171292 \\
+Multi-class Precision & 0.78895469205 \\
+Multi-class Recall & 0.744882682063 \\
+\midrule
+Binary F-score & 0.941782056354 \\
+Binary Precision & 0.895295484367 \\
+Binary Recall & 0.993360472556 \\
+\midrule
+Total amount of samples & 246467 \\
+Correctly classified & 74.4882682063% \\
+False negative & 716 \\
+False positive & 12528 \\
+True negative & 126100 \\
+True positive & 107123 \\
+\midrule
+Positive training samples & 30140 \\
+Negative training samples & 19861 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{DecisionTreeClassifier Cross: Experiment 2.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.750462077799 \\
+Multi-class Precision & 0.789343029936 \\
+Multi-class Recall & 0.744785305944 \\
+\midrule
+Binary F-score & 0.941134608457 \\
+Binary Precision & 0.894156044708 \\
+Binary Recall & 0.993323380224 \\
+\midrule
+Total amount of samples & 246467 \\
+Correctly classified & 74.4785305944% \\
+False negative & 720 \\
+False positive & 12680 \\
+True negative & 125948 \\
+True positive & 107119 \\
+\midrule
+Positive training samples & 30140 \\
+Negative training samples & 19861 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{DecisionTreeClassifier Cross: Experiment 3.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.750736467976 \\
+Multi-class Precision & 0.789479693438 \\
+Multi-class Recall & 0.745170753083 \\
+\midrule
+Binary F-score & 0.941742750263 \\
+Binary Precision & 0.895254571591 \\
+Binary Recall & 0.993323380224 \\
+\midrule
+Total amount of samples & 246467 \\
+Correctly classified & 74.5170753083% \\
+False negative & 720 \\
+False positive & 12533 \\
+True negative & 126095 \\
+True positive & 107119 \\
+\midrule
+Positive training samples & 30140 \\
+Negative training samples & 19861 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{DecisionTreeClassifier Cross: Experiment 4.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.751086165168 \\
+Multi-class Precision & 0.789751164854 \\
+Multi-class Recall & 0.745479110794 \\
+\midrule
+Binary F-score & 0.941109798047 \\
+Binary Precision & 0.894171369419 \\
+Binary Recall & 0.99324919556 \\
+\midrule
+Total amount of samples & 246467 \\
+Correctly classified & 74.5479110794% \\
+False negative & 728 \\
+False positive & 12677 \\
+True negative & 125951 \\
+True positive & 107111 \\
+\midrule
+Positive training samples & 30140 \\
+Negative training samples & 19861 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{DecisionTreeClassifier Cross: Experiment 5.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.750781804033 \\
+Multi-class Precision & 0.789592753592 \\
+Multi-class Recall & 0.744976000844 \\
+\midrule
+Binary F-score & 0.941400311102 \\
+Binary Precision & 0.894620800241 \\
+Binary Recall & 0.99334192639 \\
+\midrule
+Total amount of samples & 246467 \\
+Correctly classified & 74.4976000844% \\
+False negative & 718 \\
+False positive & 12618 \\
+True negative & 126010 \\
+True positive & 107121 \\
+\midrule
+Positive training samples & 30140 \\
+Negative training samples & 19861 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{DecisionTreeClassifier Cross: Experiment 6.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.750916646913 \\
+Multi-class Precision & 0.789199120926 \\
+Multi-class Recall & 0.745365505321 \\
+\midrule
+Binary F-score & 0.941574683389 \\
+Binary Precision & 0.89510898636 \\
+Binary Recall & 0.993128645481 \\
+\midrule
+Total amount of samples & 246467 \\
+Correctly classified & 74.5365505321% \\
+False negative & 741 \\
+False positive & 12550 \\
+True negative & 126078 \\
+True positive & 107098 \\
+\midrule
+Positive training samples & 30140 \\
+Negative training samples & 19861 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{DecisionTreeClassifier Cross: Experiment 7.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.750618223404 \\
+Multi-class Precision & 0.789042220241 \\
+Multi-class Recall & 0.744980058182 \\
+\midrule
+Binary F-score & 0.941577735192 \\
+Binary Precision & 0.89500906607 \\
+Binary Recall & 0.993258468643 \\
+\midrule
+Total amount of samples & 246467 \\
+Correctly classified & 74.4980058182% \\
+False negative & 727 \\
+False positive & 12565 \\
+True negative & 126063 \\
+True positive & 107112 \\
+\midrule
+Positive training samples & 30140 \\
+Negative training samples & 19861 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{DecisionTreeClassifier Cross: Experiment 8.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.751045124812 \\
+Multi-class Precision & 0.78958356398 \\
+Multi-class Recall & 0.745292473232 \\
+\midrule
+Binary F-score & 0.941209032598 \\
+Binary Precision & 0.894290413338 \\
+Binary Recall & 0.993323380224 \\
+\midrule
+Total amount of samples & 246467 \\
+Correctly classified & 74.5292473232% \\
+False negative & 720 \\
+False positive & 12662 \\
+True negative & 125966 \\
+True positive & 107119 \\
+\midrule
+Positive training samples & 30140 \\
+Negative training samples & 19861 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{DecisionTreeClassifier Cross: Experiment 9.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.751196086467 \\
+Multi-class Precision & 0.789576620854 \\
+Multi-class Recall & 0.745779353828 \\
+\midrule
+Binary F-score & 0.941414816149 \\
+Binary Precision & 0.894737281764 \\
+Binary Recall & 0.993230649394 \\
+\midrule
+Total amount of samples & 246467 \\
+Correctly classified & 74.5779353828% \\
+False negative & 730 \\
+False positive & 12601 \\
+True negative & 126027 \\
+True positive & 107109 \\
+\midrule
+Positive training samples & 30140 \\
+Negative training samples & 19861 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{DecisionTreeClassifier Cross: Experiment 10.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.750223087693 \\
+Multi-class Precision & 0.788658249746 \\
+Multi-class Recall & 0.74457838169 \\
+\midrule
+Binary F-score & 0.940738398848 \\
+Binary Precision & 0.893433530447 \\
+Binary Recall & 0.993332653307 \\
+\midrule
+Total amount of samples & 246467 \\
+Correctly classified & 74.457838169% \\
+False negative & 719 \\
+False positive & 12777 \\
+True negative & 125851 \\
+True positive & 107120 \\
+\midrule
+Positive training samples & 30140 \\
+Negative training samples & 19861 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{DecisionTreeClassifier Cross: Average.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.750757985556 \\
+Multi-class Precision & 0.789318110962 \\
+Multi-class Recall & 0.745128962498 \\
+\midrule
+Binary F-score & 0.94136841904 \\
+Binary Precision & 0.89460775483 \\
+Binary Recall & 0.9932872152 \\
+\midrule
+Total amount of samples & 246467.0 \\
+Correctly classified & 74.5128962498% \\
+False negative & 723.9 \\
+False positive & 12619.1 \\
+True negative & 126008.9 \\
+True positive & 107115.1 \\
+\midrule
+Positive training samples & 30140.0 \\
+Negative training samples & 19861.0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+\caption{DecisionTreeClassifier Cross: Variance.}
+\label{}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 8.60942949731e-08 \\
+Multi-class Precision & 1.08475121707e-07 \\
+Multi-class Recall & 1.1575103008e-07 \\
+\midrule
+Binary F-score & 9.44629407473e-08 \\
+Binary Precision & 3.19455779064e-07 \\
+Binary Recall & 4.49642069396e-09 \\
+\midrule
+Total amount of samples & 0.0 \\
+Correctly classified & 0.0011575103008% \\
+False negative & 52.29 \\
+False positive & 5757.69 \\
+True negative & 5757.69 \\
+True positive & 52.29 \\
+\midrule
+Positive training samples & 0.0 \\
+Negative training samples & 0.0 \\
+\bottomrule
+\endaaa{tabular}
+
+++++++++++++++++++++
+
+
+Config execution time: 2177.73137498
+End config: DecisionTreeClassifier Cross
+--------------------------------------------------
+Starting config: DecisionTreeClassifier CTU
+Description:
+	DecisionTreeClassifier
+=============
+Config execution time: 3.40938568115e-05
+End config: DecisionTreeClassifier CTU
+--------------------------------------------------
+Starting config: DecisionTreeClassifier Cross
+Description:
+	DecisionTreeClassifier Cross
+=============
+Config execution time: 2.8133392334e-05
+End config: DecisionTreeClassifier Cross
+--------------------------------------------------
+Starting config: DecisionTreeClassifier CTU
+Description:
+	DecisionTreeClassifier
+=============
+Config execution time: 3.60012054443e-05
+End config: DecisionTreeClassifier CTU
+--------------------------------------------------
+Starting config: DecisionTreeClassifier Cross
+Description:
+	DecisionTreeClassifier Cross
+=============
+Config execution time: 2.59876251221e-05
+End config: DecisionTreeClassifier Cross
+--------------------------------------------------
+Total execution time: 3044.87139606
+End of program.

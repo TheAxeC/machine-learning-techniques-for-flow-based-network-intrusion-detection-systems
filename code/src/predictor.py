@@ -10,6 +10,13 @@ class Predictor:
         self.algorithm = None
         self.feature = None
 
+    # Set the good labels
+    def set_good_labels(self, result):
+        self.good_labels = result
+
+    def set_db_file(self, f):
+        self.db_file = f
+
     # Set the result class
     def set_resultmanager(self, result):
         self.results = result
@@ -25,8 +32,11 @@ class Predictor:
     def set_logger(self, logger):
         self.logger = logger
 
+    def get_good_labels(self):
+        return self.good_labels
+
     # Run the predictor
-    def runner(self, data_set):
+    def runner(self, data_set, config):
         for d in data_set:
             try:
                 samples = self.predict_raw(d)
@@ -39,8 +49,9 @@ class Predictor:
                 print "KeyboardInterrupt occured..."
             print "End prediction."
         try:
-            print self.results.get_output()
+            print self.results.get_output(config)
         except Exception as e:
+            print e
             pass
 
     # Check whether the key exists
@@ -67,6 +78,13 @@ class Predictor:
     def predict_sample(self, flow, label, flow_raw):
         result = self.algorithm.predict(flow, label)
         self.results.add_record(result, flow_raw, label)
+
+    def predict_flow(self, flow_raw):
+        result = self.algorithm.predict(flow_raw.get_sample_data(self.feature))
+        self.results.add_record_unknown(result, flow_raw)
+
+    def get_db_file(self):
+        return self.db_file
 
     def loop(self, netflow):
         i = 0

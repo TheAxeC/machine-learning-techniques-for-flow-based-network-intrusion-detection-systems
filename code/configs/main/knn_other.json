@@ -1,0 +1,161 @@
+{
+    "check" : true,
+    "algorithm" : "KNeighborsClassifier",
+    "featureClass" : "FlowFeatureWFlags",
+    "amount" : 10,
+
+    "check-sets" : [
+            {
+                "file" : "../../test/test.flow",
+                "from" : 50000,
+                "to" : 190000
+            },
+            {
+                "file" : "../../test/test.flow",
+                "from" : 500000,
+                "to" : 600000,
+                "type" : "PredictionFileBadSamples"
+            }
+        ],
+
+    "configs" : [
+        {
+            "name" : "K-Nearest Neighbors with k=3 CTU",
+            "description" : "K-Nearest Neighbors",
+            "algorithm" : "KNeighborsClassifier3",
+            "featureClass" : "FlowFeature",
+            "data-sets" : [
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 50000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 600000,
+                        "type" : "BadTrainer",
+                        "amount" : 35000
+                    }
+                ]
+        },
+        {
+            "name" : "KNeighborsClassifier with k=3 Cross",
+            "description" : "KNeighborsClassifier Cross",
+            "algorithm" : "KNeighborsClassifier3",
+            "featureClass" : "FlowFeature",
+            "data-sets" : [
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 50000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 600000,
+                        "type" : "BadTrainer",
+                        "amount" : 35000
+                    },
+                    {
+                        "host" : "localhost",
+                        "type" : "SQLTrainer",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 30000
+                    }
+                ],
+            "check-sets" : [
+                    {
+                        "host" : "localhost",
+                        "type" : "PredictionSQL",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 70000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 50000,
+                        "to" : 190000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 520000,
+                        "to" : 600000,
+                        "type" : "PredictionFileBadSamples"
+                    }
+                ]
+        },
+        {
+            "name" : "K-Nearest Neighbors with k=7 CTU",
+            "description" : "K-Nearest Neighbors",
+            "algorithm" : "KNeighborsClassifier7",
+            "featureClass" : "FlowFeature",
+            "data-sets" : [
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 50000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 600000,
+                        "type" : "BadTrainer",
+                        "amount" : 35000
+                    }
+                ]
+        },
+        {
+            "name" : "KNeighborsClassifier with k=7 Cross",
+            "description" : "KNeighborsClassifier Cross",
+            "algorithm" : "KNeighborsClassifier7",
+            "featureClass" : "FlowFeature",
+            "data-sets" : [
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 50000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 600000,
+                        "type" : "BadTrainer",
+                        "amount" : 35000
+                    },
+                    {
+                        "host" : "localhost",
+                        "type" : "SQLTrainer",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 30000
+                    }
+                ],
+            "check-sets" : [
+                    {
+                        "host" : "localhost",
+                        "type" : "PredictionSQL",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 70000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 50000,
+                        "to" : 190000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 520000,
+                        "to" : 600000,
+                        "type" : "PredictionFileBadSamples"
+                    }
+                ]
+        }
+    ]
+}

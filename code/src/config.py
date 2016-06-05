@@ -19,7 +19,8 @@ class Config:
 
         try:
             self.data = copy.deepcopy(data)
-            del self.data['name']
+            if 'name' in self.data:
+                del self.data['name']
             self.data.update( str_config )
             self.path = directory
 
@@ -80,10 +81,18 @@ class Config:
             return self.data['name']
         return "defaultName"
 
+    def get_description(self):
+        if 'description' in self.data:
+            return self.data['description']
+        return "No description given"
+
     def get_configs(self):
         return self.configs
 
     def add_directory(self, name, features):
+        if not name in self.data:
+            return
+
         arr = self.data[name]
         for rec in arr:
             for f in features:
@@ -92,6 +101,8 @@ class Config:
                 except:
                     pass
 
+    def get_config_log(self):
+        return self.path + "logs/log_" + self.get_name() + ".txt"
 
     # Get the algorithm file
     def get_algorithm(self):
@@ -104,8 +115,15 @@ class Config:
     def get_feature(self):
         import feature
         if "featureClass" in self.data and "feature-file" in self.data:
-            return feature.BasicFeature.get_feature(self.data['featureClass'], self.path + self.data['feature-file'])
+            return feature.BasicFeature.get_feature(self.data['featureClass'], self)
+        elif "featureClass" in self.data:
+            return feature.BasicFeature.get_feature(self.data['featureClass'], self)
         return None
+
+    def get_feature_file(self):
+        if "feature-file" in self.data:
+            return self.path + self.data['feature-file']
+        return self.path + 'features.json'
 
     def get_feature_name(self):
         if 'featureClass' in self.data:
@@ -123,17 +141,22 @@ class Config:
             return self.data['data-sets']
         return []
 
+    def get_amount(self):
+        if 'amount' in self.data:
+            return self.data['amount']
+        return 1
+
     # Get trainer class
     def get_trainer(self):
         from train import Trainer
         if 'trainer' in self.data:
             return Trainer.get_trainer(self.data['trainer'])
-        return None
+        return Trainer.get_trainer('Trainer')
 
     def get_trainer_name(self):
         if 'trainer' in self.data:
             return self.data['trainer']
-        return "Unknown"
+        return "Trainer"
 
     # Get the check sets
     def get_check_sets(self):
@@ -210,24 +233,39 @@ class Config:
     def get_flow_timeout(self):
         if 'timeout' in self.data:
             return self.data['timeout']
-        return 10
+        return 5000
 
     def get_protocol_file(self):
         if 'protocol-file' in self.data:
             return self.path + self.data['protocol-file']
-        return ""
+        return self.path + "protocols.json"
 
     def get_logger_file(self):
         if 'logger' in self.data:
             return self.path + self.data['logger']
-        return ""
+        return self.path + "log.txt"
 
     def get_good_labels_file(self):
         if 'good-labels' in self.data:
             return self.path + self.data['good-labels']
-        return ""
+        return self.path + "good.txt"
 
     def print_labels(self):
         if 'print-labels' in self.data:
             return self.data['print-labels']
         return False
+
+    def get_firewall_logs(self):
+        if 'firewall_logs' in self.data:
+            return self.data['firewall_logs']
+        return ['./cegeka/2016-04-03_085630_83.log.textlog']
+
+    def get_country_file(self):
+        if 'country_file' in self.data:
+            return self.path + self.data['country_file']
+        return self.path + 'country_complete.json'
+
+    def get_db_file(self):
+        if 'db_file' in self.data:
+            return self.path + self.data['db_file']
+        return self.path + 'db.json'

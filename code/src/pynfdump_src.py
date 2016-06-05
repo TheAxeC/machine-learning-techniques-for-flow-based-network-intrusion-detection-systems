@@ -271,9 +271,9 @@ class Dumper:
             row = {
                 'af':           parts[0],
                 'first':        fromtimestamp(parts[1]),
-                #'msec_first':   parts[2],
+                'msec_first':   parts[2],
                 'last':         fromtimestamp(parts[3]),
-                #'msec_last':    parts[4],
+                'msec_last':    parts[4],
                 'prot':         self.protocols.get(parts[5], parts[5]),
                 #'sa0':          parts[6],
                 #'sa1':          parts[7],

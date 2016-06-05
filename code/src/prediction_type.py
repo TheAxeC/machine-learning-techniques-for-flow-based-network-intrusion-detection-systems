@@ -32,6 +32,23 @@ class PredictionFile(PredictionLoader):
 
         return loader.get_netflow()
 
+class PredictionFileBadSamples(PredictionLoader):
+    def load(self, data, predictor):
+        self.check_keys(data, "from", 0)
+        self.check_keys(data, "file", "")
+        self.check_keys(data, "to", -1)
+        print "Start file: " + str(data['file']) + "."
+
+        from loader import Loader, CTULoader
+        loader = Loader.get_loader(self.check_keys(data, "loader", "CTULoader"), CTULoader())
+        print "Using Loader \"" + data["loader"] + "\" to load the data."
+
+        if not loader.load(data['file'], data['from'], data['to'], predictor.get_good_labels(), False):
+            print "Dataset \"" + data['file'] + "\" could not be loaded."
+            return None
+
+        return loader.get_netflow()
+
 class PredictionSQL(PredictionLoader):
     def load(self, data, predictor):
         host = self.check_keys(data, "host", "")
@@ -41,11 +58,26 @@ class PredictionSQL(PredictionLoader):
         amount = self.check_keys(data, "amount", 2000)
         print "Start file: " + host+":"+db + "."
 
-        from loader import Loader, SQLLoader
-        loader = Loader.get_loader(self.check_keys(data, "loader", "SQLLoader"), SQLLoader())
+        from loader import Loader, PickleLoader
+        loader = Loader.get_loader(self.check_keys(data, "loader", "PickleLoader"), PickleLoader())
         print "Using Loader \"" + data["loader"] + "\" to load the data."
 
-        if not loader.load(host, user, password, db, amount):
+        if not loader.load(host, user, password, db, amount, classify=True, db_file=predictor.get_db_file()):
             print "Dataset \"" + host+":"+db + "\" could not be loaded."
             return None
         return loader.get_netflow()
+
+class PredictionBinary(PredictionLoader):
+    def load(self, data, predictor):
+        f = self.check_keys(data, "file", "")
+        amount = self.check_keys(data, "amount", -1)
+        print "Start file: " + str(data['file']) + "."
+
+        from loader import Loader, BinaryLoader
+        loader = Loader.get_loader(self.check_keys(data, "loader", "BinaryLoader"), BinaryLoader())
+        print "Using Loader \"" + data["loader"] + "\" to load the data."
+
+        if not loader.load(f, amount, predictor):
+            print "Dataset \"" + data['file'] + "\" could not be loaded."
+            return None
+        return None

@@ -1,0 +1,248 @@
+{
+    "check" : true,
+    "algorithm" : "KNeighborsClassifier",
+    "featureClass" : "FlowFeatureWFlags",
+    "amount" : 10,
+
+    "check-sets" : [
+            {
+                "file" : "../../test/test.flow",
+                "from" : 50000,
+                "to" : 190000
+            },
+            {
+                "file" : "../../test/test.flow",
+                "from" : 500000,
+                "to" : 600000,
+                "type" : "PredictionFileBadSamples"
+            }
+        ],
+
+    "configs" : [
+        {
+            "enable-IDS" : false,
+            "name" : "LinearSVC CTU",
+            "description" : "LinearSVC",
+            "check" : true,
+            "sniffer" : false,
+            "algorithm" : "LinearSVC",
+            "featureClass" : "FlowFeatureWCountry",
+            "data-sets" : [
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 10000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 600000,
+                        "type" : "BadTrainer",
+                        "amount" : 10000
+                    }
+                ]
+        },
+        {
+            "enable-IDS" : false,
+            "name" : "LinearSVC Cross",
+            "description" : "LinearSVC Cross",
+            "check" : true,
+            "sniffer" : false,
+            "algorithm" : "LinearSVC",
+            "featureClass" : "FlowFeatureWCountry",
+            "data-sets" : [
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 5000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 600000,
+                        "type" : "BadTrainer",
+                        "amount" : 5000
+                    },
+                    {
+                        "host" : "localhost",
+                        "type" : "SQLTrainer",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 5000
+                    }
+                ],
+            "check-sets" : [
+                    {
+                        "host" : "localhost",
+                        "type" : "PredictionSQL",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 70000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 50000,
+                        "to" : 190000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 520000,
+                        "to" : 600000,
+                        "type" : "PredictionFileBadSamples"
+                    }
+                ]
+        },
+        {
+            "enable-IDS" : true,
+            "name" : "LinearSVC CTU",
+            "description" : "LinearSVC",
+            "check" : true,
+            "sniffer" : false,
+            "algorithm" : "LinearSVC",
+            "featureClass" : "FlowFeatureWFlags",
+            "data-sets" : [
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 10000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 600000,
+                        "type" : "BadTrainer",
+                        "amount" : 10000
+                    }
+                ]
+        },
+        {
+            "enable-IDS" : true,
+            "name" : "LinearSVC Cross",
+            "description" : "LinearSVC Cross",
+            "check" : true,
+            "sniffer" : false,
+            "algorithm" : "LinearSVC",
+            "featureClass" : "FlowFeatureWFlags",
+            "data-sets" : [
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 5000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 600000,
+                        "type" : "BadTrainer",
+                        "amount" : 5000
+                    },
+                    {
+                        "host" : "localhost",
+                        "type" : "SQLTrainer",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 5000
+                    }
+                ],
+            "check-sets" : [
+                    {
+                        "host" : "localhost",
+                        "type" : "PredictionSQL",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 70000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 50000,
+                        "to" : 190000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 520000,
+                        "to" : 600000,
+                        "type" : "PredictionFileBadSamples"
+                    }
+                ]
+        },
+        {
+            "enable-IDS" : false,
+            "name" : "LinearSVC CTU",
+            "description" : "LinearSVC",
+            "check" : true,
+            "sniffer" : false,
+            "algorithm" : "LinearSVC",
+            "featureClass" : "FlowFeature",
+            "data-sets" : [
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 10000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 600000,
+                        "type" : "BadTrainer",
+                        "amount" : 10000
+                    }
+                ]
+        },
+        {
+            "enable-IDS" : false,
+            "name" : "LinearSVC Cross",
+            "description" : "LinearSVC Cross",
+            "check" : true,
+            "sniffer" : false,
+            "algorithm" : "LinearSVC",
+            "featureClass" : "FlowFeature",
+            "data-sets" : [
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 5000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 0,
+                        "to" : 600000,
+                        "type" : "BadTrainer",
+                        "amount" : 5000
+                    },
+                    {
+                        "host" : "localhost",
+                        "type" : "SQLTrainer",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 5000
+                    }
+                ],
+            "check-sets" : [
+                    {
+                        "host" : "localhost",
+                        "type" : "PredictionSQL",
+                        "user" : "root",
+                        "db" : "dataset",
+                        "password" : "password",
+                        "amount" : 70000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 50000,
+                        "to" : 190000
+                    },
+                    {
+                        "file" : "../../test/test.flow",
+                        "from" : 520000,
+                        "to" : 600000,
+                        "type" : "PredictionFileBadSamples"
+                    }
+                ]
+        }
+    ]
+}
