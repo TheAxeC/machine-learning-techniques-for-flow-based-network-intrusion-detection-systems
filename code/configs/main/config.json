@@ -5,21 +5,21 @@
 
     "configs" : [
         {
-            "name" : "KNeighborsClassifier with unlabeled data set",
+            "name" : "DecisionTreeClassifier with unlabeled data set",
             "description" : "Config for testing the datasets from EDM and Cegeka",
-            "algorithm" : "KNeighborsClassifier",
+            "algorithm" : "DecisionTreeClassifier",
             "data-sets" : [
                     {
                         "file" : "../../test/test.flow",
                         "from" : 0,
-                        "to" : 50000
+                        "to" : 20000
                     },
                     {
                         "file" : "../../test/test.flow",
                         "from" : 0,
                         "to" : 600000,
                         "type" : "BadTrainer",
-                        "amount" : 35000
+                        "amount" : 15000
                     },
                     {
                         "host" : "localhost",
@@ -27,7 +27,7 @@
                         "user" : "root",
                         "db" : "dataset",
                         "password" : "password",
-                        "amount" : 30000
+                        "amount" : 15000
                     }
                 ],
             "check-sets" : [

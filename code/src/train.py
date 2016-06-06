@@ -35,9 +35,9 @@ class Trainer(object):
             print "Trainer \"" + name + "\"does not exist."
             return default
 
-    def trainAll(self, feature, algorithm, good_labels, manager):
+    def trainAll(self, feature, algorithm, good_labels, manager, is_binary):
         samples = self.flow.get_sample_data_complete(feature)
-        targets = self.flow.get_target_data()
+        targets = self.flow.get_target_data(is_binary, good_labels)
         if len(samples) > 2:
             algorithm.train(samples, targets)
             pos_train = 0
@@ -70,9 +70,9 @@ class Trainer(object):
 
 class PlotTrainer(Trainer):
 
-    def trainAll(self, feature, algorithm, good_labels, manager):
+    def trainAll(self, feature, algorithm, good_labels, manager, version):
         self.flow = self.flow.random()
-        super(PlotTrainer, self).trainAll(feature, algorithm, good_labels, manager)
+        super(PlotTrainer, self).trainAll(feature, algorithm, good_labels, manager, version)
 
 # default netflow trainer
 class DefaultTrainer(Trainer):

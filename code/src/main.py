@@ -85,7 +85,7 @@ def training_data_set(config, algorithm, feature, good_labels, manager):
         if not trainer.train(algorithm, d, feature, good_labels, config):
             trained = False
     print "Start complete training..."
-    trainer.trainAll(feature, algorithm, good_labels, manager)
+    trainer.trainAll(feature, algorithm, good_labels, manager, config.is_binary())
     print "Training done."
     if not trained:
         print "No training provided."
@@ -151,7 +151,7 @@ def prediction(config, algorithm, feature, logger, good_labels, manager):
     if config.is_check():
         print "Running Checks..."
         print "Used for checking the accuracy of the IDS"
-        checker.runner(config.get_check_sets(), config)
+        checker.runner(config.get_check_sets(), config, good_labels)
         print "Checks done"
     print "End predictions and checks.\n"
 

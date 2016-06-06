@@ -76,6 +76,11 @@ class Config:
                 if c.read_config_str(d, self.path, self.data):
                     self.configs.append(c)
 
+    def is_binary(self):
+        if 'is_binary' in self.data:
+            return self.data['is_binary'] == True
+        return False
+
     def get_name(self):
         if 'name' in self.data:
             return self.data['name']

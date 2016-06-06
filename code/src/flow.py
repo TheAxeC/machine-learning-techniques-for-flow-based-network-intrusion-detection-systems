@@ -26,8 +26,17 @@ class Flows:
         return feature.make_record(self.netflow[i])
 
     # Get the targets (labels)
-    def get_target_data(self):
-        return self.flow_targets
+    def get_target_data(self, is_binary=False, good_labels=None):
+        if is_binary:
+            ret = []
+            for k in self.flow_targets:
+                if k in good_labels:
+                    ret.append('non-malicious')
+                else:
+                    ret.append('malicious')
+            return ret
+        else:
+            return self.flow_targets
 
     # Get the sample size
     def get_size(self):

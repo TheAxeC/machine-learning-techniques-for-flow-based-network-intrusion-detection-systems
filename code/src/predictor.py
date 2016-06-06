@@ -36,14 +36,14 @@ class Predictor:
         return self.good_labels
 
     # Run the predictor
-    def runner(self, data_set, config):
+    def runner(self, data_set, config, good_labels):
         for d in data_set:
             try:
                 samples = self.predict_raw(d)
                 if samples:
                     print "Using " + str(samples.get_size()) + " samples."
                     print "Start predicting..."
-                    self.predict(samples)
+                    self.predict(samples, config.is_binary(), good_labels)
             except KeyboardInterrupt as e:
                 self.logger.update_progress(-1)
                 print "KeyboardInterrupt occured..."
@@ -69,9 +69,9 @@ class Predictor:
         return loader.load(data, self)
 
     # Predict a single flow file that has been loaded
-    def predict(self, flow):
+    def predict(self, flow, is_binary, good_labels):
         if self.algorithm:
-            self.loop(flow)
+            self.loop(flow, is_binary, good_labels)
         else:
             print "Please set an algorithm first."
 
@@ -86,14 +86,15 @@ class Predictor:
     def get_db_file(self):
         return self.db_file
 
-    def loop(self, netflow):
+    def loop(self, netflow, is_binary, good_labels):
         i = 0
         size = netflow.get_size()
 
+        targets = netflow.get_target_data(is_binary, good_labels)
         while i < size:
             flow_raw = netflow.get_netflow()[i]
             flow = netflow.get_sample_data(self.feature, i)
-            label =  netflow.get_target_data()[i]
+            label =  targets[i]
             self.predict_sample(flow, label, flow_raw)
 
             i = i + 1

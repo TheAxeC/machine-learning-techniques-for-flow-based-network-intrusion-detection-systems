@@ -1,0 +1,123 @@
+% Appendix Template
+
+\chapter{User guide} % Main appendix title
+
+\label{config} % Change X to a consecutive letter; for referencing this appendix elsewhere, use \ref{AppendixX}
+
+\section{Running}
+The main program can be run using the command in Listing~\ref{command}. If no config file is passed as argument the program will look for a config file named "config.json" in the current directory. \\
+\begin{lstlisting}[frame=single, label=command]
+python main.py [config-file-location]
+\end{lstlisting}
+
+\section{Running multiple tests}
+It is also possible to run multiple tests automatically. This can be done using the command as seen in Listing~\ref{commandmult}. If no config file is passed as argument the program will look for a config file named "testing.json" in the current directory. The layout of the config file is fairly simple. It should be a list of config files that have to be run as seen in Listing~\ref{commandmultexample}. \\
+
+\begin{lstlisting}[frame=single, label=commandmult]
+python testing.py [config-file-location]
+\end{lstlisting}
+
+\begin{lstlisting}[language=json,firstnumber=1, label=commandmultexample]
+[
+    "main/config.json"
+]
+\end{lstlisting}
+
+\section{Config file}
+The config file contains the main variables that define the execution of the program. If the format of an attribute is not correct, the program either skips that value or halts program execution. \\
+\\
+There are five important boolean settings in the config file. \textbf{enable-IDS} is a boolean which specifies whether the IDS should run or not. \textbf{pcap-to-flow} is whether the small, built-in flow-converter should be used. This is used to convert \textit{pcap} files to flow files. \textbf{print-labels} activates a section of the program which extracts and prints the labels that belong to a given dataset. This could be useful when trying to find out which labels the currently selected dataset will use.  \\
+\\
+The booleans \textbf{check} and \textbf{sniffer} can only be used when \textbf{enable-IDS} is set to \textit{True}. \textbf{check} is used to activate or disable the checking of datasets after the training phase. \textbf{sniffer} is used to activate the built-in packet sniffer. The packet sniffer sniffs packets and builts flows, which are then fed to the machine learning algorithm. \\
+\begin{lstlisting}[language=json,firstnumber=1,label={configmain}]
+{
+    "enable-IDS" : true,
+    "pcap-to-flow" : false,
+    "print-labels" : false
+    
+    "check" : true,
+    "sniffer" : false,
+\end{lstlisting}~\\
+\noindent \textbf{pcap-files} is a list of (source, destination) tuples for files that have to be converted using the built-in flow converter. \\
+
+\begin{lstlisting}[language=json,firstnumber=1]
+    "pcap-files" : [
+        {
+            "src" : "../../test/dosattack.pcap",
+            "dest" :  "../../test/dosattack2.flow"
+        }
+    ],
+\end{lstlisting}~\\
+\noindent \textbf{algorithm} is used to define which algorithm is used. The value of this attribute should match the name of one of the implemented machine learning algorithm classes. \textbf{featureClass} is used to select which class to use to retrieve  features from a flow. \textbf{trainer} is used to select the training method. When the value is set to "Trainer", it is possible to select the training class in the data sets. \\
+
+\begin{lstlisting}[language=json,firstnumber=1]
+    "algorithm" : "KNeighborsClassifier",
+    "featureClass" : "FlowFeature",
+    "trainer" : "Trainer",
+\end{lstlisting}~\\
+\noindent Some attributes in the config file are used to save and use the models that the machine learning algorithms make. \textbf{model\_dir} is used to define the directory location. \textbf{model} defines the name of the model file. \textbf{use\_model} and \textbf{store\_model} are respectively used to activate usage and saving of the model. \\
+
+\begin{lstlisting}[language=json,firstnumber=1]
+    "model_dir" : "../../models/",
+    "model" : "model.mdl",
+    "use_model" : false,
+    "store_model" : true,
+\end{lstlisting}~\\
+\noindent \textbf{data-sets} indicates the data to be used when training. The layout of each item in the list is dependent of which loader should be used. A netflow file has the attributes: \textbf{file}, \textbf{from} and \textbf{to}. An SQL trainer is also implemented. Here the attributes should indicate the \textbf{host}, the \textbf{user}, the \textbf{database} and the \textbf{password}. The \textbf{type} can be used to indicate which type of date it is. This should be the name of a trainer class. \\
+\\
+The \textbf{check-sets} are used to check the performance of the machine learning algorithm. Here the \textbf{type} indicates which type the data is. The possible values are: "file" and "sql". \\
+
+\begin{lstlisting}[language=json,firstnumber=1]
+    "data-sets" : [
+            {
+                "file" : "../../test/capture20110815.binetflow",
+                "from" : 0,
+                "to" : 40000
+            },
+            {
+                "host" : "localhost",
+                "type" : "SQLTrainer",
+                "user" : "user",
+                "db" : "dataset",
+                "password" : "password"
+            }
+        ],
+    
+
+    "check-sets" : [
+            {
+                "file" : "../../test/capture20110815.binetflow",
+                "type" : "file",
+                "from" : 0,
+                "to" : -1
+            }
+        ],
+\end{lstlisting}~\\
+\noindent \textbf{feature-file} is a file that can contain information to be used in the feature class. The layout of this file is dependent on which "featureClass" is used. \textbf{logger} indicates the location of the log file to use. \textbf{good-labels} indicate which labels are considered to belong to normal behaviour.
+
+\begin{lstlisting}[language=json,firstnumber=1]
+    "feature-file" : "features.json",
+    "logger" : "log.txt",
+    "good-labels" : "good.txt",
+\end{lstlisting}~\\
+\noindent The following attributes are used in the small sniffer that was implemented. \textbf{protocol-file} is a file that selects which protocols to use.  \textbf{timeout} is a value that define the amount of milliseconds to wait before closing a flow after the last packet in that flow.
+
+\begin{lstlisting}[language=json,firstnumber=1]
+    "protocol-file" : "protocols.json",
+    "timeout" : 5000,
+\end{lstlisting}~\\
+\noindent In order to be able to test multiple algorithms at a time, there is another method next to the \textit{testing.py} file. During testing it was found that making a lot of config files was cumbersome work. A new feature was added to the config file. An attribute \textbf{configs} can be added. This should be a list. \\
+\\
+Each element of this list, represents a distinct config file. The variables in the "outer"/"main" config file are considered the standard values. Each element in the list can overwrite these elements. For example, below the list contains two elements which have different algorithms. The data-sets and check-sets are the same for these two "config" files. \textbf{use\_main} is used to let the program know whether to execute and "use" the outer config aswell, or to only use the configs list.
+\begin{lstlisting}[language=json,firstnumber=1]
+    "use_main" : true,
+    "configs" : [
+        {
+            "algorithm" : "KNeighborsClassifier"
+        },
+        {
+            "algorithm" : "SupportVectorMachines"
+        }
+    ],
+}
+\end{lstlisting}

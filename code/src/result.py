@@ -297,14 +297,14 @@ class ResultPrediction:
             s += "Accuracy score Binary: " + str(acc) + "\n"
             self.manager.add_result_binary(f1, prec, rec)
 
-            #s += "classification report: \n"
-            #s += metrics.classification_report(self.ground_truth, self.predictions)
-            #s += "\n"
-            #s += "Predictions:\n"
-            #from collections import Counter
-            #col = Counter(self.predictions)
-            #for key, value in col.iteritems():
-            #    s += str(key) + " => " + str(value) + "\n"
+            s += "classification report: \n"
+            s += metrics.classification_report(self.ground_truth, self.predictions)
+            s += "\n"
+            s += "Predictions:\n"
+            from collections import Counter
+            col = Counter(self.predictions)
+            for key, value in col.iteritems():
+                s += str(key) + " => " + str(value) + "\n"
         except Exception as e:
             import traceback
             traceback.print_exc()
