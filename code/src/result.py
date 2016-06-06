@@ -275,15 +275,18 @@ class ResultPrediction:
                 #labels = set.keys()
                 #s += "Labels used: " + str(labels) + "\n"
 
-            f1 = metrics.f1_score(self.ground_truth, self.predictions, average='weighted')
-            s += "F1 score: " + str(f1) + "\n"
-            prec = metrics.precision_score(self.ground_truth, self.predictions, average='weighted')
-            s += "Precision score: " + str(prec) + "\n"
-            rec = metrics.recall_score(self.ground_truth, self.predictions, average='weighted')
-            s += "Recall score: " + str(rec) + "\n"
-            acc = metrics.accuracy_score(self.ground_truth, self.predictions)
-            s += "Accuracy score: " + str(acc) + "\n"
-            self.manager.add_result_multiclass(f1, prec, rec)
+            try:
+                f1 = metrics.f1_score(self.ground_truth, self.predictions, average='weighted')
+                s += "F1 score: " + str(f1) + "\n"
+                prec = metrics.precision_score(self.ground_truth, self.predictions, average='weighted')
+                s += "Precision score: " + str(prec) + "\n"
+                rec = metrics.recall_score(self.ground_truth, self.predictions, average='weighted')
+                s += "Recall score: " + str(rec) + "\n"
+                acc = metrics.accuracy_score(self.ground_truth, self.predictions)
+                s += "Accuracy score: " + str(acc) + "\n"
+                self.manager.add_result_multiclass(f1, prec, rec)
+            except Exception as e:
+                pass
 
             s += "\n"
 

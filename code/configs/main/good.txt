@@ -84,6 +84,7 @@ flow=To-Background-CVUT-WebServer
 flow=Background-google-analytics9
 flow=Background
 flow=Background-google-analytics8
+non-malicious
 non_malicious
 flow=From-Normal-V50-CVUT-WebServer
 flow=To-Background-UDP-CVUT-DNS-Server

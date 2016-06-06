@@ -21,3 +21,29 @@ The other issue is the performance of the machine learning algorithms. During th
 
 \section{Combination of algorithms}
 In this thesis, multiple algorithms have been used. However, these algorithms were tested separately. It would be interesting to find out whether these algorithms can be combined. This could be done in a similar way as explained in Section~\ref{compAI}. However, it could also be done by training multiple algorithms and using the results in such a way that the multi-class and binary F-scores are maximised. One method of doing this could be by minimizing the amount of false positives and false negatives. 
+
+\section{Using only binary classification}
+
+\begin{table}[H]
+\caption{K-Nearest Neighbors with pure binary classification}
+\label{tab:one:cross}
+\centering
+\begin{tabular}{l c c r}
+\toprule
+EXperiment & CTU dataset & Cross-dataset \\
+\midrule
+Binary F-score & 0.9859 & 0.9926  \\
+Binary Precision & 0.9803 & 0.9895 \\
+Binary Recall & 0.9917 & 0.9957 \\
+\midrule
+Total amount of samples & 195519.0 & 246467.0 \\
+False negative & 469.0 & 468.0  \\
+False positive & 1136.0 & 1137.0  \\
+True negative & 137492.0 & 137491.0  \\
+True positive & 56422.0 & 107371.0  \\
+\midrule
+Positive training samples & 35363.0 & 65363.0 \\
+Negative training samples & 49638.0 & 49638.0 \\
+\bottomrule
+\end{tabular}
+\end{table}

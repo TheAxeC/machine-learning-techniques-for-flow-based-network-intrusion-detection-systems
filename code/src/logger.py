@@ -20,14 +20,16 @@ class Logger:
 
     # Output that a malicious packet has been found
     def output_malicious(self, label, flow):
-        self.logger.write("Malicious label found \"" + str(label) + "\"!!!!!!!!!!!\n")
-        self.output(flow)
-        self.logger.flush()
+        if self.logger:
+            self.logger.write("Malicious label found \"" + str(label) + "\"!!!!!!!!!!!\n")
+            self.output(flow)
+            self.logger.flush()
 
     # Output a good label
     def output_good(self, label):
-        self.logger.write("Good label found \"" + label + "\"\n")
-        self.logger.flush()
+        if self.logger:
+            self.logger.write("Good label found \"" + label + "\"\n")
+            self.logger.flush()
 
     # Output whether a label is good or bad
     def output_complete(self, label, flow, good_labels):
@@ -38,17 +40,19 @@ class Logger:
 
     # Standard output for a flow packet
     def output(self, flow):
-        self.logger.write("\t protocol: " + str(flow.protocol) + "\n")
-        self.logger.write("\t address: from: " + str(flow.src_ip) + " to " + str(flow.dest_ip) + "\n")
-        self.logger.write("\t ports: from: " + str(flow.src_port) + " to " + str(flow.dest_port) + "\n")
-        self.logger.write("\t packets: " + str(flow.total_pckts) + " with " + str(flow.total_bytes) + " bytes\n")
-        self.logger.write("\t duration: " + str(flow.duration) + " starting from " + str(flow.start_time) + "\n")
-        self.logger.flush()
+        if self.logger:
+            self.logger.write("\t protocol: " + str(flow.protocol) + "\n")
+            self.logger.write("\t address: from: " + str(flow.src_ip) + " to " + str(flow.dest_ip) + "\n")
+            self.logger.write("\t ports: from: " + str(flow.src_port) + " to " + str(flow.dest_port) + "\n")
+            self.logger.write("\t packets: " + str(flow.total_pckts) + " with " + str(flow.total_bytes) + " bytes\n")
+            self.logger.write("\t duration: " + str(flow.duration) + " starting from " + str(flow.start_time) + "\n")
+            self.logger.flush()
 
     def output_check(self, label, flow, correct):
-        self.logger.write("Uncorrect labeling: \n")
-        self.logger.write("\t got " + str(label) + " expected: " + str(correct) + "\n")
-        self.output(flow)
+        if self.logger:
+            self.logger.write("Uncorrect labeling: \n")
+            self.logger.write("\t got " + str(label) + " expected: " + str(correct) + "\n")
+            self.output(flow)
 
 
     # Close the log file
@@ -58,8 +62,9 @@ class Logger:
             self.logger = None
 
     def write(self, str):
-        self.logger.write(str)
-        self.logger.flush()
+        if self.logger:
+            self.logger.write(str)
+            self.logger.flush()
 
     # update_progress() : Displays or updates a console progress bar
     ## Accepts a float between 0 and 1. Any int will be converted to a float.
