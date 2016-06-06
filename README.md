@@ -1,5 +1,5 @@
-# Bachelor-thesis-ML-IPS
-My Bachelor thesis for Bachelor Computer Science at UHasselt: An Intrusion detection (and prevention) system using machine learning approaches.
+# Bachelor-thesis-ML-IDS
+My Bachelor thesis for Bachelor Computer Science at UHasselt: An Intrusion detection system using machine learning approaches.
 
 ## Installation
  The IDS has only been tested on UNIX based systems. The IDS requires several python packages. These are all listed in `code/pip_requirements_unix.txt`. The main required elements are:
