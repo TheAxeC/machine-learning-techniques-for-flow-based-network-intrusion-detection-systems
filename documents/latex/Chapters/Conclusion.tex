@@ -14,7 +14,7 @@ Not all machine learning algorithms work as good. The Naive Bayes algorithm make
 \\
 Support Vector Machines can be used with a linear kernel or a RBF kernel. The linear kernel SVM does not work at all, since intrusion detection is not a problem that can be solved with linear classifiers. Support vector machines with a RBF kernel perform much better. However, there performance is still quite average compared to the best algorithm. K-Nearest Neighbors performed the best. It has good results in both the evaluation and the real-life scenario.\\
 \\
-When using an algorithm such as K-Nearest Neighbors close attention needs to be paid to what value of $k$ is chosen and which distance metric is used. It seems that a value of $k=3$ or $k=7$ works well. The Canberra distance metric works the best for multi-class classification. Otherwise, if there is only an interest towards binary classification, the Euclidean or Chebyshev distance metric should be chosen. \\
+When using an algorithm such as K-Nearest Neighbors close attention needs to be paid to what value of $k$ is chosen and which distance metric is used. The value of $k$ needs to be chosen experimentally, since the results in this thesis show that there is not a best value of $k$. The Canberra distance metric works the best for multi-class classification. Otherwise, if there is only an interest towards binary classification, the Euclidean or Chebyshev distance metric should be chosen. \\
 \\
 Unsupervised learning algorithms do not work well out-of-the-box. They need a lot of manual interference before they are viable to be used for intrusion detection. 
 
