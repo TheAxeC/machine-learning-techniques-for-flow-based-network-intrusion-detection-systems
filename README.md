@@ -8,8 +8,7 @@ My Bachelor thesis for Bachelor Computer Science at UHasselt: An Intrusion detec
 - sklearn (unstable branch)
 
 ## Datasets
-The datasets used are listed in the `/dataset` folder. Two other datasets were used.
-These were from the EDM located near the UHasselt and from Cegeka in Hasselt. These cannot be made publically available.
+The datasets cannot be made publically available. The thesis does show references to the different datasets that were used.
 
 ## Experiments
 The results from the main experiments used in the thesis are listed in the `experiments/` folder. The config files used to execute these experiments are listed in `code/configs/`.
