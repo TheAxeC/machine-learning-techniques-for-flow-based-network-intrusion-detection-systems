@@ -53,4 +53,10 @@ def calculate_class(recall, precision):
     s += 'True positive & ' + str(true_pos) + " \\\\" + "\n"
     print s
 
-calculate_ctu(0.0143,  0.9987)
+import sys
+if __name__ == "__main__":
+    if len(sys.argv) == 4:
+        if sys.argv[1] == "ctu":
+            calculate_ctu(float(sys.argv[2]), float(sys.argv[3]))
+        elif sys.argv == "cross":
+            calculate_cross(float(sys.argv[2]), float(sys.argv[3]))
