@@ -1,3 +1,1813 @@
 
 \chapter{Support Vector Machine with RBF Kernel} % Main chapter title
 
+\section{Standard feature set}
+\subsection{CTU Dataset}
+
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Standard feature set CTU: Experiment 1.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.364164896326 \\
+Multi-class Precision & 0.5124492757 \\
+Multi-class Recall & 0.403786844245 \\
+\midrule
+Binary F-score & 0.0455568604424 \\
+Binary Precision & 0.0749205327325 \\
+Binary Recall & 0.0327292541878 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 55029 \\
+False positive & 22991 \\
+True negative & 115637 \\
+True positive & 1862 \\
+\midrule
+Positive training samples & 2522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Standard feature set CTU: Experiment 2.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.364164896326 \\
+Multi-class Precision & 0.5124492757 \\
+Multi-class Recall & 0.403786844245 \\
+\midrule
+Binary F-score & 0.0455568604424 \\
+Binary Precision & 0.0749205327325 \\
+Binary Recall & 0.0327292541878 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 55029 \\
+False positive & 22991 \\
+True negative & 115637 \\
+True positive & 1862 \\
+\midrule
+Positive training samples & 2522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Standard feature set CTU: Experiment 3.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.364164896326 \\
+Multi-class Precision & 0.5124492757 \\
+Multi-class Recall & 0.403786844245 \\
+\midrule
+Binary F-score & 0.0455568604424 \\
+Binary Precision & 0.0749205327325 \\
+Binary Recall & 0.0327292541878 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 55029 \\
+False positive & 22991 \\
+True negative & 115637 \\
+True positive & 1862 \\
+\midrule
+Positive training samples & 2522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Standard feature set CTU: Experiment 4.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.364164896326 \\
+Multi-class Precision & 0.5124492757 \\
+Multi-class Recall & 0.403786844245 \\
+\midrule
+Binary F-score & 0.0455568604424 \\
+Binary Precision & 0.0749205327325 \\
+Binary Recall & 0.0327292541878 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 55029 \\
+False positive & 22991 \\
+True negative & 115637 \\
+True positive & 1862 \\
+\midrule
+Positive training samples & 2522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Standard feature set CTU: Experiment 5.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.364164896326 \\
+Multi-class Precision & 0.5124492757 \\
+Multi-class Recall & 0.403786844245 \\
+\midrule
+Binary F-score & 0.0455568604424 \\
+Binary Precision & 0.0749205327325 \\
+Binary Recall & 0.0327292541878 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 55029 \\
+False positive & 22991 \\
+True negative & 115637 \\
+True positive & 1862 \\
+\midrule
+Positive training samples & 2522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Standard feature set CTU: Experiment 6.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.364164896326 \\
+Multi-class Precision & 0.5124492757 \\
+Multi-class Recall & 0.403786844245 \\
+\midrule
+Binary F-score & 0.0455568604424 \\
+Binary Precision & 0.0749205327325 \\
+Binary Recall & 0.0327292541878 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 55029 \\
+False positive & 22991 \\
+True negative & 115637 \\
+True positive & 1862 \\
+\midrule
+Positive training samples & 2522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Standard feature set CTU: Experiment 7.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.364164896326 \\
+Multi-class Precision & 0.5124492757 \\
+Multi-class Recall & 0.403786844245 \\
+\midrule
+Binary F-score & 0.0455568604424 \\
+Binary Precision & 0.0749205327325 \\
+Binary Recall & 0.0327292541878 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 55029 \\
+False positive & 22991 \\
+True negative & 115637 \\
+True positive & 1862 \\
+\midrule
+Positive training samples & 2522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Standard feature set CTU: Experiment 8.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.364164896326 \\
+Multi-class Precision & 0.5124492757 \\
+Multi-class Recall & 0.403786844245 \\
+\midrule
+Binary F-score & 0.0455568604424 \\
+Binary Precision & 0.0749205327325 \\
+Binary Recall & 0.0327292541878 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 55029 \\
+False positive & 22991 \\
+True negative & 115637 \\
+True positive & 1862 \\
+\midrule
+Positive training samples & 2522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Standard feature set CTU: Experiment 9.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.364164896326 \\
+Multi-class Precision & 0.5124492757 \\
+Multi-class Recall & 0.403786844245 \\
+\midrule
+Binary F-score & 0.0455568604424 \\
+Binary Precision & 0.0749205327325 \\
+Binary Recall & 0.0327292541878 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 55029 \\
+False positive & 22991 \\
+True negative & 115637 \\
+True positive & 1862 \\
+\midrule
+Positive training samples & 2522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Standard feature set CTU: Experiment 10.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.364164896326 \\
+Multi-class Precision & 0.5124492757 \\
+Multi-class Recall & 0.403786844245 \\
+\midrule
+Binary F-score & 0.0455568604424 \\
+Binary Precision & 0.0749205327325 \\
+Binary Recall & 0.0327292541878 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 55029 \\
+False positive & 22991 \\
+True negative & 115637 \\
+True positive & 1862 \\
+\midrule
+Positive training samples & 2522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Standard feature set CTU: Average.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.364164896326 \\
+Multi-class Precision & 0.5124492757 \\
+Multi-class Recall & 0.403786844245 \\
+\midrule
+Binary F-score & 0.0455568604424 \\
+Binary Precision & 0.0749205327325 \\
+Binary Recall & 0.0327292541878 \\
+\midrule
+Total amount of samples & 195519.0 \\
+False negative & 55029.0 \\
+False positive & 22991.0 \\
+True negative & 115637.0 \\
+True positive & 1862.0 \\
+\midrule
+Positive training samples & 2522.0 \\
+Negative training samples & 2479.0 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Standard feature set CTU: Variance.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 3.08148791102e-33 \\
+Multi-class Precision & 0.0 \\
+Multi-class Recall & 1.23259516441e-32 \\
+\midrule
+Binary F-score & 0.0 \\
+Binary Precision & 0.0 \\
+Binary Recall & 4.81482486097e-35 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+
+\newpage
+\subsection{Cross Dataset}
+
+
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Standard feature set Cross: Experiment 1.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.335081994289 \\
+Multi-class Precision & 0.654163480256 \\
+Multi-class Recall & 0.427659686692 \\
+\midrule
+Binary F-score & 0.674000068751 \\
+Binary Precision & 0.508295704145 \\
+Binary Recall & 1.0 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 0.0 \\
+False positive & 104319.0 \\
+True negative & 34309.0 \\
+True positive & 107839.0 \\
+\midrule
+Positive training samples & 4522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Standard feature set Cross: Experiment 2.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.334890285075 \\
+Multi-class Precision & 0.653538976327 \\
+Multi-class Recall & 0.427485221145 \\
+\midrule
+Binary F-score & 0.673905299929 \\
+Binary Precision & 0.508187914403 \\
+Binary Recall & 1.0 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 0.0 \\
+False positive & 104364.0 \\
+True negative & 34264.0000001 \\
+True positive & 107839.0 \\
+\midrule
+Positive training samples & 4522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Standard feature set Cross: Experiment 3.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.335357929338 \\
+Multi-class Precision & 0.647710365227 \\
+Multi-class Recall & 0.427821980225 \\
+\midrule
+Binary F-score & 0.673980378 \\
+Binary Precision & 0.50832123258 \\
+Binary Recall & 0.99981453834 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 19.9999999527 \\
+False positive & 104289.0 \\
+True negative & 34339.0000001 \\
+True positive & 107819.0 \\
+\midrule
+Positive training samples & 4522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Standard feature set Cross: Experiment 4.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.335281942093 \\
+Multi-class Precision & 0.653733416642 \\
+Multi-class Recall & 0.427826037563 \\
+\midrule
+Binary F-score & 0.674073796263 \\
+Binary Precision & 0.508379572229 \\
+Binary Recall & 1.0 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 0.0 \\
+False positive & 104284.0 \\
+True negative & 34343.9999999 \\
+True positive & 107839.0 \\
+\midrule
+Positive training samples & 4522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Standard feature set Cross: Experiment 5.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.335312871722 \\
+Multi-class Precision & 0.653842430198 \\
+Multi-class Recall & 0.42776112015 \\
+\midrule
+Binary F-score & 0.674084330082 \\
+Binary Precision & 0.508391555644 \\
+Binary Recall & 1.0 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 0.0 \\
+False positive & 104279.0 \\
+True negative & 34349.0000002 \\
+True positive & 107839.0 \\
+\midrule
+Positive training samples & 4522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Standard feature set Cross: Experiment 6.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.335507295397 \\
+Multi-class Precision & 0.653597362073 \\
+Multi-class Recall & 0.427931528359 \\
+\midrule
+Binary F-score & 0.674153861542 \\
+Binary Precision & 0.508470660348 \\
+Binary Recall & 1.0 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 0.0 \\
+False positive & 104246.0 \\
+True negative & 34381.9999998 \\
+True positive & 107839.0 \\
+\midrule
+Positive training samples & 4522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Standard feature set Cross: Experiment 7.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.335479635422 \\
+Multi-class Precision & 0.653845182633 \\
+Multi-class Recall & 0.427963987065 \\
+\midrule
+Binary F-score & 0.674118040514 \\
+Binary Precision & 0.508429906366 \\
+Binary Recall & 1.0 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 0.0 \\
+False positive & 104263.0 \\
+True negative & 34365.0000001 \\
+True positive & 107839.0 \\
+\midrule
+Positive training samples & 4522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Standard feature set Cross: Experiment 8.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.335132276178 \\
+Multi-class Precision & 0.64703765115 \\
+Multi-class Recall & 0.427777349503 \\
+\midrule
+Binary F-score & 0.67396563256 \\
+Binary Precision & 0.508304457488 \\
+Binary Recall & 0.99981453834 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 19.9999999527 \\
+False positive & 104296.0 \\
+True negative & 34332.0000001 \\
+True positive & 107819.0 \\
+\midrule
+Positive training samples & 4522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Standard feature set Cross: Experiment 9.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.334867706718 \\
+Multi-class Precision & 0.653567657531 \\
+Multi-class Recall & 0.427542023881 \\
+\midrule
+Binary F-score & 0.673960051997 \\
+Binary Precision & 0.508250187344 \\
+Binary Recall & 1.0 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 0.0 \\
+False positive & 104338.0 \\
+True negative & 34290.0000002 \\
+True positive & 107839.0 \\
+\midrule
+Positive training samples & 4522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Standard feature set Cross: Experiment 10.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.335293380236 \\
+Multi-class Precision & 0.653598846776 \\
+Multi-class Recall & 0.427821980225 \\
+\midrule
+Binary F-score & 0.674065369446 \\
+Binary Precision & 0.508369985905 \\
+Binary Recall & 1.0 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 0.0 \\
+False positive & 104288.0 \\
+True negative & 34340.0000001 \\
+True positive & 107839.0 \\
+\midrule
+Positive training samples & 4522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Standard feature set Cross: Average.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.335220531647 \\
+Multi-class Precision & 0.652463536881 \\
+Multi-class Recall & 0.427759091481 \\
+\midrule
+Binary F-score & 0.674030682908 \\
+Binary Precision & 0.508340117645 \\
+Binary Recall & 0.999962907668 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 10.8 \\
+False positive & 104306.8 \\
+True negative & 34321.2 \\
+True positive & 107828.2 \\
+\midrule
+Positive training samples & 4522.0 \\
+Negative training samples & 2479.0 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Standard feature set Cross: Variance.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 4.46381045318e-08 \\
+Multi-class Precision & 6.52957111283e-06 \\
+Multi-class Recall & 2.16450529695e-08 \\
+\midrule
+Binary F-score & 5.71532387962e-09 \\
+Binary Precision & 6.50521942293e-09 \\
+Binary Recall & 5.5033643988e-09 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+
+\newpage
+\section{TCP feature set}
+\subsection{CTU Dataset}
+
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with TCP feature set CTU: Experiment 1.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.303097321166 \\
+Multi-class Precision & 0.555459222519 \\
+Multi-class Recall & 0.358998358216 \\
+\midrule
+Binary F-score & 0.0282803077563 \\
+Binary Precision & 0.998776009792 \\
+Binary Recall & 0.0143432177322 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 56077.5 \\
+False positive & 0.999999999939 \\
+True negative & 138627.0 \\
+True positive & 813.5 \\
+\midrule
+Positive training samples & 2522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with TCP feature set CTU: Experiment 2.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.303097321166 \\
+Multi-class Precision & 0.555459222519 \\
+Multi-class Recall & 0.358998358216 \\
+\midrule
+Binary F-score & 0.0282803077563 \\
+Binary Precision & 0.998776009792 \\
+Binary Recall & 0.0143432177322 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 56077.5 \\
+False positive & 0.999999999939 \\
+True negative & 138627.0 \\
+True positive & 813.5 \\
+\midrule
+Positive training samples & 2522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with TCP feature set CTU: Experiment 3.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.303097321166 \\
+Multi-class Precision & 0.555459222519 \\
+Multi-class Recall & 0.358998358216 \\
+\midrule
+Binary F-score & 0.0282803077563 \\
+Binary Precision & 0.998776009792 \\
+Binary Recall & 0.0143432177322 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 56077.5 \\
+False positive & 0.999999999939 \\
+True negative & 138627.0 \\
+True positive & 813.5 \\
+\midrule
+Positive training samples & 2522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with TCP feature set CTU: Experiment 4.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.303097321166 \\
+Multi-class Precision & 0.555459222519 \\
+Multi-class Recall & 0.358998358216 \\
+\midrule
+Binary F-score & 0.0282803077563 \\
+Binary Precision & 0.998776009792 \\
+Binary Recall & 0.0143432177322 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 56077.5 \\
+False positive & 0.999999999939 \\
+True negative & 138627.0 \\
+True positive & 813.5 \\
+\midrule
+Positive training samples & 2522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with TCP feature set CTU: Experiment 5.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.303097321166 \\
+Multi-class Precision & 0.555459222519 \\
+Multi-class Recall & 0.358998358216 \\
+\midrule
+Binary F-score & 0.0282803077563 \\
+Binary Precision & 0.998776009792 \\
+Binary Recall & 0.0143432177322 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 56077.5 \\
+False positive & 0.999999999939 \\
+True negative & 138627.0 \\
+True positive & 813.5 \\
+\midrule
+Positive training samples & 2522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with TCP feature set CTU: Experiment 6.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.303097321166 \\
+Multi-class Precision & 0.555459222519 \\
+Multi-class Recall & 0.358998358216 \\
+\midrule
+Binary F-score & 0.0282803077563 \\
+Binary Precision & 0.998776009792 \\
+Binary Recall & 0.0143432177322 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 56077.5 \\
+False positive & 0.999999999939 \\
+True negative & 138627.0 \\
+True positive & 813.5 \\
+\midrule
+Positive training samples & 2522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with TCP feature set CTU: Experiment 7.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.303097321166 \\
+Multi-class Precision & 0.555459222519 \\
+Multi-class Recall & 0.358998358216 \\
+\midrule
+Binary F-score & 0.0282803077563 \\
+Binary Precision & 0.998776009792 \\
+Binary Recall & 0.0143432177322 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 56077.5 \\
+False positive & 0.999999999939 \\
+True negative & 138627.0 \\
+True positive & 813.5 \\
+\midrule
+Positive training samples & 2522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with TCP feature set CTU: Experiment 8.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.303097321166 \\
+Multi-class Precision & 0.555459222519 \\
+Multi-class Recall & 0.358998358216 \\
+\midrule
+Binary F-score & 0.0282803077563 \\
+Binary Precision & 0.998776009792 \\
+Binary Recall & 0.0143432177322 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 56077.5 \\
+False positive & 0.999999999939 \\
+True negative & 138627.0 \\
+True positive & 813.5 \\
+\midrule
+Positive training samples & 2522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with TCP feature set CTU: Experiment 9.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.303097321166 \\
+Multi-class Precision & 0.555459222519 \\
+Multi-class Recall & 0.358998358216 \\
+\midrule
+Binary F-score & 0.0282803077563 \\
+Binary Precision & 0.998776009792 \\
+Binary Recall & 0.0143432177322 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 56077.5 \\
+False positive & 0.999999999939 \\
+True negative & 138627.0 \\
+True positive & 813.5 \\
+\midrule
+Positive training samples & 2522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with TCP feature set CTU: Experiment 10.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.303097321166 \\
+Multi-class Precision & 0.555459222519 \\
+Multi-class Recall & 0.358998358216 \\
+\midrule
+Binary F-score & 0.0282803077563 \\
+Binary Precision & 0.998776009792 \\
+Binary Recall & 0.0143432177322 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 56077.5 \\
+False positive & 0.999999999939 \\
+True negative & 138627.0 \\
+True positive & 813.5 \\
+\midrule
+Positive training samples & 2522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with TCP feature set CTU: Average.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.303097321166 \\
+Multi-class Precision & 0.555459222519 \\
+Multi-class Recall & 0.358998358216 \\
+\midrule
+Binary F-score & 0.0282803077563 \\
+Binary Precision & 0.998776009792 \\
+Binary Recall & 0.0143432177322 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 56077.5 \\
+False positive & 0.999999999939 \\
+True negative & 138627.0 \\
+True positive & 813.5 \\
+\midrule
+Positive training samples & 2522.0 \\
+Negative training samples & 2479.0 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with TCP feature set CTU: Variance.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0 \\
+Multi-class Precision & 1.23259516441e-32 \\
+Multi-class Recall & 0.0 \\
+\midrule
+Binary F-score & 1.20370621524e-35 \\
+Binary Precision & 1.23259516441e-32 \\
+Binary Recall & 0.0 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+
+
+\newpage
+\subsection{Cross Dataset}
+
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with TCP feature set Cross: Experiment 1.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.576127838108 \\
+Multi-class Precision & 0.694445418738 \\
+Multi-class Recall & 0.597812283186 \\
+\midrule
+Binary F-score & 0.697075315944 \\
+Binary Precision & 0.74899315988 \\
+Binary Recall & 0.651888463357 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 37540 \\
+False positive & 23559 \\
+True negative & 115069 \\
+True positive & 70299 \\
+\midrule
+Positive training samples & 4522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with TCP feature set Cross: Experiment 2.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.576104441882 \\
+Multi-class Precision & 0.694401916249 \\
+Multi-class Recall & 0.597877200599 \\
+\midrule
+Binary F-score & 0.697293277811 \\
+Binary Precision & 0.749129216774 \\
+Binary Recall & 0.652166655848 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 37510 \\
+False positive & 23552 \\
+True negative & 115076 \\
+True positive & 70329 \\
+\midrule
+Positive training samples & 4522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with TCP feature set Cross: Experiment 3.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.576345140073 \\
+Multi-class Precision & 0.694817862182 \\
+Multi-class Recall & 0.598177443633 \\
+\midrule
+Binary F-score & 0.697823792083 \\
+Binary Precision & 0.749473034258 \\
+Binary Recall & 0.652834317826 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 37438 \\
+False positive & 23533 \\
+True negative & 115095 \\
+True positive & 70401 \\
+\midrule
+Positive training samples & 4522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with TCP feature set Cross: Experiment 4.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.576196985317 \\
+Multi-class Precision & 0.694194751648 \\
+Multi-class Recall & 0.598080067514 \\
+\midrule
+Binary F-score & 0.69766150857 \\
+Binary Precision & 0.749379758292 \\
+Binary Recall & 0.652621036916 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 37461 \\
+False positive & 23537 \\
+True negative & 115091 \\
+True positive & 70378 \\
+\midrule
+Positive training samples & 4522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with TCP feature set Cross: Experiment 5.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.575723197218 \\
+Multi-class Precision & 0.694479290264 \\
+Multi-class Recall & 0.597240198485 \\
+\midrule
+Binary F-score & 0.696364790856 \\
+Binary Precision & 0.748711931303 \\
+Binary Recall & 0.650859151142 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 37651 \\
+False positive & 23557 \\
+True negative & 115071 \\
+True positive & 70188 \\
+\midrule
+Positive training samples & 4522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with TCP feature set Cross: Experiment 6.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.576383268415 \\
+Multi-class Precision & 0.694693113487 \\
+Multi-class Recall & 0.59820990234 \\
+\midrule
+Binary F-score & 0.697922189902 \\
+Binary Precision & 0.749467858663 \\
+Binary Recall & 0.653010506403 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 37419 \\
+False positive & 23540 \\
+True negative & 115088 \\
+True positive & 70420 \\
+\midrule
+Positive training samples & 4522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with TCP feature set Cross: Experiment 7.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.576073699095 \\
+Multi-class Precision & 0.694439374102 \\
+Multi-class Recall & 0.597836627216 \\
+\midrule
+Binary F-score & 0.697177757177 \\
+Binary Precision & 0.749009373669 \\
+Binary Recall & 0.652055378852 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 37522 \\
+False positive & 23563 \\
+True negative & 115065 \\
+True positive & 70317 \\
+\midrule
+Positive training samples & 4522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with TCP feature set Cross: Experiment 8.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.576460087341 \\
+Multi-class Precision & 0.6942921524 \\
+Multi-class Recall & 0.598453342638 \\
+\midrule
+Binary F-score & 0.698203509745 \\
+Binary Precision & 0.749603719189 \\
+Binary Recall & 0.65339997589 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 37377 \\
+False positive & 23537 \\
+True negative & 115091 \\
+True positive & 70462 \\
+\midrule
+Positive training samples & 4522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with TCP feature set Cross: Experiment 9.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.576216083238 \\
+Multi-class Precision & 0.694392106287 \\
+Multi-class Recall & 0.59797051938 \\
+\midrule
+Binary F-score & 0.697481866364 \\
+Binary Precision & 0.749429989985 \\
+Binary Recall & 0.652268659761 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 37499 \\
+False positive & 23518 \\
+True negative & 115110 \\
+True positive & 70340 \\
+\midrule
+Positive training samples & 4522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with TCP feature set Cross: Experiment 10.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.576312761844 \\
+Multi-class Precision & 0.694249672545 \\
+Multi-class Recall & 0.598250475723 \\
+\midrule
+Binary F-score & 0.697986311079 \\
+Binary Precision & 0.749664643884 \\
+Binary Recall & 0.652973414071 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 37423 \\
+False positive & 23514 \\
+True negative & 115114 \\
+True positive & 70416 \\
+\midrule
+Positive training samples & 4522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with TCP feature set Cross: Average.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.576194350253 \\
+Multi-class Precision & 0.69444056579 \\
+Multi-class Recall & 0.597990806071 \\
+\midrule
+Binary F-score & 0.697499031953 \\
+Binary Precision & 0.74928626859 \\
+Binary Recall & 0.652407756007 \\
+\midrule
+Total amount of samples & 246467.0 \\
+False negative & 37484.0 \\
+False positive & 23541.0 \\
+True negative & 115087.0 \\
+True positive & 70355.0 \\
+\midrule
+Positive training samples & 4522.0 \\
+Negative training samples & 2479.0 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with TCP feature set Cross: Variance.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 3.92593677479e-08 \\
+Multi-class Precision & 3.30390931029e-08 \\
+Multi-class Recall & 1.00454380523e-07 \\
+\midrule
+Binary F-score & 2.65654537644e-07 \\
+Binary Precision & 8.58307384168e-08 \\
+Binary Recall & 4.7647097084e-07 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+
+\newpage
+\section{Country feature set}
+\subsection{CTU Dataset}
+
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Country feature set CTU: Experiment 1.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.3643449875 \\
+Multi-class Precision & 0.516778173267 \\
+Multi-class Recall & 0.406267421581 \\
+\midrule
+Binary F-score & 0.0449382593848 \\
+Binary Precision & 0.0758848355689 \\
+Binary Recall & 0.0319206904431 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 55075 \\
+False positive & 22115 \\
+True negative & 116513 \\
+True positive & 1816 \\
+\midrule
+Positive training samples & 2522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Country feature set CTU: Experiment 2.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.3643449875 \\
+Multi-class Precision & 0.516778173267 \\
+Multi-class Recall & 0.406267421581 \\
+\midrule
+Binary F-score & 0.0449382593848 \\
+Binary Precision & 0.0758848355689 \\
+Binary Recall & 0.0319206904431 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 55075 \\
+False positive & 22115 \\
+True negative & 116513 \\
+True positive & 1816 \\
+\midrule
+Positive training samples & 2522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Country feature set CTU: Experiment 3.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.3643449875 \\
+Multi-class Precision & 0.516778173267 \\
+Multi-class Recall & 0.406267421581 \\
+\midrule
+Binary F-score & 0.0449382593848 \\
+Binary Precision & 0.0758848355689 \\
+Binary Recall & 0.0319206904431 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 55075 \\
+False positive & 22115 \\
+True negative & 116513 \\
+True positive & 1816 \\
+\midrule
+Positive training samples & 2522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Country feature set CTU: Experiment 4.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.3643449875 \\
+Multi-class Precision & 0.516778173267 \\
+Multi-class Recall & 0.406267421581 \\
+\midrule
+Binary F-score & 0.0449382593848 \\
+Binary Precision & 0.0758848355689 \\
+Binary Recall & 0.0319206904431 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 55075 \\
+False positive & 22115 \\
+True negative & 116513 \\
+True positive & 1816 \\
+\midrule
+Positive training samples & 2522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Country feature set CTU: Experiment 5.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.3643449875 \\
+Multi-class Precision & 0.516778173267 \\
+Multi-class Recall & 0.406267421581 \\
+\midrule
+Binary F-score & 0.0449382593848 \\
+Binary Precision & 0.0758848355689 \\
+Binary Recall & 0.0319206904431 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 55075 \\
+False positive & 22115 \\
+True negative & 116513 \\
+True positive & 1816 \\
+\midrule
+Positive training samples & 2522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Country feature set CTU: Experiment 6.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.3643449875 \\
+Multi-class Precision & 0.516778173267 \\
+Multi-class Recall & 0.406267421581 \\
+\midrule
+Binary F-score & 0.0449382593848 \\
+Binary Precision & 0.0758848355689 \\
+Binary Recall & 0.0319206904431 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 55075 \\
+False positive & 22115 \\
+True negative & 116513 \\
+True positive & 1816 \\
+\midrule
+Positive training samples & 2522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Country feature set CTU: Experiment 7.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.3643449875 \\
+Multi-class Precision & 0.516778173267 \\
+Multi-class Recall & 0.406267421581 \\
+\midrule
+Binary F-score & 0.0449382593848 \\
+Binary Precision & 0.0758848355689 \\
+Binary Recall & 0.0319206904431 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 55075 \\
+False positive & 22115 \\
+True negative & 116513 \\
+True positive & 1816 \\
+\midrule
+Positive training samples & 2522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Country feature set CTU: Experiment 8.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.3643449875 \\
+Multi-class Precision & 0.516778173267 \\
+Multi-class Recall & 0.406267421581 \\
+\midrule
+Binary F-score & 0.0449382593848 \\
+Binary Precision & 0.0758848355689 \\
+Binary Recall & 0.0319206904431 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 55075 \\
+False positive & 22115 \\
+True negative & 116513 \\
+True positive & 1816 \\
+\midrule
+Positive training samples & 2522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Country feature set CTU: Experiment 9.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.3643449875 \\
+Multi-class Precision & 0.516778173267 \\
+Multi-class Recall & 0.406267421581 \\
+\midrule
+Binary F-score & 0.0449382593848 \\
+Binary Precision & 0.0758848355689 \\
+Binary Recall & 0.0319206904431 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 55075 \\
+False positive & 22115 \\
+True negative & 116513 \\
+True positive & 1816 \\
+\midrule
+Positive training samples & 2522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Country feature set CTU: Experiment 10.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.3643449875 \\
+Multi-class Precision & 0.516778173267 \\
+Multi-class Recall & 0.406267421581 \\
+\midrule
+Binary F-score & 0.0449382593848 \\
+Binary Precision & 0.0758848355689 \\
+Binary Recall & 0.0319206904431 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 55075 \\
+False positive & 22115 \\
+True negative & 116513 \\
+True positive & 1816 \\
+\midrule
+Positive training samples & 2522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Country feature set CTU: Average.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.3643449875 \\
+Multi-class Precision & 0.516778173267 \\
+Multi-class Recall & 0.406267421581 \\
+\midrule
+Binary F-score & 0.0449382593848 \\
+Binary Precision & 0.0758848355689 \\
+Binary Recall & 0.0319206904431 \\
+\midrule
+Total amount of samples & 195519.0 \\
+False negative & 55075.0 \\
+False positive & 22115.0 \\
+True negative & 116513.0 \\
+True positive & 1816.0 \\
+\midrule
+Positive training samples & 2522.0 \\
+Negative training samples & 2479.0 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Country feature set CTU: Variance.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 3.08148791102e-33 \\
+Multi-class Precision & 1.23259516441e-32 \\
+Multi-class Recall & 3.08148791102e-33 \\
+\midrule
+Binary F-score & 4.81482486097e-35 \\
+Binary Precision & 0.0 \\
+Binary Recall & 4.81482486097e-35 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+
+\newpage
+\subsection{Cross Dataset}
+
+
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Country feature set Cross: Experiment 1.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.576699770615 \\
+Multi-class Precision & 0.698364297614 \\
+Multi-class Recall & 0.600137138035 \\
+\midrule
+Binary F-score & 0.700650521513 \\
+Binary Precision & 0.75688473252 \\
+Binary Recall & 0.652194475097 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 37507 \\
+False positive & 22591 \\
+True negative & 116037 \\
+True positive & 70332 \\
+\midrule
+Positive training samples & 4522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Country feature set Cross: Experiment 2.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.57645994583 \\
+Multi-class Precision & 0.697973107152 \\
+Multi-class Recall & 0.599873411045 \\
+\midrule
+Binary F-score & 0.700264062578 \\
+Binary Precision & 0.756694770165 \\
+Binary Recall & 0.651665909365 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 37564 \\
+False positive & 22596 \\
+True negative & 116032 \\
+True positive & 70275 \\
+\midrule
+Positive training samples & 4522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Country feature set Cross: Experiment 3.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.576216479163 \\
+Multi-class Precision & 0.698105514479 \\
+Multi-class Recall & 0.599439275846 \\
+\midrule
+Binary F-score & 0.699741741203 \\
+Binary Precision & 0.756726155173 \\
+Binary Recall & 0.650738601063 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 37664 \\
+False positive & 22560 \\
+True negative & 116068 \\
+True positive & 70175 \\
+\midrule
+Positive training samples & 4522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Country feature set Cross: Experiment 4.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.576702064191 \\
+Multi-class Precision & 0.698249311267 \\
+Multi-class Recall & 0.600137138035 \\
+\midrule
+Binary F-score & 0.700773046961 \\
+Binary Precision & 0.757008340059 \\
+Binary Recall & 0.652315025176 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 37494 \\
+False positive & 22580 \\
+True negative & 116048 \\
+True positive & 70345 \\
+\midrule
+Positive training samples & 4522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Country feature set Cross: Experiment 5.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.577233701994 \\
+Multi-class Precision & 0.698983617468 \\
+Multi-class Recall & 0.600839057561 \\
+\midrule
+Binary F-score & 0.701764863977 \\
+Binary Precision & 0.757388567193 \\
+Binary Recall & 0.653752353045 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 37339 \\
+False positive & 22583 \\
+True negative & 116045 \\
+True positive & 70500 \\
+\midrule
+Positive training samples & 4522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Country feature set Cross: Experiment 6.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.575312780666 \\
+Multi-class Precision & 0.697879815347 \\
+Multi-class Recall & 0.598011092763 \\
+\midrule
+Binary F-score & 0.697451418126 \\
+Binary Precision & 0.75576361078 \\
+Binary Recall & 0.647493022005 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 38014 \\
+False positive & 22565 \\
+True negative & 116063 \\
+True positive & 69825 \\
+\midrule
+Positive training samples & 4522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Country feature set Cross: Experiment 7.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.577074358873 \\
+Multi-class Precision & 0.698338190635 \\
+Multi-class Recall & 0.600774140149 \\
+\midrule
+Binary F-score & 0.701738498741 \\
+Binary Precision & 0.757115708779 \\
+Binary Recall & 0.653909995456 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 37322 \\
+False positive & 22622 \\
+True negative & 116006 \\
+True positive & 70517 \\
+\midrule
+Positive training samples & 4522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Country feature set Cross: Experiment 8.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.576557997792 \\
+Multi-class Precision & 0.69847122856 \\
+Multi-class Recall & 0.599857181692 \\
+\midrule
+Binary F-score & 0.700226210525 \\
+Binary Precision & 0.756706404333 \\
+Binary Recall & 0.651591724701 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 37572 \\
+False positive & 22592 \\
+True negative & 116036 \\
+True positive & 70267 \\
+\midrule
+Positive training samples & 4522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Country feature set Cross: Experiment 9.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.576065824657 \\
+Multi-class Precision & 0.698080193406 \\
+Multi-class Recall & 0.59919177821 \\
+\midrule
+Binary F-score & 0.699203286568 \\
+Binary Precision & 0.756143850758 \\
+Binary Recall & 0.65023785458 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 37718 \\
+False positive & 22614 \\
+True negative & 116014 \\
+True positive & 70121 \\
+\midrule
+Positive training samples & 4522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Country feature set Cross: Experiment 10.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.576345182373 \\
+Multi-class Precision & 0.698367236219 \\
+Multi-class Recall & 0.599581282687 \\
+\midrule
+Binary F-score & 0.69978365121 \\
+Binary Precision & 0.756648663799 \\
+Binary Recall & 0.650868424225 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 37650 \\
+False positive & 22574 \\
+True negative & 116054 \\
+True positive & 70189 \\
+\midrule
+Positive training samples & 4522 \\
+Negative training samples & 2479 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Country feature set Cross: Average.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.576466810615 \\
+Multi-class Precision & 0.698281251215 \\
+Multi-class Recall & 0.599784149602 \\
+\midrule
+Binary F-score & 0.70015973014 \\
+Binary Precision & 0.756708080356 \\
+Binary Recall & 0.651476738471 \\
+\midrule
+Total amount of samples & 246467.0 \\
+False negative & 37584.4 \\
+False positive & 22587.7 \\
+True negative & 116040.3 \\
+True positive & 70254.6 \\
+\midrule
+Positive training samples & 4522.0 \\
+Negative training samples & 2479.0 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{SupportVectorMachine with Country feature set Cross: Variance.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 2.64524823102e-07 \\
+Multi-class Precision & 8.75373291227e-08 \\
+Multi-class Recall & 6.01014235748e-07 \\
+\midrule
+Binary F-score & 1.42671919089e-06 \\
+Binary Precision & 1.96499995857e-07 \\
+Binary Recall & 3.06857624029e-06 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}

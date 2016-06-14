@@ -11,7 +11,7 @@ My Bachelor thesis for Bachelor Computer Science at UHasselt: An Intrusion detec
 The datasets cannot be made publically available. The thesis does show references to the different datasets that were used.
 
 ## Experiments
-The results from the main experiments used in the thesis are listed in the `experiments/` folder. The config files used to execute these experiments are listed in `code/configs/`.
+The results from the main experiments used in the thesis are listed in the file 'experiments.pdf'. The config files used to execute these experiments are listed in `code/configs/`.
 
 ## User & Developer guide
 A user and developer guide is available within the appendix from the thesis.

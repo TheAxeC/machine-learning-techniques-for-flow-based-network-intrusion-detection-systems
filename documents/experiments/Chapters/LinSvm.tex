@@ -1,3 +1,1811 @@
 
 \chapter{Support Vector Machines with Linear Kernel} % Main chapter title
 
+\section{Standard feature set}
+\subsection{CTU Dataset}
+
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Standard feature set CTU: Experiment 1.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0731447621491 \\
+Multi-class Precision & 0.193679286641 \\
+Multi-class Recall & 0.0464098118341 \\
+\midrule
+Binary F-score & 0.000179821078027 \\
+Binary Precision & 0.00060963218858 \\
+Binary Recall & 0.000105464836266 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 56885 \\
+False positive & 9836 \\
+True negative & 128792 \\
+True positive & 6 \\
+\midrule
+Positive training samples & 10069 \\
+Negative training samples & 9932 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Standard feature set CTU: Experiment 2.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.00861973900158 \\
+Multi-class Precision & 0.10392192579 \\
+Multi-class Recall & 0.0113288222628 \\
+\midrule
+Binary F-score & 6.24736439315e-05 \\
+Binary Precision & 0.000280269058296 \\
+Binary Recall & 3.51549454219e-05 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 56889 \\
+False positive & 7134 \\
+True negative & 131494 \\
+True positive & 2 \\
+\midrule
+Positive training samples & 10069 \\
+Negative training samples & 9932 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Standard feature set CTU: Experiment 3.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0108550011243 \\
+Multi-class Precision & 0.0955771357678 \\
+Multi-class Recall & 0.00723203371539 \\
+\midrule
+Binary F-score & 0.454321756985 \\
+Binary Precision & 0.293966822954 \\
+Binary Recall & 0.999578140655 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 24 \\
+False positive & 136580 \\
+True negative & 2048 \\
+True positive & 56867 \\
+\midrule
+Positive training samples & 10069 \\
+Negative training samples & 9932 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Standard feature set CTU: Experiment 4.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 5.39428618225e-11 \\
+Multi-class Precision & 2.69715731439e-11 \\
+Multi-class Recall & 5.1145924437e-06 \\
+\midrule
+Binary F-score & 0.450782457113 \\
+Binary Precision & 0.290974278715 \\
+Binary Recall & 1.0 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 0 \\
+False positive & 138628 \\
+True negative & 0 \\
+True positive & 56891 \\
+\midrule
+Positive training samples & 10069 \\
+Negative training samples & 9932 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Standard feature set CTU: Experiment 5.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.390589045323 \\
+Multi-class Precision & 0.520065636569 \\
+Multi-class Recall & 0.370117482188 \\
+\midrule
+Binary F-score & 0.659999276594 \\
+Binary Precision & 0.502252479563 \\
+Binary Recall & 0.962208433671 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 2150 \\
+False positive & 54250 \\
+True negative & 84378 \\
+True positive & 54741 \\
+\midrule
+Positive training samples & 10069 \\
+Negative training samples & 9932 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Standard feature set CTU: Experiment 6.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.107538011822 \\
+Multi-class Precision & 0.295607746689 \\
+Multi-class Recall & 0.084666963313 \\
+\midrule
+Binary F-score & 0.493619591094 \\
+Binary Precision & 0.328625284784 \\
+Binary Recall & 0.991351883426 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 492 \\
+False positive & 115222 \\
+True negative & 23406 \\
+True positive & 56399 \\
+\midrule
+Positive training samples & 10069 \\
+Negative training samples & 9932 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Standard feature set CTU: Experiment 7.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0046423430834 \\
+Multi-class Precision & 0.0218711429796 \\
+Multi-class Recall & 0.0027618799196 \\
+\midrule
+Binary F-score & 0.452538482043 \\
+Binary Precision & 0.29246631698 \\
+Binary Recall & 0.999683605491 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 18 \\
+False positive & 137587 \\
+True negative & 1041 \\
+True positive & 56873 \\
+\midrule
+Positive training samples & 10069 \\
+Negative training samples & 9932 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Standard feature set CTU: Experiment 8.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.01988865948 \\
+Multi-class Precision & 0.179211395417 \\
+Multi-class Recall & 0.0107559879091 \\
+\midrule
+Binary F-score & 0.470009792215 \\
+Binary Precision & 0.307219479523 \\
+Binary Recall & 0.999771492855 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 13 \\
+False positive & 128260 \\
+True negative & 10368 \\
+True positive & 56878 \\
+\midrule
+Positive training samples & 10069 \\
+Negative training samples & 9932 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Standard feature set CTU: Experiment 9.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.39357608393 \\
+Multi-class Precision & 0.527211740039 \\
+Multi-class Recall & 0.381001334909 \\
+\midrule
+Binary F-score & 0.724048957989 \\
+Binary Precision & 0.580528119331 \\
+Binary Recall & 0.961839306744 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 2171 \\
+False positive & 39539 \\
+True negative & 99089 \\
+True positive & 54720 \\
+\midrule
+Positive training samples & 10069 \\
+Negative training samples & 9932 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Standard feature set CTU: Experiment 10.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.00657950586219 \\
+Multi-class Precision & 0.15413517859 \\
+Multi-class Recall & 0.00374388166879 \\
+\midrule
+Binary F-score & 0.453557926975 \\
+Binary Precision & 0.293326043338 \\
+Binary Recall & 0.999595718128 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 23 \\
+False positive & 137005 \\
+True negative & 1623 \\
+True positive & 56868 \\
+\midrule
+Positive training samples & 10069 \\
+Negative training samples & 9932 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Standard feature set CTU: Average.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.101543315183 \\
+Multi-class Precision & 0.209128118851 \\
+Multi-class Recall & 0.0918023312312 \\
+\midrule
+Binary F-score & 0.415912053573 \\
+Binary Precision & 0.289024872643 \\
+Binary Recall & 0.791416920075 \\
+\midrule
+Total amount of samples & 195519.0 \\
+False negative & 11866.5 \\
+False positive & 90404.1 \\
+True negative & 48223.9 \\
+True positive & 45024.5 \\
+\midrule
+Positive training samples & 10069.0 \\
+Negative training samples & 9932.0 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Standard feature set CTU: Variance.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0221918598774 \\
+Multi-class Precision & 0.0312257870173 \\
+Multi-class Recall & 0.0207512633398 \\
+\midrule
+Binary F-score & 0.0514706070687 \\
+Binary Precision & 0.0298954755235 \\
+Binary Recall & 0.156760948513 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+
+\newpage
+\subsection{Cross Dataset}
+
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Standard feature set Cross: Experiment 1.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.228491874033 \\
+Multi-class Precision & 0.469141761631 \\
+Multi-class Recall & 0.176417126836 \\
+\midrule
+Binary F-score & 0.651732275802 \\
+Binary Precision & 0.484892092842 \\
+Binary Recall & 0.993610845798 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 689 \\
+False positive & 113827 \\
+True negative & 24801 \\
+True positive & 107150 \\
+\midrule
+Positive training samples & 10045 \\
+Negative training samples & 4956 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Standard feature set Cross: Experiment 2.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.142158318144 \\
+Multi-class Precision & 0.340972450684 \\
+Multi-class Recall & 0.0949620030268 \\
+\midrule
+Binary F-score & 0.609669294633 \\
+Binary Precision & 0.438508458035 \\
+Binary Recall & 0.999990726917 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 1 \\
+False positive & 138082 \\
+True negative & 546 \\
+True positive & 107838 \\
+\midrule
+Positive training samples & 10045 \\
+Negative training samples & 4956 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Standard feature set Cross: Experiment 3.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.189041649905 \\
+Multi-class Precision & 0.404663455052 \\
+Multi-class Recall & 0.124069348026 \\
+\midrule
+Binary F-score & 0.6250192034 \\
+Binary Precision & 0.454615605181 \\
+Binary Recall & 0.999758899841 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 26 \\
+False positive & 129339 \\
+True negative & 9289 \\
+True positive & 107813 \\
+\midrule
+Positive training samples & 10045 \\
+Negative training samples & 4956 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Standard feature set Cross: Experiment 4.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.148483705387 \\
+Multi-class Precision & 0.297016905178 \\
+Multi-class Recall & 0.100313632251 \\
+\midrule
+Binary F-score & 0.612415543906 \\
+Binary Precision & 0.441803167616 \\
+Binary Recall & 0.997700275411 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 248 \\
+False positive & 135936 \\
+True negative & 2692 \\
+True positive & 107591 \\
+\midrule
+Positive training samples & 10045 \\
+Negative training samples & 4956 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Standard feature set Cross: Experiment 5.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.305722399073 \\
+Multi-class Precision & 0.47608506946 \\
+Multi-class Recall & 0.253551185351 \\
+\midrule
+Binary F-score & 0.64853334947 \\
+Binary Precision & 0.481304675852 \\
+Binary Recall & 0.993842672873 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 664 \\
+False positive & 115501 \\
+True negative & 23127 \\
+True positive & 107175 \\
+\midrule
+Positive training samples & 10045 \\
+Negative training samples & 4956 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Standard feature set Cross: Experiment 6.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.234710403125 \\
+Multi-class Precision & 0.397794059596 \\
+Multi-class Recall & 0.18572060357 \\
+\midrule
+Binary F-score & 0.652382039226 \\
+Binary Precision & 0.485527662774 \\
+Binary Recall & 0.993963222953 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 651 \\
+False positive & 113578 \\
+True negative & 25050 \\
+True positive & 107188 \\
+\midrule
+Positive training samples & 10045 \\
+Negative training samples & 4956 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Standard feature set Cross: Experiment 7.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.22511289817 \\
+Multi-class Precision & 0.450074920328 \\
+Multi-class Recall & 0.174546693878 \\
+\midrule
+Binary F-score & 0.652337148651 \\
+Binary Precision & 0.485632939512 \\
+Binary Recall & 0.993314107141 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 721 \\
+False positive & 113456 \\
+True negative & 25172 \\
+True positive & 107118 \\
+\midrule
+Positive training samples & 10045 \\
+Negative training samples & 4956 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Standard feature set Cross: Experiment 8.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.139388432253 \\
+Multi-class Precision & 0.279366424343 \\
+Multi-class Recall & 0.0928643591231 \\
+\midrule
+Binary F-score & 0.610476438486 \\
+Binary Precision & 0.439345851888 \\
+Binary Recall & 0.999981453834 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 2 \\
+False positive & 137612 \\
+True negative & 1016 \\
+True positive & 107837 \\
+\midrule
+Positive training samples & 10045 \\
+Negative training samples & 4956 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Standard feature set Cross: Experiment 9.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.193932553955 \\
+Multi-class Precision & 0.399109896362 \\
+Multi-class Recall & 0.138343064183 \\
+\midrule
+Binary F-score & 0.333973629464 \\
+Binary Precision & 0.764891427054 \\
+Binary Recall & 0.213624013576 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 84802 \\
+False positive & 7081 \\
+True negative & 131547 \\
+True positive & 23037 \\
+\midrule
+Positive training samples & 10045 \\
+Negative training samples & 4956 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Standard feature set Cross: Experiment 10.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.202254406451 \\
+Multi-class Precision & 0.41171227465 \\
+Multi-class Recall & 0.137442335079 \\
+\midrule
+Binary F-score & 0.644249684855 \\
+Binary Precision & 0.475740047936 \\
+Binary Recall & 0.99760754458 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 258 \\
+False positive & 118553 \\
+True negative & 20075 \\
+True positive & 107581 \\
+\midrule
+Positive training samples & 10045 \\
+Negative training samples & 4956 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Standard feature set Cross: Average.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.20092966405 \\
+Multi-class Precision & 0.392593721729 \\
+Multi-class Recall & 0.147823035132 \\
+\midrule
+Binary F-score & 0.604078860789 \\
+Binary Precision & 0.495226192869 \\
+Binary Recall & 0.918339376292 \\
+\midrule
+Total amount of samples & 246467.0 \\
+False negative & 8806.2 \\
+False positive & 112296.5 \\
+True negative & 26331.5 \\
+True positive & 99032.8 \\
+\midrule
+Positive training samples & 10045.0 \\
+Negative training samples & 4956.0 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Standard feature set Cross: Variance.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0023651172141 \\
+Multi-class Precision & 0.00413353016849 \\
+Multi-class Recall & 0.00229801980393 \\
+\midrule
+Binary F-score & 0.00840598202009 \\
+Binary Precision & 0.00844284960399 \\
+Binary Recall & 0.0551873566326 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+
+\newpage
+\section{TCP feature set}
+\subsection{CTU Dataset}
+
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with TCP feature set CTU: Experiment 1.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 5.10229538331e-05 \\
+Multi-class Precision & 0.0105701579524 \\
+Multi-class Recall & 4.09167395496e-05 \\
+\midrule
+Binary F-score & 0.45079317285 \\
+Binary Precision & 0.290983208278 \\
+Binary Recall & 1.0 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 0 \\
+False positive & 138622 \\
+True negative & 6 \\
+True positive & 56891 \\
+\midrule
+Positive training samples & 10069 \\
+Negative training samples & 9932 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with TCP feature set CTU: Experiment 2.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.00620597311193 \\
+Multi-class Precision & 0.0147049805449 \\
+Multi-class Recall & 0.0550483584716 \\
+\midrule
+Binary F-score & 0.0 \\
+Binary Precision & 0.0 \\
+Binary Recall & 0.0 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 56891 \\
+False positive & 6 \\
+True negative & 138622 \\
+True positive & 0 \\
+\midrule
+Positive training samples & 10069 \\
+Negative training samples & 9932 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with TCP feature set CTU: Experiment 3.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0929545885223 \\
+Multi-class Precision & 0.115675737817 \\
+Multi-class Recall & 0.0832655649835 \\
+\midrule
+Binary F-score & 0.00447319234727 \\
+Binary Precision & 0.00555512088256 \\
+Binary Recall & 0.00374400168744 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 56678 \\
+False positive & 38130 \\
+True negative & 100498 \\
+True positive & 213 \\
+\midrule
+Positive training samples & 10069 \\
+Negative training samples & 9932 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with TCP feature set CTU: Experiment 4.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 5.10227220434e-05 \\
+Multi-class Precision & 0.0105701578365 \\
+Multi-class Recall & 3.58021471059e-05 \\
+\midrule
+Binary F-score & 0.45079317285 \\
+Binary Precision & 0.290983208278 \\
+Binary Recall & 1.0 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 0 \\
+False positive & 138622 \\
+True negative & 6 \\
+True positive & 56891 \\
+\midrule
+Positive training samples & 10069 \\
+Negative training samples & 9932 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with TCP feature set CTU: Experiment 5.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.00561883185789 \\
+Multi-class Precision & 0.155052852158 \\
+Multi-class Recall & 0.0028795155458 \\
+\midrule
+Binary F-score & 0.452073789478 \\
+Binary Precision & 0.292051253093 \\
+Binary Recall & 1.0 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 0 \\
+False positive & 137907 \\
+True negative & 721 \\
+True positive & 56891 \\
+\midrule
+Positive training samples & 10069 \\
+Negative training samples & 9932 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with TCP feature set CTU: Experiment 6.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.000242466361569 \\
+Multi-class Precision & 0.010668061237 \\
+Multi-class Recall & 0.0048332898593 \\
+\midrule
+Binary F-score & 0.00458547716949 \\
+Binary Precision & 0.00591485934853 \\
+Binary Recall & 0.00374400168744 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 56678 \\
+False positive & 35798 \\
+True negative & 102830 \\
+True positive & 213 \\
+\midrule
+Positive training samples & 10069 \\
+Negative training samples & 9932 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with TCP feature set CTU: Experiment 7.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.000173509608218 \\
+Multi-class Precision & 0.039144273832 \\
+Multi-class Recall & 8.69480715429e-05 \\
+\midrule
+Binary F-score & 0.45083425456 \\
+Binary Precision & 0.291017443347 \\
+Binary Recall & 1.0 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 0 \\
+False positive & 138599 \\
+True negative & 29 \\
+True positive & 56891 \\
+\midrule
+Positive training samples & 10069 \\
+Negative training samples & 9932 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with TCP feature set CTU: Experiment 8.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 5.10228981084e-05 \\
+Multi-class Precision & 0.0105701579246 \\
+Multi-class Recall & 3.06875546622e-05 \\
+\midrule
+Binary F-score & 0.454319311625 \\
+Binary Precision & 0.293928309412 \\
+Binary Recall & 1.0 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 0 \\
+False positive & 136663 \\
+True negative & 1965 \\
+True positive & 56891 \\
+\midrule
+Positive training samples & 10069 \\
+Negative training samples & 9932 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with TCP feature set CTU: Experiment 9.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0853428817889 \\
+Multi-class Precision & 0.0701185457415 \\
+Multi-class Recall & 0.179895560022 \\
+\midrule
+Binary F-score & 0.0 \\
+Binary Precision & 0.0 \\
+Binary Recall & 0.0 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 56891 \\
+False positive & 12 \\
+True negative & 138616 \\
+True positive & 0 \\
+\midrule
+Positive training samples & 10069 \\
+Negative training samples & 9932 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with TCP feature set CTU: Experiment 10.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.000503402749181 \\
+Multi-class Precision & 0.000268434472523 \\
+Multi-class Recall & 0.00428602846782 \\
+\midrule
+Binary F-score & 0.0 \\
+Binary Precision & 0.0 \\
+Binary Recall & 0.0 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 56891 \\
+False positive & 6 \\
+True negative & 138622 \\
+True positive & 0 \\
+\midrule
+Positive training samples & 10069 \\
+Negative training samples & 9932 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with TCP feature set CTU: Average.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0191194722574 \\
+Multi-class Precision & 0.0437343359516 \\
+Multi-class Recall & 0.0330402671863 \\
+\midrule
+Binary F-score & 0.226787237088 \\
+Binary Precision & 0.147043340264 \\
+Binary Recall & 0.500748800337 \\
+\midrule
+Total amount of samples & 195519.0 \\
+False negative & 28402.9 \\
+False positive & 76436.5 \\
+True negative & 62191.5 \\
+True positive & 28488.1 \\
+\midrule
+Positive training samples & 10069.0 \\
+Negative training samples & 9932.0 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with TCP feature set CTU: Variance.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.00123388562989 \\
+Multi-class Precision & 0.0025409527256 \\
+Multi-class Recall & 0.00314593298391 \\
+\midrule
+Binary F-score & 0.05061737695 \\
+Binary Precision & 0.0209569798608 \\
+Binary Recall & 0.24925344247 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+
+\newpage
+\subsection{Cross Dataset}
+
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with TCP feature set Cross: Experiment 1.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.108532746023 \\
+Multi-class Precision & 0.125127779618 \\
+Multi-class Recall & 0.102910328766 \\
+\midrule
+Binary F-score & 0.608737129697 \\
+Binary Precision & 0.437542855984 \\
+Binary Recall & 1.0 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 0 \\
+False positive & 138626 \\
+True negative & 2 \\
+True positive & 107839 \\
+\midrule
+Positive training samples & 10045 \\
+Negative training samples & 4956 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with TCP feature set Cross: Experiment 2.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 8.01755264511e-05 \\
+Multi-class Precision & 0.0101434277619 \\
+Multi-class Recall & 6.08600745739e-05 \\
+\midrule
+Binary F-score & 0.000183911428256 \\
+Binary Precision & 0.01100110011 \\
+Binary Recall & 9.27308302191e-05 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 107829 \\
+False positive & 899 \\
+True negative & 137729 \\
+True positive & 10 \\
+\midrule
+Positive training samples & 10045 \\
+Negative training samples & 4956 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with TCP feature set Cross: Experiment 3.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 1.62954972964e-05 \\
+Multi-class Precision & 0.0100622386203 \\
+Multi-class Recall & 0.000129834825758 \\
+\midrule
+Binary F-score & 0.476419220448 \\
+Binary Precision & 0.51002031574 \\
+Binary Recall & 0.446971874739 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 59638 \\
+False positive & 46307 \\
+True negative & 92321 \\
+True positive & 48201 \\
+\midrule
+Positive training samples & 10045 \\
+Negative training samples & 4956 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with TCP feature set Cross: Experiment 4.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 7.62589583616e-05 \\
+Multi-class Precision & 0.0100927905008 \\
+Multi-class Recall & 0.00161887798367 \\
+\midrule
+Binary F-score & 0.608737129697 \\
+Binary Precision & 0.437542855984 \\
+Binary Recall & 1.0 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 0 \\
+False positive & 138626 \\
+True negative & 2 \\
+True positive & 107839 \\
+\midrule
+Positive training samples & 10045 \\
+Negative training samples & 4956 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with TCP feature set Cross: Experiment 5.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 3.62596829657e-05 \\
+Multi-class Precision & 0.0100723070876 \\
+Multi-class Recall & 0.00118880012334 \\
+\midrule
+Binary F-score & 0.608737129697 \\
+Binary Precision & 0.437542855984 \\
+Binary Recall & 1.0 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 0 \\
+False positive & 138626 \\
+True negative & 2 \\
+True positive & 107839 \\
+\midrule
+Positive training samples & 10045 \\
+Negative training samples & 4956 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with TCP feature set Cross: Experiment 6.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 6.5126032129e-05 \\
+Multi-class Precision & 0.0100868194595 \\
+Multi-class Recall & 0.00368000584257 \\
+\midrule
+Binary F-score & 0.528169231434 \\
+Binary Precision & 0.3958282254 \\
+Binary Recall & 0.79345134877 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 22274 \\
+False positive & 130602 \\
+True negative & 8026 \\
+True positive & 85565 \\
+\midrule
+Positive training samples & 10045 \\
+Negative training samples & 4956 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with TCP feature set Cross: Experiment 7.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.130240462931 \\
+Multi-class Precision & 0.243463021893 \\
+Multi-class Recall & 0.092263873054 \\
+\midrule
+Binary F-score & 0.571056832052 \\
+Binary Precision & 0.447269308148 \\
+Binary Recall & 0.78958447315 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 22691 \\
+False positive & 105225 \\
+True negative & 33403 \\
+True positive & 85148 \\
+\midrule
+Positive training samples & 10045 \\
+Negative training samples & 4956 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with TCP feature set Cross: Experiment 8.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0264893245373 \\
+Multi-class Precision & 0.0262573233188 \\
+Multi-class Recall & 0.0745454766764 \\
+\midrule
+Binary F-score & 0.424805730801 \\
+Binary Precision & 0.539588898253 \\
+Binary Recall & 0.350290711153 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 70064 \\
+False positive & 32232 \\
+True negative & 106396 \\
+True positive & 37775 \\
+\midrule
+Positive training samples & 10045 \\
+Negative training samples & 4956 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with TCP feature set Cross: Experiment 9.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 1.62162755781e-05 \\
+Multi-class Precision & 0.0100621989962 \\
+Multi-class Recall & 8.11467660985e-06 \\
+\midrule
+Binary F-score & 0.596627255263 \\
+Binary Precision & 0.64006246481 \\
+Binary Recall & 0.558712525153 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 47588 \\
+False positive & 33882 \\
+True negative & 104746 \\
+True positive & 60251 \\
+\midrule
+Positive training samples & 10045 \\
+Negative training samples & 4956 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with TCP feature set Cross: Experiment 10.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.104080794792 \\
+Multi-class Precision & 0.0781017463055 \\
+Multi-class Recall & 0.221173625678 \\
+\midrule
+Binary F-score & 0.551523272088 \\
+Binary Precision & 0.406614392199 \\
+Binary Recall & 0.856907055889 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 15431 \\
+False positive & 134854 \\
+True negative & 3774 \\
+True positive & 92408 \\
+\midrule
+Positive training samples & 10045 \\
+Negative training samples & 4956 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with TCP feature set Cross: Average.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0369633660257 \\
+Multi-class Precision & 0.0533469653561 \\
+Multi-class Recall & 0.0497579797701 \\
+\midrule
+Binary F-score & 0.49749968426 \\
+Binary Precision & 0.426301327261 \\
+Binary Recall & 0.679601071968 \\
+\midrule
+Total amount of samples & 246467.0 \\
+False negative & 34551.5 \\
+False positive & 89987.9 \\
+True negative & 48640.1 \\
+True positive & 73287.5 \\
+\midrule
+Positive training samples & 10045.0 \\
+Negative training samples & 4956.0 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with TCP feature set Cross: Variance.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.00266135453516 \\
+Multi-class Precision & 0.00538719922764 \\
+Multi-class Recall & 0.00488369903997 \\
+\midrule
+Binary F-score & 0.0309269181023 \\
+Binary Precision & 0.0240146002847 \\
+Binary Recall & 0.100336934882 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+
+\newpage
+\section{Country feature set}
+\subsection{CTU Dataset}
+
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Country feature set CTU: Experiment 1.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.303801903048 \\
+Multi-class Precision & 0.448969320545 \\
+Multi-class Recall & 0.245991438172 \\
+\midrule
+Binary F-score & 0.564173466985 \\
+Binary Precision & 0.394522601799 \\
+Binary Recall & 0.989805065828 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 580 \\
+False positive & 86421 \\
+True negative & 52207 \\
+True positive & 56311 \\
+\midrule
+Positive training samples & 10069 \\
+Negative training samples & 9932 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Country feature set CTU: Experiment 2.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0988947758146 \\
+Multi-class Precision & 0.301453071171 \\
+Multi-class Recall & 0.0641676767987 \\
+\midrule
+Binary F-score & 0.498707964758 \\
+Binary Precision & 0.33285849673 \\
+Binary Recall & 0.993953349387 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 344 \\
+False positive & 113336 \\
+True negative & 25292 \\
+True positive & 56547 \\
+\midrule
+Positive training samples & 10069 \\
+Negative training samples & 9932 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Country feature set CTU: Experiment 3.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0117301645298 \\
+Multi-class Precision & 0.170689165683 \\
+Multi-class Recall & 0.0064136989244 \\
+\midrule
+Binary F-score & 0.455460057833 \\
+Binary Precision & 0.294929847766 \\
+Binary Recall & 0.999472675819 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 30 \\
+False positive & 135934 \\
+True negative & 2694 \\
+True positive & 56861 \\
+\midrule
+Positive training samples & 10069 \\
+Negative training samples & 9932 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Country feature set CTU: Experiment 4.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.256120061765 \\
+Multi-class Precision & 0.433501058495 \\
+Multi-class Recall & 0.199822012183 \\
+\midrule
+Binary F-score & 0.000180940892642 \\
+Binary Precision & 0.000636334712059 \\
+Binary Recall & 0.000105464836266 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 56885 \\
+False positive & 9423 \\
+True negative & 129205 \\
+True positive & 6 \\
+\midrule
+Positive training samples & 10069 \\
+Negative training samples & 9932 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Country feature set CTU: Experiment 5.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.369573304134 \\
+Multi-class Precision & 0.52862308828 \\
+Multi-class Recall & 0.33181941397 \\
+\midrule
+Binary F-score & 0.624197890958 \\
+Binary Precision & 0.45836937449 \\
+Binary Recall & 0.978028159111 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 1250 \\
+False positive & 65748 \\
+True negative & 72880 \\
+True positive & 55641 \\
+\midrule
+Positive training samples & 10069 \\
+Negative training samples & 9932 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Country feature set CTU: Experiment 6.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.346945514394 \\
+Multi-class Precision & 0.448438923011 \\
+Multi-class Recall & 0.377687079005 \\
+\midrule
+Binary F-score & 0.000200950207409 \\
+Binary Precision & 0.000547816559712 \\
+Binary Recall & 0.000123042308977 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 56884 \\
+False positive & 12771 \\
+True negative & 125857 \\
+True positive & 7 \\
+\midrule
+Positive training samples & 10069 \\
+Negative training samples & 9932 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Country feature set CTU: Experiment 7.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0726501930296 \\
+Multi-class Precision & 0.190972327977 \\
+Multi-class Recall & 0.046420041019 \\
+\midrule
+Binary F-score & 0.485813047879 \\
+Binary Precision & 0.321299516113 \\
+Binary Recall & 0.995570476877 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 252 \\
+False positive & 119642 \\
+True negative & 18986 \\
+True positive & 56639 \\
+\midrule
+Positive training samples & 10069 \\
+Negative training samples & 9932 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Country feature set CTU: Experiment 8.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.00206531712084 \\
+Multi-class Precision & 0.014322138707 \\
+Multi-class Recall & 0.00112521033761 \\
+\midrule
+Binary F-score & 0.451256221619 \\
+Binary Precision & 0.2913691909 \\
+Binary Recall & 1.0 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 0 \\
+False positive & 138363 \\
+True negative & 265 \\
+True positive & 56891 \\
+\midrule
+Positive training samples & 10069 \\
+Negative training samples & 9932 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Country feature set CTU: Experiment 9.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0730009614252 \\
+Multi-class Precision & 0.173619859268 \\
+Multi-class Recall & 0.0467576041203 \\
+\midrule
+Binary F-score & 0.472512805112 \\
+Binary Precision & 0.309761179501 \\
+Binary Recall & 0.995623209295 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 249 \\
+False positive & 126215 \\
+True negative & 12413 \\
+True positive & 56642 \\
+\midrule
+Positive training samples & 10069 \\
+Negative training samples & 9932 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Country feature set CTU: Experiment 10.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.348164413822 \\
+Multi-class Precision & 0.508277815233 \\
+Multi-class Recall & 0.301060255014 \\
+\midrule
+Binary F-score & 0.605764019856 \\
+Binary Precision & 0.437888320419 \\
+Binary Recall & 0.982387372344 \\
+\midrule
+Total amount of samples & 195519 \\
+False negative & 1002 \\
+False positive & 71744 \\
+True negative & 66884 \\
+True positive & 55889 \\
+\midrule
+Positive training samples & 10069 \\
+Negative training samples & 9932 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Country feature set CTU: Average.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.188294660908 \\
+Multi-class Precision & 0.321886676837 \\
+Multi-class Recall & 0.162126442954 \\
+\midrule
+Binary F-score & 0.41582673661 \\
+Binary Precision & 0.284218267899 \\
+Binary Recall & 0.793506881581 \\
+\midrule
+Total amount of samples & 195519.0 \\
+False negative & 11747.6 \\
+False positive & 87959.7 \\
+True negative & 50668.3 \\
+True positive & 45143.4 \\
+\midrule
+Positive training samples & 10069.0 \\
+Negative training samples & 9932.0 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Country feature set CTU: Variance.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.0202047595102 \\
+Multi-class Precision & 0.027910062049 \\
+Multi-class Recall & 0.0189480705569 \\
+\midrule
+Binary F-score & 0.046481442443 \\
+Binary Precision & 0.0231556981645 \\
+Binary Recall & 0.157412145258 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+
+\newpage
+\subsection{Cross Dataset}
+
+
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Country feature set Cross: Experiment 1.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.142274185538 \\
+Multi-class Precision & 0.378411433359 \\
+Multi-class Recall & 0.094406147679 \\
+\midrule
+Binary F-score & 0.611484800363 \\
+Binary Precision & 0.440427122438 \\
+Binary Recall & 0.999795992174 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 22 \\
+False positive & 136984 \\
+True negative & 1644 \\
+True positive & 107817 \\
+\midrule
+Positive training samples & 10045 \\
+Negative training samples & 4956 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Country feature set Cross: Experiment 2.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.207532436407 \\
+Multi-class Precision & 0.411213439099 \\
+Multi-class Recall & 0.154422295885 \\
+\midrule
+Binary F-score & 0.636269485246 \\
+Binary Precision & 0.467226401401 \\
+Binary Recall & 0.996976974935 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 326 \\
+False positive & 122596 \\
+True negative & 16032 \\
+True positive & 107513 \\
+\midrule
+Positive training samples & 10045 \\
+Negative training samples & 4956 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Country feature set Cross: Experiment 3.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.212799558804 \\
+Multi-class Precision & 0.459057956113 \\
+Multi-class Recall & 0.149172100119 \\
+\midrule
+Binary F-score & 0.640119583957 \\
+Binary Precision & 0.471446366539 \\
+Binary Recall & 0.996726601693 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 353 \\
+False positive & 120506 \\
+True negative & 18122 \\
+True positive & 107486 \\
+\midrule
+Positive training samples & 10045 \\
+Negative training samples & 4956 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Country feature set Cross: Experiment 4.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.203939842743 \\
+Multi-class Precision & 0.415425443938 \\
+Multi-class Recall & 0.151269744023 \\
+\midrule
+Binary F-score & 0.636998678746 \\
+Binary Precision & 0.468015270831 \\
+Binary Recall & 0.996967701852 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 327 \\
+False positive & 122207 \\
+True negative & 16421 \\
+True positive & 107512 \\
+\midrule
+Positive training samples & 10045 \\
+Negative training samples & 4956 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Country feature set Cross: Experiment 5.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.206202673685 \\
+Multi-class Precision & 0.415030414849 \\
+Multi-class Recall & 0.15326189713 \\
+\midrule
+Binary F-score & 0.635996556712 \\
+Binary Precision & 0.46696060119 \\
+Binary Recall & 0.996847151773 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 340 \\
+False positive & 122711 \\
+True negative & 15917 \\
+True positive & 107499 \\
+\midrule
+Positive training samples & 10045 \\
+Negative training samples & 4956 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Country feature set Cross: Experiment 6.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.256280523309 \\
+Multi-class Precision & 0.416608903462 \\
+Multi-class Recall & 0.210381105787 \\
+\midrule
+Binary F-score & 0.66139523726 \\
+Binary Precision & 0.494804656942 \\
+Binary Recall & 0.997097525014 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 313 \\
+False positive & 109784 \\
+True negative & 28844 \\
+True positive & 107526 \\
+\midrule
+Positive training samples & 10045 \\
+Negative training samples & 4956 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Country feature set Cross: Experiment 7.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.189587907203 \\
+Multi-class Precision & 0.408559005194 \\
+Multi-class Recall & 0.124292501633 \\
+\midrule
+Binary F-score & 0.624578064276 \\
+Binary Precision & 0.454563505475 \\
+Binary Recall & 0.997755913909 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 242 \\
+False positive & 129107 \\
+True negative & 9521 \\
+True positive & 107597 \\
+\midrule
+Positive training samples & 10045 \\
+Negative training samples & 4956 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Country feature set Cross: Experiment 8.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.207362980373 \\
+Multi-class Precision & 0.421636559419 \\
+Multi-class Recall & 0.154641392154 \\
+\midrule
+Binary F-score & 0.638054167794 \\
+Binary Precision & 0.469501473972 \\
+Binary Recall & 0.995409823904 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 495 \\
+False positive & 121290 \\
+True negative & 17338 \\
+True positive & 107344 \\
+\midrule
+Positive training samples & 10045 \\
+Negative training samples & 4956 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Country feature set Cross: Experiment 9.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.252863575445 \\
+Multi-class Precision & 0.421852311896 \\
+Multi-class Recall & 0.200562347089 \\
+\midrule
+Binary F-score & 0.660845297262 \\
+Binary Precision & 0.494239451254 \\
+Binary Recall & 0.996893517188 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 335 \\
+False positive & 110010 \\
+True negative & 28618 \\
+True positive & 107504 \\
+\midrule
+Positive training samples & 10045 \\
+Negative training samples & 4956 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Country feature set Cross: Experiment 10.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.216213720761 \\
+Multi-class Precision & 0.443349454823 \\
+Multi-class Recall & 0.163863722121 \\
+\midrule
+Binary F-score & 0.644557552781 \\
+Binary Precision & 0.476353028798 \\
+Binary Recall & 0.996392770704 \\
+\midrule
+Total amount of samples & 246467 \\
+False negative & 389 \\
+False positive & 118118 \\
+True negative & 20510 \\
+True positive & 107450 \\
+\midrule
+Positive training samples & 10045 \\
+Negative training samples & 4956 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[H]
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Country feature set Cross: Average.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.209505740427 \\
+Multi-class Precision & 0.419114492215 \\
+Multi-class Recall & 0.155627325362 \\
+\midrule
+Binary F-score & 0.63902994244 \\
+Binary Precision & 0.470353787884 \\
+Binary Recall & 0.997086397315 \\
+\midrule
+Total amount of samples & 246467.0 \\
+False negative & 314.2 \\
+False positive & 121331.3 \\
+True negative & 17296.7 \\
+True positive & 107524.8 \\
+\midrule
+Positive training samples & 10045.0 \\
+Negative training samples & 4956.0 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfillx
+\begin{minipage}{0.5\textwidth}
+\caption{LinearSVC with Country feature set Cross: Variance.}
+\centering
+\begin{tabular}{l r}
+\toprule
+Multi-class F-score & 0.000909080528027 \\
+Multi-class Precision & 0.00040638208873 \\
+Multi-class Recall & 0.000988355251415 \\
+\midrule
+Binary F-score & 0.000199734926887 \\
+Binary Precision & 0.000237798221837 \\
+Binary Recall & 1.13322528018e-06 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}

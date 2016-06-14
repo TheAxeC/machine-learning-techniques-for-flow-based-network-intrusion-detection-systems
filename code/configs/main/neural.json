@@ -2,7 +2,7 @@
     "check" : true,
     "algorithm" : "KNeighborsClassifier",
     "featureClass" : "FlowFeatureWFlags",
-    "amount" : 10,
+    "amount" : 1,
 
     "check-sets" : [
             {
@@ -20,7 +20,7 @@
 
     "configs" : [
         {
-            "enable-IDS" : true,
+            "enable-IDS" : false,
             "name" : "NeuralNetwork CTU",
             "description" : "NeuralNetwork",
             "check" : true,
@@ -43,7 +43,7 @@
                 ]
         },
         {
-            "enable-IDS" : true,
+            "enable-IDS" : false,
             "name" : "NeuralNetwork Cross",
             "description" : "NeuralNetwork Cross",
             "check" : true,
@@ -95,7 +95,7 @@
                 ]
         },
         {
-            "enable-IDS" : false,
+            "enable-IDS" : true,
             "name" : "NeuralNetwork CTU",
             "description" : "NeuralNetwork",
             "check" : true,
