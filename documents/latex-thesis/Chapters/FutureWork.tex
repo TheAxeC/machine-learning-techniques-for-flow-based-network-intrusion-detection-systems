@@ -1,0 +1,77 @@
+% Chapter Template
+
+\chapter{Future work} % Main chapter title
+\label{prevention} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
+
+\section{Increasing performance}
+There are several possible methods that could be used to improve the performance of the implemented  system. Currently the system generates alerts based on whether it thinks a flow is malicious or not. Incrementing the performance of the system could be solved by giving the system more data to learn from. \\
+\\
+One method to be able to get more training data is to generate it. This would be very useful for the neural network algorithm which was underfitting. Using a Virtual Machine, different kinds of malware could be run. The generated network traffic can be used to train the system. \\
+\\
+Another possible solution could be to implement packet analysis. A flow-based intrusion detection system processes a lot less data than a packet-based intrusion detection system. However, because IP flows contain less information than complete packets, a flow-based system cannot detect everything. It might be worth to find methods that incorperate both flow-based intrusion detection and packet-based intrusion deteciton. \\
+\\
+One such method could be to use the IP flows to eliminate flows that are non-malicious and afterwards to perform packet analysis on the remaining flows. This may or may not have an impact on the accuracy and the different kinds of attacks that can be detected.
+
+\section{Intrusion Prevention Systems}
+It would be interesting to find out whether the methods described in this thesis also apply to intrusion prevention systems. There are two main issues with using a similar system for intrusion prevention. IP Flows are defined as an entire "flow", as a connection. At the moment a flow is received by the intrusion detection system, every packet has already been exchanged between the source and the destination. This means that "prevention" is more difficult since the intrusion has already happened. A solution to this could be to process incomplete flows. This means that the flow might still change and that communication is still ongoing. However, it is unknown how the system reacts to unknown flows. \\
+\\
+The other issue is the performance of the machine learning algorithms. During the tests that were done in this thesis, no performance issues of the machine learning algorithms were noticed. But it is unknown how fast the machine learning algorithm needs to perform, should the intrusion detection system be fast enough.
+
+\section{Combination of algorithms}
+In this thesis, multiple algorithms have been used. However, these algorithms were tested separately. It would be interesting to find out whether these algorithms can be combined. This could be done by training multiple algorithms and using the results in such a way that the multi-class and binary F-scores are maximised. One method of doing this could be by minimizing the amount of false positives and false negatives. \\
+\\
+Another method is to use a layered approach. In this method, algorithms are chained together in a layered method. Every layer reduces the amount of flows that the next layer should process. This approach works in a similar way as explained in Section~\ref{compAI}. However, that approach only speaks about using an unsupervised learning algorithm and afterwards a supervised learning algorithm. 
+
+\section{Using only binary classification}
+
+This thesis focused on multi-class classification. The different machine learning algorithms are trained in order to be able to predict the exact classification of a flow. The binary F-score that was used in the evaluation was calculated after the algorithms predicted the classes. It would be interesting to see what kind of results can be obtained by training the machine learning algorithms in a binary way. This means that the algorithm can only predict whether a flow is malicious or non-malicious. \\
+\\
+The framework that was made for this thesis does already support binary learning. In Table~\ref{tab:bin} and Table~\ref{tab:bin2}, some results can be seen. These experiments have only been repeated a couple times and are not necessarially statistically correct. However, they do give an indication whether binary classification offers an advantage. The results show excellent binary F-scores which are better than the binary scores shown in the binary F-score for multiclass Classification. 
+
+\begin{table}[H]
+\caption{K-Nearest Neighbors (standard feature set, k=5) for CTU Dataset}
+\label{tab:bin}
+\centering
+\begin{tabular}{l c c r}
+\toprule
+Experiment & multi-class training & binary training \\
+\midrule
+Binary F-score & 0.9500 & 0.9859  \\
+Binary Precision & 0.9204 & 0.9803 \\
+Binary Recall & 0.9816 & 0.9917 \\
+\midrule
+Total amount of samples & 195519.0 & 195519.0 \\
+False negative & 1048.0 & 469.0  \\
+False positive & 4830.0 & 1136.0  \\
+True negative & 133798.0 & 137492.0  \\
+True positive & 55843.0 & 56422.0  \\
+\midrule
+Positive training samples & 35363.0 & 35363.0 \\
+Negative training samples & 49638.0 & 49638.0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\caption{K-Nearest Neighbors (standard feature set, k=5) for Cross Dataset}
+\label{tab:bin2}
+\centering
+\begin{tabular}{l c c r}
+\toprule
+Experiment & multi-class training & binary training \\
+\midrule
+Binary F-score & 0.9631 & 0.9926  \\
+Binary Precision & 0.9543 & 0.9895 \\
+Binary Recall & 0.9720 & 0.9957 \\
+\midrule
+Total amount of samples & 246467.0 & 246467.0 \\
+False negative & 3015.1 & 468.0  \\
+False positive & 5013.9 & 1137.0  \\
+True negative & 133614.1 & 137491.0  \\
+True positive & 104823.9 & 107371.0  \\
+\midrule
+Positive training samples & 65363.0 & 65363.0 \\
+Negative training samples & 49638.0 & 49638.0 \\
+\bottomrule
+\end{tabular}
+\end{table}

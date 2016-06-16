@@ -104,6 +104,7 @@ def training(config, algorithm, feature, good_labels, manager):
             print "Using stored model \"" + config.get_model() + "\" in directory \"" + directory + "\"."
             if not algorithm.load_file(directory + config.get_model()):
                 return False
+            manager.add_new_result(-1, -1)
         except IOError as e:
             print "Couldn't use stored model."
             if not training_data_set(config, algorithm, feature, good_labels, manager):
@@ -307,8 +308,13 @@ def print_labels(files):
 
 ##########################################################
 ##########################################################
+def warn(*args, **kwargs):
+    pass
 
 def main(config_file=None):
+    import warnings
+    warnings.warn = warn
+
     # Read the config file
     from config import Config
 

@@ -300,18 +300,19 @@ class ResultPrediction:
             s += "Accuracy score Binary: " + str(acc) + "\n"
             self.manager.add_result_binary(f1, prec, rec)
 
-            s += "classification report: \n"
-            s += metrics.classification_report(self.ground_truth, self.predictions)
-            s += "\n"
-            s += "Predictions:\n"
+            report = ""
+            report += "classification report: \n"
+            report += metrics.classification_report(self.ground_truth, self.predictions)
+            report += "\n"
+            report += "Predictions:\n"
             from collections import Counter
             col = Counter(self.predictions)
             for key, value in col.iteritems():
-                s += str(key) + " => " + str(value) + "\n"
+                report += str(key) + " => " + str(value) + "\n"
+            #s += report
         except Exception as e:
             import traceback
             traceback.print_exc()
-
         return s
 
     def get_output(self, config):
@@ -357,7 +358,7 @@ class ResultPrediction:
             csv.open_files(config.get_firewall_logs())
             print "Opened firewall logs"
         else:
-            return
+            return ""
 
         self.manager.copy_new_result()
 

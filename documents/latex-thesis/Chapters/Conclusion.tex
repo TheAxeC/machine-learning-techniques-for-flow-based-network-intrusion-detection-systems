@@ -1,0 +1,20 @@
+% Chapter Template
+
+\chapter{Conclusion} % Main chapter title
+
+\label{conclusion} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
+
+This thesis has given an overview of machine learning algorithms and has shown how they can be used in an intrusion detection system. The advantages and disadvantages of IP flows have been given. It was found that IP flows do contain enough information to detect intrusions. \\
+\\
+However, they do not contain enough information to detect all different types of intrusions. They can only detect a subset of intrusions. In general, the more information is known, the better the results. Extra information such as knowing the TCP flags used in the flow can greatly improve the performance of machine learning algorithms. Other information such as using the country of origin of a flow did not have any impact on the results. However, this could be caused by a lack of variance in the training dataset.  The experiments show that attacks such as SSH scans are more easily detectable as compared to malware.\\
+\\
+The biggest problem that was discovered during the thesis was finding good labeled datasets which could be used to train the machine learning algorithms. If a good training dataset is used to train a machine learning algorithm, it can be used to create an intrusion detection system which offers acceptable performance out-of-the-box.A lot depends on the quality of the training dataset. If the training dataset does not contain enough samples of the different intrusions, the machine learning algorithm will exhibit a large amount of false positives and false negatives. \\
+\\
+Not all machine learning algorithms work as good. The Naive Bayes algorithm makes wrong assumptions about the features. This makes it a poor choice for intrusion detection. Neural networks seem promising but there was not enough data to train the algorithm. Most experiments with neural networks were done while it was underfitting. Decision tree algorithms have promising results in the experiments, however they do not hold up when they are used in a real-life scenario.  \\
+\\
+Support Vector Machines can be used with a linear kernel or a RBF kernel. The linear kernel SVM does not work at all, since intrusion detection is not a problem that can be solved with linear classifiers. Support vector machines with a RBF kernel perform much better. However, there performance is still quite average compared to the best algorithm. K-Nearest Neighbors performed the best. It has good results in both the evaluation and the real-life scenario.\\
+\\
+When using an algorithm such as K-Nearest Neighbors close attention needs to be paid to what value of $k$ is chosen and which distance metric is used. The value of $k$ needs to be chosen experimentally, since the results in this thesis show that there is not a best value of $k$. The Canberra distance metric works the best for multi-class classification. Otherwise, if there is only an interest towards binary classification, the Euclidean or Chebyshev distance metric should be chosen. \\
+\\
+Unsupervised learning algorithms do not work well out-of-the-box. They need a lot of manual interference before they are viable to be used for intrusion detection. 
+
