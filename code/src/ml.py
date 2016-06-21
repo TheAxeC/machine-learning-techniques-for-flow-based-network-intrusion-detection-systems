@@ -104,7 +104,7 @@ class Plot_RandomClassifier(MLAlgorithm):
 
     def train(self, data_set, target_set=None):
         from visualise import plot_learning_curve
-        plot_learning_curve(self.algorithm, "Plot_RandomClassifier", data_set, target_set, cv=2, baseline=False)
+        plot_learning_curve(self.algorithm, "Random Classifier", data_set, target_set, cv=2, baseline=False)
         self.algorithm.fit(data_set, target_set)
 
     # Predict a sample

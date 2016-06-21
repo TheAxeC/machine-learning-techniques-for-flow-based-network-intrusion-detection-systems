@@ -1,6 +1,6 @@
 import numpy as np
 
-def plot_learning_curve(estimator, title, X, y, ylim=None, cv=None,
+def plot_learning_curve(estimator, title, X, y, ylim=(0,1), cv=None,
                         n_jobs=1, train_sizes=np.linspace(.1, 1.0, 5), save=True, baseline=True):
     """
     Generate a simple plot of the test and traning learning curve.
@@ -40,11 +40,12 @@ def plot_learning_curve(estimator, title, X, y, ylim=None, cv=None,
     from sklearn.learning_curve import learning_curve
 
     plt.figure()
-    plt.title(title)
+    plt.title(title, fontsize=25)
     if ylim is not None:
         plt.ylim(*ylim)
-    plt.xlabel("Training examples")
-    plt.ylabel("Accuracy")
+    plt.xlabel("Training examples", fontsize=25)
+    plt.ylabel("Accuracy", fontsize=25)
+    
     train_sizes, train_scores, test_scores = learning_curve(
         estimator, X, y, cv=cv, n_jobs=n_jobs, train_sizes=train_sizes)
     train_scores_mean = np.mean(train_scores, axis=1)
@@ -84,7 +85,7 @@ def plot_learning_curve(estimator, title, X, y, ylim=None, cv=None,
         plt.plot(train_sizes_rand, test_scores_mean_rand, 'o-', color="c",
                  label="Baseline Cross-validation score")
 
-    plt.legend(loc="best")
+    #plt.legend(loc="best")
     if save:
         plt.savefig(title.replace(" ", "_"))
     return plt

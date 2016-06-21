@@ -1,0 +1,12 @@
+Image sources:
+[1]: https://upload.wikimedia.org/wikipedia/commons/ thumb/d/d7/Desktop_computer_clipart_- _Yellow_theme.svg/2000px- Desktop_computer_clipart_-_Yellow_theme.svg.png 
+[2]:https://pixabay.com/static/uploads/photo/ 2013/07/12/14/11/workstation-147953_960_720.png 
+[3]:https://kaggle2.blob.core.windows.net/ competitions/kaggle/3428/media/scikit-learn-logo.png
+[4]: http://media.charlesleifer.com/blog/photos/ p1422977174.11.png
+[5]: http://3.bp.blogspot.com/-ZslDMqm5M9o/ T8ja_f_fALI/AAAAAAAAAt4/z7w55YAZXpw/s1600/ p1.png
+[6]: https://www.packtpub.com/sites/default/files/ Article-Images/6053OS_03_05.png
+[7]: https://upload.wikimedia.org/wikipedia/commons/ thumb/e/e4/Artificial_neural_network.svg/2000px- Artificial_neural_network.svg.png
+[8]: http://scikit-learn.org/stable/modules/ svm.html#svm-outlier-detection
+[9]: http://scikit-learn.org/stable/modules/svm.html 
+[10]: https://upload.wikimedia.org/wikipedia/commons/ thumb/b/b5/Svm_separating_hyperplanes_(SVG).svg/ 2000px-Svm_separating_hyperplanes_(SVG).svg.png 
+[11]: https://upload.wikimedia.org/wikipedia/commons/ 1/17/ArtificialFictionBrain.png

@@ -18,3 +18,6 @@ A user and developer guide is available within the appendix from the thesis.
 
 ## Documents
 The documents folder contains the actual thesis (and latex files). Some reference material is also included.
+
+## Poster
+Image sources are located at `documents/poster_sources.txt`
